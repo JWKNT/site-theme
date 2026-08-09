@@ -3,8 +3,8 @@
 Shared, versioned CSS for JWKNT GitHub Pages projects.
 
 ```html
-<script src="https://jwknt.github.io/site-theme/v1/theme.js"></script>
-<link rel="stylesheet" href="https://jwknt.github.io/site-theme/v1/base.css">
+<script src="/site-theme/v1/theme.js"></script>
+<link rel="stylesheet" href="/site-theme/v1/base.css">
 <link rel="stylesheet" href="assets/styles.css">
 ```
 
