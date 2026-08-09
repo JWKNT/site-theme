@@ -3,13 +3,16 @@
 Shared, versioned CSS for JWKNT GitHub Pages projects.
 
 ```html
+<script src="https://jwknt.github.io/site-theme/v1/theme.js"></script>
 <link rel="stylesheet" href="https://jwknt.github.io/site-theme/v1/base.css">
 <link rel="stylesheet" href="assets/styles.css">
 ```
 
 The shared stylesheet owns design tokens, document defaults, accessibility
 utilities, and common header primitives. Each consumer keeps its page-specific
-layout and components in a local stylesheet loaded afterward.
+layout and components in a local stylesheet loaded afterward. The controller
+applies the saved or system theme before the page renders and adds an accessible
+toggle to the first standard navigation or toolbar slot on the page.
 
 ## Versioning
 
@@ -26,4 +29,3 @@ python3 -m http.server 8000
 ```
 
 Then open <http://localhost:8000/>.
-
