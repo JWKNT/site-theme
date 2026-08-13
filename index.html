@@ -11,7 +11,10 @@
     <style>
       main { width: min(760px, calc(100% - 44px)); margin: 0 auto; padding: 48px 0 72px; font-size: 16px; line-height: 1.6; }
       h1 { margin: 0 0 8px; font-size: 32px; font-weight: 500; }
+      h2 { margin: 34px 0 8px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 18px; font-variant: small-caps; font-weight: 600; letter-spacing: .35px; }
       p { margin: 8px 0 18px; }
+      ul { padding-left: 20px; }
+      li { margin: 6px 0; }
       code { padding: 2px 5px; background: var(--surface); font: .85em/1.5 var(--mono); }
       pre { overflow-x: auto; padding: 14px; border: 1px solid var(--line); background: var(--surface); }
       pre code { padding: 0; background: none; }
@@ -26,6 +29,16 @@
 &lt;link rel="stylesheet" href="/site-theme/v1/base.css"&gt;
 &lt;link rel="stylesheet" href="assets/styles.css"&gt;</code></pre>
       <p>Version 1 contains the common palette, typography, document defaults, accessibility utilities, and site-header primitives.</p>
+      <h2>Philosophy</h2>
+      <p>The theme is a quiet frame for different kinds of work. Structure follows the material; the shared language keeps those structures related.</p>
+      <ul>
+        <li>Prefer text, whitespace, alignment, and hairline rules before containers or decoration.</li>
+        <li>Use a neutral serif-first palette with one restrained blue and compact, square controls.</li>
+        <li>Add search, filters, sorting, pagination, or overlays only when the information earns them.</li>
+        <li>Keep stable work in the build, bound large rendered collections, and make the empty case equally intentional.</li>
+        <li>Treat keyboard access, visible focus, responsive hierarchy, dark mode, and reduced motion as part of the style.</li>
+      </ul>
+      <p><a href="PHILOSOPHY.md">Read the full site philosophy</a>.</p>
     </main>
   </body>
 </html>

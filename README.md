@@ -2,6 +2,10 @@
 
 Shared, versioned CSS for JWKNT GitHub Pages projects.
 
+The theme follows a shared [site philosophy](PHILOSOPHY.md): start with the
+material, keep the interface subordinate, earn every feature, and reuse a
+restrained visual language without forcing unrelated projects into one layout.
+
 ```html
 <script src="/site-theme/v1/theme.js"></script>
 <link rel="stylesheet" href="/site-theme/v1/base.css">
@@ -13,6 +17,12 @@ utilities, and common header primitives. Each consumer keeps its page-specific
 layout and components in a local stylesheet loaded afterward. The controller
 applies the saved or system theme before the page renders and adds an accessible
 toggle to the first standard navigation or toolbar slot on the page.
+
+The recurring visual grammar is serif-first typography, a neutral paper
+palette, one restrained blue, hairline divisions, square compact controls,
+small-caps labels, generous whitespace, and content-led responsive layouts.
+These are defaults rather than decoration requirements: local UI should exist
+only when it helps readers find, read, compare, or operate the material.
 
 ## Versioning
 
@@ -29,3 +39,6 @@ python3 -m http.server 8000
 ```
 
 Then open <http://localhost:8000/>.
+
+When changing the foundation, review both sparse and dense consumers, narrow
+and wide layouts, light and dark modes, keyboard focus, and reduced motion.
