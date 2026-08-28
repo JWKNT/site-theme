@@ -21,7 +21,9 @@ A long page should work at several depths: title and dateline, section headings,
 
 Use 66–72 characters for sustained prose. Data tools may use a wider shell only where comparison needs it. Tables, timelines, code, and numeric results should use tabular or monospaced figures; prose should not.
 
-Major changes of subject may use the shared star-and-hairline divider. It is punctuation, not branding: use it once or twice on a page, never between every dashboard section.
+Major changes of subject may use a shared ruled ornament. It is punctuation, not branding: use it once or twice on a page, never between every dashboard section. The mark may vary with the material—an asterism for an editorial turn, a helix-like bow for genetics, a section sign for documents—but its visual weight stays quiet.
+
+A transition has one owner. When an ornament separates two sections, the preceding section gives up its closing rule; when a disclosure ends a section, do not add a second rule immediately beneath it. Parallel hairlines should describe rows or columns, never appear as accidental strata around whitespace.
 
 ## Earn every feature
 

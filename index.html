@@ -15,7 +15,7 @@
   <body>
     <header class="site-header">
       <a class="site-title" href="https://jehlp.net/">jehlp.net</a>
-      <nav aria-label="Site links"><a href="PHILOSOPHY.md">Philosophy</a></nav>
+      <nav aria-label="Site links"><a href="philosophy.html">Philosophy</a></nav>
     </header>
     <main class="theme-doc">
       <header>
@@ -23,7 +23,7 @@
         <h1>Site theme</h1>
         <p class="lede">Typography, spacing, controls, and information patterns shared by the projects at jehlp.net.</p>
       </header>
-      <div class="site-divider" aria-hidden="true"><span></span></div>
+      <div class="site-divider" data-ornament="constellation" aria-hidden="true"><span></span></div>
       <section>
         <h2>Use</h2>
         <p>Load the shared foundation before a site-specific stylesheet:</p>
@@ -40,6 +40,15 @@
         </dl>
       </section>
       <section>
+        <h2>Transitions</h2>
+        <p>A change of subject may use one ruled ornament. The surrounding sections then surrender their own boundary rules, so punctuation never accumulates into a stack.</p>
+        <div class="ornament-specimen" aria-hidden="true">
+          <span>✦</span><span>⁂</span><span>◆</span><span>⋈</span><span>§</span><span>✣</span>
+        </div>
+        <pre><code>&lt;section class="section-block"&gt;…&lt;/section&gt;
+&lt;div class="site-divider" data-ornament="helix" aria-hidden="true"&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;</code></pre>
+      </section>
+      <section>
         <h2>Principles</h2>
         <ul>
           <li>Lead with the material, not a promotional masthead.</li>
@@ -48,7 +57,7 @@
           <li>Reserve color for identity, state, and comparison.</li>
           <li>Keep every interaction legible with a keyboard, on a phone, and in print.</li>
         </ul>
-        <p><a href="PHILOSOPHY.md">Full philosophy and component guidance</a>.</p>
+        <p><a href="philosophy.html">Full philosophy and component guidance</a>.</p>
       </section>
     </main>
   </body>

@@ -2,6 +2,8 @@
 .theme-doc header h1 { margin: 0; font-weight: 500; }
 .theme-doc header p { margin: .65rem 0 0; }
 .theme-doc section { margin-top: 2.7rem; }
+.theme-doc .site-divider + section { margin-top: 0; }
+.theme-doc .site-divider + section > h2 { padding-top: 0; border-top: 0; }
 .theme-doc h2 { margin: 0 0 .75rem; padding-top: .65rem; border-top: 1px solid var(--line); font-size: 1.2rem; font-variant: small-caps; font-weight: 600; letter-spacing: .025em; }
 .theme-doc p { text-wrap: pretty; }
 .theme-doc ul { padding-left: 1.2rem; }
@@ -12,4 +14,8 @@
 .type-specimen dd { margin: 0; }
 .type-specimen .ui { font-family: var(--sans); font-size: .82rem; }
 .type-specimen .mono { font-family: var(--mono); font-size: .78rem; }
+.ornament-specimen { display: grid; grid-template-columns: repeat(6, 1fr); margin: 1rem 0; border-block: 1px solid var(--line); }
+.ornament-specimen span { display: grid; min-height: 3.2rem; place-items: center; color: var(--muted-strong); font: 1.05rem/1 var(--display); }
+.ornament-specimen span + span { border-left: 1px solid var(--line); }
+.philosophy-doc section p, .philosophy-doc section li { max-width: var(--measure); }
 @media (max-width: 34rem) { .type-specimen { grid-template-columns: 1fr; } }

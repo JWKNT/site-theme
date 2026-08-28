@@ -82,15 +82,23 @@ mark { padding-inline: .08em; background: var(--mark); color: inherit; }
 
 .eyebrow, .section-kicker, .data-label, .control-label { margin: 0 0 .22rem; color: var(--muted); font: 600 .64rem/1.25 var(--sans); font-variant: small-caps; letter-spacing: .065em; text-transform: lowercase; }
 .lede { max-width: var(--measure); color: var(--muted-strong); font-size: 1.05rem; line-height: 1.6; }
-.site-divider { display: grid; grid-template-columns: minmax(1rem, 1fr) auto minmax(1rem, 1fr); gap: .9rem; align-items: center; width: min(34rem, 88%); margin: var(--section-space) auto; color: var(--line-strong); }
+.site-divider { display: grid; grid-template-columns: minmax(2rem, 1fr) auto minmax(2rem, 1fr); gap: clamp(.85rem, 2vw, 1.35rem); align-items: center; width: min(54rem, calc(100% - 2rem)); margin: clamp(2.4rem, 5vw, 4rem) auto; color: var(--line-strong); }
 .site-divider::before, .site-divider::after { height: 1px; background: var(--line); content: ""; }
-.site-divider > span::before { color: var(--muted); content: "✦"; font: 1rem/1 var(--display); }
+.site-divider > span { display: grid; min-width: 1.1rem; place-items: center; }
+.site-divider > span::before { color: var(--muted); content: "✦"; font: 1.05rem/1 var(--display); }
+.site-divider[data-ornament="asterism"] > span::before { content: "⁂"; font-size: .95rem; letter-spacing: .08em; }
+.site-divider[data-ornament="diamond"] > span::before { content: "◆"; font-size: .62rem; }
+.site-divider[data-ornament="helix"] > span::before { content: "⋈"; font-size: 1.12rem; }
+.site-divider[data-ornament="folio"] > span::before { content: "§"; font-size: 1rem; }
+.site-divider[data-ornament="constellation"] > span::before { content: "✣"; font-size: 1rem; }
+.site-divider--wide { width: 100%; }
 
 .section-index { position: sticky; top: 0; z-index: 40; display: flex; gap: .45rem 1.1rem; overflow-x: auto; padding: .65rem 0; border-bottom: 1px solid var(--line); background: var(--paper); font: 600 .66rem/1.3 var(--sans); font-variant: small-caps; letter-spacing: .035em; scrollbar-width: none; }
 .section-index::-webkit-scrollbar { display: none; }
 .section-index a { flex: none; color: var(--muted); text-decoration-color: transparent; }
 .section-index a:hover, .section-index a[aria-current] { color: var(--blue-dark); text-decoration-color: currentColor; }
-.section-block { scroll-margin-top: 3rem; padding: var(--section-space) 0; border-bottom: 1px solid var(--line-strong); }
+.section-block { scroll-margin-top: 3rem; padding: var(--section-space) 0; }
+.section-block + .section-block { border-top: 1px solid var(--line-strong); }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1.25rem; margin-bottom: 1.2rem; }
 .section-heading h1, .section-heading h2, .section-heading h3 { margin: 0; font-weight: 500; }
 .section-note, .result-status, .quiet { color: var(--muted); font-size: .78rem; }
@@ -111,7 +119,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 .theme-toggle { flex: none; min-width: 1.95rem; min-height: 1.8rem; margin-left: .2rem; padding: .15rem .45rem; font: 1rem/1 var(--display); }
 .theme-toggle--floating { position: fixed; top: .75rem; right: 1rem; z-index: 100; box-shadow: 0 .15rem .8rem var(--shadow-soft); }
 
-details { border-block: 1px solid var(--line); }
+details { border-top: 1px solid var(--line); }
 summary { padding: .55rem 0; color: var(--blue); cursor: pointer; font-size: .8rem; }
 table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
 th, td { padding: .48rem .58rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
@@ -122,8 +130,9 @@ th { color: var(--muted); font: 600 .62rem/1.25 var(--sans); font-variant: small
 
 @media (max-width: 42rem) {
   :root { --gutter: .85rem; --section-space: 2.1rem; }
-  .site-header { align-items: flex-start; }
-  .site-header nav { flex-wrap: wrap; justify-content: flex-end; gap: .5rem .7rem; }
+  .site-header { align-items: flex-start; flex-direction: column; gap: .65rem; }
+  .site-header nav { width: 100%; flex-wrap: wrap; justify-content: flex-start; gap: .5rem .7rem; }
+  .site-header nav .theme-toggle { margin-left: auto; }
   .section-heading { align-items: flex-start; flex-direction: column; gap: .5rem; }
   .data-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .data-strip > div:nth-child(odd) { border-left: 0; }
