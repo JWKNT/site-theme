@@ -28,6 +28,7 @@
     document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
       button.setAttribute("aria-pressed", String(dark));
       button.setAttribute("aria-label", label);
+      button.dataset.themeTarget = dark ? "light" : "dark";
       button.title = label;
     });
   }

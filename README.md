@@ -16,8 +16,9 @@ The shared stylesheet owns type roles, design tokens, document defaults,
 accessibility utilities, controls, tables, ruled ornaments, standard shells, and header
 primitives. Each consumer keeps only content-specific layout and visualization
 rules locally. The controller applies the saved or system theme before the page
-renders and adds an accessible toggle to the first standard navigation or
-toolbar slot.
+renders and adds an accessible celestial toggle to the first standard navigation
+or toolbar slot. Its moon and sun seals live in `v2/icons/` and remain subordinate
+to the page until hovered or focused.
 
 The recurring visual grammar is serif-first typography, a neutral paper
 palette, one restrained blue, hairline divisions, square compact controls,
