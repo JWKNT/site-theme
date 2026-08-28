@@ -99,6 +99,7 @@ mark { padding-inline: .08em; background: var(--mark); color: inherit; }
 .section-index a:hover, .section-index a[aria-current] { color: var(--blue-dark); text-decoration-color: currentColor; }
 .section-block { scroll-margin-top: 3rem; padding: var(--section-space) 0; }
 .section-block + .section-block { border-top: 1px solid var(--line-strong); }
+.section-block:target { border-top-color: transparent; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1.25rem; margin-bottom: 1.2rem; }
 .section-heading h1, .section-heading h2, .section-heading h3 { margin: 0; font-weight: 500; }
 .section-note, .result-status, .quiet { color: var(--muted); font-size: .78rem; }
