@@ -1,0 +1,15 @@
+.theme-doc { width: min(46rem, calc(100% - 2 * var(--gutter))); margin-inline: auto; padding: clamp(2rem, 7vw, 5rem) 0 5rem; }
+.theme-doc header h1 { margin: 0; font-weight: 500; }
+.theme-doc header p { margin: .65rem 0 0; }
+.theme-doc section { margin-top: 2.7rem; }
+.theme-doc h2 { margin: 0 0 .75rem; padding-top: .65rem; border-top: 1px solid var(--line); font-size: 1.2rem; font-variant: small-caps; font-weight: 600; letter-spacing: .025em; }
+.theme-doc p { text-wrap: pretty; }
+.theme-doc ul { padding-left: 1.2rem; }
+.theme-doc li + li { margin-top: .45rem; }
+.theme-doc pre { overflow-x: auto; padding: .8rem 1rem; border: 1px solid var(--line); background: var(--surface); font-size: .75rem; }
+.type-specimen { display: grid; grid-template-columns: 7rem 1fr; gap: .5rem 1.25rem; margin: 1rem 0; padding-block: .8rem; border-block: 1px solid var(--line); }
+.type-specimen dt { color: var(--muted); font: 600 .62rem/1.4 var(--sans); font-variant: small-caps; letter-spacing: .05em; }
+.type-specimen dd { margin: 0; }
+.type-specimen .ui { font-family: var(--sans); font-size: .82rem; }
+.type-specimen .mono { font-family: var(--mono); font-size: .78rem; }
+@media (max-width: 34rem) { .type-specimen { grid-template-columns: 1fr; } }

@@ -3,42 +3,52 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Shared design foundation for JWKNT GitHub Pages projects.">
-    <meta name="theme-color" content="#ffffff">
-    <title>JWKNT Site Theme</title>
-    <script src="v1/theme.js"></script>
-    <link rel="stylesheet" href="v1/base.css">
-    <style>
-      main { width: min(760px, calc(100% - 44px)); margin: 0 auto; padding: 48px 0 72px; font-size: 16px; line-height: 1.6; }
-      h1 { margin: 0 0 8px; font-size: 32px; font-weight: 500; }
-      h2 { margin: 34px 0 8px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 18px; font-variant: small-caps; font-weight: 600; letter-spacing: .35px; }
-      p { margin: 8px 0 18px; }
-      ul { padding-left: 20px; }
-      li { margin: 6px 0; }
-      code { padding: 2px 5px; background: var(--surface); font: .85em/1.5 var(--mono); }
-      pre { overflow-x: auto; padding: 14px; border: 1px solid var(--line); background: var(--surface); }
-      pre code { padding: 0; background: none; }
-    </style>
+    <meta name="description" content="Shared design foundation for jehlp.net projects.">
+    <meta name="theme-color" content="#fbfaf7">
+    <title>Site Theme · jehlp.net</title>
+    <link rel="icon" href="v2/favicons/site-theme.png" type="image/png">
+    <script src="v2/theme.js"></script>
+    <link rel="stylesheet" href="v2/base.css">
+    <link rel="stylesheet" href="v2/docs.css">
   </head>
   <body>
-    <main>
-      <h1>JWKNT Site Theme</h1>
-      <p>A shared, versioned design foundation for JWKNT GitHub Pages projects.</p>
-      <p>Load the shared foundation before a site-specific stylesheet:</p>
-      <pre><code>&lt;script src="/site-theme/v1/theme.js"&gt;&lt;/script&gt;
-&lt;link rel="stylesheet" href="/site-theme/v1/base.css"&gt;
+    <header class="site-header">
+      <a class="site-title" href="https://jehlp.net/">jehlp.net</a>
+      <nav aria-label="Site links"><a href="PHILOSOPHY.md">Philosophy</a></nav>
+    </header>
+    <main class="theme-doc">
+      <header>
+        <p class="eyebrow">shared foundation</p>
+        <h1>Site theme</h1>
+        <p class="lede">Typography, spacing, controls, and information patterns shared by the projects at jehlp.net.</p>
+      </header>
+      <div class="site-divider" aria-hidden="true"><span></span></div>
+      <section>
+        <h2>Use</h2>
+        <p>Load the shared foundation before a site-specific stylesheet:</p>
+        <pre><code>&lt;script src="https://jehlp.net/site-theme/v2/theme.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="https://jehlp.net/site-theme/v2/base.css"&gt;
 &lt;link rel="stylesheet" href="assets/styles.css"&gt;</code></pre>
-      <p>Version 1 contains the common palette, typography, document defaults, accessibility utilities, and site-header primitives.</p>
-      <h2>Philosophy</h2>
-      <p>The theme is a quiet frame for different kinds of work. Structure follows the material; the shared language keeps those structures related.</p>
-      <ul>
-        <li>Prefer text, whitespace, alignment, and hairline rules before containers or decoration.</li>
-        <li>Use a neutral serif-first palette with one restrained blue and compact, square controls.</li>
-        <li>Add search, filters, sorting, pagination, or overlays only when the information earns them.</li>
-        <li>Keep stable work in the build, bound large rendered collections, and make the empty case equally intentional.</li>
-        <li>Treat keyboard access, visible focus, responsive hierarchy, dark mode, and reduced motion as part of the style.</li>
-      </ul>
-      <p><a href="PHILOSOPHY.md">Read the full site philosophy</a>.</p>
+      </section>
+      <section>
+        <h2>Typography</h2>
+        <dl class="type-specimen">
+          <dt>Reading</dt><dd>Serif text carries explanation and long-form material.</dd>
+          <dt>Interface</dt><dd class="ui">Sans serif labels controls, filters, and quiet metadata.</dd>
+          <dt>Data</dt><dd class="mono">0123456789 · ids · values · state</dd>
+        </dl>
+      </section>
+      <section>
+        <h2>Principles</h2>
+        <ul>
+          <li>Lead with the material, not a promotional masthead.</li>
+          <li>Make hierarchy skimmable through type, measure, rules, and disclosure.</li>
+          <li>Use margins for context and whitespace for separation before adding boxes.</li>
+          <li>Reserve color for identity, state, and comparison.</li>
+          <li>Keep every interaction legible with a keyboard, on a phone, and in print.</li>
+        </ul>
+        <p><a href="PHILOSOPHY.md">Full philosophy and component guidance</a>.</p>
+      </section>
     </main>
   </body>
 </html>
