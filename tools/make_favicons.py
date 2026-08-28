@@ -116,6 +116,19 @@ def writing(draw, accent):
     draw.line((39, 151, 112, 151), fill=FG, width=4)
 
 
+def eastern_star(draw, accent):
+    cx, cy = 96, 96
+    for i, length in enumerate((64, 48, 72, 44, 61, 50, 70, 46, 65, 43, 69, 49)):
+        angle = i * 2 * pi / 12 - pi / 2
+        draw.polygon((
+            (cx + cos(angle - .07) * 13, cy + sin(angle - .07) * 13),
+            (cx + cos(angle) * length, cy + sin(angle) * length),
+            (cx + cos(angle + .07) * 13, cy + sin(angle + .07) * 13),
+        ), fill=FG if i % 2 == 0 else accent)
+    draw.ellipse((83, 83, 109, 109), fill=BG, outline=FG, width=4)
+    draw.ellipse((91, 91, 101, 101), fill=accent)
+
+
 ICONS = {
     "home": (home, "#c7ad62"),
     "site-theme": (theme, "#9ab8d2"),
@@ -128,6 +141,7 @@ ICONS = {
     "mystery-report": (mystery, "#c98d70"),
     "ngu-idle-dashboard": (ngu, "#88b68b"),
     "writing": (writing, "#a1abc5"),
+    "eastern-star": (eastern_star, "#8dc3d5"),
 }
 
 
