@@ -129,6 +129,15 @@ def eastern_star(draw, accent):
     draw.ellipse((91, 91, 101, 101), fill=accent)
 
 
+def puzzles(draw, accent):
+    draw.polygon(((96, 35), (157, 96), (96, 157), (35, 96)), outline=FG)
+    for x, y in ((72, 72), (120, 72), (72, 120), (120, 120)):
+        draw.ellipse((x - 7, y - 7, x + 7, y + 7), fill=FG)
+    draw.line((72, 72, 120, 120), fill=accent, width=7)
+    draw.line((120, 72, 72, 120), fill=MUTED, width=4)
+    draw.ellipse((88, 88, 104, 104), fill=BG, outline=accent, width=4)
+
+
 ICONS = {
     "home": (home, "#c7ad62"),
     "site-theme": (theme, "#9ab8d2"),
@@ -142,6 +151,7 @@ ICONS = {
     "ngu-idle-dashboard": (ngu, "#88b68b"),
     "writing": (writing, "#a1abc5"),
     "eastern-star": (eastern_star, "#8dc3d5"),
+    "puzzles": (puzzles, "#d29a67"),
 }
 
 
