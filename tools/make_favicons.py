@@ -138,6 +138,20 @@ def puzzles(draw, accent):
     draw.ellipse((88, 88, 104, 104), fill=BG, outline=accent, width=4)
 
 
+def box_puzzles(draw, accent):
+    boxes = (
+        (35, 63, 80, 123, "#b9574e"),
+        (74, 48, 119, 108, "#557aa7"),
+        (113, 68, 158, 128, "#5f8b70"),
+    )
+    for left, top, right, bottom, color in boxes:
+        draw.rectangle((left, top, right, bottom), fill=BG, outline=FG, width=4)
+        draw.line((left, top + 11, right, top + 11), fill=color, width=7)
+    draw.polygon(((96, 125), (116, 145), (96, 165), (76, 145)), fill=accent, outline=FG)
+    draw.line((96, 125, 96, 165), fill=FG, width=3)
+    draw.line((76, 145, 116, 145), fill=FG, width=3)
+
+
 ICONS = {
     "home": (home, "#c7ad62"),
     "site-theme": (theme, "#9ab8d2"),
@@ -152,6 +166,7 @@ ICONS = {
     "writing": (writing, "#a1abc5"),
     "eastern-star": (eastern_star, "#8dc3d5"),
     "puzzles": (puzzles, "#d29a67"),
+    "box-puzzles": (box_puzzles, "#c85f55"),
 }
 
 
