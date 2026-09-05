@@ -27,7 +27,7 @@ Major changes of subject may use a shared ruled ornament. It is punctuation, not
 
 A transition has one owner. When an ornament separates two sections, the preceding section gives up its closing rule; when a disclosure ends a section, do not add a second rule immediately beneath it. Parallel hairlines should describe rows or columns, never appear as accidental strata around whitespace.
 
-On a puzzle page, one quiet PNG-centered rule can separate the written rules from the solve image. Its orientation follows the layout; explanatory diagrams stay beside the rules they explain.
+On a puzzle page, one quiet PNG-centered rule marks the start of the main puzzle unit: its lead-in, solve links, and grids belong together below it. Complete rules and worked examples stay above it. Choose the boundary by meaning, not by the first image; the line must not separate a puzzle from its own introduction or links. Its orientation follows the layout.
 
 ## Earn every feature
 

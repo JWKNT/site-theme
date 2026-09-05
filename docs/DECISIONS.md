@@ -1,5 +1,23 @@
 # Design decisions
 
+## 2026-09-05 · 010 · Separate the main puzzle unit, not the first image
+
+**Evidence:** A first-diagram match can place the ornament before a worked example;
+moving it only to a main grid can instead strand that grid's lead-in or solve-link
+paragraph above the divider. Preserving image counts and order does not prove
+that the visual boundary describes the material correctly.
+**Decision:** Place one ornament after complete rules/examples and before the
+main puzzle unit as a whole: lead-in, solve links, grids, and reference diagrams.
+The public archive's resolver uses a uniquely named main SudokuPad link, with
+Penpa+ fallback, and keeps its containing paragraph. Two reviewed exceptions use
+the Loop main-puzzle lead-in and the first of Roller's paired main grids. Keep
+these mappings explicit and preserve every source word, link, and diagram.
+**Tradeoff:** Semantic boundary selection requires more source knowledge than a
+first-image selector. New or ambiguous structures need review or an explicit
+boundary instead of a guessed match. Reconsider the resolver when the content
+format changes, not merely because one image happens to be first. This clarifies
+the puzzle-transition portion of decision 009 without changing its other choices.
+
 ## 2026-09-05 · 009 · Useful density and consistent selection
 
 **Evidence:** The user identified mismatched reader controls, unexplained section

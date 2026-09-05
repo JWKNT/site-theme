@@ -141,15 +141,27 @@ flowing, short paginated table may keep its complete header static with a local
 `thead` override. Sort direction needs no visible priority digit; primary/secondary
 sorting belongs in explicit advanced controls and accessible labels.
 
-**Puzzle transitions.** Use one `.site-divider` with a decorative PNG between
-rules and the first diagram. The public `puzzles/build.mjs` inserts the divider
-before the first centered diagram block, preserving exact text, example/main-grid
-ordering, links, and later reference charts. Layout and orientation stay local: the Jekyll puzzle
-template uses a vertical divider for side-by-side material and a horizontal one
-when stacked. Its `puzzles.png` has empty `alt` inside the hidden decorative
-wrapper. Jekyll's `data-image-decoration` prevents the image-caption processor
-from framing it. Preserve explanatory diagrams beside their rule text; avoid a
-second border around the same transition.
+**Puzzle transitions.** Use one `.site-divider` with a decorative PNG at the
+start of the main puzzle unit, after complete rules and worked examples. The
+unit includes its lead-in, solve links, main grids, and reference diagrams; never
+put the ornament between those links or introductory words and their grids.
+The first image may be an example and is not a reliable boundary.
+
+The public renderer delegates boundary selection to `puzzles/lib/puzzle-content.mjs`.
+It uses a uniquely named main SudokuPad link (Penpa+ fallback) and retains the
+containing solve-link paragraph with the puzzle. Two reviewed exceptions put the
+divider before the Loop lead-in `And here is the main puzzle:` and before the
+first of Roller's paired main grids. Keep these exceptions explicit; do not turn
+them into a general first-image heuristic. Ambiguous new content needs an explicit
+semantic boundary rather than a guessed image match. Preserve exact text, links,
+all diagrams, and their source order. The current 126-page archive has 48 example
+diagrams before the boundary and 129 main/reference diagrams after it (177 total).
+
+Use `puzzles.png` with empty `alt` inside the hidden decorative wrapper; layout
+and orientation stay local. Jekyll's separate `data-image-decoration` opt-out keeps
+its image-caption processor from framing a decorative mark. Avoid a second border
+around the same transition. An existing layout-specific placement is not evidence
+that the main-unit boundary has been verified.
 
 **Dialogs.** Name the dialog with `aria-labelledby`. Place a native
 `<form method="dialog" class="ui-dialog-dismiss">` before its body, with a named

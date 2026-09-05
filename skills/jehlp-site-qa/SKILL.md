@@ -21,7 +21,11 @@ PNG masthead loading at its actual small size in both modes. Review the first
 useful viewport for empty hero space or unexplained number gutters. A paginated
 table must not also need internal two-axis scrolling; inspect first/last rows,
 details and sort direction. For a true matrix, test connected headers in each
-scroll direction. Puzzle dividers have one boundary and leave explanatory diagrams
-with their rule text.
+scroll direction. For puzzle dividers, inspect the complete rules/examples and
+the main puzzle's lead-in, solve links and grids on both sides of the boundary.
+An ornament before the first image is not sufficient: examples stay above, while
+the complete main puzzle unit stays below. Check the reviewed lead-in/paired-grid
+exceptions in docs/COMPONENTS.md and verify exact source text, link and diagram
+preservation; image counts alone cannot establish a correct semantic boundary.
 
 Fix demonstrated failures at the responsible layer. Stop optional testing when concrete risks are covered. Leave an honest checklist of unavailable gates; never treat a DOM stub or source regex as proof of browser accessibility.

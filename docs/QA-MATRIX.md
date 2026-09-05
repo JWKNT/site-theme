@@ -23,7 +23,8 @@ fresh generated build; the archived `_site` is stale after source edits.
 | Dashboard | Offline, loading, stale, valid state, unavailable fields | Truthful status; unknown is not zero; no mutation requests; hierarchy works with real content |
 | Solver | All four tabs, options, solve/step/cancel; offline dist | Board geometry intact; primary controls reachable; exported file works without network |
 | Jekyll | Essay, home/archive, puzzle, dark mode, footnote/popups | Fresh build; correct background; long-form measure and navigation work |
-| Public puzzles | Catalogue filters/sort/reset and single/multiple-image detail pages | 126 source records/177 diagrams and exact text/links unchanged; one PNG divider before first diagram; later examples/reference charts retain order |
+| Public puzzles | Complete rules/examples through main lead-in, solve links, and grids; ordinary, example-heavy, and paired-grid pages | One PNG divider at the start of the main puzzle unit, never before an instructional example or between a lead-in/link paragraph and its grids; 126 records, exact text/links/order, and all 177 diagrams preserved (48 examples above, 129 main/reference diagrams below) |
+| Puzzle boundary exceptions | Loop lead-in and Roller paired grids | Divider precedes `And here is the main puzzle:` for Loop and the first of Roller's paired main grids; no example absorbed into the main unit and no main grid stranded above |
 
 Capture representative before/after screenshots with viewport and theme in the
 filename. Record only observed results. Static tests do not establish visual

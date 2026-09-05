@@ -96,9 +96,13 @@ Blue carries links, focus, and selection. Dataset colors retain their meanings.
 Use muted ink for secondary text, and reserve faint ink for nonessential marks;
 check contrast in context. A section boundary has one owner. Preserve the existing
 rule/ornament grammar rather than stacking borders around the same whitespace.
-Puzzle rules and their solve image may have one PNG-centered divider: vertical
-when side by side, horizontal when stacked. Leave explanatory diagrams within the
-rules they illustrate, and do not frame a decorative mark as a content image.
+Place one PNG-centered divider at the start of the main puzzle unit, after the
+complete rules and worked examples. Keep the main puzzle's lead-in, solve-link
+paragraph, grids, and reference diagrams together below it. The first image may
+be an example, so image position alone cannot identify this boundary. Preserve
+the original text, links, diagram order, and paired-grid grouping; do not frame
+the decorative mark as a content image. The divider's orientation follows the
+page layout rather than changing the content's semantic grouping.
 
 ## Independent pages, related identities
 

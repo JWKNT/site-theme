@@ -1,5 +1,17 @@
 # Change record
 
+## 2026-09-05 · Main-puzzle boundary correction
+
+- Replaced the public archive's first-diagram placement rule with the start of
+  the main puzzle unit: complete rules/examples above; lead-in, solve links and
+  main/reference grids together below. The solve-link paragraph is preserved.
+- Documented the main-link resolver and its two reviewed lead-in/paired-grid
+  exceptions, retaining all 177 diagrams: 48 examples above and 129 main/reference
+  diagrams below the boundary. Source text, links, and order remain the contract.
+- Corrected the philosophy, component guidance, QA gates, and two existing skills.
+  This supersedes the first-diagram convention recorded below. See
+  `VALIDATION-2026-09-05-PUZZLE-BOUNDARIES.md` for observed checks and release evidence.
+
 ## 2026-09-05 · Page-specific consistency and reusable controls
 
 - Replaced masthead Unicode glyphs with 13 purpose-made transparent PNG marks.
