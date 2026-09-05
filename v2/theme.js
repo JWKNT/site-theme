@@ -14,7 +14,7 @@
       for (const key of legacyKeys) {
         const legacy = localStorage.getItem(key);
         if (legacy === "dark" || legacy === "light") {
-          localStorage.setItem(storageKey, legacy);
+          try { localStorage.setItem(storageKey, legacy); } catch {}
           return legacy;
         }
       }
@@ -25,6 +25,8 @@
   function updateControls(theme) {
     const dark = theme === "dark";
     const label = dark ? "Use light theme" : "Use dark theme";
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = dark ? "#131412" : "#fbfaf7";
     document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
       button.setAttribute("aria-pressed", String(dark));
       button.setAttribute("aria-label", label);
@@ -38,8 +40,6 @@
     root.dataset.theme = theme;
     root.classList.toggle("dark", dark);
     root.style.colorScheme = theme;
-    const meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.content = dark ? "#131412" : "#fbfaf7";
     updateControls(theme);
     const detail = { detail: { theme } };
     window.dispatchEvent(new CustomEvent("jehlp:themechange", detail));
@@ -85,6 +85,17 @@
   };
   if (typeof media.addEventListener === "function") media.addEventListener("change", followSystem);
   else media.addListener(followSystem);
+
+  // Same-origin pages share the preference; clearing it resumes system mode.
+  // A storage event is not written back, avoiding a cross-tab feedback loop.
+  window.addEventListener("storage", (event) => {
+    try { if (event.storageArea && event.storageArea !== localStorage) return; } catch { return; }
+    if (event.key !== storageKey && event.key !== null) return;
+    const value = event.newValue;
+    const valid = value === "dark" || value === "light";
+    followsSystem = !valid;
+    applyTheme(valid ? value : (media.matches ? "dark" : "light"));
+  });
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", setup, { once: true });
   else setup();

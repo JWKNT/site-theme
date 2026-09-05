@@ -10,9 +10,9 @@
 .theme-doc li + li { margin-top: .45rem; }
 .theme-doc pre { overflow-x: auto; padding: .8rem 1rem; border: 1px solid var(--line); background: var(--surface); font-size: .75rem; }
 .type-specimen { display: grid; grid-template-columns: 7rem 1fr; gap: .5rem 1.25rem; margin: 1rem 0; padding-block: .8rem; border-block: 1px solid var(--line); }
-.type-specimen dt { color: var(--muted); font: 600 .62rem/1.4 var(--sans); font-variant: small-caps; letter-spacing: .05em; }
+.type-specimen dt { color: var(--muted); font: 600 .875rem/1.4 var(--sans); font-variant: small-caps; letter-spacing: .05em; }
 .type-specimen dd { margin: 0; }
-.type-specimen .ui { font-family: var(--sans); font-size: .82rem; }
+.type-specimen .ui { font-family: var(--sans); font-size: .875rem; }
 .type-specimen .mono { font-family: var(--mono); font-size: .78rem; }
 .ornament-specimen { display: grid; grid-template-columns: repeat(6, 1fr); margin: 1rem 0; border-block: 1px solid var(--line); }
 .ornament-specimen span { display: grid; min-height: 3.2rem; place-items: center; color: var(--muted-strong); font: 1.05rem/1 var(--display); }

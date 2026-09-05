@@ -13,11 +13,12 @@
     <link rel="stylesheet" href="v2/docs.css">
   </head>
   <body>
+    <a class="skip-link" href="#theme-doc">Skip to content</a>
     <header class="site-header">
       <a class="site-title" href="https://jehlp.net/">jehlp.net</a>
-      <nav aria-label="Site links"><a href="philosophy.html">Philosophy</a></nav>
+      <nav aria-label="Site links"><a href="philosophy.html">Philosophy</a><a href="SKILLS.md">Codex skills</a><a href="docs/CHANGELOG.md">Changes</a></nav>
     </header>
-    <main class="theme-doc">
+    <main id="theme-doc" tabindex="-1" class="theme-doc">
       <header>
         <p class="eyebrow">shared foundation</p>
         <h1>Site theme</h1>
@@ -38,6 +39,18 @@
           <dt>Interface</dt><dd class="ui">Sans serif labels controls, filters, and quiet metadata.</dd>
           <dt>Data</dt><dd class="mono">0123456789 · ids · values · state</dd>
         </dl>
+      </section>
+      <section>
+        <h2>Readable at every density</h2>
+        <p>Keep reading at 16px or larger, regular controls at 14px, and secondary metadata at 12px. Wrap a toolbar before shrinking its labels. Plot annotations and puzzle candidates need their own measured treatment.</p>
+        <div class="table-scroll" tabindex="0" aria-label="Shared type and control scale">
+          <table><caption>Shared v2 scale</caption><thead><tr><th scope="col">Role</th><th scope="col">Token</th><th scope="col">Default</th></tr></thead>
+          <tbody><tr><th scope="row">Reading</th><td><code>--text-body</code></td><td>1rem</td></tr>
+          <tr><th scope="row">Interface</th><td><code>--text-ui</code></td><td>.875rem</td></tr>
+          <tr><th scope="row">Metadata</th><td><code>--text-meta</code></td><td>.75rem</td></tr>
+          <tr><th scope="row">Control height</th><td><code>--control-size</code></td><td>2.25rem · 2.75rem on touch</td></tr></tbody></table>
+        </div>
+        <details><summary>How to apply the scale</summary><p>The shared stylesheet supplies defaults. Consumer styles may still override them: repair the declaration that owns the layout and keep chart or board geometry local. See the <a href="docs/DESIGN-SYSTEM.md">design system</a> for ownership and exceptions.</p></details>
       </section>
       <section>
         <h2>Transitions</h2>

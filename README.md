@@ -51,3 +51,18 @@ Then open <http://localhost:8000/>.
 
 When changing the foundation, review both sparse and dense consumers, narrow
 and wide layouts, light and dark modes, keyboard focus, and reduced motion.
+
+## Design work and Codex
+
+- [Design system and ownership](docs/DESIGN-SYSTEM.md)
+- [Six portable Codex skills and installation](SKILLS.md)
+- [Repository inventory](docs/REPOSITORIES.md)
+- [Decisions](docs/DECISIONS.md) and [change record](docs/CHANGELOG.md)
+- [Validation](docs/VALIDATION.md) and [browser review matrix](docs/QA-MATRIX.md)
+- [Sol Extra High continuation](docs/SOL-HANDOFF.md)
+
+The September 2026 update retains v2's public contract and adds a readable body,
+interface, metadata and control scale. Its consumer, browser, print, offline,
+build, and routing checks are recorded in `docs/VALIDATION.md`. Run the controller
+checks with `node --test tests/*.test.mjs`. New skills are maintained in `skills/`
+and linked into local Codex discovery with `tools/install_skills.py`.
