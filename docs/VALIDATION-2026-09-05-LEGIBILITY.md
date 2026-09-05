@@ -78,10 +78,34 @@ source reviews and tests; browser observations below were made by the main agent
 
 ## Release
 
-Prepared for the already-authorized GitHub Pages publication. Publish the shared
-theme before the eight changed consumer repositories, then verify remote heads,
-Pages completion, and exact deployed file bytes. Albatross receives the reader
+Published the shared theme first, verified its seven release files, then pushed
+the eight changed consumer repositories. All nine Pages workflows completed
+successfully, including Box Logic's existing Lean, test, and production-build
+gates. Local and remote main heads matched; 40 cache-busted public release files
+returned HTTP200 and matched local SHA-256 bytes. Albatross receives the reader
 update through its shared stylesheet without needing a local commit.
+
+| Repository | UI commit | Successful Pages run |
+| --- | --- | --- |
+| site-theme | `193d9ab` | `33947858786` |
+| mystery-report | `4a851a4` | `33947910847` |
+| profile | `30c5d53` | `33947911115` |
+| ngu-idle-dashboard | `2b28d3c` | `33947910920` |
+| bl2 | `5bed154` | `33947910759` |
+| logical-solver | `eb753ae` | `33947910982` |
+| mtl-guide | `09261d7` | `33947910833` |
+| black-sheep-town | `fe5641b` | `33947910656` |
+| box-puzzles | `1489100` | `33947911058` |
+
+The theme completion record is a subsequent documentation-only commit. Public
+Pages responses use a 600-second cache lifetime; an already-open browser may need
+a hard refresh. The release verification uses fresh requests to distinguish
+cached old pages from the published bytes.
+
+Additional gallery check: copy examples and their buttons compute14px, with
+about13px clearance between button and code; native body row headings stay static.
+Matched before/after Mystery screenshots are saved in the task's
+`outputs/legibility-pass/` directory outside the repositories.
 
 Rollback bases: site-theme `34b328e`, mystery `dc12e56`, Profile `c55fd53`,
 dashboard `31272c9`, Armory `3ea90eb`, solver `892f4c5`, MTL `9e36d77`,
