@@ -23,6 +23,7 @@ themselves into existing consumers.
 | Responsive disclosure | `data-disclosure="(max-width: 650px)"` button + `aria-controls` region | Breakpoint, label, region layout | MTL contents, Armory filters, gallery |
 | Section index | `data-section-nav` on native anchor navigation | Section IDs, shell, section content | Profile, NGU dashboard, gallery |
 | Table overflow | `data-scroll-region` + accessible name on a wrapper | Caption/headings, column geometry, sorting, paging | Consensus, Profile, dashboard, MTL, gallery |
+| Table header band | `.ui-table` on one native table | Widths, numeric alignment, cell content, bounded wrapper height | Consensus, Profile, dashboard, MTL, Armory, gallery |
 | Dialog | `.ui-dialog`, `.ui-dialog-body`, `.ui-dialog-dismiss`, `data-dialog` | Title relationship, content, `showModal()`, domain actions | Armory, Profile, consensus, gallery |
 | Copy code | `data-copy-code` on `pre` containing `code` | The actual snippet | MTL, gallery |
 
@@ -77,6 +78,17 @@ scrolling is needed; existing descriptions are preserved. Resize observation
 handles disclosure/dialog opening and table size changes. Replacing the wrapper
 requires another enhancement call. Column widths and sticky identifiers stay
 local: a fixed first column can obscure most of a phone viewport.
+
+**Table header bands.** Add `class="ui-table"` to the native table inside its
+named overflow wrapper. The complete `thead` sticks as one opaque band; individual
+header cells and row headings stay in normal table layout. Separate borders with
+zero spacing keep the divider attached while scrolling. Do not split headings
+and rows into different tables or add a top margin inside the scroll region.
+Column widths, numeric alignment, and the wrapper's optional maximum height stay
+local. Use `scope="col"` / `scope="row"` and preserve native captions. Regular
+values and header labels are at least 14px in normal case; prose cells are 16px.
+Check horizontal, vertical, and combined scroll, not only the initial position.
+Without this optional stylesheet the native table remains usable.
 
 **Dialogs.** Name the dialog with `aria-labelledby`. Place a native
 `<form method="dialog" class="ui-dialog-dismiss">` before its body, with a named

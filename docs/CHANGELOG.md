@@ -1,5 +1,25 @@
 # Change record
 
+## 2026-09-05 · Legibility and connected-header correction
+
+- Promoted regular spreadsheet values, labels, and controls to normal-case 14px
+  type; retained 16px prose and secondary 12px provenance. Removed synthetic small
+  caps from task text across the shared foundation, readers, and local tools.
+- Added the opt-in native `.ui-table` header band and adopted it in the ranking,
+  Profile, dashboard, Armory, and generated guide. One sticky `thead`, opaque
+  background, and zero-spacing separate borders retain the header/row boundary.
+- Removed Profile's internal marker-table top gap and mobile unbounded scroll
+  overrides. Widened the dashboard's Item/Specials columns so populated rows stay
+  readable. Ranking titles now wrap rather than truncate with enlarged text.
+- Repaired mobile glossary reading order: each language heading stays directly
+  before its own definition; desktop headers remain aligned side by side.
+- Enlarged solver explanations, reader speakers/glossary prose, quiz labels, and
+  Box Logic answer labels. Rebuilt guide pages, Pages assets, and offline solver.
+- Added static regressions and explicit scrolled-state/computed-font QA gates.
+  Strengthened the shared print-only overflow reset against local screen heights.
+
+See `VALIDATION-2026-09-05-LEGIBILITY.md` for actual checks and scope boundaries.
+
 ## 2026-09-05 · Independent-page editorial pass
 
 - Removed global-home navigation from project headers, subpages, generated guide

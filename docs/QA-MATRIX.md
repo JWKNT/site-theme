@@ -14,6 +14,8 @@ fresh generated build; the archived `_site` is stale after source edits.
 | MTL | Mobile contents closed/open, Escape, heading choice, breakpoint change, no JS | Closed links untabbable; focus meaningful; desktop contents visible; reading survives without JS |
 | MTL | Long code and widest table | Local scrolling; copy button does not cover text |
 | Consensus | Empty results, reset, filter, sort, pagination, modal, export | Existing counts/data/export preserved; titled dialog and correct focus return |
+| All tables | Initial, horizontal, vertical, and combined scroll; first and last rows | Header/body column edges match; opaque connected header band; no blank inset strip, floating row headers, disappearing divider, or doubled rules |
+| Task typography | Inspect computed styles of values, labels, sorting buttons, explanations | At least 14px normal-case task labels/values and 16px prose; do not mistake nominal small-caps size for readable glyphs |
 | Profile | Controls, chromosome views, report dialog, narrow comparison table | No lost information; chart geometry unchanged; labels have readable equivalents |
 | Dashboard | Offline, loading, stale, valid state, unavailable fields | Truthful status; unknown is not zero; no mutation requests; hierarchy works with real content |
 | Solver | All four tabs, options, solve/step/cancel; offline dist | Board geometry intact; primary controls reachable; exported file works without network |

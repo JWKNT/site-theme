@@ -1,5 +1,20 @@
 # Design decisions
 
+## 2026-09-05 · 008 · Readable values and connected table headings
+
+**Evidence:** Follow-up review found 12px main ranking values, synthetic small-caps
+controls, collapsed-border sticky cells, and a 12px top gap inside Profile's marker
+table viewport. Initial screenshots did not expose all scrolled-state defects.
+**Decision:** Treat spreadsheet values as regular 14px task text, prose as 16px,
+and use normal-case interface labels. Add opt-in `.ui-table`: one native table,
+one opaque sticky `thead`, separate zero-spacing borders, static row headings.
+Adopt the contract across comparison pages and check actual column bounds while
+scrolled. Retain 12px only for secondary provenance, timestamps, and identifiers;
+puzzle marks and chart geometry retain their local scale.
+**Tradeoff:** Readable columns can require more local horizontal scrolling. That
+is preferable to silently shrinking meaningful text. Native table structure keeps
+headers and rows together without synchronized duplicate DOM or extra JavaScript.
+
 ## 2026-09-05 · 001 · Refine the existing v2 language
 
 **Evidence:** The attached foundation and consumers already agree on serif reading,

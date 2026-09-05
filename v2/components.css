@@ -18,6 +18,11 @@
 .ui-directory p { margin: .2rem 0 0; color: var(--muted-strong, #4a4945); }
 
 [data-scroll-region] { max-width: 100%; overflow: auto; scrollbar-width: thin; }
+/* One native table, one scroll context, one opaque header band. */
+.ui-table { margin: 0; border-collapse: separate; border-spacing: 0; font-size: var(--text-ui, .875rem); }
+.ui-table > thead { position: sticky; top: 0; z-index: 2; background: var(--surface, #f4f2ed); box-shadow: 0 1px 0 var(--line-strong, #aaa49a); }
+.ui-table > thead > tr > th { position: static; border-bottom: 1px solid var(--line-strong, #aaa49a); background: var(--surface, #f4f2ed); color: var(--muted-strong, #4a4945); font: 600 var(--text-ui, .875rem)/1.4 var(--sans, sans-serif); letter-spacing: normal; text-transform: none; }
+.ui-table > tbody > tr > th { position: static; }
 .ui-scroll-hint { margin: .3rem 0 .5rem; color: var(--muted, #6f6c66); font: var(--text-meta, .75rem)/1.5 var(--sans, sans-serif); }
 [data-section-nav] a { scroll-margin-inline: .75rem; }
 [data-section-nav] ~ section[id] { scroll-margin-top: var(--section-offset, 4rem); }
@@ -31,9 +36,11 @@
 .ui-dialog-body h2 { overflow-wrap: anywhere; }
 
 pre[data-copy-code] { position: relative; padding: calc(var(--control-size, 2.25rem) + 1rem) 1rem 1rem; overflow: auto; border: 1px solid var(--line, #d9d5cd); background: var(--surface, #f4f2ed); }
-.ui-copy { position: absolute; top: .35rem; right: .5rem; min-height: var(--control-size, 2.25rem); padding: .2rem .5rem; font: var(--text-meta, .75rem)/1.4 var(--sans, sans-serif); }
+.ui-copy { position: absolute; top: .35rem; right: .5rem; min-height: var(--control-size, 2.25rem); padding: .2rem .5rem; font: var(--text-ui, .875rem)/1.4 var(--sans, sans-serif); }
 
 @media print {
   .ui-scroll-hint, .ui-copy, [data-disclosure], [data-disclosure-close], .ui-dialog-dismiss { display: none !important; }
-  [data-scroll-region] { max-height: none; overflow: visible; }
+  /* Printing must release later page-specific scrollport heights. */
+  [data-scroll-region] { max-height: none !important; overflow: visible !important; }
+  .ui-table > thead { position: static; box-shadow: none; }
 }

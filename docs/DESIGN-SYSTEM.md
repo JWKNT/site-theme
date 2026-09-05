@@ -35,6 +35,10 @@ Tiny puzzle candidate marks and chart annotations need a local solution (zoom,
 detail view, equivalent text); enlarging every value blindly can break geometry.
 Do not silently shrink ordinary labels below the scale to make a layout fit.
 Move controls to a second line, simplify columns, or use bounded overflow instead.
+Use normal case for task labels and table headings: synthetic small caps can
+shrink lowercase glyphs despite a nominal 14px font size. Main spreadsheet values
+are task text, not secondary metadata. Reserve small caps for occasional editorial
+eyebrows, never as a way to fit controls or columns.
 
 ## Ownership and CSS order
 
