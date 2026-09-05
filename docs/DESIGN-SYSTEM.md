@@ -40,8 +40,13 @@ Move controls to a second line, simplify columns, or use bounded overflow instea
 `v2/base.css`: palette, type roles, common header/shell, focus, controls, tables,
 print foundation, reduced-motion behavior. `v2/theme.js`: saved/system preference,
 control creation, browser chrome, and both theme events. `v2/docs.css`: theme
-reference pages. `v2/reader.css`: a separate legacy reader surface whose consumers
-were not attached; it still needs its own measured readability pass.
+reference pages. `v2/reader.css`: the shared bilingual and English reader surface,
+used by Black Sheep Town and Albatross Koukairoku.
+
+`v2/components.css` and `v2/components.js` are an optional layer for directories,
+controls, disclosures, navigation, overflow, dialogs, and copying. See
+`COMPONENTS.md` for explicit contracts and the working gallery. Existing pages do
+not gain behavior merely by using a coincidentally similar class name.
 
 Local CSS owns data visualization, board geometry, tables with special columns,
 and page-specific hierarchy. Local files currently contain shared overrides;

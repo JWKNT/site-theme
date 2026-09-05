@@ -23,6 +23,12 @@ the public routes below were confirmed before release.
 
 ## Base commits and checks
 
+This section preserves the first-pass starting points. The second component pass,
+its seven consumer commits, and immediate rollback bases are recorded in
+`VALIDATION-2026-09-05-COMPONENTS.md`. That pass additionally edits the homepage
+and BL2, leaves both reader repositories unchanged while refining shared reader
+CSS, and does not modify the source-only Jekyll checkout.
+
 - `site-theme`: `e9a85b3c177050af966e88ec1d0afd85e6b58e3f`; `node --test tests/*.test.mjs`.
 - `logical-solver`: `27b6e33b8f88d52ee8ff2a3c2bc42b45639baf6c`; `node build.js`; existing Node tests.
 - `mtl-guide`: `68db8574e56229f0023985ece85fededf5155d6c`; `node build.js`; syntax + TSV validation.

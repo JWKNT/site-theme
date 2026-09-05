@@ -39,3 +39,31 @@ explicit catalog and a symlink installer for local Codex discovery. Keep repo
 instructions short and route to these maintained sources.
 **Tradeoff:** User-level links point to the local checkout and must be recreated
 if it moves. Do not install a second independent copy that will drift.
+
+## 2026-09-05 · 005 · Share behaviors without prescribing page layouts
+
+**Evidence:** Profile and NGU duplicated section-index controllers; Profile,
+consensus, and BL2 duplicated modal shells; MTL and BL2 needed the same mobile
+disclosure focus contract. Dense tables could overflow without a visible cue.
+**Decision:** Add opt-in `v2/components.css` and `v2/components.js`, native markup
+contracts, an idempotent `JehlpUI.enhance(root)`, and a working gallery. Keep filter
+state, data interpretation, geometry, and network access in the consuming page.
+Use a seventh focused skill to preserve these ownership boundaries for new pages.
+**Tradeoff:** Consumers depend on new optional assets, so publish assets first.
+The controllers have document lifetimes, suited to these static pages; add
+disposal only when a real virtualized consumer needs it. Reconsider an abstraction
+when consumers differ semantically, not merely because local styling differs.
+
+## 2026-09-05 · 006 · Prefer native disclosure, dialog, and table semantics
+
+**Evidence:** BL2's old translated drawer left offscreen controls in the keyboard
+order. Generic dialog-target click handlers also dismissed clicks on padding.
+MTL's block-scrolling tables and sticky first columns impaired narrow comparisons.
+**Decision:** Use native `hidden` for in-flow mobile contents/filters, native modal
+dialogs with `method="dialog"` close forms, and named overflow wrappers around
+unmodified tables. Add a tab stop and directional cue only when needed. Keep
+focus transfer explicit on activation and leave passive scrolling focus alone.
+**Tradeoff:** Opening filters moves results down, and full tables still require
+local horizontal scrolling. This preserves context and readable columns without
+building a second modal system or changing the underlying data. Reconsider only
+if real filter volume or comparison needs make this model unsuitable.

@@ -1,0 +1,39 @@
+/* Optional patterns. Load after base.css and before page-specific styles. */
+.ui-toolbar { display: flex; flex-wrap: wrap; align-items: end; gap: .65rem .9rem; }
+.ui-field { display: grid; gap: .25rem; min-width: 0; color: var(--muted, #6f6c66); font: var(--text-ui, .875rem)/1.4 var(--sans, sans-serif); }
+.ui-field :is(input, select, textarea) { min-width: 0; max-width: 100%; min-height: var(--control-size, 2.25rem); font: inherit; color: var(--ink, #181817); }
+.ui-field--search { flex: 1 1 18rem; }
+.ui-field--search input { width: 100%; }
+.ui-segmented { display: flex; flex-wrap: wrap; gap: 0; }
+.ui-segmented > :is(button, a) { position: relative; min-height: var(--control-size, 2.25rem); margin: 0; padding: .4rem .65rem; border: 1px solid var(--line-strong, #aaa49a); color: var(--muted-strong, #4a4945); font: var(--text-ui, .875rem)/1.4 var(--sans, sans-serif); text-decoration: none; }
+.ui-segmented > :is(button, a) + :is(button, a) { margin-left: -1px; }
+.ui-segmented > :is([aria-pressed="true"], [aria-current="page"]) { z-index: 1; border-color: var(--blue, #35567a); background: var(--surface-blue, #edf1f4); color: var(--blue-dark, #203e61); }
+.ui-segmented > :focus-visible { z-index: 2; }
+
+/* An editorial directory, not a grid of cards. Child layout stays local. */
+.ui-directory { margin: 0; padding: 0; list-style: none; }
+.ui-directory > li { padding: var(--directory-space, .8rem) 0; border-bottom: var(--directory-rule, 1px solid var(--line, #d9d5cd)); }
+.ui-directory > li:last-child { border-bottom: 0; }
+.ui-directory a { font-weight: 600; }
+.ui-directory p { margin: .2rem 0 0; color: var(--muted-strong, #4a4945); }
+
+[data-scroll-region] { max-width: 100%; overflow: auto; scrollbar-width: thin; }
+.ui-scroll-hint { margin: .3rem 0 .5rem; color: var(--muted, #6f6c66); font: var(--text-meta, .75rem)/1.5 var(--sans, sans-serif); }
+[data-section-nav] a { scroll-margin-inline: .75rem; }
+[data-section-nav] ~ section[id] { scroll-margin-top: var(--section-offset, 4rem); }
+
+.ui-dialog { width: min(var(--dialog-width, 48rem), calc(100% - 2rem)); max-height: calc(100vh - 2rem); max-height: calc(100dvh - 2rem); margin: auto; padding: 0; overflow: auto; overscroll-behavior: contain; border: 1px solid var(--line-strong, #aaa49a); border-radius: 0; background: var(--paper, #fbfaf7); color: var(--ink, #181817); }
+.ui-dialog::backdrop { background: rgb(0 0 0 / 48%); }
+.ui-dialog-body { padding: clamp(1rem, 3vw, 1.75rem); }
+.ui-dialog-dismiss { position: sticky; top: .5rem; z-index: 3; float: right; margin: .5rem .5rem 0 0; }
+.ui-dialog-dismiss button { display: grid; width: var(--control-size, 2.25rem); min-height: var(--control-size, 2.25rem); padding: 0; place-items: center; background: var(--paper, #fbfaf7); font-size: 1.25rem; }
+.ui-dialog-body > :is(h2, .dialog-kicker) { padding-right: 2rem; }
+.ui-dialog-body h2 { overflow-wrap: anywhere; }
+
+pre[data-copy-code] { position: relative; padding: calc(var(--control-size, 2.25rem) + 1rem) 1rem 1rem; overflow: auto; border: 1px solid var(--line, #d9d5cd); background: var(--surface, #f4f2ed); }
+.ui-copy { position: absolute; top: .35rem; right: .5rem; min-height: var(--control-size, 2.25rem); padding: .2rem .5rem; font: var(--text-meta, .75rem)/1.4 var(--sans, sans-serif); }
+
+@media print {
+  .ui-scroll-hint, .ui-copy, [data-disclosure], [data-disclosure-close], .ui-dialog-dismiss { display: none !important; }
+  [data-scroll-region] { max-height: none; overflow: visible; }
+}

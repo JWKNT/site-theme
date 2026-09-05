@@ -18,4 +18,20 @@
 .ornament-specimen span { display: grid; min-height: 3.2rem; place-items: center; color: var(--muted-strong); font: 1.05rem/1 var(--display); }
 .ornament-specimen span + span { border-left: 1px solid var(--line); }
 .philosophy-doc section p, .philosophy-doc section li { max-width: var(--measure); }
+.component-doc { width: min(58rem, calc(100% - 2 * var(--gutter))); padding-top: 2rem; }
+.component-doc .section-index { margin-top: 1.5rem; }
+.component-doc > section > h2 { border-top: 0; }
+.component-doc > section { padding-top: 1rem; border-top: 1px solid var(--line); }
+.component-doc > section:first-of-type { margin-top: 1.5rem; padding-top: 0; border-top: 0; }
+.component-doc .ui-directory { padding-left: 0; }
+.component-doc .ui-directory > li + li { margin-top: 0; }
+.component-doc p { overflow-wrap: anywhere; }
+.component-directory > li { display: grid; grid-template-columns: minmax(10rem, 1fr) 2fr; gap: 1rem; }
+.component-controls { padding-block: .5rem; }
+.component-patterns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem; }
+.component-patterns li { min-width: 0; }
+.component-table { min-width: 44rem; font-size: var(--text-ui); }
+.component-table caption { padding: .5rem 0; text-align: left; font-family: var(--sans); color: var(--muted); }
+.component-contents { display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; padding: .75rem 0; font-family: var(--sans); }
+@media (max-width: 42rem) { .component-directory > li, .component-patterns { grid-template-columns: 1fr; gap: .2rem; } }
 @media (max-width: 34rem) { .type-specimen { grid-template-columns: 1fr; } }

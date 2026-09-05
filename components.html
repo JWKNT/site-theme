@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Working, reusable interface patterns for jehlp.net pages.">
+    <link rel="canonical" href="https://jehlp.net/site-theme/components.html">
+    <meta name="theme-color" content="#fbfaf7">
+    <title>Components · jehlp.net</title>
+    <link rel="icon" href="v2/favicons/site-theme.png" type="image/png">
+    <script src="v2/theme.js"></script>
+    <link rel="stylesheet" href="v2/base.css">
+    <link rel="stylesheet" href="v2/components.css">
+    <link rel="stylesheet" href="v2/docs.css">
+    <script src="v2/components.js" defer></script>
+    <script src="v2/components-demo.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#components">Skip to components</a>
+    <header class="site-header"><a class="site-title" href="index.html">Site theme</a><nav aria-label="Site links"><a href="components.html" aria-current="page">Components</a><a href="philosophy.html">Philosophy</a><a href="https://jehlp.net/">Projects</a></nav></header>
+    <main class="theme-doc component-doc" id="components" tabindex="-1">
+      <header><p class="eyebrow">working patterns</p><h1>Small pieces, useful pages</h1><p class="lede">Use a directory for browsing, a toolbar for filtering, and a quiet index for long pages. These examples share behavior while leaving the material in charge of the layout.</p></header>
+      <nav class="section-index" data-section-nav aria-label="Component sections"><a href="#directory">Directory</a><a href="#controls">Controls</a><a href="#tables">Tables</a><a href="#details">Dialogs</a><a href="#navigation">Navigation</a><a href="#use">Use</a></nav>
+      <section id="directory"><h2>Directory</h2><p>Links and explanations form rows. Change the columns to suit the material; keep the list semantics.</p>
+        <ul class="ui-directory component-directory"><li><a href="philosophy.html">Site philosophy</a><p>The principles behind the shared visual language.</p></li><li><a href="docs/COMPONENTS.md">Component contracts</a><p>Markup, ownership, dynamic content, and graceful fallback.</p></li><li><a href="SKILLS.md">Authoring skills</a><p>Reusable guidance for future pages and shared changes.</p></li></ul>
+        <details><summary>Directory markup</summary><pre data-copy-code><code>&lt;ul class="ui-directory"&gt;
+  &lt;li&gt;&lt;a href="guide.html"&gt;Guide&lt;/a&gt;
+    &lt;p&gt;A short explanation of what the reader will find.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre></details>
+      </section>
+      <section id="controls"><h2>Controls near their results</h2><p>Native labels and controls wrap as a group. This small catalogue is a working example: search or change the surface to filter it.</p>
+        <form class="ui-toolbar component-controls" id="component-filter" role="search"><label class="ui-field ui-field--search">Find a pattern<input type="search" name="query" placeholder="Navigation, table, reading…" autocomplete="off"></label><label class="ui-field">Surface<select name="surface"><option value="all">All surfaces</option><option value="reading">Reading</option><option value="data">Data</option></select></label><button type="reset">Reset</button></form>
+        <p class="result-status" id="component-count" role="status">6 patterns</p>
+        <ul class="ui-directory component-patterns" id="component-patterns"><li data-surface="reading"><a href="#directory">Directory</a><p>Browse a finite set of documents or projects.</p></li><li data-surface="data"><a href="#controls">Toolbar and fields</a><p>Keep search, filters, and reset together.</p></li><li data-surface="data"><a href="#tables">Scrollable table</a><p>Compare columns without shrinking their labels.</p></li><li data-surface="data"><a href="#details">Native dialog</a><p>Inspect a record and return to its opener.</p></li><li data-surface="reading"><a href="#navigation">Responsive disclosure</a><p>Keep mobile contents and filters in the document.</p></li><li data-surface="reading"><a href="#use">Copyable code</a><p>Reuse a snippet with clear success or fallback.</p></li></ul>
+        <p id="component-empty" hidden>No patterns match. Clear the search or choose all surfaces.</p>
+      </section>
+      <section id="tables"><h2>Show where the table continues</h2><p>A cue appears only when columns extend beyond the viewport. Focus the table region and use the arrow keys to scroll. The table keeps its native headings and caption.</p>
+        <div class="table-scroll" data-scroll-region aria-label="Pattern compatibility"><table class="component-table"><caption>Pattern compatibility</caption><thead><tr><th scope="col">Pattern</th><th scope="col">Without JavaScript</th><th scope="col">Keyboard behavior</th><th scope="col">Layout ownership</th></tr></thead><tbody><tr><th scope="row">Directory</th><td>All links are available</td><td>Native links</td><td>Page-specific columns</td></tr><tr><th scope="row">Responsive disclosure</th><td>Contents remains visible</td><td>Toggle, Escape, focus return</td><td>Page-specific breakpoint</td></tr><tr><th scope="row">Dialog</th><td>Native close form works once open</td><td>Escape and native focus return</td><td>Shared shell; local content</td></tr></tbody></table></div>
+        <details><summary>Table markup</summary><pre data-copy-code><code>&lt;div class="table-scroll" data-scroll-region aria-label="Comparison"&gt;
+  &lt;table&gt;…caption, headings, and rows…&lt;/table&gt;
+&lt;/div&gt;</code></pre></details>
+      </section>
+      <section id="details"><h2>One record, in context</h2><p>A native dialog handles focus containment and Escape. The shared shell keeps its close control reachable while long content scrolls.</p><button id="component-open-dialog" type="button">Inspect this pattern</button>
+        <details><summary>Dialog markup</summary><pre data-copy-code><code>&lt;dialog class="ui-dialog" data-dialog aria-labelledby="record-title"&gt;
+  &lt;form method="dialog" class="ui-dialog-dismiss"&gt;
+    &lt;button aria-label="Close details"&gt;×&lt;/button&gt;
+  &lt;/form&gt;
+  &lt;div class="ui-dialog-body"&gt;
+    &lt;h2 id="record-title"&gt;Record title&lt;/h2&gt;
+    &lt;p&gt;Record content.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;</code></pre></details>
+      </section>
+      <section id="navigation"><h2>Navigation that follows the reading</h2><p>The index above marks the current section as you scroll. Following a link places focus in the target section; manual scrolling does not move keyboard focus.</p>
+        <button type="button" data-disclosure="(max-width: 650px)" aria-controls="component-contents" aria-expanded="false" hidden>Contents example</button>
+        <nav class="component-contents" id="component-contents" aria-label="Example contents"><a href="#directory">Directory</a><a href="#tables">Tables</a><a href="#details">Dialogs</a></nav>
+        <p class="quiet">On a narrow screen, the contents above becomes an in-flow disclosure. Press Escape to close it. Without the optional script, its links remain visible.</p>
+        <details><summary>Disclosure markup</summary><pre data-copy-code><code>&lt;button data-disclosure="(max-width: 650px)"
+  aria-controls="contents" aria-expanded="false" hidden&gt;Contents&lt;/button&gt;
+&lt;nav id="contents" aria-label="On this page"&gt;
+  &lt;a href="#introduction"&gt;Introduction&lt;/a&gt;
+&lt;/nav&gt;</code></pre></details>
+      </section>
+      <section id="use"><h2>Use only what the page needs</h2><p>Load the optional component layer after the foundation and before local styles. Behavior is enabled by explicit data attributes. Unmarked pages keep their existing behavior.</p><pre data-copy-code><code>&lt;script src="https://jehlp.net/site-theme/v2/theme.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="https://jehlp.net/site-theme/v2/base.css"&gt;
+&lt;link rel="stylesheet" href="https://jehlp.net/site-theme/v2/components.css"&gt;
+&lt;link rel="stylesheet" href="assets/styles.css"&gt;
+&lt;script src="https://jehlp.net/site-theme/v2/components.js" defer&gt;&lt;/script&gt;</code></pre><p>For components added later, call <code>window.JehlpUI?.enhance(container)</code>. Repeated calls are safe. See the <a href="docs/COMPONENTS.md">full component contracts</a> for examples and boundaries.</p></section>
+    </main>
+    <dialog class="ui-dialog" data-dialog id="component-dialog" aria-labelledby="component-dialog-title"><form method="dialog" class="ui-dialog-dismiss" id="component-dismiss"><button aria-label="Close pattern details">×</button></form><div class="ui-dialog-body"><p class="eyebrow">reusable behavior</p><h2 id="component-dialog-title">Native dialog</h2><p>Keep the record’s title, explanation, and actions together. Open with <code>showModal()</code> after filling the content. Close with a native <code>method="dialog"</code> form.</p><p>Escape returns you to the opener. Clicking inside the dialog—including its padding—keeps it open. A click begun and finished on the backdrop closes it.</p><button type="submit" form="component-dismiss">Done</button></div></dialog>
+  </body>
+</html>

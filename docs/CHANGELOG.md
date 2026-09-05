@@ -1,5 +1,31 @@
 # Change record
 
+## 2026-09-05 · Astra component and page pass
+
+- Added an optional, dependency-free component layer with a working gallery and
+  explicit contracts: directories, toolbars/fields, segmented selections,
+  responsive disclosures, section indexes, table overflow, native dialog shells,
+  and copyable code. Existing unmarked pages keep their behavior.
+- Adopted real shared patterns across the homepage, MTL guide, BL2 armory,
+  consensus report, Profile, and NGU dashboard. Removed duplicated listeners and
+  shell CSS while leaving datasets, sorting, telemetry, and puzzle rules local.
+- Replaced BL2's offscreen mobile filter drawer with an in-flow disclosure;
+  improved its result-count announcements, native dialog naming/focus, metadata,
+  and ruled mobile list. Added visible horizontal-scroll cues to dense tables.
+- Improved homepage/guide directory descriptions, promoted Box Logic into Tools,
+  simplified redundant report/reader rules, and aligned the solver's dark UI with
+  the shared palette without recoloring puzzle geometry.
+- Regenerated all 14 MTL documents and the self-contained solver export. Added
+  component behavior tests, documented adoption boundaries, and created/installed
+  the seventh maintained skill, `jehlp-components`.
+- Reviewed all 12 local site surfaces at narrow/wide dark layouts and 10 at
+  narrow/wide light layouts plus doubled mobile text. Exercised disclosures,
+  modal focus, filters, native table scrolling, no-script contents, touch/reduced
+  motion, print, and offline solver operation.
+
+See `VALIDATION-2026-09-05-COMPONENTS.md` for actual checks, release boundaries,
+the randomized solver-test caveat, and rollback bases.
+
 ## 2026-09-05 · Sol completion
 
 ### Completed
