@@ -82,14 +82,47 @@ inspected at their actual small display size in both palettes.
   changed. The existing generated Pages directory stays ignored.
 - Solver: rebuilt its single-file export with the embedded PNG and passed the
   focused auto/source smoke test. No engine changes; the full randomized battery
-  was not rerun. Armory: syntax checks and browser sort/reset; no test suite exists.
+  was not rerun. With browser networking disabled, all four tabs switched and
+  retained the loaded embedded PNG. Armory: syntax checks and browser sort/reset;
+  no test suite exists.
 - Six updated skills passed the skill-creator quick validator. Diff checks passed.
 
 ## Release
 
-Publication is authorized by the user. Shared assets publish and are verified
-before consumers. Release commit/run identifiers and public-byte checks will be
-added after deployment completes.
+Published and verified the shared theme first, then pushed all 12 consumer/source
+repositories. All 12 public Pages deployments succeeded. A bounded six-request
+read-only verifier checked 188 public HTML, CSS, JavaScript and PNG files: every
+response was HTTP 200 and matched local SHA-256 bytes, including all 126 public
+puzzle pages and Box Logic's current hashed production assets.
+
+| Repository | UI commit | Successful Pages run |
+| --- | --- | --- |
+| site-theme | `3c23448` | `33979366165` |
+| Albatross | `9bbc9b9` | `33979435865` |
+| Black Sheep Town | `2f0916b` | `33979435297` |
+| Profile | `287ec43` | `33979435868` |
+| Mystery | `7d5cda0` | `33979435481` |
+| Dashboard | `25ab89a` | `33979435039` |
+| Armory | `d25ff0f` | `33979435834` |
+| Solver | `39d2013` | `33979435474` |
+| MTL | `c0ed91b` | `33979435009` |
+| Homepage | `ffd399c` | `33979435113` |
+| Box Logic | `0ea8914` | `33979435735` |
+| Public puzzles | `8317190` | `33979435475` |
+| Private Jekyll source | `4ce6c9a` | Not deployed; Pages disabled |
+
+Live-browser checks confirmed Albatross's enhanced Voyage selection changed to
+Kuro and its canonical chapter 2001 while displaying Chapter 01; both controls
+remain 36px. Mystery's 390px table fit its 362px surface with three columns and
+seven enhanced dropdowns; Next page displayed rank 51, focused results and
+scrolled them to the viewport top. The live A38 puzzle fit at 390px with a loaded
+32px masthead, 28px divider, and full-width diagram. PNGs loaded from the published theme path.
+The private source push used its existing remote redirect, without rewriting it.
+This completion record is a subsequent documentation-only theme commit.
+
+Public assets can remain cached for 600 seconds; an already-open page may need a
+hard refresh. The verification requests were cache-busted. The exact verifier is
+saved in the task workspace as `work/verify-specifics-release.mjs`.
 
 Excluded: both theme `.DS_Store` files, existing private essay moves/deletions,
 deleted private build helpers, all bot changes and runtime data, the preserved
