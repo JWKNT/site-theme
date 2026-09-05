@@ -3,7 +3,8 @@
 The direction continues the existing philosophy: serif reading, sans interface,
 monospaced values, paper and charcoal surfaces, restrained blue, square controls,
 and thin rules. Improve the ability to read and operate the material before
-changing its visual identity. This is an ergonomic refinement of v2, not a new brand.
+adding decoration. Subject identity belongs inside this common language, not in
+a separate visual system for each page.
 
 ## Choose the surface from the task
 
@@ -76,6 +77,27 @@ Blue carries links, focus, and selection. Dataset colors retain their meanings.
 Use muted ink for secondary text, and reserve faint ink for nonessential marks;
 check contrast in context. A section boundary has one owner. Preserve the existing
 rule/ornament grammar rather than stacking borders around the same whitespace.
+
+## Independent pages, related identities
+
+Each project stands alone: no Projects, Home, linked site logo, or footer route
+back to the global directory. Project-local navigation, source links, downloads,
+and canonical metadata remain useful. The global directory can link out to each
+project without requiring a return link.
+
+Use the opt-in identity header in `COMPONENTS.md`: one small decorative subject
+mark, a serif title, and only useful local navigation. Blue, plum, teal, and ochre
+identity tones are available in both color modes. Reserve these for marks and
+small editorial accents; links, focus, selection, and data/status colors keep
+their existing meanings. Do not tint the whole reading surface.
+
+Give the material room: margin numbers can orient a long page, a serif row title
+can give a collection character, and open lists often need fewer rules than boxes.
+Remove headings that repeat the navigation and instructions already conveyed by
+controls. Keep scientific uncertainty, privacy boundaries, provenance, failure
+states, and instructions needed to operate an unfamiliar tool. On small screens,
+bring margin labels into the content flow; never pay for decoration with overflow
+or smaller text.
 
 Keep standard icon URLs relative to their stylesheet. Inline builds must embed
 the referenced assets. Do not trade an offline deliverable for an unnoticed CDN

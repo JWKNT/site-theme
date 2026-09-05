@@ -16,6 +16,7 @@ themselves into existing consumers.
 
 | Pattern | Shared contract | Page responsibility | Current adopters |
 | --- | --- | --- | --- |
+| Page identity | `.site-header--identity`, `.site-brand`, `.site-mark`, `data-site-tone` in base CSS | Subject mark/title, useful local links, no global-home link | Theme docs, guide, readers, reports, puzzles, writing |
 | Directory | `.ui-directory`, list/link semantics, row boundaries | Columns and grouping; `--directory-rule` / `--directory-space` | Homepage, MTL, gallery |
 | Toolbar | `.ui-toolbar`, `.ui-field`, `.ui-field--search` | Labels, filter state, widths, result rendering | Armory, consensus, gallery |
 | Segmented controls | `.ui-segmented`, `aria-pressed` buttons or `aria-current="page"` links | Selection state and actions; not an ARIA tab widget | Consensus |
@@ -29,6 +30,27 @@ CSS classes define appearance; data attributes opt into behavior. Do not put
 filtering, dataset interpretation, telemetry, puzzle rules, or network calls here.
 
 ## Behavior contracts
+
+**Page identity.** This is CSS-only and needs no optional component script. Add
+`data-site-tone="blue"` (or `plum`, `teal`, `ochre`) to the body. Use a plain title
+on the project landing page; a subpage may link to that project's own landing
+page. Never point the brand or navigation to the global home directory. The
+decorative mark is hidden from assistive technology; the title remains text.
+Keep one mark per header and let the navigation wrap naturally. Long titles may
+wrap; local puzzle navigation can use a named horizontal scroll region.
+
+```html
+<header class="site-header site-header--identity">
+  <div class="site-brand">
+    <span class="site-mark" aria-hidden="true">§</span>
+    <span class="site-title">Project title</span>
+  </div>
+  <nav aria-label="Page links">
+    <a href="#reference">Reference</a>
+    <button type="button" data-theme-toggle aria-label="Use dark theme">◐</button>
+  </nav>
+</header>
+```
 
 **Disclosures.** Start the toggle `hidden` and the region visible. The script
 exposes the toggle at its narrow breakpoint and uses native `hidden` on the closed

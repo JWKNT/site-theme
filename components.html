@@ -15,11 +15,11 @@
     <script src="v2/components.js" defer></script>
     <script src="v2/components-demo.js" defer></script>
   </head>
-  <body>
+  <body data-site-tone="blue">
     <a class="skip-link" href="#components">Skip to components</a>
-    <header class="site-header"><a class="site-title" href="index.html">Site theme</a><nav aria-label="Site links"><a href="components.html" aria-current="page">Components</a><a href="philosophy.html">Philosophy</a><a href="https://jehlp.net/">Projects</a></nav></header>
+    <header class="site-header site-header--identity"><div class="site-brand"><span class="site-mark" aria-hidden="true">✣</span><a class="site-title" href="index.html">Site theme</a></div><nav aria-label="Site links"><a href="components.html" aria-current="page">Components</a><a href="philosophy.html">Philosophy</a></nav></header>
     <main class="theme-doc component-doc" id="components" tabindex="-1">
-      <header><p class="eyebrow">working patterns</p><h1>Small pieces, useful pages</h1><p class="lede">Use a directory for browsing, a toolbar for filtering, and a quiet index for long pages. These examples share behavior while leaving the material in charge of the layout.</p></header>
+      <header><h1>Components</h1><p class="lede">Shared patterns for independent pages.</p></header>
       <nav class="section-index" data-section-nav aria-label="Component sections"><a href="#directory">Directory</a><a href="#controls">Controls</a><a href="#tables">Tables</a><a href="#details">Dialogs</a><a href="#navigation">Navigation</a><a href="#use">Use</a></nav>
       <section id="directory"><h2>Directory</h2><p>Links and explanations form rows. Change the columns to suit the material; keep the list semantics.</p>
         <ul class="ui-directory component-directory"><li><a href="philosophy.html">Site philosophy</a><p>The principles behind the shared visual language.</p></li><li><a href="docs/COMPONENTS.md">Component contracts</a><p>Markup, ownership, dynamic content, and graceful fallback.</p></li><li><a href="SKILLS.md">Authoring skills</a><p>Reusable guidance for future pages and shared changes.</p></li></ul>

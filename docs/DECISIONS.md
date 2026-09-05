@@ -67,3 +67,19 @@ focus transfer explicit on activation and leave passive scrolling focus alone.
 local horizontal scrolling. This preserves context and readable columns without
 building a second modal system or changing the underlying data. Reconsider only
 if real filter volume or comparison needs make this model unsuitable.
+
+## 2026-09-05 · 007 · Related identities, independent pages
+
+**Evidence:** The user requested more memorable but minimal pages, less redundant
+copy, and no route back to the global homepage. Repeated Projects links occupied
+every masthead without helping the page's own task.
+**Decision:** Share a CSS-only identity header: one decorative subject mark, a
+serif title, optional muted blue/plum/teal/ochre accents, and useful project-local
+navigation. Remove global-home links from authored and generated surfaces. Let
+margin labels, type hierarchy, open rows, and whitespace provide character while
+preserving data colors, scientific caveats, privacy boundaries, and tool rules.
+**Tradeoff:** Discovery from the homepage is intentionally one-way. Header tones
+are not a new data or status vocabulary. Decoration must yield to text at narrow
+widths; the mark's reserved width scales with its font so enlarged text cannot
+collide with the title. Future pages should adopt this additive contract rather
+than copying local masthead rules.

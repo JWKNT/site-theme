@@ -1,5 +1,26 @@
 # Change record
 
+## 2026-09-05 · Independent-page editorial pass
+
+- Removed global-home navigation from project headers, subpages, generated guide
+  documents, the standalone solver, writing layouts, and the bot dashboard mirror.
+  Project-local navigation, source links, and canonical metadata remain intact.
+- Added an opt-in identity masthead with one subject mark, serif title, and four
+  contrast-checked light/dark accent tones. Documented the contract and updated the
+  existing site-design skill instead of creating a duplicate skill.
+- Gave the guide and Profile margin indexes; opened ancestry, lineage, armory
+  details, and scoring rows; simplified reader chrome and report version tabs;
+  removed dashboard gradients and redundant labels. Shortened the homepage and
+  guide directories while preserving substantive guidance and safety caveats.
+- Rebuilt 14 guide pages and the self-contained solver. Verified and fixed the
+  solver's mobile header grid and the identity mark's enlarged-text spacing.
+- Reconciled seven newer Box Logic commits before applying presentation-only
+  changes. Its on-demand generator, variable liar counts, rules, reveal states,
+  and equal-height boxes remain intact.
+
+See `VALIDATION-2026-09-05-EDITORIAL.md` for observed checks, source-only release
+boundaries, and rollback bases.
+
 ## 2026-09-05 · Astra component and page pass
 
 - Added an optional, dependency-free component layer with a working gallery and
