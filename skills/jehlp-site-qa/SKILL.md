@@ -13,4 +13,15 @@ Exercise 390px and 1440px light/dark layouts, keyboard traversal, meaningful foc
 
 For the MTL contents disclosure, check hidden links, Escape, heading selection, resize and no-JS. For data dialogs, check naming, focus and close. For solver export, disable network. For the dashboard, preserve read-only behavior and truthful offline/stale state.
 
+For select changes, exercise keyboard/typeahead, Escape without selection, reset,
+disabled options, dynamic option population, programmatic value synchronization
+and native fallback. Compare equal-role reader controls for matching size; check
+that chapter groups survive and redundant glossary controls do not return. Check
+PNG masthead loading at its actual small size in both modes. Review the first
+useful viewport for empty hero space or unexplained number gutters. A paginated
+table must not also need internal two-axis scrolling; inspect first/last rows,
+details and sort direction. For a true matrix, test connected headers in each
+scroll direction. Puzzle dividers have one boundary and leave explanatory diagrams
+with their rule text.
+
 Fix demonstrated failures at the responsible layer. Stop optional testing when concrete risks are covered. Leave an honest checklist of unavailable gates; never treat a DOM stub or source regex as proof of browser accessibility.

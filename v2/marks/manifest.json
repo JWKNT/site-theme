@@ -1,0 +1,181 @@
+{
+  "generator": "built-in image_gen.imagegen",
+  "created": "2026-09-05",
+  "assetCount": 13,
+  "notes": [
+    "Transparent PNG masthead illustrations, generated separately with the built-in image tool.",
+    "128px Lanczos derivatives of1254px originals. Native alpha preserved; no hand-drawn replacements.",
+    "Inspected at28px and32px on light and dark surfaces. Originals retained in the local task outputs."
+  ],
+  "assets": [
+    {
+      "id": "home",
+      "file": "home.png",
+      "prompt": "Use case: stylized-concept\nAsset type: isolated PNG mini-illustration for a refined jehlp.net editorial website masthead, displayed at 28–32 CSS pixels.\nScene/backdrop: genuinely transparent alpha background, including every exterior corner. This is an isolated cutout with no background color and no checkerboard drawn into the image.\nSubject: A small open folio or index book, seen at a slight three-quarter angle, two ivory pages and a slate-blue cover; three broad simple index tabs visible along its outer edge. No writing or page marks.\nStyle/medium: refined flat editorial illustration, clean confident edges, bold simple silhouette, very few large details. Gently rounded charcoal outlines with sparse ivory highlights that remain readable against both off-white and charcoal page backgrounds. Restrained slate blue, muted plum, ochre, and teal accent palette; use only the subject's named accents plus charcoal and ivory.\nComposition/framing: square canvas, one centered subject, object spans approximately 80% of the canvas width or height with balanced transparent edge space. All parts fully visible.\nConstraints: actual PNG transparency; no text, letters, numerals, Unicode symbols, watermark, enclosing app tile, enclosing circle badge, outer frame, shadows, backdrop, gradients, texture, glossy effects, or tiny decorative details. Keep the illustration simple and readable when downscaled to 32 pixels.",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "site-theme",
+      "file": "site-theme.png",
+      "prompt": "Use case: stylized-concept\nAsset type: isolated PNG mini-illustration for a refined jehlp.net editorial website masthead, displayed at 28–32 CSS pixels.\nScene/backdrop: genuinely transparent alpha background, including every exterior corner. This is an isolated cutout with no background color and no checkerboard drawn into the image.\nSubject: One compact artist's drawing pen nib, angled downward, touching one short ruled line; slate-blue metal nib with a small restrained ochre accent. The pen nib and single line form one compact composition.\nStyle/medium: refined flat editorial illustration, clean confident edges, bold simple silhouette, very few large details. Gently rounded charcoal outlines with sparse ivory highlights that remain readable against both off-white and charcoal page backgrounds. Restrained slate blue, muted plum, ochre, and teal accent palette; use only the subject's named accents plus charcoal and ivory.\nComposition/framing: square canvas, one centered subject, object spans approximately 80% of the canvas width or height with balanced transparent edge space. All parts fully visible.\nConstraints: actual PNG transparency; no text, letters, numerals, Unicode symbols, watermark, enclosing app tile, enclosing circle badge, outer frame, shadows, backdrop, gradients, texture, glossy effects, or tiny decorative details. Keep the illustration simple and readable when downscaled to 32 pixels.",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mtl-guide",
+      "file": "mtl-guide.png",
+      "prompt": "Use case: stylized-concept\nAsset type: isolated PNG mini-illustration for a refined jehlp.net editorial website masthead, displayed at 28–32 CSS pixels.\nScene/backdrop: genuinely transparent alpha background, including every exterior corner. This is an isolated cutout with no background color and no checkerboard drawn into the image.\nSubject: One small open book with ivory pages and a plum cover, with a single slate-teal bookmark ribbon curling gently between the two pages to suggest translation or passage between them. No letters or writing.\nStyle/medium: refined flat editorial illustration, clean confident edges, bold simple silhouette, very few large details. Gently rounded charcoal outlines with sparse ivory highlights that remain readable against both off-white and charcoal page backgrounds. Restrained slate blue, muted plum, ochre, and teal accent palette; use only the subject's named accents plus charcoal and ivory.\nComposition/framing: square canvas, one centered subject, object spans approximately 80% of the canvas width or height with balanced transparent edge space. All parts fully visible.\nConstraints: actual PNG transparency; no text, letters, numerals, Unicode symbols, watermark, enclosing app tile, enclosing circle badge, outer frame, shadows, backdrop, gradients, texture, glossy effects, or tiny decorative details. Keep the illustration simple and readable when downscaled to 32 pixels.",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "mystery-report",
+      "file": "mystery-report.png",
+      "prompt": "Use case: stylized-concept\nAsset type: isolated PNG mini-illustration for a refined jehlp.net editorial website masthead, displayed at 28–32 CSS pixels.\nScene/backdrop: genuinely transparent alpha background, including every exterior corner. This is an isolated cutout with no background color and no checkerboard drawn into the image.\nSubject: One magnifying glass with a broad slate-blue rim, ivory glass highlight and a compact plum handle, angled diagonally. The glass interior is mostly transparent; no object is magnified.\nStyle/medium: refined flat editorial illustration, clean confident edges, bold simple silhouette, very few large details. Gently rounded charcoal outlines with sparse ivory highlights that remain readable against both off-white and charcoal page backgrounds. Restrained slate blue, muted plum, ochre, and teal accent palette; use only the subject's named accents plus charcoal and ivory.\nComposition/framing: square canvas, one centered subject, object spans approximately 80% of the canvas width or height with balanced transparent edge space. All parts fully visible.\nConstraints: actual PNG transparency; no text, letters, numerals, Unicode symbols, watermark, enclosing app tile, enclosing circle badge, outer frame, shadows, backdrop, gradients, texture, glossy effects, or tiny decorative details. Keep the illustration simple and readable when downscaled to 32 pixels.",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "profile",
+      "file": "profile.png",
+      "prompt": "Use case: stylized-concept\nAsset type: isolated PNG mini-illustration for a refined jehlp.net editorial website masthead, displayed at 28–32 CSS pixels.\nScene/backdrop: genuinely transparent alpha background, including every exterior corner. This is an isolated cutout with no background color and no checkerboard drawn into the image.\nSubject: One compact DNA double helix with two broad gently twisting strands and just four connecting rungs. One strand is muted slate-blue and the other muted teal, with ivory accents and charcoal outline. No molecular balls or scientific labels.\nStyle/medium: refined flat editorial illustration, uniform solid color fills, clean confident edges, bold simple silhouette, very few large details. Gently rounded charcoal outlines with sparse ivory highlights that remain readable against both off-white and charcoal page backgrounds. Restrained slate blue, muted plum, ochre, and teal accent palette; use only the subject's named accents plus charcoal and ivory.\nComposition/framing: square canvas, one centered subject, object spans approximately 80% of the canvas width or height with balanced transparent edge space. All parts fully visible.\nConstraints: actual PNG transparency; no text, letters, numerals, Unicode symbols, watermark, enclosing app tile, enclosing circle badge, outer frame, shadows, backdrop, gradients, shading, texture, glossy effects, or tiny decorative details. Keep the illustration simple and readable when downscaled to 32 pixels.",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "ngu-idle-dashboard",
+      "file": "ngu-idle-dashboard.png",
+      "prompt": "Use case: stylized-concept\nAsset type: isolated PNG mini-illustration for a refined jehlp.net editorial website masthead, displayed at 28–32 CSS pixels.\nScene/backdrop: genuinely transparent alpha background, including every exterior corner. This is an isolated cutout with no background color and no checkerboard drawn into the image.\nSubject: One small restrained analog gauge with a simple ochre pointer, three broad tick marks and a slate-blue frame, overlapping one small muted teal cogwheel at its lower edge. The circular gauge is the instrument itself, not an enclosing background badge. No letters or numerals.\nStyle/medium: refined flat editorial illustration, uniform solid color fills, clean confident edges, bold simple silhouette, very few large details. Gently rounded charcoal outlines with sparse ivory highlights that remain readable against both off-white and charcoal page backgrounds. Restrained slate blue, muted plum, ochre, and teal accent palette; use only the subject's named accents plus charcoal and ivory.\nComposition/framing: square canvas, one centered subject, object spans approximately 80% of the canvas width or height with balanced transparent edge space. All parts fully visible.\nConstraints: actual PNG transparency; no text, letters, numerals, Unicode symbols, watermark, enclosing app tile, enclosing circle badge, outer frame, shadows, backdrop, gradients, shading, texture, glossy effects, or tiny decorative details. Keep the illustration simple and readable when downscaled to 32 pixels.",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "bl2",
+      "file": "bl2.png",
+      "prompt": "Use case: stylized-concept\nAsset type: isolated PNG mini-illustration for a refined jehlp.net editorial website masthead, displayed at 28–32 CSS pixels.\nScene/backdrop: genuinely transparent alpha background, including every exterior corner. This is an isolated cutout with no background color and no checkerboard drawn into the image.\nSubject: One compact armory emblem: a simple slate-blue heraldic shield with a single upright ochre ammunition cartridge at its center. The shield is the requested object itself, not a surrounding app badge. Just the inanimate shield and cartridge, no gun, person, scene, violence or action.\nStyle/medium: refined flat editorial illustration, uniform solid color fills, clean confident edges, bold simple silhouette, very few large details. Gently rounded charcoal outlines with sparse ivory highlights that remain readable against both off-white and charcoal page backgrounds. Restrained slate blue, muted plum, ochre, and teal accent palette; use only the subject's named accents plus charcoal and ivory.\nComposition/framing: square canvas, one centered subject, object spans approximately 80% of the canvas width or height with balanced transparent edge space. All parts fully visible.\nConstraints: actual PNG transparency; no text, letters, numerals, Unicode symbols, watermark, enclosing app tile, enclosing circle badge, outer frame, shadows, backdrop, gradients, shading, texture, glossy effects, or tiny decorative details. Keep the illustration simple and readable when downscaled to 32 pixels.",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "black-sheep-town",
+      "file": "black-sheep-town.png",
+      "prompt": "Use case: stylized-concept\nAsset type: isolated PNG mini-illustration for a refined jehlp.net editorial website masthead, displayed at 28–32 CSS pixels.\nScene/backdrop: genuinely transparent alpha background, including every exterior corner. This is an isolated cutout with no background color and no checkerboard drawn into the image.\nSubject: The front-facing head of a black sheep with two sideways ears, a compact rounded charcoal wool silhouette, slate-blue subtle inner shapes and two tiny ivory eye dots. A few large soft wool lobes and one simple muzzle. No body or accessories.\nStyle/medium: refined flat editorial illustration, uniform solid color fills, clean confident edges, bold simple silhouette, very few large details. Gently rounded charcoal outlines with sparse ivory highlights that remain readable against both off-white and charcoal page backgrounds. Restrained slate blue, muted plum, ochre, and teal accent palette; use only the subject's named accents plus charcoal and ivory.\nComposition/framing: square canvas, one centered subject, object spans approximately 80% of the canvas width or height with balanced transparent edge space. All parts fully visible.\nConstraints: actual PNG transparency; no text, letters, numerals, Unicode symbols, watermark, enclosing app tile, enclosing circle badge, outer frame, shadows, backdrop, gradients, shading, texture, glossy effects, or tiny decorative details. Keep the illustration simple and readable when downscaled to 32 pixels.",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "albatross-koukairoku",
+      "file": "albatross-koukairoku.png",
+      "prompt": "Use case: stylized-concept\nAsset type: isolated PNG mini-illustration for a refined jehlp.net editorial website masthead, displayed at 28–32 CSS pixels.\nScene/backdrop: genuinely transparent alpha background, including every exterior corner. This is an isolated cutout with no background color and no checkerboard drawn into the image.\nSubject: One albatross seabird in flight with sweeping long outstretched wings in a gentle diagonal, ivory body, slate-blue wing tips, tiny restrained ochre beak. The streamlined pose and one subtle teal curved flight stroke suggest nautical travel. No sea scene, boat, compass, clouds or extra objects.\nStyle/medium: refined flat editorial illustration, uniform solid color fills, clean confident edges, bold simple silhouette, very few large details. Gently rounded charcoal outlines with sparse ivory highlights that remain readable against both off-white and charcoal page backgrounds. Restrained slate blue, muted plum, ochre, and teal accent palette; use only the subject's named accents plus charcoal and ivory.\nComposition/framing: square canvas, one centered subject, object spans approximately 80% of the canvas width or height with balanced transparent edge space. All parts fully visible.\nConstraints: actual PNG transparency; no text, letters, numerals, Unicode symbols, watermark, enclosing app tile, enclosing circle badge, outer frame, shadows, backdrop, gradients, shading, texture, glossy effects, or tiny decorative details. Keep the illustration simple and readable when downscaled to 32 pixels.",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "logical-solver",
+      "file": "logical-solver.png",
+      "prompt": "Use case: stylized-concept\nAsset type: isolated PNG mini-illustration for a refined jehlp.net editorial website masthead, displayed at 28–32 CSS pixels.\nScene/backdrop: genuinely transparent alpha background, including every exterior corner. This is an isolated cutout with no background color and no checkerboard drawn into the image.\nSubject: One compact interlocking path-and-grid miniature: two broad right-angled paths, one slate blue and one muted teal, thread through a very small open three-by-three grid outline. Clear negative spaces and just one small ochre endpoint square. No letters, numerals, arrows or symbols.\nStyle/medium: refined flat editorial illustration, uniform solid color fills, clean confident edges, bold simple silhouette, very few large details. Gently rounded charcoal outlines with sparse ivory highlights that remain readable against both off-white and charcoal page backgrounds. Restrained slate blue, muted plum, ochre, and teal accent palette; use only the subject's named accents plus charcoal and ivory.\nComposition/framing: square canvas, one centered subject, object spans approximately 80% of the canvas width or height with balanced transparent edge space. All parts fully visible.\nConstraints: actual PNG transparency; no text, letters, numerals, Unicode symbols, watermark, enclosing app tile, enclosing circle badge, outer frame, shadows, backdrop, gradients, shading, texture, glossy effects, or tiny decorative details. Keep the illustration simple and readable when downscaled to 32 pixels.",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "writing",
+      "file": "writing.png",
+      "prompt": "Use case: stylized-concept\nAsset type: isolated PNG mini-illustration for a refined jehlp.net editorial website masthead, displayed at 28–32 CSS pixels.\nScene/backdrop: genuinely transparent alpha background, including every exterior corner. This is an isolated cutout with no background color and no checkerboard drawn into the image.\nSubject: One compact quill pen: a single gently curved ivory feather with a muted plum central shape and a small ochre writing nib at its tip. Broad simple feather silhouette with only two cuts, charcoal outline. No ink bottle, paper or line.\nStyle/medium: refined flat editorial illustration, uniform solid color fills, clean confident edges, bold simple silhouette, very few large details. Gently rounded charcoal outlines with sparse ivory highlights that remain readable against both off-white and charcoal page backgrounds. Restrained slate blue, muted plum, ochre, and teal accent palette; use only the subject's named accents plus charcoal and ivory.\nComposition/framing: square canvas, one centered subject, object spans approximately 80% of the canvas width or height with balanced transparent edge space. All parts fully visible.\nConstraints: actual PNG transparency; no text, letters, numerals, Unicode symbols, watermark, enclosing app tile, enclosing circle badge, outer frame, shadows, backdrop, gradients, shading, texture, glossy effects, or tiny decorative details. Keep the illustration simple and readable when downscaled to 32 pixels.",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "puzzles",
+      "file": "puzzles.png",
+      "prompt": "Use case: stylized-concept\nAsset type: isolated PNG mini-illustration for a refined jehlp.net editorial website masthead, displayed at 28–32 CSS pixels.\nScene/backdrop: genuinely transparent alpha background, including every exterior corner. This is an isolated cutout with no background color and no checkerboard drawn into the image.\nSubject: One compact geometric puzzle emblem made of three interlocking angular solid pieces in muted slate-blue, plum and ochre. The pieces fit together into a distinctive open asymmetric knot with one small transparent gap. No circle enclosure, text, letters or numerals.\nStyle/medium: refined flat editorial illustration, uniform solid color fills, clean confident edges, bold simple silhouette, very few large details. Gently rounded charcoal outlines with sparse ivory highlights that remain readable against both off-white and charcoal page backgrounds. Restrained slate blue, muted plum, ochre, and teal accent palette; use only the subject's named accents plus charcoal and ivory.\nComposition/framing: square canvas, one centered subject, object spans approximately 80% of the canvas width or height with balanced transparent edge space. All parts fully visible.\nConstraints: actual PNG transparency; no text, letters, numerals, Unicode symbols, watermark, enclosing app tile, enclosing circle badge, outer frame, shadows, backdrop, gradients, shading, texture, glossy effects, or tiny decorative details. Keep the illustration simple and readable when downscaled to 32 pixels.",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "box-puzzles",
+      "file": "box-puzzles.png",
+      "prompt": "Use case: stylized-concept\nAsset type: isolated PNG mini-illustration for a refined jehlp.net editorial website masthead, displayed at 28–32 CSS pixels.\nScene/backdrop: genuinely transparent alpha background, including every exterior corner. This is an isolated cutout with no background color and no checkerboard drawn into the image.\nSubject: One small open box seen at a slight three-quarter angle, ochre lid flaps and slate-blue sides, containing one simple muted teal faceted gem. The gem has only three broad facets. No extra contents.\nStyle/medium: refined flat editorial illustration, uniform solid color fills, clean confident edges, bold simple silhouette, very few large details. Gently rounded charcoal outlines with sparse ivory highlights that remain readable against both off-white and charcoal page backgrounds. Restrained slate blue, muted plum, ochre, and teal accent palette; use only the subject's named accents plus charcoal and ivory.\nComposition/framing: square canvas, one centered subject, object spans approximately 80% of the canvas width or height with balanced transparent edge space. All parts fully visible.\nConstraints: actual PNG transparency; no text, letters, numerals, Unicode symbols, watermark, enclosing app tile, enclosing circle badge, outer frame, shadows, backdrop, gradients, shading, texture, glossy effects, or tiny decorative details. Keep the illustration simple and readable when downscaled to 32 pixels.",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

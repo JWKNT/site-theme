@@ -26,6 +26,20 @@ test('theme pages retain local navigation without a global-home shortcut', () =>
   for (const page of ['index.html', 'components.html', 'philosophy.html']) {
     const html = readFileSync(new URL(`../${page}`, import.meta.url), 'utf8');
     assert.doesNotMatch(html, /<a\b[^>]*href=["'](?:https?:\/\/(?:www\.)?jehlp\.net\/?|\/)["']/i, page);
-    assert.match(html, /class="site-mark" aria-hidden="true"/, page);
+    assert.match(html, /<img class="site-mark" src="[^"]+\/marks\/site-theme\.png" width="32" height="32" alt=""/, page);
+    assert.doesNotMatch(html, /<span class="site-mark"/, page);
+  }
+});
+
+test('each masthead mark is a small RGBA PNG with explicit reserved dimensions', () => {
+  const manifest = JSON.parse(readFileSync(new URL('../v2/marks/manifest.json', import.meta.url), 'utf8'));
+  assert.equal(manifest.assets.length, 13);
+  for (const asset of manifest.assets) {
+    const png = readFileSync(new URL(`../v2/marks/${asset.file}`, import.meta.url));
+    assert.equal(png.subarray(1, 4).toString(), 'PNG', asset.file);
+    assert.equal(png.readUInt32BE(16), 128, asset.file);
+    assert.equal(png.readUInt32BE(20), 128, asset.file);
+    assert.equal(png[25], 6, `${asset.file}: RGB with alpha`);
+    assert.deepEqual(asset.transparentCorners, [0, 0, 0, 0]);
   }
 });

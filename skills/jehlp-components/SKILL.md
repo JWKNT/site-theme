@@ -12,7 +12,7 @@ and `v2/components.js`; base tokens and theme preferences remain in their existi
 foundation files.
 
 Choose the smallest pattern that serves the material. Existing contracts cover
-directories, grouped fields, segmented selections, responsive disclosures, section
+directories, grouped fields, single-choice selects, segmented selections, responsive disclosures, section
 indexes, overflow regions, native dialog shells, and copyable code. Extract a new
 behavior when real consumers share its semantics, not merely similar class names.
 Prove it in a representative page before spreading it. Keep intentional local
@@ -23,6 +23,15 @@ useful if the optional script fails. Shared components do not own application
 data, filtering policy, API calls, or puzzle logic. `JehlpUI.enhance(root)` is
 idempotent; use it for newly inserted components and remove superseded local
 listeners. Geometry, content, and dataset rendering stay local.
+
+Adopt `data-ui-select` for ordinary native single-choice dropdowns. Preserve the
+native label, options, form name/value and change handlers; call
+`JehlpUI.enhance(select)` after programmatic value changes or option population.
+Do not layer it over the richer VN chapter browser or flatten meaningful chapter
+groups to obtain matching styling. Use the shared reader-like control scale.
+Keep one navigation model per table: natural-flow pagination with record detail,
+or named matrix overflow without pagination. Consult the current contract rather
+than copying superseded local selectors or listeners.
 
 Edit authored templates before regenerating output. Publish new assets before
 their consumers. Check focus, keyboard, breakpoint transitions, empty/populated,

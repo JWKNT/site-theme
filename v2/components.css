@@ -10,6 +10,19 @@
 .ui-segmented > :is([aria-pressed="true"], [aria-current="page"]) { z-index: 1; border-color: var(--blue, #35567a); background: var(--surface-blue, #edf1f4); color: var(--blue-dark, #203e61); }
 .ui-segmented > :focus-visible { z-index: 2; }
 
+/* Same square, paper-backed dropdown vocabulary as the chapter readers. */
+.ui-select { display: block; position: relative; min-width: 0; max-width: 100%; color: var(--ink, #181817); font: var(--text-ui, .875rem)/1.4 var(--sans, sans-serif); }
+.ui-select > .ui-select-trigger { display: block; position: relative; width: 100%; min-height: var(--control-size, 2.25rem); margin: 0; padding: .3125rem 1.9rem .3125rem .5625rem; border: 1px solid var(--line-strong, #aaa49a); border-radius: 0; background: var(--paper, #fbfaf7); color: var(--ink, #181817); font: inherit; text-align: left; white-space: normal; overflow-wrap: anywhere; }
+.ui-select-trigger::after { position: absolute; right: .7rem; top: 50%; width: .4rem; height: .4rem; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: translateY(-70%) rotate(45deg); content: ""; }
+.ui-select-trigger[aria-expanded="true"] { border-color: var(--blue, #35567a); }
+.ui-select-trigger:disabled { opacity: .5; cursor: default; }
+.ui-select > .ui-select-menu { position: fixed; z-index: 150; box-sizing: border-box; margin: 0; padding: .25rem; overflow: auto; overscroll-behavior: contain; border: 1px solid var(--line-strong, #aaa49a); background: var(--paper, #fbfaf7); color: var(--ink, #181817); font: inherit; text-align: left; }
+.ui-select-option { display: block; min-height: var(--control-size, 2.25rem); box-sizing: border-box; margin: 0; padding: .5rem .55rem; cursor: pointer; overflow-wrap: anywhere; }
+.ui-select-option[aria-selected="true"] { background: var(--surface-blue, #edf1f4); color: var(--blue-dark, #203e61); }
+.ui-select-option[data-active="true"] { outline: 1px solid var(--blue, #35567a); outline-offset: -1px; }
+.ui-select-option:hover:not([aria-disabled="true"]) { background: var(--surface, #f4f2ed); }
+.ui-select-option[aria-disabled="true"] { opacity: .5; cursor: default; }
+
 /* An editorial directory, not a grid of cards. Child layout stays local. */
 .ui-directory { margin: 0; padding: 0; list-style: none; }
 .ui-directory > li { padding: var(--directory-space, .8rem) 0; border-bottom: var(--directory-rule, 1px solid var(--line, #d9d5cd)); }

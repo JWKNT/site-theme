@@ -17,7 +17,7 @@
   </head>
   <body data-site-tone="blue">
     <a class="skip-link" href="#components">Skip to components</a>
-    <header class="site-header site-header--identity"><div class="site-brand"><span class="site-mark" aria-hidden="true">✣</span><a class="site-title" href="index.html">Site theme</a></div><nav aria-label="Site links"><a href="components.html" aria-current="page">Components</a><a href="philosophy.html">Philosophy</a></nav></header>
+    <header class="site-header site-header--identity"><div class="site-brand"><img class="site-mark" src="https://jehlp.net/site-theme/v2/marks/site-theme.png" width="32" height="32" alt=""><a class="site-title" href="index.html">Site theme</a></div><nav aria-label="Site links"><a href="components.html" aria-current="page">Components</a><a href="philosophy.html">Philosophy</a></nav></header>
     <main class="theme-doc component-doc" id="components" tabindex="-1">
       <header><h1>Components</h1><p class="lede">Shared patterns for independent pages.</p></header>
       <nav class="section-index" data-section-nav aria-label="Component sections"><a href="#directory">Directory</a><a href="#controls">Controls</a><a href="#tables">Tables</a><a href="#details">Dialogs</a><a href="#navigation">Navigation</a><a href="#use">Use</a></nav>
@@ -30,7 +30,13 @@
 &lt;/ul&gt;</code></pre></details>
       </section>
       <section id="controls"><h2>Controls near their results</h2><p>Native labels and controls wrap as a group. This small catalogue is a working example: search or change the surface to filter it.</p>
-        <form class="ui-toolbar component-controls" id="component-filter" role="search"><label class="ui-field ui-field--search">Find a pattern<input type="search" name="query" placeholder="Navigation, table, reading…" autocomplete="off"></label><label class="ui-field">Surface<select name="surface"><option value="all">All surfaces</option><option value="reading">Reading</option><option value="data">Data</option></select></label><button type="reset">Reset</button></form>
+        <form class="ui-toolbar component-controls" id="component-filter" role="search"><label class="ui-field ui-field--search">Find a pattern<input type="search" name="query" placeholder="Navigation, table, reading…" autocomplete="off"></label><label class="ui-field">Surface<select name="surface" data-ui-select><option value="all">All surfaces</option><option value="reading">Reading</option><option value="data">Data</option></select></label><button type="reset">Reset</button></form>
+        <details><summary>Dropdown markup</summary><pre data-copy-code><code>&lt;label class="ui-field"&gt;Surface
+  &lt;select name="surface" data-ui-select&gt;
+    &lt;option value="all"&gt;All surfaces&lt;/option&gt;
+    &lt;option value="reading"&gt;Reading&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/label&gt;</code></pre><p>The native select owns the value and form events. The shared menu adds arrow keys, Home/End, typeahead, Enter, and Escape. Without the script it remains a styled native control.</p></details>
         <p class="result-status" id="component-count" role="status">6 patterns</p>
         <ul class="ui-directory component-patterns" id="component-patterns"><li data-surface="reading"><a href="#directory">Directory</a><p>Browse a finite set of documents or projects.</p></li><li data-surface="data"><a href="#controls">Toolbar and fields</a><p>Keep search, filters, and reset together.</p></li><li data-surface="data"><a href="#tables">Scrollable table</a><p>Compare columns without shrinking their labels.</p></li><li data-surface="data"><a href="#details">Native dialog</a><p>Inspect a record and return to its opener.</p></li><li data-surface="reading"><a href="#navigation">Responsive disclosure</a><p>Keep mobile contents and filters in the document.</p></li><li data-surface="reading"><a href="#use">Copyable code</a><p>Reuse a snippet with clear success or fallback.</p></li></ul>
         <p id="component-empty" hidden>No patterns match. Clear the search or choose all surfaces.</p>

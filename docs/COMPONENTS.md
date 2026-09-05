@@ -16,13 +16,14 @@ themselves into existing consumers.
 
 | Pattern | Shared contract | Page responsibility | Current adopters |
 | --- | --- | --- | --- |
-| Page identity | `.site-header--identity`, `.site-brand`, `.site-mark`, `data-site-tone` in base CSS | Subject mark/title, useful local links, no global-home link | Theme docs, guide, readers, reports, puzzles, writing |
+| Page identity | `.site-header--identity`, `.site-brand`, `img.site-mark`, `data-site-tone` in base CSS | Transparent subject PNG/title, useful local links, no global-home link | Theme docs, guide, readers, reports, puzzles, writing |
 | Directory | `.ui-directory`, list/link semantics, row boundaries | Columns and grouping; `--directory-rule` / `--directory-space` | Homepage, MTL, gallery |
 | Toolbar | `.ui-toolbar`, `.ui-field`, `.ui-field--search` | Labels, filter state, widths, result rendering | Armory, consensus, gallery |
+| Single-choice select | `data-ui-select` on a native `select` | Native options/value/name, labels, change handlers, programmatic synchronization | Profile, consensus, Armory, Albatross voyage, puzzles, gallery |
 | Segmented controls | `.ui-segmented`, `aria-pressed` buttons or `aria-current="page"` links | Selection state and actions; not an ARIA tab widget | Consensus |
-| Responsive disclosure | `data-disclosure="(max-width: 650px)"` button + `aria-controls` region | Breakpoint, label, region layout | MTL contents, Armory filters, gallery |
+| Responsive disclosure | `data-disclosure="(max-width: 650px)"` button + `aria-controls` region | Breakpoint, label, region layout | MTL contents, Armory/puzzle filters, gallery |
 | Section index | `data-section-nav` on native anchor navigation | Section IDs, shell, section content | Profile, NGU dashboard, gallery |
-| Table overflow | `data-scroll-region` + accessible name on a wrapper | Caption/headings, column geometry, sorting, paging | Consensus, Profile, dashboard, MTL, gallery |
+| Table overflow | `data-scroll-region` + accessible name on a wrapper | Matrix need, caption/headings, column geometry; no pagination | Profile, dashboard, MTL, gallery |
 | Table header band | `.ui-table` on one native table | Widths, numeric alignment, cell content, bounded wrapper height | Consensus, Profile, dashboard, MTL, Armory, gallery |
 | Dialog | `.ui-dialog`, `.ui-dialog-body`, `.ui-dialog-dismiss`, `data-dialog` | Title relationship, content, `showModal()`, domain actions | Armory, Profile, consensus, gallery |
 | Copy code | `data-copy-code` on `pre` containing `code` | The actual snippet | MTL, gallery |
@@ -36,14 +37,15 @@ filtering, dataset interpretation, telemetry, puzzle rules, or network calls her
 `data-site-tone="blue"` (or `plum`, `teal`, `ochre`) to the body. Use a plain title
 on the project landing page; a subpage may link to that project's own landing
 page. Never point the brand or navigation to the global home directory. The
-decorative mark is hidden from assistive technology; the title remains text.
+decorative mark is a transparent PNG with empty `alt`; the title remains text.
+Use `img.site-mark` with `width="32" height="32"`, never a Unicode glyph or emoji.
 Keep one mark per header and let the navigation wrap naturally. Long titles may
 wrap; local puzzle navigation can use a named horizontal scroll region.
 
 ```html
 <header class="site-header site-header--identity">
   <div class="site-brand">
-    <span class="site-mark" aria-hidden="true">§</span>
+    <img class="site-mark" src="https://jehlp.net/site-theme/v2/marks/profile.png" width="32" height="32" alt="">
     <span class="site-title">Project title</span>
   </div>
   <nav aria-label="Page links">
@@ -52,6 +54,44 @@ wrap; local puzzle navigation can use a named horizontal scroll region.
   </nav>
 </header>
 ```
+
+The 13 maintained PNGs in `v2/marks/` are `site-theme.png`, `home.png`,
+`mtl-guide.png`, `profile.png`, `mystery-report.png`, `ngu-idle-dashboard.png`,
+`logical-solver.png`, `bl2.png`, `box-puzzles.png`, `black-sheep-town.png`,
+`albatross-koukairoku.png`, `writing.png`, and `puzzles.png`. Choose the relevant
+subject, check both color modes, and preserve the existing favicon separately.
+Publish a new mark before adopting its URL; embed the PNG in offline exports.
+
+**Single-choice selects.** Keep an ordinary native `select`, its `id`, `name`,
+options, initial selection, label, and application `change` handlers. Add
+`data-ui-select` and load the optional component layer. The script adds the shared
+reader-like trigger/listbox and hides the native control only after setup. Without
+the script, the native control remains usable. Multiple selections and expanded
+native listboxes are intentionally left native. The richer VN chapter browser
+retains its own grouped/searchable chapter context; do not stack this enhancement
+on top of it.
+
+```html
+<label class="ui-field" for="detail">Detail
+  <select id="detail" name="detail" data-ui-select>
+    <option value="broad">Broad overview</option>
+    <option value="detailed">Detailed populations</option>
+  </select>
+</label>
+```
+
+The square trigger and options use 14px UI type and the shared minimum control
+height (36px desktop, 44px coarse pointer). Arrow keys, Home/End, and typeahead move
+the active option; Enter/Space confirms, Escape dismisses without changing the
+selection, and Tab closes while retaining normal focus travel. The chosen option
+updates the native value and emits bubbling `input`/`change` events. Native form
+submission, reset, required state, and disabled choices remain authoritative.
+
+After assigning `.value` or `.selectedIndex` programmatically, call
+`window.JehlpUI?.enhance(select)` to resync presentation; those property assignments
+do not emit a change event. Enhance again after populating options or replacing
+controls. The call is idempotent. Keep local width/layout rules, but remove
+conflicting control styling and superseded custom-menu listeners.
 
 **Disclosures.** Start the toggle `hidden` and the region visible. The script
 exposes the toggle at its narrow breakpoint and uses native `hidden` on the closed
@@ -79,16 +119,37 @@ handles disclosure/dialog opening and table size changes. Replacing the wrapper
 requires another enhancement call. Column widths and sticky identifiers stay
 local: a fixed first column can obscure most of a phone viewport.
 
-**Table header bands.** Add `class="ui-table"` to the native table inside its
-named overflow wrapper. The complete `thead` sticks as one opaque band; individual
+Reserve this pattern for a real matrix whose columns need simultaneous comparison.
+A paginated collection should instead flow naturally with the document, keeping
+essential columns visible and disclosing secondary fields in record details.
+Do not combine pagination with an internally scrolling two-axis table. Ordinary
+document scrolling is not a second table navigation model.
+
+**Table header bands.** Add `class="ui-table"` to one native table. When a matrix
+needs overflow, place it inside the named wrapper above. The complete `thead`
+sticks as one opaque band; individual
 header cells and row headings stay in normal table layout. Separate borders with
 zero spacing keep the divider attached while scrolling. Do not split headings
 and rows into different tables or add a top margin inside the scroll region.
 Column widths, numeric alignment, and the wrapper's optional maximum height stay
 local. Use `scope="col"` / `scope="row"` and preserve native captions. Regular
 values and header labels are at least 14px in normal case; prose cells are 16px.
-Check horizontal, vertical, and combined scroll, not only the initial position.
-Without this optional stylesheet the native table remains usable.
+For overflowing matrices, check horizontal, vertical, and combined scroll, not
+only the initial position. Confirm paginated rows have no internal scrollport.
+Without this optional stylesheet the native table remains usable. A naturally
+flowing, short paginated table may keep its complete header static with a local
+`thead` override. Sort direction needs no visible priority digit; primary/secondary
+sorting belongs in explicit advanced controls and accessible labels.
+
+**Puzzle transitions.** Use one `.site-divider` with a decorative PNG between
+rules and the first diagram. The public `puzzles/build.mjs` inserts the divider
+before the first centered diagram block, preserving exact text, example/main-grid
+ordering, links, and later reference charts. Layout and orientation stay local: the Jekyll puzzle
+template uses a vertical divider for side-by-side material and a horizontal one
+when stacked. Its `puzzles.png` has empty `alt` inside the hidden decorative
+wrapper. Jekyll's `data-image-decoration` prevents the image-caption processor
+from framing it. Preserve explanatory diagrams beside their rule text; avoid a
+second border around the same transition.
 
 **Dialogs.** Name the dialog with `aria-labelledby`. Place a native
 `<form method="dialog" class="ui-dialog-dismiss">` before its body, with a named
@@ -107,8 +168,9 @@ the code is selected for manual copying and the button explains this. Only the
 
 The one public API is `window.JehlpUI.enhance(root = document)`. Initialization runs
 at DOM readiness. Call `window.JehlpUI?.enhance(container)` after inserting new
-components; it accepts an element or document, includes the root itself, and is
-idempotent. There is no framework, runtime dependency, global DOM mutation
+components and after programmatic select-value changes; it accepts an element or
+document, includes the root itself, and is idempotent. There is no framework,
+runtime dependency, global DOM mutation
 observer, or network request. Controllers live for the document lifetime;
 virtualized apps that repeatedly discard roots should add a disposal contract
 before adopting this static-page helper.

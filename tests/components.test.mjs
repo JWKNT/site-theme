@@ -14,16 +14,18 @@ class Element {
   }
   setAttribute(k, v) { this.attrs[k] = v; }
   getAttribute(k) { return this.attrs[k] ?? null; }
-  hasAttribute(k) { return k in this.attrs; }
+  hasAttribute(k) { return k in this.attrs || k.startsWith('data-') && k.slice(5).replace(/-([a-z])/g, (_, c) => c.toUpperCase()) in this.dataset; }
   removeAttribute(k) { delete this.attrs[k]; }
   get id() { return this.attrs.id; }
   set id(v) { this.attrs.id = v; }
   addEventListener(type, fn) { (this.listeners[type] ||= []).push(fn); }
   emit(type, event = {}) { for (const fn of this.listeners[type] || []) fn({ target: this, preventDefault() {}, ...event }); }
-  append(child) { this.children.push(child); child.parentElement = this; child.doc = this.doc; }
+  append(...children) { for (const child of children) { this.children.push(child); child.parentElement = this; child.doc = this.doc; } }
+  replaceChildren(...children) { this.children = []; this.append(...children); }
+  dispatchEvent(event) { this.emit(event.type, event); }
   before(child) { child.parentElement = this.parentElement; child.doc = this.doc; this.parentElement.children.splice(this.parentElement.children.indexOf(this), 0, child); }
   contains(el) { return this === el || this.children.some(child => child.contains(el)); }
-  matches(selector) { const [, tag, attr] = selector.match(/^([a-z]+)?(?:\[([^\]]+)\])?$/) || []; return (!tag || this.tagName === tag) && (!attr || this.hasAttribute(attr)); }
+  matches(selector) { if (selector === ':disabled') return Boolean(this.disabled); const [, tag, attr] = selector.match(/^([a-z]+)?(?:\[([^\]]+)\])?$/) || []; return (!tag || this.tagName === tag) && (!attr || this.hasAttribute(attr)); }
   closest(selector) { return this.matches(selector) ? this : this.parentElement?.closest(selector); }
   querySelectorAll(selector) { return this.children.flatMap(child => [...(child.matches(selector) ? [child] : []), ...child.querySelectorAll(selector)]); }
   querySelector(selector) { return this.querySelectorAll(selector)[0] || null; }
@@ -39,7 +41,7 @@ function fixture(build, mobile = false) {
   document.getElementById = id => document.querySelectorAll('[id]').find(el => el.id === id);
   const frames = [], media = new Element(), window = new Element('window'); media.matches = mobile;
   window.requestAnimationFrame = fn => frames.push(fn); window.matchMedia = () => media;
-  window.scrollY = 0; window.innerHeight = 844;
+  window.scrollY = 0; window.innerHeight = 844; window.innerWidth = 1440;
   window.setTimeout = fn => { window.timer = fn; }; window.clearTimeout = () => {};
   const location = { origin: 'https://example.test', pathname: '/guide', search: '', hash: '' };
   const history = { pushState(a, b, hash) { location.hash = hash; } };
@@ -47,7 +49,7 @@ function fixture(build, mobile = false) {
   const add = (tag, attrs, parent = document) => { const el = new Element(tag, attrs); parent.append(el); return el; };
   const link = (id, parent) => { const el = add('a', { href: `#${id}` }, parent); Object.assign(el, location, { hash: `#${id}` }); return el; };
   const nodes = build({ document, add, link });
-  vm.runInNewContext(source, { document, window, location, history, navigator });
+  vm.runInNewContext(source, { document, window, location, history, navigator, Event: class { constructor(type) { this.type = type; } } });
   const flush = () => { while (frames.length) frames.shift()(); }; flush();
   return { ...nodes, document, window, media, location, navigator, flush };
 }
@@ -95,4 +97,57 @@ test('copy uses code text and selects it for manual copying if clipboard access 
   f.window.timer(); assert.equal(button.textContent, 'Copy'); let selected;
   f.document.createRange = () => ({ selectNodeContents(node) { selected = node; } }); f.window.getSelection = () => ({ removeAllRanges() {}, addRange() {} }); f.navigator.clipboard.writeText = async () => { throw Error('blocked'); };
   await button.listeners.click[0](); assert.equal(selected, f.code); assert.equal(button.textContent, 'Select and copy');
+});
+
+function selectFixture() {
+  return fixture(({ add }) => {
+    const select = add('select', { 'data-ui-select': '', 'aria-label': 'Surface' });
+    select.selectedIndex = 0;
+    select.options = ['All surfaces', 'Unavailable', 'Data', 'Reading'].map((text, index) => {
+      const option = add('option', {}, select); option.textContent = text; option.disabled = index === 1; return option;
+    });
+    return { select };
+  });
+}
+test('select menu supports keyboard choice, disabled options, Escape and native changes', () => {
+  const f = selectFixture(), wrap = f.document.children[0], [trigger, menu] = wrap.children;
+  let changes = 0; f.select.addEventListener('change', () => changes++);
+  assert.equal(f.select.hidden, true); assert.equal(trigger.getAttribute('aria-label'), 'Surface');
+  assert.equal(menu.hidden, true); assert.equal(trigger.textContent, 'All surfaces');
+  trigger.emit('keydown', { key: 'ArrowDown' });
+  assert.equal(menu.hidden, false); assert.equal(trigger.getAttribute('aria-activedescendant'), menu.children[0].id);
+  trigger.emit('keydown', { key: 'ArrowDown' });
+  assert.equal(trigger.getAttribute('aria-activedescendant'), menu.children[2].id);
+  trigger.emit('keydown', { key: 'Enter' });
+  assert.equal(f.select.selectedIndex, 2); assert.equal(changes, 1); assert.equal(menu.hidden, true); assert.equal(trigger.textContent, 'Data');
+  trigger.emit('keydown', { key: 'End' }); trigger.emit('keydown', { key: 'Escape' });
+  assert.equal(f.select.selectedIndex, 2); assert.equal(menu.hidden, true);
+  f.select.selectedIndex = 3; f.select.emit('change'); assert.equal(trigger.textContent, 'Reading');
+});
+test('select enhancement is idempotent, refreshes programmatic values and supports typeahead/outside dismissal', () => {
+  const f = selectFixture(), wrap = f.document.children[0], [trigger, menu] = wrap.children;
+  f.select.selectedIndex = 3; f.window.JehlpUI.enhance();
+  assert.equal(f.document.children.length, 2); assert.equal(trigger.listeners.click.length, 1); assert.equal(trigger.textContent, 'Reading');
+  trigger.emit('keydown', { key: 'd' }); trigger.emit('keydown', { key: 'Enter' });
+  assert.equal(f.select.selectedIndex, 2);
+  trigger.emit('click'); f.document.emit('pointerdown'); assert.equal(menu.hidden, true);
+  trigger.emit('click'); trigger.emit('keydown', { key: 'Tab' }); assert.equal(menu.hidden, true);
+  f.select.disabled = true; f.window.JehlpUI.enhance(); trigger.emit('click'); assert.equal(menu.hidden, true); assert.equal(trigger.disabled, true);
+});
+test('select option activation keeps native selection, one change event and trigger focus', () => {
+  const f = selectFixture(), [trigger, menu] = f.document.children[0].children;
+  let changes = 0; f.select.addEventListener('change', () => changes++);
+  trigger.emit('click'); menu.emit('click', { target: menu.children[3] });
+  assert.equal(f.select.selectedIndex, 3); assert.equal(changes, 1); assert.equal(f.document.activeElement, trigger);
+  trigger.emit('click'); menu.emit('click', { target: menu.children[3] }); assert.equal(changes, 1);
+});
+test('scrolling a focused select into view does not cancel its pending keyboard choice', () => {
+  const f = selectFixture(), [trigger, menu] = f.document.children[0].children;
+  trigger.emit('keydown', { key: 'End' });
+  f.window.emit('scroll', { target: f.document });
+  assert.equal(menu.hidden, false);
+  assert.equal(trigger.getAttribute('aria-activedescendant'), menu.children[3].id);
+  trigger.emit('keydown', { key: 'Enter' }); assert.equal(f.select.selectedIndex, 3);
+  trigger.emit('click'); trigger.rect.bottom = -10; f.window.emit('scroll', { target: f.document });
+  assert.equal(menu.hidden, true);
 });

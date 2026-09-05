@@ -1,5 +1,27 @@
 # Change record
 
+## 2026-09-05 · Page-specific consistency and reusable controls
+
+- Replaced masthead Unicode glyphs with 13 purpose-made transparent PNG marks.
+  Embedded the solver mark in its offline export; no global-home links returned.
+- Added a native-backed, keyboard-accessible dropdown matching the VN readers.
+  Adopted it in Albatross, Profile, the ranking, Armory, and the public puzzles.
+- Equalized Albatross Voyage/Chapter controls, shortened visible chapter labels,
+  and removed Black Sheep Town's redundant glossary arrow without losing context.
+- Removed Profile's unexplained numbering and reserved gutter, tightened section
+  spacing, and used the regional-summary width more effectively.
+- Replaced the ranking's paginated two-axis scrollport with responsive native
+  tables in document flow. Wide views retain axis comparisons; narrow summaries
+  expose complete details on demand. CSV, sorting, records, and scores survive.
+  Sort arrows no longer display priority digits; page turns restore results focus.
+- Updated all 126 public puzzle pages with a quiet PNG-centered divider before
+  the first diagram. Preserved every rule, link, and all 177 diagram placements.
+  Updated the separate private Jekyll layouts without changing their content.
+- Extended the existing philosophy, component contracts, QA gates, and six skills.
+  Recorded the public puzzle repository separately from the private Jekyll source.
+
+See `VALIDATION-2026-09-05-SPECIFICS.md` for checks and publication boundaries.
+
 ## 2026-09-05 · Legibility and connected-header correction
 
 - Promoted regular spreadsheet values, labels, and controls to normal-case 14px

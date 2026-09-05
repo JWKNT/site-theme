@@ -17,6 +17,7 @@ the public routes below were confirmed before release.
 | `JWKNT.github.io` | `https://github.com/JWKNT/JWKNT.github.io.git` | Projects homepage | No source change; compatibility review | `https://jehlp.net/` · `main` root + `CNAME` |
 | `bl2` | `https://github.com/JWKNT/bl2.git` | Static data explorer | No source change; compatibility review | `https://jehlp.net/bl2/` · `main` root |
 | `box-puzzles` | `https://github.com/JWKNT/box-puzzles.git` | Lean + generated Pages build | No source change; compatibility review | `https://jehlp.net/box-puzzles/` · Actions |
+| `puzzles` | `https://github.com/JWKNT/puzzles.git` | Static JSON-to-HTML generator; 126 puzzles | PNG identity/divider, v2 catalogue controls; preserve source content | `https://jehlp.net/puzzles/` · `main` root |
 | `site` | `git@github.com:jehlp/JWsite.git` (redirects to private `JWKNT/JWsite`) | Jekyll; Ruby/Bundler | Background alias and text/navigation CSS | Pages disabled; source-only checkout |
 | `ngu-idle-bot` | `https://github.com/JWKNT/ngu-idle-autopilot.git` | Unity/C# autopilot + native/local monitor | No edits; existing user changes preserved | `not assumed a Pages site` |
 | `puzzle-cot` | `https://github.com/JWKNT/puzzle-cot.git` | Python research harness | No edits; existing instructions preserved | `not assumed a Pages site` |
@@ -60,6 +61,13 @@ local build is not copied into another repository.
 The Jekyll checkout already had essay moves, removed build-helper files, an
 untracked essay and `_incomplete` material. Those changes remain unstaged and are
 not restored or overwritten by this UI release.
+
+The specifics pass located the actual public puzzle archive in `JWKNT/puzzles`
+and cloned it into `bin/puzzles`. It is not the private Jekyll collection: its
+126 generated pages and 177 diagrams come from `data/puzzles.json`. The public
+archive is released through its existing Pages main/root configuration; existing
+Sites metadata is preserved, not treated as authority to create another public
+destination. Changes to the older 100-puzzle Jekyll template remain source-only.
 
 All available local v2 consumers were reviewed: the homepage, both script readers,
 BL2, Box Logic, the seven handoff surfaces, and the source-only Jekyll build.

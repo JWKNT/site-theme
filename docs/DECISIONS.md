@@ -1,5 +1,25 @@
 # Design decisions
 
+## 2026-09-05 · 009 · Useful density and consistent selection
+
+**Evidence:** The user identified mismatched reader controls, unexplained section
+numbers, empty Profile space, redundant navigation, numbered sort arrows, and
+tables requiring pagination plus two-axis scrolling. Unicode mastheads varied
+across platforms; native selects differed from the reader's chapter control.
+**Decision:** Use small transparent PNG identities, remove decorative numbering,
+and let useful summaries or navigation occupy margins. Share an opt-in dropdown
+whose native select remains the value/event authority and no-script fallback.
+Paginated collections flow in the document: preserve comparison columns where
+they fit and use explicit, complete details at narrower widths. Keep visible sort
+direction simple, with advanced order stated accessibly. Page changes focus and
+scroll to the new results. A restrained image-centered rule may separate puzzle
+instructions from diagrams without reordering examples or substantive content.
+**Tradeoff:** Compact table summaries require opening details for some fields;
+CSV and advanced sorting must retain all columns. Native enhancement needs more
+keyboard/focus tests than a CSS-only select. These are opt-in patterns, not a
+requirement to turn non-paginated matrices into cards. Reconsider when a concrete
+comparison task needs a different presentation, not to achieve visual uniformity.
+
 ## 2026-09-05 · 008 · Readable values and connected table headings
 
 **Evidence:** Follow-up review found 12px main ranking values, synthetic small-caps
