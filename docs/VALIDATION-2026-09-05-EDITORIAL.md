@@ -1,8 +1,7 @@
 # Independent-page editorial validation
 
 Recorded 2026-09-05 for the more expressive, minimal page pass requested after
-the component release. This is a candidate record; deployment conclusions and
-published-byte checks are verified after pushing.
+the component release. This records the reviewed candidate and completed release.
 
 ## Scope and preservation
 
@@ -51,7 +50,15 @@ at `204f38e` with only the anchor deletion. This avoids compiling unrelated dirt
 source or overwriting local executable artifacts. Build passed; the aggregate
 initially stopped on missing ignored `work/` reference assemblies. Copies of the
 already-read game references were supplied only inside that checkout before the
-unchanged aggregate was retried. Final aggregate status is recorded at release.
+unchanged aggregate was retried. All 36 direct C# suites and the rebirth-policy
+golden suite passed. The final deployment-lifecycle fixture failed in the
+aggregate and on an unchanged standalone retry. A timestamp observation showed
+that its synthetic telemetry writer missed the marker/handshake window and ran
+after fixture cleanup; no live native operation was involved. The aggregate is
+therefore **not** recorded as passing. No bot-source fix was attempted for this
+HTML-only task. Diff-check and the 155-file commentary audit passed; SHA-256s of
+the original DLL and both monitor binaries remained identical. The isolated
+checkout was removed after verification, leaving the original dirty work intact.
 
 ## Rendered checks
 
@@ -83,6 +90,10 @@ mark width allowed enlarged glyphs to crowd the title.
 - Standalone solver: solves with network emulation offline and switches among
   all four puzzle modes. Dark-mode print computes white paper, black text, a
   neutral identity mark, and a hidden theme toggle. Emulation is reset afterward.
+- Live smoke checks: the published guide has its 28px identity mark and no root
+  link; Workflow opens with its retained article and Files disclosure. Consensus
+  search/reset works on the published dataset. The final smoke test also caught
+  and corrected the singular label for a one-result search.
 
 Representative before/after screenshots are stored in the task's
 `outputs/editorial-pass/` directory: `mtl-before-1440-dark.png`,
@@ -120,3 +131,27 @@ consumers. Check deployment conclusions and published asset bytes afterward.
 For rollback, revert this pass's consumer commits before reverting the shared
 identity styles. Do not reset unrelated working-tree edits or undo Box Logic's
 seven preceding feature commits.
+
+## Completed publication
+
+All eleven public Pages deployment jobs succeeded for the editorial UI commits.
+Forty-six published HTML, CSS, JS, and standalone/build assets returned HTTP 200
+and matched local SHA-256s. Writing and the bot mirror were committed and pushed
+as source-only changes. The bot lifecycle-fixture caveat above does not represent
+a game deployment or a passing full bot aggregate.
+
+| Repository | Published UI commit |
+| --- | --- |
+| site-theme | `71f2ab2` (this completion record follows separately) |
+| logical-solver | `892f4c5` |
+| mtl-guide | `9e36d77` |
+| mystery-report | `04ab2b2`, then `dc12e56` for singular result labels |
+| ngu-idle-dashboard | `31272c9` |
+| profile | `c55fd53` |
+| bl2 | `3ea90eb` |
+| JWKNT.github.io | `7a4c0f4` |
+| black-sheep-town | `47af720` |
+| albatross-koukairoku | `62dbda5` |
+| box-puzzles | `b9feca1` |
+| site / JWKNT/JWsite | `6f7b1eb` |
+| ngu-idle-bot / JWKNT/ngu-idle-autopilot | `8996055` |
