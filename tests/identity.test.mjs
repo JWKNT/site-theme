@@ -33,7 +33,7 @@ test('theme pages retain local navigation without a global-home shortcut', () =>
 
 test('each masthead mark is a small RGBA PNG with explicit reserved dimensions', () => {
   const manifest = JSON.parse(readFileSync(new URL('../v2/marks/manifest.json', import.meta.url), 'utf8'));
-  assert.equal(manifest.assets.length, 13);
+  assert.equal(manifest.assets.length, 14);
   for (const asset of manifest.assets) {
     const png = readFileSync(new URL(`../v2/marks/${asset.file}`, import.meta.url));
     assert.equal(png.subarray(1, 4).toString(), 'PNG', asset.file);

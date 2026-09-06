@@ -55,10 +55,10 @@ wrap; local puzzle navigation can use a named horizontal scroll region.
 </header>
 ```
 
-The 13 maintained PNGs in `v2/marks/` are `site-theme.png`, `home.png`,
+The 14 maintained PNGs in `v2/marks/` are `site-theme.png`, `home.png`,
 `mtl-guide.png`, `profile.png`, `mystery-report.png`, `ngu-idle-dashboard.png`,
 `logical-solver.png`, `bl2.png`, `box-puzzles.png`, `black-sheep-town.png`,
-`albatross-koukairoku.png`, `writing.png`, and `puzzles.png`. Choose the relevant
+`albatross-koukairoku.png`, `writing.png`, `puzzles.png`, and `baba-is-you.png`. Use a unique mark for each project; subpages within that project may share its mark. Choose the relevant
 subject, check both color modes, and preserve the existing favicon separately.
 Publish a new mark before adopting its URL; embed the PNG in offline exports.
 

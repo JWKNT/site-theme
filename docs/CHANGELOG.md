@@ -1,5 +1,10 @@
 # Change record
 
+## 2026-09-05 · Unique Baba Is You mark
+
+- Added a generated transparent Baba character PNG and assigned it exclusively to the Baba Is You project. Recorded the unique-per-project identity convention.
+- Checked the real masthead at 32px in Chromium in light and dark modes; native alpha and 128px asset dimensions verified. All 22 theme tests and 3 catalogue tests pass. Shared asset publishes before the consumer reference; no shared CSS or JavaScript changes.
+
 ## 2026-09-05 · Baba Is You recording catalogue
 
 - Added the standalone `JWKNT/baba-is-you` project for five numbered level clips,

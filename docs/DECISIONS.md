@@ -1,5 +1,9 @@
 # Design decisions
 
+## 2026-09-05 · 014 · Unique project marks
+
+Each independent project has its own masthead illustration. Related projects may share the illustration style, but not the same asset. Subpages within one project retain its identity. Baba Is You now uses a generated transparent Baba character mark instead of the generic puzzles mark.
+
 ## 2026-09-05 · 013 · A level recording catalogue
 
 **Evidence:** Baba Is You needs a growing collection of cropped level videos,
