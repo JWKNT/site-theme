@@ -1,5 +1,18 @@
 # Design decisions
 
+## 2026-09-06 · 017 · Curated directory and playback-only controls
+
+**Evidence:** The user requested removing Other, shortening the homepage's Baba
+label, and removing download controls and the save-slot label from its catalogue.
+**Decision:** The homepage lists authored destinations only; remove automatic
+repository discovery rather than leaving a hidden fallback category. Use
+“Baba Is You” as its destination label. Baba retains level selection, speed and
+PiP controls, without dedicated download links or save-slot metadata on the page.
+**Tradeoff:** New destinations require an explicit directory entry. Direct level
+links remain the no-script playback fallback; `controlslist="nodownload"` is a
+browser hint, not access protection. This supersedes the explicit recording-label
+and download-control preferences in decisions 015 and 013. Shared runtime is unchanged.
+
 ## 2026-09-06 · 016 · Header scope and recording speed
 
 **Evidence:** The user requested removal of GitHub Source header links and

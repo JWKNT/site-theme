@@ -1,5 +1,20 @@
 # Change record
 
+## 2026-09-06 · Curated homepage and simpler Baba controls
+
+- Removed the homepage's Other section and repository-discovery implementation;
+  all 13 authored destinations remain, with the shorter “Baba Is You” label.
+- Removed Baba's dedicated MP4/download controls and visible save-slot label,
+  including the deleted control's player-state wiring and layout column. Kept
+  all 80 recordings, native level links, PiP and 1.00×–4.00× speed controls.
+- Validation: 11 homepage, 24 Baba and 22 theme tests pass. Headed Chromium
+  checked search/Escape, homepage-to-Baba navigation, clip selection and actual
+  4.00× playback, desktop light and 390px dark layouts without horizontal overflow.
+  Shared runtime and media are unchanged. No new Safari or no-script browser run.
+- Release commits: homepage `92e6c0a` (Pages run `34060206261`), Baba `452ac76`
+  (run `34060205111`). Rollback: revert those commits; removed discovery code
+  remains recoverable in Git. Previous bases: `8425741` and `b3620d8` respectively.
+
 ## 2026-09-06 · Playback speeds and quieter headers
 
 - Removed GitHub Source links from Baba and the public NGU dashboard headers,
