@@ -1,5 +1,19 @@
 # Change record
 
+## 2026-09-05 · Root typographic directory
+
+- Rebuilt only `JWKNT.github.io`'s homepage as a compact type atlas: four decorative
+  punctuation studies, quiet accent points, category labels and destination names.
+  Removed the visible title and masthead; retained canonical metadata and utilities.
+- Added a validated JSON-to-static-HTML generator, native expandable categories,
+  optional keyboard-accessible search, and bounded paginated future-Page discovery.
+  Included NDB Idle in the authored twelve-link directory instead of relying on API
+  discovery for an already-known destination.
+- Kept shared CSS/JS and all subpages unchanged. Documented the homepage-specific
+  exception to the PNG masthead rule and the reusable data/rendering contract.
+- See `VALIDATION-2026-09-05-HOMEPAGE.md` for rendered checks, scale fixtures,
+  automated tests, publication evidence, and rollback bases.
+
 ## 2026-09-05 · Main-puzzle boundary correction
 
 - Replaced the public archive's first-diagram placement rule with the start of

@@ -1,5 +1,26 @@
 # Design decisions
 
+## 2026-09-05 · 011 · A compact typographic atlas at the root
+
+**Evidence:** The user requested a memorable homepage using symbolic type art,
+without a visible title, filler copy, or an extreme vertical scroll, and with room
+for many more categories and subpages. The reference's sparse ink forms, tiny
+accent, and fine connectors informed the composition, not its long-scroll format.
+**Decision:** Give the root four composed punctuation studies, restrained rust
+accents, serif destination links, and native category disclosures. Keep all twelve
+known links in generated static HTML, driven by an extensible JSON directory;
+future categories can start closed. Optional search opens matching groups and
+restores their previous state when cleared. Bounded, paginated Pages discovery
+supplements the curated links under a closed Other group and fails quietly.
+Keep this art local to the homepage and preserve shared theme runtime and every
+subpage. Decorative punctuation is not a new masthead identity convention.
+**Tradeoff:** Categories add a small amount of relevant text; names still supply
+orientation that abstract symbols alone cannot. Browser fonts can vary the art's
+exact contours. Reconsider the directory layout when real category growth outgrows
+disclosure/search, not by preemptively adding paging, internal scrolling, or a
+navigation framework. The existing design/component skills cover this pattern;
+its implementation contract lives in the homepage README.
+
 ## 2026-09-05 · 010 · Separate the main puzzle unit, not the first image
 
 **Evidence:** A first-diagram match can place the ornament before a worked example;

@@ -43,6 +43,13 @@ The versioned theme owns palette, type stacks, document defaults, focus behavior
 
 Mastheads use a small, relevant transparent PNG beside the text title, never a Unicode glyph or emoji standing in for the page identity. Related subjects share a restrained drawing language, with a mark that remains clear on paper and charcoal. The mark is decorative; the title supplies its name.
 
+The root directory has a different job: it may omit a visible masthead entirely
+and use composed, decorative typography to organize category and destination
+names. Keep that artwork separate from the accessible link names and small enough
+to preserve a compact overview. Native disclosures and optional search let the
+directory grow; the complete authored destinations remain in static HTML. This
+homepage treatment does not replace the PNG-title convention on independent pages.
+
 Favicons retain their separate dark rounded field, ivory geometry, and one subject color. Their center marks identify the material—a helix for genetics, a solved path for logic, a lens for consensus research—without relying on letters.
 
 Visible authorship and canonical metadata use **jehlp.net**. GitHub account names belong only in source links where they are part of the destination.
