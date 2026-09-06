@@ -204,6 +204,23 @@ overriding Escape. Use `--dialog-width` to vary shell width.
 the code is selected for manual copying and the button explains this. Only the
 `code` text is copied. Clipboard access occurs only after the reader activates Copy.
 
+## Recording catalogues
+
+Keep one native video player and ordinary direct media links in generated HTML.
+An optional controller may enhance selection and shareable level fragments, but
+must not autoplay or intercept modified clicks. Re-selecting the current item
+preserves playback and avoids duplicate history; unrelated fragments such as a
+skip target retain the current item. Back to an empty fragment restores the
+initial item. Update title, poster, duration, current-state label and download
+together. Feature-detect PiP after metadata loads and report rejected requests
+without disabling normal playback or downloads.
+
+Derive recording counts and latest dates from validated data. Keep test fixtures
+independent of a live catalogue's count/date so additions use the same generator.
+The initial implementation remains local to `baba-is-you/lib/catalogue.mjs` and
+`assets/player.js`; do not add a shared runtime dependency until another consumer
+needs it. Test controller decisions separately from real playback and native PiP.
+
 ## Dynamic content and release
 
 The one public API is `window.JehlpUI.enhance(root = document)`. Initialization runs

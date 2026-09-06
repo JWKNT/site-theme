@@ -1,5 +1,17 @@
 # Change record
 
+## 2026-09-05 · Baba catalogue and homepage audit
+
+- Tightened player/list typography and controls, removed disconnected/redundant
+  labels, fixed fragment/re-selection behavior, validated recording metadata and
+  added player regressions. Preserved all five clips, posters and authored data.
+- Consolidated the homepage into four current groups without imposing a category
+  cap. Games contains NDB Idle, Puzzles and explicitly labelled Baba recordings;
+  Links moves to Reading. Added distinct Games art and data-derived metadata.
+- Recorded the local reusable catalogue contract and QA checks; shared CSS/JS and
+  identity assets are unchanged. See `VALIDATION-2026-09-05-BABA-AUDIT.md` for
+  observed checks, release evidence, limitations and rollback bases.
+
 ## 2026-09-05 · Unique Baba Is You mark
 
 - Added a generated transparent Baba character PNG and assigned it exclusively to the Baba Is You project. Recorded the unique-per-project identity convention.
