@@ -112,8 +112,9 @@ page layout rather than changing the content's semantic grouping.
 ## Independent pages, related identities
 
 Each project stands alone: no Projects, Home, linked site logo, or footer route
-back to the global directory. Project-local navigation, source links, downloads,
-and canonical metadata remain useful. The global directory can link out to each
+back to the global directory. Project-local navigation, downloads, and canonical
+metadata remain useful. Keep GitHub Source links out of headers; provenance may
+remain with the content or in the footer. The global directory can link out to each
 project without requiring a return link.
 
 Use the opt-in identity header in `COMPONENTS.md`: one relevant transparent PNG

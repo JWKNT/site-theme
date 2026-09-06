@@ -41,6 +41,8 @@ decorative mark is a transparent PNG with empty `alt`; the title remains text.
 Use `img.site-mark` with `width="32" height="32"`, never a Unicode glyph or emoji.
 Keep one mark per header and let the navigation wrap naturally. Long titles may
 wrap; local puzzle navigation can use a named horizontal scroll region.
+Omit GitHub Source buttons/links from the header. Preserve meaningful provenance
+elsewhere and keep downloads or project-local navigation that serve the page.
 
 ```html
 <header class="site-header site-header--identity">
@@ -220,6 +222,16 @@ independent of a live catalogue's count/date so additions use the same generator
 The initial implementation remains local to `baba-is-you/lib/catalogue.mjs` and
 `assets/player.js`; do not add a shared runtime dependency until another consumer
 needs it. Test controller decisions separately from real playback and native PiP.
+
+Playback-speed presets use the existing `.ui-segmented` appearance with native
+buttons and `aria-pressed`, not tabs. Baba's local `assets/playback-speed.js` binds
+a hidden `[data-playback-speed="video-id"]` group to its native video. Buttons
+use `data-playback-rate`; the group has an accessible Playback speed name. The
+controller sets `playbackRate` and `defaultPlaybackRate`, listens for native
+`ratechange`, and never plays, pauses or seeks. The selected rate survives clip
+changes for that page session. No-JS leaves the group hidden and native controls
+available. Unsupported requests get a nearby live-status message. Keep this
+small behavior local until another real consumer needs a shared runtime module.
 
 ## Dynamic content and release
 

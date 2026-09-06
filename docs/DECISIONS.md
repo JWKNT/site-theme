@@ -1,5 +1,17 @@
 # Design decisions
 
+## 2026-09-06 · 016 · Header scope and recording speed
+
+**Evidence:** The user requested removal of GitHub Source header links and
+Baba's recording note, plus speed controls up to 4.00×.
+**Decision:** Reserve mastheads for identity, project-local navigation and
+essential controls. Keep source provenance outside headers. Add six compact,
+native speed presets using the existing segmented-control appearance, with the
+actual video rate as state authority and a default rate retained across clips.
+**Tradeoff:** Presets provide quick access rather than every possible native
+rate. Unsupported rates report a failure; native controls remain the no-script
+fallback. Keep the small speed controller local until reuse justifies promotion.
+
 ## 2026-09-05 · 015 · Catalogue state and compact directory grouping
 
 **Evidence:** The new recording catalogue reset its clip when the skip fragment

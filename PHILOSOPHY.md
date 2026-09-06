@@ -56,6 +56,10 @@ Favicons retain their separate dark rounded field, ivory geometry, and one subje
 
 Visible authorship and canonical metadata use **jehlp.net**. GitHub account names belong only in source links where they are part of the destination.
 
+Keep GitHub “Source” links out of page headers. The masthead is for identity,
+project-local navigation, and essential controls; useful source provenance may
+remain with the material or in the footer.
+
 ## Treat accessibility as part of the style
 
 Pages should work with a keyboard, retain visible focus, expose useful labels and live status, respect reduced motion, remain legible in light and dark modes, and collapse cleanly on narrow screens. Responsive design should simplify hierarchy rather than hide essential content.

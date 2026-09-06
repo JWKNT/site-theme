@@ -1,5 +1,15 @@
 # Change record
 
+## 2026-09-06 · Playback speeds and quieter headers
+
+- Removed GitHub Source links from Baba and the public NGU dashboard headers,
+  plus the dashboard's local bot-repository mirror; footer provenance remains.
+- Removed Baba's recording note and its now-unused description reference. Added
+  1.00×, 1.25×, 1.50×, 2.00×, 3.00× and 4.00× presets using existing shared CSS
+  with a small independently testable local controller. No shared runtime edits.
+- Recorded the header and playback-speed contracts. Validation and deployment
+  evidence: `VALIDATION-2026-09-06-PLAYBACK-SPEED.md`.
+
 ## 2026-09-05 · Baba catalogue and homepage audit
 
 - Tightened player/list typography and controls, removed disconnected/redundant
