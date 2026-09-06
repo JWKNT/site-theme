@@ -173,6 +173,11 @@ The frame includes paired grids, post-grid solve links, notes, and reference
 charts, not just the first image. Print hides the ornament and restores a normal
 top border.
 
+The divider's grid columns already leave a real gap between its two hairlines.
+Keep the ornament image's CSS background transparent as well as the PNG itself;
+a page-colored backdrop creates a rectangular cutout over the sheet's different
+surface color. Preserve the image padding instead of painting over the line.
+
 An optional `.puzzle-actions` native nav groups only a leading solver-only run,
 with `aria-label="Solve this puzzle"`. The public generator recognizes named
 SudokuPad/penpa+ links plus their existing whitespace/empty-anchor/paragraph

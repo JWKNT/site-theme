@@ -1,5 +1,22 @@
 # Change record
 
+## 2026-09-05 · Transparent puzzle ornament correction
+
+- Removed the ornament image's opaque page-colored CSS backdrop, which appeared
+  as a rectangular cutout over the puzzle sheet. The PNG was already transparent;
+  the separate grid hairlines already provide the gap. Frame geometry is unchanged.
+- Rebuilt all 126 pages with a refreshed stylesheet URL. All 10 puzzle tests
+  pass, including a new transparent-background regression and exact article
+  preservation. Full diff whitespace checks pass; data and diagrams are unchanged.
+- Actual browser screenshots at 1440px and 390px in light/dark show no backdrop.
+  Computed image background is transparent, padding remains 0/12px, and there is
+  no page overflow. Roller's two grids also load within the unchanged narrow frame.
+- Clarified the existing component contract; no shared runtime or skills changed.
+  Rollback bases: puzzles `e136d48`, theme `f96845a`.
+- Published puzzle commit `30d0249`; Pages run `34006464861` succeeded. All 129
+  changed public HTML/CSS files returned HTTP 200 and matched the tested build.
+  Theme tests: 22 passed.
+
 ## 2026-09-05 · Quiet puzzle sheets
 
 - Framed the complete main unit on all 126 public puzzle pages with a thin,
