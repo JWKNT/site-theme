@@ -1,5 +1,19 @@
 # Design decisions
 
+## 2026-09-05 · 013 · A level recording catalogue
+
+**Evidence:** Baba Is You needs a growing collection of cropped level videos,
+including playback outside the page, rather than a grid of simultaneous players.
+**Decision:** Use one native video player beside a compact ordered level list.
+Progressively enhance direct MP4 links into selection and shareable level hashes;
+keep downloads and no-JavaScript access. Detect picture-in-picture support and
+report unavailable requests honestly. Reuse the existing puzzles PNG identity,
+v2 paper/charcoal palette and type roles without changing shared runtime assets.
+**Tradeoff:** Selecting a clip pauses playback instead of autoplaying. At narrow
+widths the list flows below the player, and durations move below titles. Media
+stays in the project repository while small; capacity growth requires a separate
+storage decision, not an assumed unlimited Pages video service.
+
 ## 2026-09-05 · 012 · A quiet sheet for the main puzzle
 
 **Evidence:** The user found individual puzzles visually disconnected and the

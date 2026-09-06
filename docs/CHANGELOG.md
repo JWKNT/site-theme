@@ -1,5 +1,25 @@
 # Change record
 
+## 2026-09-05 · Baba Is You recording catalogue
+
+- Added the standalone `JWKNT/baba-is-you` project for five numbered level clips,
+  a single native player, level hashes, direct downloads and feature-detected PiP.
+  Adopted existing v2 foundations and the puzzles PNG mark. No shared runtime
+  changes. Added a Games destination to the authored homepage directory.
+- Local checks: 3 catalogue tests, 15 homepage tests and 22 theme tests pass.
+  Browser review at 1440/390px in both modes, 200% text, keyboard, no-JS links,
+  print/reduced motion, actual playback/seek/selection/history passed with no
+  script errors. Headed Chromium opened and closed picture-in-picture; Safari
+  fallback remains untested. Game-only crops were reviewed before upload.
+- Published catalogue `6d152c9` (Pages run `34007726865`) and homepage `a8687f9`
+  (run `34007723080`); both deployments succeeded. Live HTTPS page, canonical,
+  CSS/JS/data/poster assets match the local build. All five MP4s serve byte ranges
+  as HTTP 206. Live headed Chromium loaded every clip, played video and opened/
+  closed PiP without script errors. The homepage destination is present publicly.
+- Release bases: homepage `0526d8b`, theme `63d6902`. New catalogue has no prior
+  deployment; rollback is to unpublish its Pages site and remove its directory
+  entry. Revert the release commits for homepage/theme documentation rollback.
+
 ## 2026-09-05 · Neutral non-link puzzle prose
 
 - Scoped puzzle link color to anchors with `href` and reset no-destination

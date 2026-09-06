@@ -6,6 +6,7 @@ the public routes below were confirmed before release.
 
 | Local directory | Actual source remote | Stack | Intended source change | Public path |
 | --- | --- | --- | --- | --- |
+| `baba-is-you` | `https://github.com/JWKNT/baba-is-you.git` | Static video catalogue + Node build | Cropped level recordings, native player/PiP | `https://jehlp.net/baba-is-you/` · `main` root |
 | `site-theme` | `https://github.com/JWKNT/site-theme.git` | Shared static foundation | Theme source, docs, skills, specimens | `https://jehlp.net/site-theme/` · Actions |
 | `logical-solver` | `https://github.com/JWKNT/logical-solver.git` | Static HTML + Node single-file build | UI, exporter, generated dist | `https://jehlp.net/logical-solver/` · `main` root |
 | `mtl-guide` | `https://github.com/JWKNT/mtl-guide.git` | Static Markdown-to-HTML generator | UI, contents behavior, generated documents | `https://jehlp.net/mtl-guide/` · `main` root |
