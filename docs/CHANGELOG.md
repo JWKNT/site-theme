@@ -1,5 +1,24 @@
 # Change record
 
+## 2026-09-05 · Neutral non-link puzzle prose
+
+- Scoped puzzle link color to anchors with `href` and reset no-destination
+  anchors to inherited text color with no decoration. Imported wrappers remain
+  byte-for-byte intact; 55 prose-bearing wrappers occur across 51 archive pages.
+- Rebuilt all 126 pages with a refreshed stylesheet URL. All 11 puzzle tests
+  pass, including the new anchor-style regression and exact content preservation;
+  full diff whitespace checks pass. Data, diagrams, and solving URLs are unchanged.
+- At the browser's default 1280px width, Double Internal X-Sums screenshots and
+  computed styles confirm normal prose beside the blue, underlined example link
+  in both themes. Tab advances from that example link to SudokuPad without an
+  extra stop. Roller's longer notes inherit body color while real links stay blue.
+  This color-only correction did not repeat the earlier responsive/print suite.
+- Clarified the imported-content contract without changing shared runtime or
+  skills. Rollback bases: puzzles `30d0249`, theme `1f881bb`.
+- Published puzzle commit `e8fe0b7`; Pages run `34007410183` succeeded. All 129
+  changed public HTML/CSS files returned HTTP 200 and matched the tested build.
+  Theme tests: 22 passed.
+
 ## 2026-09-05 · Transparent puzzle ornament correction
 
 - Removed the ornament image's opaque page-colored CSS backdrop, which appeared

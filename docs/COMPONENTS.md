@@ -186,6 +186,11 @@ wrappers. Only this verified run uses flattened paragraph layout. Do not apply
 their solve links after the grids. All wrappers are insertion-only; stripping
 them must recover the exact source HTML apart from the existing image-path rewrite.
 
+Imported anchors without `href` can contain ordinary prose, including example
+introductions and notes. Give those wrappers inherited text color and no link
+decoration, including on hover; reserve link styling for `a[href]`. Never hide
+no-destination anchors outside the verified solver-only action row.
+
 **Dialogs.** Name the dialog with `aria-labelledby`. Place a native
 `<form method="dialog" class="ui-dialog-dismiss">` before its body, with a named
 close button. Additional Done buttons can reference that form through
