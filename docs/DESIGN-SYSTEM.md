@@ -96,6 +96,11 @@ Blue carries links, focus, and selection. Dataset colors retain their meanings.
 Use muted ink for secondary text, and reserve faint ink for nonessential marks;
 check contrast in context. A section boundary has one owner. Preserve the existing
 rule/ornament grammar rather than stacking borders around the same whitespace.
+Use a dedicated transition ornament rather than repeating the masthead logo. A
+thin, square puzzle sheet may enclose the complete main unit; its top edge is the
+divider, not a second parallel rule. Keep diagram colors unchanged and reserve
+compact action-row treatment for verified solver-only content.
+
 Place one PNG-centered divider at the start of the main puzzle unit, after the
 complete rules and worked examples. Keep the main puzzle's lead-in, solve-link
 paragraph, grids, and reference diagrams together below it. The first image may

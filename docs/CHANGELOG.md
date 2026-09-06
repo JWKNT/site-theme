@@ -1,5 +1,17 @@
 # Change record
 
+## 2026-09-05 · Quiet puzzle sheets
+
+- Framed the complete main unit on all 126 public puzzle pages with a thin,
+  square-edged sheet. Its divider is the top edge, with a dedicated geometric
+  PNG distinct from the masthead logo; rules and worked examples stay outside.
+- Grouped 124 leading solver-only runs into compact action rows. Preserved the
+  two image-first exceptions, all source text and links, and all 177 diagrams.
+- Added source-preservation and ornament regressions, documented the local
+  markup contract, and extended the existing design and QA skills.
+- See `VALIDATION-2026-09-05-PUZZLE-SHEETS.md` for observed checks, publication
+  evidence, and rollback bases. Shared CSS/JS and other subpages are unchanged.
+
 ## 2026-09-05 · Root typographic directory
 
 - Rebuilt only `JWKNT.github.io`'s homepage as a compact type atlas: four decorative

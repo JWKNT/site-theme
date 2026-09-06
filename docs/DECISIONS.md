@@ -1,5 +1,22 @@
 # Design decisions
 
+## 2026-09-05 · 012 · A quiet sheet for the main puzzle
+
+**Evidence:** The user found individual puzzles visually disconnected and the
+repeated masthead logo made their divider feel like another header. Separate
+solver-link paragraphs left an awkward gap before an otherwise floating grid.
+**Decision:** Give the transition a dedicated geometric PNG: a small hollow
+lozenge and two points. Enclose the complete main puzzle unit in one thin,
+square-edged sheet, with the divider forming its top edge. Group only verified
+leading solver-only content into a compact native action row. Keep complete
+examples outside, paired grids and references inside, and post-grid links in
+source order. Preserve original HTML byte-for-byte after stripping inserted
+wrappers and reversing the existing image-path rewrite.
+**Tradeoff:** A modest inset slightly reduces diagram width, so it shrinks on
+narrow screens. This is a local archive layout, not a new universal card
+component. The ornament is shared; the content-aware wrapper stays in the puzzle
+generator. Existing design and QA skills cover the pattern without a new skill.
+
 ## 2026-09-05 · 011 · A compact typographic atlas at the root
 
 **Evidence:** The user requested a memorable homepage using symbolic type art,

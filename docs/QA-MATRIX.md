@@ -25,6 +25,7 @@ fresh generated build; the archived `_site` is stale after source edits.
 | Jekyll | Essay, home/archive, puzzle, dark mode, footnote/popups | Fresh build; correct background; long-form measure and navigation work |
 | Public puzzles | Complete rules/examples through main lead-in, solve links, and grids; ordinary, example-heavy, and paired-grid pages | One PNG divider at the start of the main puzzle unit, never before an instructional example or between a lead-in/link paragraph and its grids; 126 records, exact text/links/order, and all 177 diagrams preserved (48 examples above, 129 main/reference diagrams below) |
 | Puzzle boundary exceptions | Loop lead-in and Roller paired grids | Divider precedes `And here is the main puzzle:` for Loop and the first of Roller's paired main grids; no example absorbed into the main unit and no main grid stranded above |
+| Puzzle sheet | Frame edge, solve controls, post-grid links, notes and reference charts | Dedicated ornament differs from masthead; no doubled top border; complete main unit inside one frame; only solver-only paragraphs form an action row; narrow/200% text does not clip controls or grids; print restores top edge |
 
 Capture representative before/after screenshots with viewport and theme in the
 filename. Record only observed results. Static tests do not establish visual

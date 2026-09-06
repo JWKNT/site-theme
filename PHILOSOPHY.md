@@ -29,6 +29,8 @@ A transition has one owner. When an ornament separates two sections, the precedi
 
 On a puzzle page, one quiet PNG-centered rule marks the start of the main puzzle unit: its lead-in, solve links, and grids belong together below it. Complete rules and worked examples stay above it. Choose the boundary by meaning, not by the first image; the line must not separate a puzzle from its own introduction or links. Its orientation follows the layout.
 
+Give that transition its own small geometric ornament, distinct from the masthead logo. A quiet, square-edged sheet can group the main solve links, grids and reference material when they otherwise feel disconnected. Let the divider form the sheet's top edge rather than stacking a second border beneath it. Keep examples outside, avoid shadows, preserve original diagram colors and proportions, and reduce the inset on narrow screens. Group genuine solve actions; do not flatten prose or move a post-grid link merely to make every page identical.
+
 ## Earn every feature
 
 A feature belongs when it makes the material easier to find, read, compare, or operate. Search, filtering, sorting, pagination, drawers, and dialogs are tools for a real information problem—not decoration. Empty states, counts, and status text should be useful and quiet.

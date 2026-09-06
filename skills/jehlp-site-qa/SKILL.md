@@ -28,4 +28,10 @@ the complete main puzzle unit stays below. Check the reviewed lead-in/paired-gri
 exceptions in docs/COMPONENTS.md and verify exact source text, link and diagram
 preservation; image counts alone cannot establish a correct semantic boundary.
 
+For puzzle sheets, verify a distinct transition ornament, one top edge, and the
+complete main unit inside the frame, including paired grids and reference charts.
+Only a verified leading solver-only run may become an action row; post-grid links
+stay in source order. Check narrow/enlarged-text control wrapping, unchanged bitmap
+colors and proportions, and print's normal top border without the ornament.
+
 Fix demonstrated failures at the responsible layer. Stop optional testing when concrete risks are covered. Leave an honest checklist of unavailable gates; never treat a DOM stub or source regex as proof of browser accessibility.
