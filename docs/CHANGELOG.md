@@ -1,5 +1,25 @@
 # Change record
 
+## 2026-09-06 · World-based Baba catalogue
+
+- Replaced the flat 110-recording list with eight native collapsible world groups,
+  counts, short in-world labels and cross-world search. Clear/Escape restores
+  disclosure state; deep links and history reveal the selected world without
+  autoplay. Original recording data, media, posters and IDs are unchanged.
+- Extracted local world rendering and browser controllers; retained shared field
+  and segmented-control styles without changing shared CSS/JS. Documented the
+  markup, future world overrides, native fallback and navigation contract.
+- Validation: 31 Baba tests and 22 theme tests pass, including a 500-recording /
+  25-world renderer fixture. Headed Chromium checked 1440px and 390px light/dark,
+  keyboard disclosure/Tab, search across closed worlds, empty/Clear/Escape,
+  clip selection, Back and deep links, 4.00× actual playback and 200% mobile text.
+  No horizontal overflow or script errors observed. Native no-JS world expansion
+  exposes direct level links with search hidden. Print-media testing found and
+  fixed hidden records: all 110 now render, with state restored afterward.
+  Safari and a physical print dialog were not newly tested.
+- Recording import 106–110 completed separately before the UI rebuild. Release
+  `9986d6b` (Pages run `34072997157`); rollback by reverting it to base `8327b27`.
+
 ## 2026-09-06 · Curated homepage and simpler Baba controls
 
 - Removed the homepage's Other section and repository-discovery implementation;

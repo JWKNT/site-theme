@@ -1,5 +1,17 @@
 # Design decisions
 
+## 2026-09-06 · 018 · World-based recording navigation
+
+**Evidence:** Baba's growing flat list is difficult to navigate and is expected
+to reach several hundred recordings.
+**Decision:** Use native collapsible world groups with recording counts and short
+in-world labels. Add cross-world search, preserve disclosure state when clearing
+it, and reveal the selected clip's group for deep links and history. Keep one
+player and unchanged IDs/media URLs; no pagination or nested scrolling.
+**Tradeoff:** Several worlds can remain open by choice. Native groups work without
+scripts, while search is an enhancement. Keep grouping and filtering local with
+documented contracts; reconsider shared extraction only for a second consumer.
+
 ## 2026-09-06 · 017 · Curated directory and playback-only controls
 
 **Evidence:** The user requested removing Other, shortening the homepage's Baba

@@ -213,9 +213,10 @@ An optional controller may enhance selection and shareable level fragments, but
 must not autoplay or intercept modified clicks. Re-selecting the current item
 preserves playback and avoids duplicate history; unrelated fragments such as a
 skip target retain the current item. Back to an empty fragment restores the
-initial item. Update title, poster, duration, current-state label and download
-together. Feature-detect PiP after metadata loads and report rejected requests
-without disabling normal playback or downloads.
+initial item. Update title, poster, duration and current-state label together.
+Feature-detect PiP after metadata loads and report rejected requests without
+disabling normal playback. Baba has no dedicated download controls; its direct
+level links retain native playback access.
 
 Derive recording counts and latest dates from validated data. Keep test fixtures
 independent of a live catalogue's count/date so additions use the same generator.
@@ -232,6 +233,21 @@ controller sets `playbackRate` and `defaultPlaybackRate`, listens for native
 changes for that page session. No-JS leaves the group hidden and native controls
 available. Unsupported requests get a nearby live-status message. Keep this
 small behavior local until another real consumer needs a shared runtime module.
+
+### Grouped recording navigation
+
+Baba uses native `details.world-group[data-world]` with a named `summary` and
+recording count, containing one ordered level list. Its local `lib/worlds.mjs`
+renders full world names and short in-world labels without changing original IDs,
+titles or media paths. Groups follow first appearance, with no fixed world limit.
+The local `assets/world-browser.js` enhances a hidden search form; matching spans
+world names, full titles, in-world codes and catalogue numbers. Filtering opens
+matching groups and restores previous disclosure state on Clear/Escape. An empty
+result has explicit recovery text. `BabaWorldBrowser.reveal(row)` opens the current
+recording's group on selection or history changes without controlling playback.
+Native groups and links work without scripts; print temporarily expands all rows.
+Use native disclosure semantics and shared field tokens. Keep this single-consumer
+controller local rather than adding a global accordion or filtering framework.
 
 ## Dynamic content and release
 
