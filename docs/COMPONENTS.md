@@ -214,9 +214,9 @@ must not autoplay or intercept modified clicks. Re-selecting the current item
 preserves playback and avoids duplicate history; unrelated fragments such as a
 skip target retain the current item. Back to an empty fragment restores the
 initial item. Update title, poster, duration and current-state label together.
-Feature-detect PiP after metadata loads and report rejected requests without
-disabling normal playback. Baba has no dedicated download controls; its direct
-level links retain native playback access.
+If a page provides custom PiP, feature-detect it and report failures honestly.
+Baba instead leaves PiP to native browser controls and has no dedicated download
+controls; direct level links retain native playback access.
 
 Derive recording counts and latest dates from validated data. Keep test fixtures
 independent of a live catalogue's count/date so additions use the same generator.
@@ -240,14 +240,15 @@ Baba uses native `details.world-group[data-world]` with a named `summary` and
 recording count, containing one ordered level list. Its local `lib/worlds.mjs`
 renders full world names and short in-world labels without changing original IDs,
 titles or media paths. Groups follow first appearance, with no fixed world limit.
-The local `assets/world-browser.js` enhances a hidden search form; matching spans
-world names, full titles, in-world codes and catalogue numbers. Filtering opens
-matching groups and restores previous disclosure state on Clear/Escape. An empty
-result has explicit recovery text. `BabaWorldBrowser.reveal(row)` opens the current
+The local `assets/world-browser.js` uses `BabaWorldBrowser.reveal(row)` to open the current
 recording's group on selection or history changes without controlling playback.
 Native groups and links work without scripts; print temporarily expands all rows.
-Use native disclosure semantics and shared field tokens. Keep this single-consumer
-controller local rather than adding a global accordion or filtering framework.
+World groups are the sole catalogue navigation; do not restore search or a custom
+PiP button. A single transparent, decorative rule-tile SVG from `lib/ornament.mjs`
+occupies the former search space above the groups, replacing the plain heading
+rule. Its three linked tiles evoke Baba's rules without repeating the PNG
+masthead. Use theme colors and no opaque rectangle behind the symbol. Keep this
+single-consumer controller and ornament local rather than adding a global framework.
 
 ## Dynamic content and release
 

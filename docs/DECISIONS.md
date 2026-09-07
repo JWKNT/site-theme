@@ -1,5 +1,19 @@
 # Design decisions
 
+## 2026-09-06 · 019 · World browsing without auxiliary controls
+
+**Evidence:** The user preferred removing Baba's search and large PiP button,
+and suggested a distinctive divider in the recovered space.
+**Decision:** Keep world disclosures as the catalogue navigation and leave PiP
+to native browser controls where provided. Remove obsolete search/PiP code and
+tests; retain playback speeds, deep links and full print output. Add one small,
+transparent three-rule-tile ornament above the world list, not another masthead
+mark or a second stacked border. Keep its SVG geometry local and theme-aware.
+**Tradeoff:** Direct search is no longer a page feature; browser Find remains
+browser-dependent for closed groups. This supersedes the search portion of 018
+and dedicated-PiP portion of earlier recording decisions. Do not reintroduce
+either control without an explicit user request.
+
 ## 2026-09-06 · 018 · World-based recording navigation
 
 **Evidence:** Baba's growing flat list is difficult to navigate and is expected

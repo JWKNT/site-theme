@@ -1,5 +1,24 @@
 # Change record
 
+## 2026-09-06 · Quiet rule-tile divider and native playback controls
+
+- Removed Baba's search form, search metadata/controller branches and dedicated
+  PiP button/note/controller. Native PiP is not disabled; availability is the
+  browser's responsibility. Moved duration beside the retained speed controls.
+- Added one transparent three-tile SVG ornament above the world list, replacing
+  the plain heading rule and search space. Kept the PNG masthead distinct, used
+  theme colors, and hid the decorative divider from accessibility and print.
+- Kept all 110 recordings, original IDs/media paths, world disclosures, history,
+  playback speed and print expansion. Removed tests for deleted features and
+  added absence/divider regressions. Updated repository and component guidance.
+- Validation: 27 Baba and 22 theme tests pass, including the 500-recording renderer
+  fixture. Headed Chromium checked 390px light/dark and 1440px layouts in both
+  modes, transparent ornament background, keyboard world selection/Tab, actual
+  4.00× playback, 200% text without overflow, and all 110 rows in print media.
+  No script errors. No new Safari, no-JS or native-PiP activation test this pass.
+- Release `cf179cb`, Pages run `34073460602`; rollback by reverting to `9986d6b`.
+  Removed implementation remains recoverable in Git; no recordings were removed.
+
 ## 2026-09-06 · World-based Baba catalogue
 
 - Replaced the flat 110-recording list with eight native collapsible world groups,
