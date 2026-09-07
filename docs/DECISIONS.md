@@ -260,3 +260,7 @@ are not a new data or status vocabulary. Decoration must yield to text at narrow
 widths; the mark's reserved width scales with its font so enlarged text cannot
 collide with the title. Future pages should adopt this additive contract rather
 than copying local masthead rules.
+
+
+## Recording-specific context beside a native player — 2026-09-06
+Keep a selected recording’s approach, mechanics, and attempt notes beside the player on desktop and beneath it on narrow screens. Render all notes as native disclosures before enhancement; JavaScript reveals only the selected level’s notes and follows player history. Notes remain readable without JavaScript. This is a local Baba Is You pattern, not a shared component yet.

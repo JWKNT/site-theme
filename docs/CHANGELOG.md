@@ -334,3 +334,7 @@ Small chart/candidate labels and `v2/reader.css` remain a measured follow-up.
 The bot and puzzle research harness are inventoried and unchanged.
 
 See `VALIDATION.md` for observed checks and `SOL-HANDOFF.md` for the ordered work.
+
+
+## 2026-09-06 — Baba Is You recording notes
+The fresh playthrough adds per-level approach, mechanics, and attempts beside the native video, with stacked mobile layout and native no-JavaScript disclosures. Shared theme runtime assets are unchanged. Validation is recorded in baba-is-you/VALIDATION.md.
