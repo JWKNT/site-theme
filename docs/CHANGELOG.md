@@ -1,5 +1,14 @@
 # Change record
 
+## 2026-09-06 · Remove the redundant Worlds label
+
+- Removed Baba's visible Worlds heading and its spacing rules. The section keeps
+  the accessible name “Recordings by world”; the tile divider leads into the groups.
+- Generator rebuilt; all 27 Baba tests pass, including a heading-absence and
+  accessible-label regression. No player, media, grouping or shared runtime changes.
+- Release `57ff7c2`, Pages run `34073868176`; rollback by reverting to `cf179cb`.
+  This small removal does not repeat the preceding full responsive/media audit.
+
 ## 2026-09-06 · Quiet rule-tile divider and native playback controls
 
 - Removed Baba's search form, search metadata/controller branches and dedicated
