@@ -1,7 +1,7 @@
 # A quiet frame, made usable
 
-The direction continues the existing philosophy: serif reading, sans interface,
-monospaced values, paper and charcoal surfaces, restrained blue, square controls,
+Readers is the visual reference: Georgia reading and interface text, bold Palatino
+headings, monospaced values, paper and charcoal surfaces, restrained state colors, square controls,
 and thin rules. Improve the ability to read and operate the material before
 adding decoration. Subject identity belongs inside this common language, not in
 a separate visual system for each page.
@@ -23,10 +23,10 @@ health interpretation, puzzle rules, or bot decisions while restyling their UI.
 
 | Role | Target | Implementation |
 | --- | --- | --- |
-| Sustained reading | 16px or larger at default settings | `--text-body: 1rem`, line height roughly 1.6 |
+| Sustained reading | 18–20px for sustained prose; 16px for dense reference | `--text-body: 1rem`, line height roughly 1.6 |
 | Regular labels, navigation, controls | 14px or larger | `--text-ui: .875rem` |
 | Secondary metadata | 12px or larger | `--text-meta: .75rem` |
-| Page titles | Usually 26–32px | Existing display stack, restrained weight |
+| Page titles | Usually 26–32px | `--display`, Palatino stack, weight 700 |
 | Desktop interface controls | At least 36px high | `--control-size: 2.25rem` |
 | Coarse-pointer interface controls | Aim for 44px high | `--control-size: 2.75rem` |
 
@@ -46,6 +46,12 @@ option surface as the VN readers. Keep their native select as form/data authorit
 Retain the richer VN chapter browsers where grouping and chapter context are part
 of the task; equal-role voyage/chapter controls still share the control scale.
 See `COMPONENTS.md` for keyboard behavior, native fallback, and programmatic sync.
+
+### Font contracts
+
+`--serif` is Georgia / Times New Roman; `--display` is Palatino Linotype / Palatino / Book Antiqua / P052 / Georgia. `--ui: var(--serif)` gives controls the same voice. Consumers use `var(--ui, var(--serif))` for compatibility during staggered deployment. Keep `--sans` available for tiny chart annotations; do not redefine it as a disguised serif. Numerical grids, coordinates, identifiers, and code keep their existing mono fonts. No font downloads are required.
+
+Use ink-colored links and navigation with restrained underlines. Status, selected controls, scientific plots, and game/puzzle cues retain meaningful color. Borders should organize content rather than outline every label; use neutral tag surfaces and one rule per transition.
 
 ## Ownership and CSS order
 

@@ -23,6 +23,20 @@ the public routes below were confirmed before release.
 | `ngu-idle-bot` | `https://github.com/JWKNT/ngu-idle-autopilot.git` | Unity/C# autopilot + native/local monitor | No edits; existing user changes preserved | `not assumed a Pages site` |
 | `puzzle-cot` | `https://github.com/JWKNT/puzzle-cot.git` | Python research harness | No edits; existing instructions preserved | `not assumed a Pages site` |
 
+## September 19 family refinement
+
+The current sweep includes every public Pages app in the account. Added inventory:
+
+| Local directory | Source | Public route | Build |
+| --- | --- | --- | --- |
+| `readers` | `JWKNT/readers` | `https://jehlp.net/readers/` | Static; aesthetic reference preserved |
+| `links` | `JWKNT/links` | `https://jehlp.net/links/` | `npm run build`; migrated v1 to v2 |
+| `ndb-idle` | `JWKNT/ndb-idle` | `https://jehlp.net/ndb-idle/` | Vite / Pages Actions; bundled self-only CSS |
+
+The media repositories contain recordings, not independent UI surfaces. The private
+`site` checkout has Pages disabled and unrelated user edits; it is not a release
+target. Readers retains its vendored theme and exact reading layout.
+
 ## Base commits and checks
 
 This section preserves the first-pass starting points. The second component pass,

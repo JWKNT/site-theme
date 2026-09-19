@@ -7,7 +7,7 @@ description: "Design or improve jehlp.net pages using the shared visual language
 
 Read the owning repository's AGENTS.md and the theme's PHILOSOPHY.md and docs/DESIGN-SYSTEM.md. Locate site-theme beside the current repo, or resolve this skill's real path to its owning site-theme checkout.
 
-Identify the primary task and choose the surface around it: reading, reference, collection, live monitor, chart exploration, or puzzle workspace. Put the real material or controls in the first useful viewport. Retain the serif/sans/mono roles, paper/charcoal modes, restrained blue, square controls and quiet rules; do not impose a card grid or marketing hero.
+Identify the primary task and choose the surface around it: reading, reference, collection, live monitor, chart exploration, or puzzle workspace. Put the real material or controls in the first useful viewport. Use the Readers reference: Georgia text and controls, bold Palatino headings, mono values, and sans only for tiny chart annotations. Retain paper/charcoal modes, restrained blue, square controls and quiet rules; do not impose a card grid or marketing hero.
 
 Treat each project as an independent page: omit navigation back to the global homepage, including linked brands and footer shortcuts. Preserve project-local navigation and source/download links. For a masthead, use the shared identity contract in docs/COMPONENTS.md: a relevant transparent PNG from v2/marks as img.site-mark, 32px, empty alt—not Unicode or emoji. Keep identity separate from data colors.
 

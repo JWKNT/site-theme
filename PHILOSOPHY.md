@@ -1,6 +1,6 @@
 # Site philosophy
 
-The shared theme is a quiet frame for different kinds of work. A script reader, puzzle archive, solver, reference guide, item database, project index, and link collection should feel related without pretending their content has the same shape.
+The Readers page is the aesthetic reference: warm paper, dark ink, assured traditional type, and a quiet frame for the material. The shared theme carries that character into different kinds of work. A script reader, puzzle archive, solver, reference guide, item database, project index, and link collection should feel related without pretending their content has the same shape.
 
 ## Start with the material
 
@@ -9,11 +9,15 @@ Structure follows the information. A long text needs readable measure; a dense a
 ## Keep the interface subordinate
 
 - Prefer text, whitespace, and alignment before containers or decoration.
-- Use serif for reading, sans serif for interface and metadata, and monospace only for values, identifiers, shortcuts, and compact status.
-- Keep the palette neutral with one restrained blue for links, focus, selection, and meaningful state.
+- Use Georgia for reading and ordinary interface text, with bold Palatino headings. Controls belong to the same typographic voice as the material. Reserve sans serif for genuinely tiny chart labels and monospace for values, identifiers, shortcuts, and compact status.
+- Keep the palette neutral. Links and navigation use ink, with fine underlines where needed; restrained blue remains available for focus, selection, and meaningful state.
 - Use hairline rules to explain structure. Avoid cards, shadows, rounded containers, gradients, and animation unless the material needs a real boundary, depth cue, or transition.
 - Keep controls square, compact, plainly labeled, and close to the content they affect. Equivalent dropdowns share one visual and keyboard grammar; remove duplicate controls that do the same job in the same context.
-- Let titles be calm. A page title should usually fit near 31 pixels; section headings should stay near the text they govern.
+- Let titles be assured: bold Palatino, ordinary case, modest negative tracking. Most working-page titles fit near 28–32 pixels; sustained reading may use 34–48 pixels. Avoid airy display weights, fashionable rounded UI type, and ornamental lettering in ordinary controls.
+
+## Carry the Readers character across the family
+
+Refinement is usually the last ten percent: type weight, line length, an aligned baseline, a calmer border, and breathing room around the actual material. Do not turn every page into a novel reader. Keep dense tools efficient and prose generous. Preserve puzzle geometry, chart colors, game art, and data meaning. Theme controls and existing subject marks can remain as restrained punctuation; do not add scrollwork, simulated parchment, or gold decoration to suggest quality.
 
 ## Make the hierarchy skimmable
 

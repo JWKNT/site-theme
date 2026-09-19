@@ -1,5 +1,5 @@
 .theme-doc { width: min(46rem, calc(100% - 2 * var(--gutter))); margin-inline: auto; padding: clamp(2rem, 7vw, 5rem) 0 5rem; }
-.theme-doc header h1 { margin: 0; font-weight: 500; }
+.theme-doc header h1 { margin: 0; font-weight: 700; }
 .theme-doc header p { margin: .65rem 0 0; }
 .theme-doc section { margin-top: 2.7rem; }
 .theme-doc .site-divider + section { margin-top: 0; }
@@ -12,9 +12,9 @@
 .theme-doc pre:not([data-copy-code]) { padding: .8rem 1rem; }
 .theme-doc code { font-size: var(--text-ui); }
 .type-specimen { display: grid; grid-template-columns: 7rem 1fr; gap: .5rem 1.25rem; margin: 1rem 0; padding-block: .8rem; border-block: 1px solid var(--line); }
-.type-specimen dt { color: var(--muted); font: 600 .875rem/1.4 var(--sans); font-variant: small-caps; letter-spacing: .05em; }
+.type-specimen dt { color: var(--muted); font: 600 .875rem/1.4 var(--ui, var(--serif)); font-variant: small-caps; letter-spacing: .05em; }
 .type-specimen dd { margin: 0; }
-.type-specimen .ui { font-family: var(--sans); font-size: .875rem; }
+.type-specimen .ui { font-family: var(--ui, var(--serif)); font-size: .875rem; }
 .type-specimen .mono { font-family: var(--mono); font-size: .78rem; }
 .ornament-specimen { display: grid; grid-template-columns: repeat(6, 1fr); margin: 1rem 0; border-block: 1px solid var(--line); }
 .ornament-specimen span { display: grid; min-height: 3.2rem; place-items: center; color: var(--muted-strong); font: 1.05rem/1 var(--display); }
@@ -33,7 +33,7 @@
 .component-patterns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem; }
 .component-patterns li { min-width: 0; }
 .component-table { min-width: 44rem; font-size: var(--text-ui); }
-.component-table caption { padding: .5rem 0; text-align: left; font-family: var(--sans); color: var(--muted); }
-.component-contents { display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; padding: .75rem 0; font-family: var(--sans); }
+.component-table caption { padding: .5rem 0; text-align: left; font-family: var(--ui, var(--serif)); color: var(--muted); }
+.component-contents { display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; padding: .75rem 0; font-family: var(--ui, var(--serif)); }
 @media (max-width: 42rem) { .component-directory > li, .component-patterns { grid-template-columns: 1fr; gap: .2rem; } }
 @media (max-width: 34rem) { .type-specimen { grid-template-columns: 1fr; } }

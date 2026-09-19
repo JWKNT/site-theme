@@ -1,5 +1,23 @@
 # Design decisions
 
+## 020 — Readers as the family reference (2026-09-19)
+
+**Decision:** Use Georgia for prose and UI, bold Palatino for headings, and ink-led
+navigation. Preserve paper/charcoal colors, small subject marks, square controls,
+existing focus/state colors, and purpose-specific layouts. This supersedes the
+earlier serif-reading/sans-interface split.
+
+**Evidence:** The owner identified Readers as the exact desired thematic feel and
+asked for the last aesthetic refinement across all pages. The previous Avenir UI
+and light Baskerville headings made tools feel unrelated to the book readers.
+
+**Tradeoff:** Serif controls have different widths. Review mobile wrapping and dense
+controls; retain sans for tiny plotted labels and mono for numerical geometry.
+Links adopts v2; NDB bundles the paper/type treatment to preserve its CSP and
+offline operation, with game art and state colors unchanged. Readers itself remains
+the reference, rather than receiving a gratuitous redesign.
+
+
 ## 2026-09-06 · 019 · World browsing without auxiliary controls
 
 **Evidence:** The user preferred removing Baba's search and large PiP button,

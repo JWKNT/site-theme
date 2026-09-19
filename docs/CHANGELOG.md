@@ -1,5 +1,17 @@
 # Change record
 
+## 2026-09-19 — Readers visual language across the family
+
+Adopt Georgia reading/UI and bold Palatino headings throughout v2 and its
+consumers. Refine guide reading measure, neutral puzzle tags, table heading space,
+solver typography and offline export. Migrate Links from v1; align NDB's bundled
+outer interface while preserving game art and state. Record Readers as the
+aesthetic reference in philosophy, design system, specimen, and site-design skill.
+
+See [validation and rollback bases](VALIDATION-2026-09-19-READERS-THEME.md) for
+exact scope, builds, browser evidence, and limits.
+
+
 ## 2026-09-19 · Readers directory link and annotation expansion
 
 - Homepage `a728d5d` adds Readers under Reading; reader `929317a` removes the
