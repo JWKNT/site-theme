@@ -42,7 +42,8 @@ grids keep their specialist fonts.
   Reduced-motion shared gallery used automatic scrolling; guide content remained
   readable with JavaScript disabled; print emulation used white paper/black text.
 - NGU correctly showed offline state because no telemetry bridge was running.
-  Local video preview could not load media; public playback is checked separately.
+  Local video preview could not load media; the public player subsequently reached
+  readyState 4 with its original media URL and no error.
 - `git diff --check` passed in every edited repository.
 
 ## Rollback bases
@@ -63,3 +64,29 @@ grids keep their specialist fonts.
 - `links`: `80c4f6704b28eb2d01bea57c44da43dcfb3f08e0`
 - `ndb-idle`: `28786f3eeb1986d4e6fd87db086d7c9f9c966322`
 - `readers`: `929317a28d8aaba6755a36c766964cf0a4ead4d1`
+
+## Release evidence
+
+Shared foundation release `938ea5d` deployed successfully. Every consumer push
+completed; public stylesheet bytes matched the edited sources. Both Vite Pages
+workflows passed (including the existing Lean verification in Box Logic). NDB
+uses a different production base path; verify its Pages-mode build rather than
+comparing it to the relative-path desktop build. Public solver computed styles
+confirm Georgia body text and bold Palatino headings.
+
+Consumer release commits:
+
+- `JWKNT.github.io`: `7c141abda39afd28391a0ae698fa64e62880a6c6`
+- `logical-solver`: `f44c1e81883a1e6cd82518b67ccc0e0c1b8e2c25`
+- `mtl-guide`: `1c94de7176275f2ea5f04dbb35caca07d0fe1957`
+- `mystery-report`: `d66d89cd0a08521abec3a5f0ad1afb09cbe432eb`
+- `ngu-idle-dashboard`: `0eebfaf32cd2a79a58c0f94378818cfda4c2f869`
+- `profile`: `5eef79bad92e3f60fff6976e60f59f0b10171b6d`
+- `bl2`: `85cb412c8781fbfb9dae29498fd63088d6106a50`
+- `puzzles`: `0fa993ed4da7a35c13b22f8c0f9f5560e38bbf7b`
+- `baba-is-you`: `be1768c50fe15fdb50e97cc9eb469438adbb3c84`
+- `black-sheep-town`: `67537a1cdda4dd22ca52d8c4bb5aed8848049115`
+- `albatross-koukairoku`: `8247afed5cebb194f01d09b7c55492815c80c158`
+- `box-puzzles`: `04b7d50e710631fccf6566ddbc79a057fdd5da68`
+- `links`: `cac903eb68b096e2e6ef3b283ffdd42244072da8`
+- `ndb-idle`: `305917dcd2b42cc0cb66b1d297eae793ec622090`
