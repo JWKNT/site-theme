@@ -1,5 +1,12 @@
 # Change record
 
+## 2026-09-19 — NDB exception and Readers external-reference notes
+
+- Restore NDB Idle by reverting `305917d` and `473e178`. Result `52ec5b8` has exactly the tree of `28786f3`; Pages Actions completed successfully. Record the explicit styling exception in philosophy, repository guidance, and decision 021. Other family styling is retained.
+- Readers version 9 removes eight series entries for six purely in-book terms, rewrites 56 existing descriptions, and adds 52 sourced entries focused on missed proper nouns. 857 notes remain across 324 chapters. The margin explains external meanings; tentative namesakes and roots use “Possibly” in short and full notes. Research and sources are in Readers `NOTES-V9.md`.
+- Readers validation passes against `4dac1a4`: prose, paragraph addresses, first/local-first annotations, counts, local links, and static/interactive text. Separate checks confirm all static tooltips/source links agree with the glossary.
+- Browser verification: desktop Long Sun Limna and absence of shiprock markup; desktop New Sun Jolenta; Short Sun Sfido at 390px without horizontal overflow, Escape close, and light-mode switch. No shared runtime or CSS changes in this follow-up.
+
 ## 2026-09-19 — Readers visual language across the family
 
 Adopt Georgia reading/UI and bold Palatino headings throughout v2 and its

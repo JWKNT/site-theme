@@ -1,5 +1,13 @@
 # Design decisions
 
+## 021 — NDB Idle is an explicit theme exception (2026-09-19)
+
+**Evidence:** After reviewing the family sweep, the owner approved the other pages and asked to restore NDB Idle.
+
+**Decision:** Preserve NDB’s independent game styling. This supersedes the NDB portion of decision 020; the Readers direction remains in force for the other sites.
+
+**Tradeoff:** NDB intentionally differs from the family. Reconsider only on an explicit request, not during a broad theme update. Reverts `d8557d6` and `52ec5b8` restore exactly the tree at `28786f3`.
+
 ## 020 — Readers as the family reference (2026-09-19)
 
 **Decision:** Use Georgia for prose and UI, bold Palatino for headings, and ink-led

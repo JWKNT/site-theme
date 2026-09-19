@@ -15,6 +15,10 @@ Structure follows the information. A long text needs readable measure; a dense a
 - Keep controls square, compact, plainly labeled, and close to the content they affect. Equivalent dropdowns share one visual and keyboard grammar; remove duplicate controls that do the same job in the same context.
 - Let titles be assured: bold Palatino, ordinary case, modest negative tracking. Most working-page titles fit near 28–32 pixels; sustained reading may use 34–48 pixels. Avoid airy display weights, fashionable rounded UI type, and ornamental lettering in ordinary controls.
 
+## Explicit exception: NDB Idle
+
+NDB Idle retains its own game interface and pre-sweep typography, palette, and browser chrome. The owner explicitly exempted it from the Readers aesthetic sweep. Do not migrate or reskin it as part of general theme adoption; reconsider only on an explicit request for that game.
+
 ## Carry the Readers character across the family
 
 Refinement is usually the last ten percent: type weight, line length, an aligned baseline, a calmer border, and breathing room around the actual material. Do not turn every page into a novel reader. Keep dense tools efficient and prose generous. Preserve puzzle geometry, chart colors, game art, and data meaning. Theme controls and existing subject marks can remain as restrained punctuation; do not add scrollwork, simulated parchment, or gold decoration to suggest quality.
