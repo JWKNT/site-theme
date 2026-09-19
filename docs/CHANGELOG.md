@@ -1,5 +1,23 @@
 # Change record
 
+## 2026-09-19 · Readers directory link and annotation expansion
+
+- Homepage `a728d5d` adds Readers under Reading; reader `929317a` removes the
+  three-series footer navigation, retaining contents and progress.
+- Added 38 glossary entries for 22 terms across the series. The source evidence,
+  contextual corrections, uncertainty policy, and audit limits live in Readers
+  `NOTES.md`; this is not a shared-theme or book-text change.
+- Homepage: all 11 Node tests pass. Readers: all 813 glossary entries and 324
+  chapters pass structural validation, local-link checks, and exact prose/ID
+  comparison to `4dac1a4`; static and interactive text agree.
+- Browser: 1440px light and 390px dark homepage/Long Sun views; Readers link
+  navigation, desktop/mobile Silk popup, Escape close, and absence of the footer
+  series links verified. No horizontal overflow in the 390px reader.
+  This focused pass did not repeat print, 200% text, or the full shared-theme matrix.
+- Published consumer commits above. Roll back with reverts in their respective
+  repositories. No shared runtime, palette, or component contract changed.
+
+
 ## 2026-09-06 · Remove the redundant Worlds label
 
 - Removed Baba's visible Worlds heading and its spacing rules. The section keeps
