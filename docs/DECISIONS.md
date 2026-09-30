@@ -1,5 +1,19 @@
 # Design decisions
 
+## 024 — A typographic theme action (2026-09-30)
+
+**Evidence:** The owner found the generic theme button out of character and
+requested a site-wide refinement.
+
+**Decision:** Use a small half-ink dial with the serif name of the destination
+mode, an unboxed resting state and one hover rule. Keep the square focus ring,
+visible action name, existing pressed state and full-size click/touch target.
+The mark is UI punctuation, not a new masthead or a new accent palette.
+
+**Tradeoff:** A word is wider than an icon alone. It makes the action clearer,
+so headers must allow the control to wrap rather than shrinking or clipping it.
+Keep legacy SVG URLs for self-contained consumers and retain the v2 controller.
+
 ## 023 — Individual works own reader navigation and references (2026-09-30)
 
 **Evidence:** The owner requested individual short-story pages, one Fifth Head

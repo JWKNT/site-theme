@@ -1,5 +1,19 @@
 # Change record
 
+## 2026-09-30 — Typographic light/dark control
+
+- Replace the circular moon/sun badge and hover shadow with an ink-and-paper dial,
+  a small serif action label and a single hover rule. Keep the existing theme
+  controller, accessible action names, pressed state, storage and public events.
+- The visible label names the next mode (Dark on paper, Light on charcoal). Keep
+  at least a 36px desktop / 44px coarse-pointer target and square keyboard focus.
+  Preserve print/reduced-motion behavior and fixed placement for floating controls.
+- Shared consumers load this from v2; refresh the Readers vendor copy and the
+  Logical Solvers self-contained export after shared live visual verification.
+- Pre-release checks: 25 shared static/behavior tests pass. Local browser preview
+  is unavailable (ERR_BLOCKED_BY_CLIENT); visual review will follow the authorized
+  shared deployment, with the prior commit retained for rollback.
+
 ## 2026-09-30 — Reader transcription and prose typography
 
 - Correct 335 reviewed transcription errors across 44 Readers works, including
