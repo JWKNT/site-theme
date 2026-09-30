@@ -1,5 +1,21 @@
 # Change record
 
+## 2026-09-30 — Homepage full-text search and drawn link arrows
+
+- The slash control now searches published page text, Reader chapters and notes,
+  bilingual VN scripts, puzzle subpages and public catalogue data across all 14
+  authored sites. Results have excerpts, supported deep links, site filters and
+  bounded pagination; keyboard, error/retry and Back-navigation states are covered.
+- Pagefind indexes are static and fetched on demand. English and Japanese text use
+  appropriate tokenizers. Inputs are explicit public paths and rendered-field
+  allowlists; no private exports, external-site crawling or live game state.
+- Replace homepage Unicode destination arrows with fine CSS geometry so iPhone
+  does not render them as colored emoji. Preserve the slash and theme controls.
+- Publish through existing main/root Pages permissions. Index refresh is manual
+  (`npm run refresh:search` in the homepage repo); no new OAuth scope or scheduled
+  workflow was installed. See `VALIDATION-2026-09-30-SITE-SEARCH.md` for coverage,
+  exclusions, release commits and actual checks.
+
 ## 2026-09-30 — Hyperion contents and Strange Travelers
 
 - Correct Hyperion’s contents to distinguish numbered frame chapters from their
