@@ -20,7 +20,7 @@ styling exception. No new game theme feature or game-state change was introduced
 
 - All 25 shared static/behavior tests pass
 - Homepage: 11 tests; Links: 8; Albatross: 12 Node + 7 Python; Black Sheep Town:17; Profile:12; Mystery:19; NGU dashboard:8; puzzles:11; Baba:47
-- Box Logic test suite and Pages build pass; guide build/syntax/TSV checks pass
+- Box Logic:10 tests and Pages build pass; guide build/syntax/TSV checks pass
 - Solver rebuild and 3 targeted UI/source smoke tests pass. No solver engines were changed; the expensive engine/soundness batteries were not rerun
 - BL2 change is a stylesheet query only; no dedicated test suite was present
 - After rebuilding, consumer HTML differed only by the stylesheet version reference. No text, datasets, source links, diagrams or recordings were changed
@@ -52,7 +52,15 @@ styling exception. No new game theme feature or game-state change was introduced
 Shared runtime/assets: `74c48cd` (merges the final symbol-only revision while
 preserving concurrent reader-release documentation). Its Pages deployment succeeded.
 
-Readers vendor integration is recorded separately once its owner confirms publication.
+Readers vendor release: `200397e4ba5b0a5db716f7940b9c77cf2ae9d478`;
+[successful deployment](https://github.com/JWKNT/readers/actions/runs/36679145948).
+All872 tracked HTML consumers and2 authored generators use the vendor token
+`base.css?v=theme-20260930-dial`; the alphabetic prefix survives Readers’ numeric
+edition-version rewrites. The library, interactive New Sun reader and a static
+chapter were verified live, including a384px layout, light/dark switch,44px target
+and no visible label or horizontal document overflow. No book text/JSON was part
+of this theme release. Existing open tabs need a normal reload to adopt newly
+versioned HTML; an ordinary reload was verified on the solver.
 
 ## Rollback
 

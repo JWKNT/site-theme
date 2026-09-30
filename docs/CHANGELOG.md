@@ -33,6 +33,8 @@
 - Propagation review includes shared assets, nested/generated pages, the Readers
   vendor copy and Logical Solvers self-contained export. Version consumer asset
   references so a cached earlier stylesheet does not retain the superseded label.
+- Readers vendor release `200397e` updates872 HTML references and2 generators,
+  with live library, interactive and static chapter verification.
 - All13 shared consumers and159 public HTML/export routes verified after successful
   deployment; representative nested routes, light/dark, keyboard, persistence and
   narrow/enlarged views pass. See `VALIDATION-2026-09-30-THEME-DIAL.md` for exact
