@@ -1,5 +1,23 @@
 # Design decisions
 
+## 023 — Individual works own reader navigation and references (2026-09-30)
+
+**Evidence:** The owner requested individual short-story pages, one Fifth Head
+reader, external-reference margins and distinct thematic dividers.
+
+**Decision:** Preserve a work's boundaries even when its EPUB container is an
+anthology or a file split. Use a quiet alphabetical link list for discovery,
+independent search/glossaries per work, and optional supplied afterwords. Titles
+may carry the same externally sourced notes as prose. Initials begin narration;
+source epigraphs keep their separate typographic role. Match decorative dividers
+to existing section boundaries and give an undivided story a small end ornament.
+
+**Scope and tradeoff:** Readers-local markup, CSS and original SVG assets. Reuse
+the approved historical alphabets; do not generalize reader ornament rules into
+site-wide mastheads. Source-integrity checks accompany conversion; possible OCR
+losses remain documented instead of being silently reconstructed. Reconsider the
+library's two-column list only if observed browsing needs require filtering.
+
 ## 021 — NDB Idle is an explicit theme exception (2026-09-19)
 
 **Evidence:** After reviewing the family sweep, the owner approved the other pages and asked to restore NDB Idle.

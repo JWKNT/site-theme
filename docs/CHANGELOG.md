@@ -1,5 +1,20 @@
 # Change record
 
+## 2026-09-30 — Standalone fiction readers and thematic dividers
+
+- Readers adds one Fifth Head reader and 60 deduplicated short-story readers, with
+  386 external-reference notes, optional source afterwords and an alphabetical
+  library. The mislabeled Island EPUB is excluded.
+- Added title-note interaction and 64 original thematic SVG ornaments, including
+  one for each Liu novel. Sun text, routes, ornaments and initials are unchanged.
+- Scope: Readers repository only for UI/runtime; these shared design records.
+  Existing theme tokens and controllers need no changes.
+- Validation: all 67 readers pass source/static/route checks against 854c40b;
+  independent EPUB-boundary review; 1440px/390px paper/charcoal browser checks of
+  notes, search, navigation, fallback and ornaments; 22 theme tests pass. Native
+  enlarged-text/print preview unavailable. Detailed source-quality limitations
+  and observed checks are in readers/NOTES-V13.md.
+
 ## 2026-09-19 — NDB exception and Readers external-reference notes
 
 - Restore NDB Idle by reverting `305917d` and `473e178`. Result `52ec5b8` has exactly the tree of `28786f3`; Pages Actions completed successfully. Record the explicit styling exception in philosophy, repository guidance, and decision 021. Other family styling is retained.
