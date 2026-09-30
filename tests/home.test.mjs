@@ -5,8 +5,8 @@ import vm from 'node:vm';
 
 const source = readFileSync(new URL('../v2/theme.js', import.meta.url), 'utf8');
 const css = readFileSync(new URL('../v2/base.css', import.meta.url), 'utf8');
-function page({ path = '/puzzles/loop/', authored = false } = {}) {
-  const nodes = [], ready = {};
+function page({ path = '/puzzles/loop/', authored = false, edge = null } = {}) {
+  const nodes = [], ready = {}, scrolls = [];
   const node = tag => ({ tag, dataset: {}, attrs: {}, children: [], style: {},
     classList: { add() {}, toggle() {} },
     setAttribute(k, v) { this.attrs[k] = v; },
@@ -20,14 +20,19 @@ function page({ path = '/puzzles/loop/', authored = false } = {}) {
     querySelectorAll() { return [button]; },
     querySelector(q) {
       if (q === '[data-theme-toggle]') return button;
+      if (q === '.site-home-dock') return edge ? { getBoundingClientRect: () => edge } : null;
       if (q === '.site-home') return existing || nodes.find(n => n.className === 'site-home-dock')?.children[0];
       return null;
     },
     addEventListener(k, f) { ready[k] = f; }
   };
   const media = { matches: false, addEventListener() {} };
-  vm.runInNewContext(source, { document, window: { location: { pathname: path }, matchMedia: () => media, addEventListener() {}, dispatchEvent() {} }, localStorage: { getItem() {}, setItem() {} }, CustomEvent: class {} });
-  return { nodes, existing, setup: () => ready.DOMContentLoaded() };
+  vm.runInNewContext(source, { document, window: { location: { pathname: path }, matchMedia: () => media, requestAnimationFrame: f => f(), scrollBy: options => scrolls.push(options), addEventListener() {}, dispatchEvent() {} }, localStorage: { getItem() {}, setItem() {} }, CustomEvent: class {} });
+  return { nodes, existing, scrolls, setup: () => ready.DOMContentLoaded(), focus(box, excluded = false) {
+    const target = { closest: () => excluded, getBoundingClientRect: () => box };
+    document.activeElement = target;
+    ready.focusin({ target });
+  } };
 }
 
 test('creates a native, named absolute Home link on nested and offline pages', () => {
@@ -69,4 +74,18 @@ test('Home has a 44px target, focus, safe-area clearance, and print fallback', (
 
 test('narrow pages give the symbol a dedicated edge strip rather than cover form ends', () => {
   assert.match(css, /@media \(max-width: 42rem\) \{\s*\.site-home-dock \{[^}]+width: 100%;[^}]+min-height: calc\(3\.5rem/);
+});
+
+
+test('focus clearance scrolls only a control actually obscured by the fixed dock', () => {
+  const p = page({ edge: { left: 0, right: 390, top: 600, bottom: 657, width: 390, height: 57 } });
+  p.setup(); p.setup();
+  p.focus({ left: 14, right: 370, top: 565, bottom: 606 });
+  assert.equal(p.scrolls.length, 1); assert.equal(p.scrolls[0].top, 14);
+  p.focus({ left: 14, right: 370, top: 80, bottom: 124 });
+  p.focus({ left: 14, right: 370, top: 565, bottom: 606 }, true);
+  assert.equal(p.scrolls.length, 1, 'visible controls, Home and open modal controls retain their scroll state');
+  const integrated = page({ edge: { left: 0, right: 0, top: 0, bottom: 0, width: 0, height: 0 } });
+  integrated.setup(); integrated.focus({ left: 0, right: 100, top: 100, bottom: 144 });
+  assert.equal(integrated.scrolls.length, 0, 'Readers integrated toolbar owns its own clearance');
 });

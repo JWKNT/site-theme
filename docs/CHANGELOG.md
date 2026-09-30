@@ -8,7 +8,9 @@
 - Author the fallback into pages and generators, propagate cache versions and
   vendored assets, and embed the mark in the offline solver. Mobile Readers reuses
   its existing toolbar instead of adding a second strip.
-- Reserve document-end/keyboard-scroll clearance and offset adjacent mobile
+- Reserve document-end/keyboard-scroll clearance; move an actually obscured focused
+  control above the dock without changing normal reading or theme-toggle scroll.
+  Add a shallow edge strip on narrow screens, and offset adjacent mobile
   popovers and sticky filters. The earlier one-way navigation decision is superseded.
 
 ## 2026-09-30 — Homepage full-text search and drawn link arrows
