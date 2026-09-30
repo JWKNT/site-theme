@@ -1,18 +1,17 @@
 # Change record
 
-## 2026-09-30 — Typographic light/dark control
+## 2026-09-30 — Symbol-only light/dark dial
 
-- Replace the circular moon/sun badge and hover shadow with an ink-and-paper dial,
-  a small serif action label and a single hover rule. Keep the existing theme
-  controller, accessible action names, pressed state, storage and public events.
-- The visible label names the next mode (Dark on paper, Light on charcoal). Keep
-  at least a 36px desktop / 44px coarse-pointer target and square keyboard focus.
-  Preserve print/reduced-motion behavior and fixed placement for floating controls.
-- Shared consumers load this from v2; refresh the Readers vendor copy and the
-  Logical Solvers self-contained export after shared live visual verification.
-- Pre-release checks: 25 shared static/behavior tests pass. Local browser preview
-  is unavailable (ERR_BLOCKED_BY_CLIENT); visual review will follow the authorized
-  shared deployment, with the prior commit retained for rollback.
+- Replace the circular moon/sun badge and hover shadow with a larger ink-and-paper
+  dial, fine diagonal and a single hover rule. Per owner correction, keep the
+  control symbol-only; accessible action names/title and pressed state remain.
+- Keep a 44px hit target for every pointer type, square keyboard focus and
+  print/reduced-motion behavior. Preserve the controller/storage/public events.
+- Propagation review includes shared assets, nested/generated pages, the Readers
+  vendor copy and Logical Solvers self-contained export. Version consumer asset
+  references so a cached earlier stylesheet does not retain the superseded label.
+- Local browser preview is unavailable (ERR_BLOCKED_BY_CLIENT). Shared visual
+  review follows the authorized deployment; retain prior commits for rollback.
 
 ## 2026-09-30 — Reader transcription and prose typography
 
