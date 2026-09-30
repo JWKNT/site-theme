@@ -1,5 +1,28 @@
 # Change record
 
+## 2026-09-30 — Hyperion contents and Strange Travelers
+
+- Correct Hyperion’s contents to distinguish numbered frame chapters from their
+  embedded Tales. Use indented full-title jumps, a single dedication link and
+  proper part groups; keep Fall’s Epilogue outside Part Three. Plain HTML has the
+  same hierarchy. All 57 chapter bodies and 297 notes remain byte-identical.
+  Readers commit 9c80028 is live; all 151 checked public files matched the release.
+- Add thirteen individual Strange Travelers readers, with two existing duplicates
+  preserved, 255 external-reference notes, 48 reversible transcription repairs,
+  thirteen original ornaments and the approved historical dropcaps. Retain verse,
+  epigraphs, inset letters/notices and Koshchei’s optional source note.
+  Readers commit 5a3233b is live; all 175 checked public files match the release.
+- Scope: Readers-local importer, markup, CSS and assets. Preserve the concurrent
+  theme rollout at Readers 200397e. No shared runtime changes are needed here.
+- Checks: all 79 readers / 618 sections pass baseline/source/static/annotation/link
+  validation; 15 reader tests and 25 theme tests pass. Reimport is identical across
+  108 checked files. Independent audit confirms all 1,565 files across the existing
+  66 readers are unchanged from 200397e. Browser review covers desktop paper, 390px charcoal, contents,
+  direct section jumps, Escape focus return, title notes and source-wording recovery.
+  Native enlarged-text and print preview were unavailable. Detailed evidence and
+  source boundaries are in readers/NOTES-STRANGE-TRAVELERS.md and
+  readers/NOTES-HYPERION-CONTENTS.md.
+
 ## 2026-09-30 — Combined series readers and Hyperion references
 
 - Add Hyperion and The Fall of Hyperion as one reader with two volume groups,
