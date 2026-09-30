@@ -1,5 +1,18 @@
 # Change record
 
+## 2026-09-30 — Reader transcription and prose typography
+
+- Correct 335 reviewed transcription errors across 44 Readers works, including
+  joined words, misplaced punctuation, OCR substitutions and locally clear word
+  omissions. Keep original fragments in an authored correction ledger and the
+  existing source-wording view; preserve every paragraph address.
+- Reflow broken transcript turns, restore epigraph and verse roles, repair email
+  italics and separate a merged speaker turn. Changes remain local to Readers.
+- Checks: all 67 readers / 547 chapters pass baseline recovery, static/search,
+  annotation, address and word-count checks; independent correction replay is
+  idempotent. Desktop paper and mobile charcoal review covers poetry and dialogue.
+  Native enlarged-text and print preview were not available in the preview surface.
+
 ## 2026-09-30 — Standalone fiction readers and thematic dividers
 
 - Readers adds one Fifth Head reader and 60 deduplicated short-story readers, with
