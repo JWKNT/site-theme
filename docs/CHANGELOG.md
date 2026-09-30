@@ -9,6 +9,8 @@
   targets. Desktop layout and project-specific mobile headers remain unchanged.
 - Refresh vendored and self-contained copies plus generator asset versions; test
   the reported Albatross header, longer titles, and narrow nested pages.
+- Let the documentation index’s longer link list wrap within its own mobile group,
+  keeping the utility pair aligned with its first row. Desktop uses display contents.
 
 ## 2026-09-30 — Header Home emblem
 

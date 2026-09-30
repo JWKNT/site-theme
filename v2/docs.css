@@ -37,3 +37,11 @@
 .component-contents { display: flex; flex-wrap: wrap; gap: .6rem 1.2rem; padding: .75rem 0; font-family: var(--ui, var(--serif)); }
 @media (max-width: 42rem) { .component-directory > li, .component-patterns { grid-template-columns: 1fr; gap: .2rem; } }
 @media (max-width: 34rem) { .type-specimen { grid-template-columns: 1fr; } }
+
+/* Dense documentation links wrap independently of the header utilities. */
+.docs-nav-links { display: contents; }
+@media (max-width: 42rem) {
+  .site-header nav:has(.docs-nav-links) { align-items: flex-start; flex-wrap: nowrap; }
+  .site-header nav .docs-nav-links { display: flex; flex: 1; min-width: 0; flex-wrap: wrap; gap: .25rem .7rem; }
+  .docs-nav-links a { display: inline-flex; align-items: center; min-width: 2.75rem; min-height: 2.75rem; }
+}

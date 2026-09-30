@@ -81,3 +81,12 @@ test('mobile local navigation retains 44px targets without changing the desktop 
   assert.match(desktop, /\.site-header\.site-header--identity \{ align-items: center; flex-flow: row wrap; padding-block: clamp\(1\.25rem, 2\.5vw, 2rem\) 1rem; gap: \.8rem 1\.5rem; \}/);
   assert.match(desktop, /\.site-header\.site-header--identity nav \{ width: auto; margin-left: auto; gap: \.6rem 1rem; \}/);
 });
+
+test('dense documentation links wrap separately from the mobile utility pair', () => {
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const docs = readFileSync(new URL('../v2/docs.css', import.meta.url), 'utf8');
+  assert.match(html, /<span class="docs-nav-links">[\s\S]+?Changes<\/a><\/span><a class="site-home"/);
+  assert.match(docs, /\.docs-nav-links \{ display: contents; \}/);
+  assert.match(docs, /@media \(max-width: 42rem\) \{[\s\S]*nav:has\(\.docs-nav-links\) \{ align-items: flex-start; flex-wrap: nowrap;/);
+  assert.match(docs, /\.site-header nav \.docs-nav-links \{ display: flex; flex: 1; min-width: 0; flex-wrap: wrap;/);
+});
