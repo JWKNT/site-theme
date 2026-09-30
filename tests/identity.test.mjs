@@ -44,3 +44,40 @@ test('each masthead mark is a small RGBA PNG with explicit reserved dimensions',
     assert.deepEqual(asset.transparentCorners, [0, 0, 0, 0]);
   }
 });
+
+// These source-contract checks catch the specificity regression behind the
+// staggered Albatross header; rendered breakpoint review remains a release gate.
+const mobile = css.split('@media (max-width: 42rem) {')[1].split('/* Scope touch sizing')[0];
+function mobileRule(selector) {
+  for (const [, selectors, declarations] of mobile.matchAll(/([^{}]+)\{([^{}]*)\}/g)) {
+    if (selectors.replace(/\/\*[\s\S]*?\*\//g, '').split(',').map(s => s.trim()).includes(selector)) return declarations;
+  }
+  throw new Error(`Missing mobile rule: ${selector}`);
+}
+
+test('mobile identity mastheads explicitly override desktop wrapping and spacing', () => {
+  const header = mobileRule('.site-header.site-header--identity');
+  assert.match(header, /align-items:\s*stretch;/);
+  assert.match(header, /flex-flow:\s*column nowrap;/);
+  assert.match(header, /gap:\s*\.375rem;/);
+  assert.match(mobile, /\.site-header\.site-header--identity\s*\{\s*padding-block:\s*\.875rem \.5rem;/);
+});
+
+test('mobile navigation owns a full row with a right-aligned intact utility pair', () => {
+  const nav = mobileRule('.site-header.site-header--identity nav');
+  assert.match(nav, /width:\s*100%;/);
+  assert.match(nav, /margin-left:\s*0;/);
+  assert.match(nav, /justify-content:\s*flex-start;/);
+  assert.match(nav, /flex-wrap:\s*wrap;/);
+  assert.match(mobileRule('.site-header nav > .site-utility-pair'), /margin-left:\s*auto;/);
+  assert.match(mobileRule('.site-header nav .site-utility-pair .theme-toggle'), /margin-left:\s*0;/);
+});
+
+test('mobile local navigation retains 44px targets without changing the desktop rules', () => {
+  const links = mobileRule('.site-header nav > a:not(.site-home)');
+  assert.match(links, /min-width:\s*2\.75rem;/);
+  assert.match(links, /min-height:\s*2\.75rem;/);
+  const desktop = css.split('@media (max-width: 42rem) {')[0];
+  assert.match(desktop, /\.site-header\.site-header--identity \{ align-items: center; flex-flow: row wrap; padding-block: clamp\(1\.25rem, 2\.5vw, 2rem\) 1rem; gap: \.8rem 1\.5rem; \}/);
+  assert.match(desktop, /\.site-header\.site-header--identity nav \{ width: auto; margin-left: auto; gap: \.6rem 1rem; \}/);
+});

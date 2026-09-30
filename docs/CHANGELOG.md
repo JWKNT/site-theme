@@ -1,5 +1,15 @@
 # Change record
 
+## 2026-09-30 — Aligned mobile mastheads
+
+- Correct the identity-header selector precedence at the existing 42rem breakpoint.
+  A narrow masthead now has a compact title row and a full-width navigation row,
+  with local links left-aligned and the Home/theme pair together on the right.
+- Reduce mobile-only padding and row spacing; retain 44px utility and local-link
+  targets. Desktop layout and project-specific mobile headers remain unchanged.
+- Refresh vendored and self-contained copies plus generator asset versions; test
+  the reported Albatross header, longer titles, and narrow nested pages.
+
 ## 2026-09-30 — Header Home emblem
 
 - Add one native 44px Home link beside the existing header theme dial. Its abstract

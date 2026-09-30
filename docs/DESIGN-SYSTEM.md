@@ -122,7 +122,10 @@ symbol-only Home anchor returns to `https://jehlp.net/` from the existing header
 paired with the theme dial. The abstract bracketed asterisk echoes the homepage's
 typographic studies; it has a 44px target, visible keyboard focus and the accessible
 name/tooltip `Home — jehlp.net`. Keep the utility pair together when navigation
-wraps. It scrolls with its existing header: do not add a fixed footer, reserved
+wraps. At the shared mobile breakpoint, identity headers use a compact title row
+and a full-width navigation row: local links start at the left, while the utility
+pair stays together at the right. Match identity-selector specificity so desktop
+wrapping rules cannot silently replace that mobile layout. It scrolls with its existing header: do not add a fixed footer, reserved
 bottom space, focus-driven scrolling, or a new sticky bar. NDB Idle remains exempt.
 
 Include native `.site-home` markup in generators so it works without JavaScript.
