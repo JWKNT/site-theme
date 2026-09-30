@@ -1,5 +1,21 @@
 # Design decisions
 
+## 025 — Series share a continuous reader (2026-09-30)
+
+**Evidence:** The owner requested Hyperion and Remembrance of Earth’s Past grouped
+like the Sun books: one reader for each series, with books in its contents.
+
+**Decision:** A combined reader owns continuous progress, search and references,
+while each volume retains its chapter and part hierarchy, original supplementary
+material, thematic ornament and opening alphabet. Prefix migrated chapter and note
+IDs by source book and preserve paragraph IDs. Old entry links forward to their
+corresponding positions; original static chapter routes remain available.
+
+**Tradeoff:** Combined indexes are larger. Keep chapters lazy-loaded and preserve
+source readers as assembly inputs so grouping never requires rewriting their prose
+or definitions. This series rule does not alter independent short-story pages.
+Reconsider only if measured loading or navigation problems require another layout.
+
 ## 024 — A typographic theme action (2026-09-30)
 
 **Evidence:** The owner found the generic theme button out of character and
