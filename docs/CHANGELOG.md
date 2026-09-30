@@ -33,8 +33,10 @@
 - Propagation review includes shared assets, nested/generated pages, the Readers
   vendor copy and Logical Solvers self-contained export. Version consumer asset
   references so a cached earlier stylesheet does not retain the superseded label.
-- Local browser preview is unavailable (ERR_BLOCKED_BY_CLIENT). Shared visual
-  review follows the authorized deployment; retain prior commits for rollback.
+- All13 shared consumers and159 public HTML/export routes verified after successful
+  deployment; representative nested routes, light/dark, keyboard, persistence and
+  narrow/enlarged views pass. See `VALIDATION-2026-09-30-THEME-DIAL.md` for exact
+  commits, coverage and remaining browser-test limits.
 
 ## 2026-09-30 — Reader transcription and prose typography
 
