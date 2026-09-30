@@ -117,11 +117,19 @@ page layout rather than changing the content's semantic grouping.
 
 ## Independent pages, related identities
 
-Each project stands alone: no Projects, Home, linked site logo, or footer route
-back to the global directory. Project-local navigation, downloads, and canonical
-metadata remain useful. Keep GitHub Source links out of headers; provenance may
-remain with the content or in the footer. The global directory can link out to each
-project without requiring a return link.
+Each project retains its subject identity and project-local navigation. A single,
+symbol-only Home anchor offers a persistent return to `https://jehlp.net/` on every
+shared-theme page, including generated and plain HTML documents. Keep it separate
+from the masthead and theme dial, with a 44px target, a visible keyboard outline,
+and safe-area-aware edge placement. It is a native link, so modified clicks and
+browser Back/Forward keep working. On mobile Readers, the existing bottom toolbar
+absorbs that same control. NDB Idle remains explicitly exempt.
+
+Include the native `.site-home-dock` / `.site-home` markup in generators so the
+route works without JavaScript; the theme controller creates it only if absent.
+Reserve document-end and keyboard-scroll clearance, and offset nearby sticky
+filters or mobile popovers at their local source. Keep GitHub Source links out of
+headers; useful provenance may remain with the material or in the footer.
 
 Use the opt-in identity header in `COMPONENTS.md`: one relevant transparent PNG
 as `img.site-mark` at 32px with empty `alt`, a serif title, and only useful local

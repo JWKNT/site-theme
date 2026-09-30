@@ -321,6 +321,8 @@ if real filter volume or comparison needs make this model unsuitable.
 
 ## 2026-09-05 · 007 · Related identities, independent pages
 
+The no-return-link portion is superseded by the 2026-09-30 persistent Home decision.
+
 **Evidence:** The user requested more memorable but minimal pages, less redundant
 copy, and no route back to the global homepage. Repeated Projects links occupied
 every masthead without helping the page's own task.
@@ -338,3 +340,17 @@ than copying local masthead rules.
 
 ## Recording-specific context beside a native player — 2026-09-06
 Keep a selected recording’s approach, mechanics, and attempt notes beside the player on desktop and beneath it on narrow screens. Render all notes as native disclosures before enhancement; JavaScript reveals only the selected level’s notes and follows player history. Notes remain readable without JavaScript. This is a local Baba Is You pattern, not a shared component yet.
+
+## 2026-09-30 · Persistent symbolic return home
+
+**Evidence:** The owner now requests an always-available symbolic route back to
+jehlp.net on every page except NDB Idle. This supersedes the earlier one-way
+discovery choice, while preserving each page's own masthead and the liked dial.
+**Decision:** Add one native Home anchor with a custom ink roof/door mark, a 44px
+target, focus outline and safe-area edge placement. Preserve the theme dial's
+page-bound positions. Use static markup in generators and runtime creation only
+as a compatibility fallback. Readers mobile reuses its existing bottom toolbar.
+**Tradeoff:** A fixed edge affordance needs document-end/keyboard-scroll clearance
+and local offsets for bottom popovers/sticky controls. Keep the dock compact; do
+not impose another full-width toolbar on independent pages. Offline builds embed
+the SVG, and NDB Idle remains unchanged.

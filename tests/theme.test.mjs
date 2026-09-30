@@ -20,7 +20,7 @@ function page({ saved = {}, dark = false, blocked = false, writeBlocked = false,
   const document = {
     documentElement: root, readyState: loading ? 'loading' : 'complete',
     querySelectorAll() { return buttons; },
-    querySelector(q) { return q.startsWith('meta') ? meta : q === '[data-theme-toggle]' ? buttons[0] : slot; },
+    querySelector(q) { return q.startsWith('meta') ? meta : q === '.site-home' ? {} : q === '[data-theme-toggle]' ? buttons[0] : slot; },
     createElement: button, body: { prepend(b) { inserted++; buttons.push(b); } },
     addEventListener(k, f) { ready[k] = f; }
   };

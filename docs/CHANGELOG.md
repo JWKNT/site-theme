@@ -1,5 +1,16 @@
 # Change record
 
+## 2026-09-30 — Persistent home symbol
+
+- Add a native, symbol-only Home link with an ink roof/door drawing, a 44px target,
+  keyboard focus and safe-area-aware persistent positioning. Keep the theme dial
+  and each project’s own identity. NDB Idle remains excluded.
+- Author the fallback into pages and generators, propagate cache versions and
+  vendored assets, and embed the mark in the offline solver. Mobile Readers reuses
+  its existing toolbar instead of adding a second strip.
+- Reserve document-end/keyboard-scroll clearance and offset adjacent mobile
+  popovers and sticky filters. The earlier one-way navigation decision is superseded.
+
 ## 2026-09-30 — Homepage full-text search and drawn link arrows
 
 - The slash control now searches published page text, Reader chapters and notes,

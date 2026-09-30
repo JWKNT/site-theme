@@ -8,14 +8,15 @@
     <meta name="theme-color" content="#fbfaf7">
     <title>Components · jehlp.net</title>
     <link rel="icon" href="v2/favicons/site-theme.png" type="image/png">
-    <script src="v2/theme.js"></script>
-    <link rel="stylesheet" href="v2/base.css?v=20260930-dial">
+    <script src="v2/theme.js?v=20260930-home"></script>
+    <link rel="stylesheet" href="v2/base.css?v=20260930-home">
     <link rel="stylesheet" href="v2/components.css">
     <link rel="stylesheet" href="v2/docs.css">
     <script src="v2/components.js" defer></script>
     <script src="v2/components-demo.js" defer></script>
   </head>
   <body data-site-tone="blue">
+  <nav class="site-home-dock" aria-label="Site"><a class="site-home" href="https://jehlp.net/" aria-label="Home · jehlp.net" title="Home · jehlp.net"><span aria-hidden="true">⌂</span></a></nav>
     <a class="skip-link" href="#components">Skip to components</a>
     <header class="site-header site-header--identity"><div class="site-brand"><img class="site-mark" src="https://jehlp.net/site-theme/v2/marks/site-theme.png" width="32" height="32" alt=""><a class="site-title" href="index.html">Site theme</a></div><nav aria-label="Site links"><a href="components.html" aria-current="page">Components</a><a href="philosophy.html">Philosophy</a></nav></header>
     <main class="theme-doc component-doc" id="components" tabindex="-1">
@@ -68,8 +69,8 @@
   &lt;a href="#introduction"&gt;Introduction&lt;/a&gt;
 &lt;/nav&gt;</code></pre></details>
       </section>
-      <section id="use"><h2>Use only what the page needs</h2><p>Load the optional component layer after the foundation and before local styles. Behavior is enabled by explicit data attributes. Unmarked pages keep their existing behavior.</p><pre data-copy-code><code>&lt;script src="https://jehlp.net/site-theme/v2/theme.js"&gt;&lt;/script&gt;
-&lt;link rel="stylesheet" href="https://jehlp.net/site-theme/v2/base.css"&gt;
+      <section id="use"><h2>Use only what the page needs</h2><p>Load the optional component layer after the foundation and before local styles. Behavior is enabled by explicit data attributes. Unmarked pages keep their existing behavior.</p><pre data-copy-code><code>&lt;script src="https://jehlp.net/site-theme/v2/theme.js?v=20260930-home"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="https://jehlp.net/site-theme/v2/base.css?v=20260930-home"&gt;
 &lt;link rel="stylesheet" href="https://jehlp.net/site-theme/v2/components.css"&gt;
 &lt;link rel="stylesheet" href="assets/styles.css"&gt;
 &lt;script src="https://jehlp.net/site-theme/v2/components.js" defer&gt;&lt;/script&gt;</code></pre><p>For components added later, call <code>window.JehlpUI?.enhance(container)</code>. Repeated calls are safe. See the <a href="docs/COMPONENTS.md">full component contracts</a> for examples and boundaries.</p></section>

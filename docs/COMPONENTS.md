@@ -16,7 +16,7 @@ themselves into existing consumers.
 
 | Pattern | Shared contract | Page responsibility | Current adopters |
 | --- | --- | --- | --- |
-| Page identity | `.site-header--identity`, `.site-brand`, `img.site-mark`, `data-site-tone` in base CSS | Transparent subject PNG/title, useful local links, no global-home link | Theme docs, guide, readers, reports, puzzles, writing |
+| Page identity | `.site-header--identity`, `.site-brand`, `img.site-mark`, `data-site-tone` in base CSS | Transparent subject PNG/title and useful local links; separate persistent Home control | Theme docs, guide, readers, reports, puzzles, writing |
 | Directory | `.ui-directory`, list/link semantics, row boundaries | Columns and grouping; `--directory-rule` / `--directory-space` | Homepage, MTL, gallery |
 | Toolbar | `.ui-toolbar`, `.ui-field`, `.ui-field--search` | Labels, filter state, widths, result rendering | Armory, consensus, gallery |
 | Single-choice select | `data-ui-select` on a native `select` | Native options/value/name, labels, change handlers, programmatic synchronization | Profile, consensus, Armory, Albatross voyage, puzzles, gallery |
@@ -268,3 +268,19 @@ load this layer. Rebuild offline exports after changing their embedded assets.
 Run `node --test tests/*.test.mjs`, then check real focus, breakpoint transitions,
 overflow, and light/dark modes on the gallery and consumers. DOM stubs test
 controller decisions, not browser accessibility.
+
+## Persistent Home
+
+Use one native link outside project navigation:
+
+```html
+<nav class="site-home-dock" aria-label="Site"><a class="site-home" href="https://jehlp.net/" aria-label="Home · jehlp.net" title="Home · jehlp.net"><span aria-hidden="true">⌂</span></a></nav>
+```
+
+The fallback symbol works without CSS. Shared CSS draws the ink roof/door mark,
+provides a 44px target and focus ring, and hides the control for print. The theme
+script adds the same structure only when absent, except on `/ndb-idle/`. Native
+anchors preserve browser history and modified-click behavior. Keep offline
+exports self-contained by embedding `icons/home.svg`. Use
+`--site-home-clearance` for nearby bottom-positioned controls. Readers mobile
+integrates the same dock into its existing toolbar; it never duplicates the link.
