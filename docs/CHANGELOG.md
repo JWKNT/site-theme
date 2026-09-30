@@ -1,5 +1,28 @@
 # Change record
 
+## 2026-09-30 — Combined series readers and Hyperion references
+
+- Add Hyperion and The Fall of Hyperion as one reader with two volume groups,
+  57 sections, 297 external-reference notes and 36 recorded transcription repairs.
+  Preserve source verse, diary structure, epigraphs, dedications and inline formulas;
+  add two original thematic ornaments using the existing historical alphabets.
+- Assemble Remembrance of Earth’s Past into one reader, retaining all three books,
+  129 sections, 350 existing notes and every paragraph address. Old entry URLs
+  preserve book, chapter, paragraph and wording query when forwarding.
+- Endangered Species already has all 34 stories represented without duplicates.
+  Add 14 external-reference notes and three recorded quotation repairs.
+- Readers-local changes; shared CSS/runtime need no changes for this release.
+  Preserve the separate annotation audit at 4559554. Readers release: 71dc166;
+  pre-release baseline: 4559554. Details and source limits: readers/NOTES-V16.md.
+- Validation: 66 readers / 604 sections pass source recovery, static equivalents,
+  address, link and annotation checks; 11 reader tests and 25 theme tests pass.
+  Desktop paper/mobile charcoal browser checks cover combined contents, notes,
+  cross-volume search, original wording and legacy links. Native enlarged-text
+  and print preview were unavailable.
+- Published Readers commit 71dc166; Pages reports that exact commit built. All
+  628 checked public files match local SHA-256 hashes. Public note interaction
+  and source links work; two transient CDN 503 responses passed on retry.
+
 ## 2026-09-30 — Symbol-only light/dark dial
 
 - Replace the circular moon/sun badge and hover shadow with a larger ink-and-paper
