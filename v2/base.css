@@ -191,6 +191,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 [data-theme-toggle][data-theme-target="light"].theme-toggle::after { content: "Light"; }
 [data-theme-toggle].theme-toggle[aria-pressed="true"] { border-color: transparent; background: transparent; color: var(--muted-strong); }
 [data-theme-toggle].theme-toggle:hover:not(:disabled) {
+  border-color: transparent;
   border-bottom-color: var(--line-strong);
   background: transparent;
   color: var(--ink);

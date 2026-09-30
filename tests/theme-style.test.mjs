@@ -13,6 +13,7 @@ test('theme control keeps a readable action label and an unboxed, non-clipping t
   assert.match(control, /overflow: visible/);
   assert.match(control, /border-radius: 0/);
   assert.match(control, /box-shadow: none/);
+  assert.match(css, /\.theme-toggle:hover:not\(:disabled\) \{\s*border-color: transparent;\s*border-bottom-color: var\(--line-strong\)/);
   assert.match(css, /\.theme-toggle::after \{\s*content: "Dark";\s*font: var\(--text-ui\)/);
   assert.match(css, /\[data-theme-target="light"\]\.theme-toggle::after \{ content: "Light"; \}/);
   assert.match(css, /\[data-theme-toggle\]\.theme-toggle \{ min-height: 2\.75rem; \}/);
