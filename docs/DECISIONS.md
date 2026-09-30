@@ -351,6 +351,6 @@ target, focus outline and safe-area edge placement. Preserve the theme dial's
 page-bound positions. Use static markup in generators and runtime creation only
 as a compatibility fallback. Readers mobile reuses its existing bottom toolbar.
 **Tradeoff:** A fixed edge affordance needs document-end/keyboard-scroll clearance
-and local offsets for bottom popovers/sticky controls. Keep the dock compact; do
-not impose another full-width toolbar on independent pages. Offline builds embed
+and local offsets for bottom popovers/sticky controls. Keep the dock compact; use a shallow paper-backed edge strip only on narrow pages, where browser
+review showed a corner symbol crossing the end of a form field. Offline builds embed
 the SVG, and NDB Idle remains unchanged.

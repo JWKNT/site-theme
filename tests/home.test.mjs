@@ -65,3 +65,8 @@ test('Home has a 44px target, focus, safe-area clearance, and print fallback', (
   assert.match(icon, /viewBox="0 0 24 24"/);
   assert.doesNotMatch(icon, /<script|<image|<text/);
 });
+
+
+test('narrow pages give the symbol a dedicated edge strip rather than cover form ends', () => {
+  assert.match(css, /@media \(max-width: 42rem\) \{\s*\.site-home-dock \{[^}]+width: 100%;[^}]+min-height: calc\(3\.5rem/);
+});
