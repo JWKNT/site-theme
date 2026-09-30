@@ -19,9 +19,9 @@ test('theme control is symbol-only with an unboxed 44px hit target', () => {
 });
 
 test('dial masks stay relative, mode-distinct and compatible with the offline exporter', () => {
-  const moon = readFileSync(new URL('../v2/icons/theme-moon.svg', import.meta.url), 'utf8');
-  const sun = readFileSync(new URL('../v2/icons/theme-sun.svg', import.meta.url), 'utf8');
-  for (const [name, svg] of [['moon', moon], ['sun', sun]]) {
+  const moon = readFileSync(new URL('../v2/icons/theme-dial-dark.svg', import.meta.url), 'utf8');
+  const sun = readFileSync(new URL('../v2/icons/theme-dial-light.svg', import.meta.url), 'utf8');
+  for (const [name, svg] of [['dial-dark', moon], ['dial-light', sun]]) {
     assert.match(css, new RegExp(`icons/theme-${name}\\.svg`));
     assert.match(svg, /viewBox="0 0 24 24"/);
     assert.doesNotMatch(svg, /<script|<image|https?:\/\/(?!www\.w3\.org)/);
