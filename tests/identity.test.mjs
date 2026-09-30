@@ -22,11 +22,11 @@ test('small identity accents retain readable contrast on both paper palettes', (
   }
 });
 
-test('theme pages retain local navigation with one separate native home shortcut', () => {
+test('theme pages retain local navigation with one native home shortcut beside the theme dial', () => {
   for (const page of ['index.html', 'components.html', 'philosophy.html']) {
     const html = readFileSync(new URL(`../${page}`, import.meta.url), 'utf8');
     assert.equal((html.match(/class="site-home"/g) || []).length, 1, page);
-    assert.match(html, /class="site-home" href="https:\/\/jehlp\.net\/" aria-label="Home · jehlp.net"/, page);
+    assert.match(html, /class="site-home" href="https:\/\/jehlp\.net\/" aria-label="Home — jehlp.net"/, page);
     assert.match(html, /<img class="site-mark" src="[^"]+\/marks\/site-theme\.png" width="32" height="32" alt=""/, page);
     assert.doesNotMatch(html, /<span class="site-mark"/, page);
   }

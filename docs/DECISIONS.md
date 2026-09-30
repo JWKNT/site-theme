@@ -341,7 +341,10 @@ than copying local masthead rules.
 ## Recording-specific context beside a native player — 2026-09-06
 Keep a selected recording’s approach, mechanics, and attempt notes beside the player on desktop and beneath it on narrow screens. Render all notes as native disclosures before enhancement; JavaScript reveals only the selected level’s notes and follows player history. Notes remain readable without JavaScript. This is a local Baba Is You pattern, not a shared component yet.
 
-## 2026-09-30 · Persistent symbolic return home
+## 2026-09-30 · Persistent symbolic return home (superseded)
+
+The owner rejected footer placement in the same session; the header emblem
+decision below replaces its dock, house drawing and clearance behavior.
 
 **Evidence:** The owner now requests an always-available symbolic route back to
 jehlp.net on every page except NDB Idle. This supersedes the earlier one-way
@@ -354,3 +357,19 @@ as a compatibility fallback. Readers mobile reuses its existing bottom toolbar.
 and local offsets for bottom popovers/sticky controls. Keep the dock compact; use a shallow paper-backed edge strip only on narrow pages, where browser
 review showed a corner symbol crossing the end of a form field. Offline builds embed
 the SVG, and NDB Idle remains unchanged.
+
+## 2026-09-30 · Header Home emblem
+
+**Evidence:** After seeing the persistent footer, the owner requested its removal,
+Home in the header, and a more important-looking abstract symbol like the homepage
+illustrations. The reviewed preview uses a bold tilted asterisk, offset brackets,
+and one rust point, with the existing theme dial alongside it.
+**Decision:** Put a native Home link in the existing header, paired with the theme
+dial in a non-wrapping 44px utility group. Preserve project identities and homepage
+illustrations. Home scrolls with that header; no new sticky/fixed chrome. Restore
+Readers' original Contents/Search toolbar and all pre-footer bottom positioning.
+Remove the footer spacer, clearance token and focus-scrolling handler entirely.
+**Tradeoff:** Home is no longer visible throughout a long scroll. That is the
+owner's explicit preferred layout. Native markup in all generators/static pages
+preserves no-JavaScript navigation, while a compatibility migration moves cached
+first-release docks into headers. NDB Idle stays independent.

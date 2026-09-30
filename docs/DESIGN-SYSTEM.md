@@ -118,18 +118,20 @@ page layout rather than changing the content's semantic grouping.
 ## Independent pages, related identities
 
 Each project retains its subject identity and project-local navigation. A single,
-symbol-only Home anchor offers a persistent return to `https://jehlp.net/` on every
-shared-theme page, including generated and plain HTML documents. Keep it separate
-from the masthead and theme dial, with a 44px target, a visible keyboard outline,
-and safe-area-aware edge placement. It is a native link, so modified clicks and
-browser Back/Forward keep working. On mobile Readers, the existing bottom toolbar
-absorbs that same control. NDB Idle remains explicitly exempt.
+symbol-only Home anchor returns to `https://jehlp.net/` from the existing header,
+paired with the theme dial. The abstract bracketed asterisk echoes the homepage's
+typographic studies; it has a 44px target, visible keyboard focus and the accessible
+name/tooltip `Home — jehlp.net`. Keep the utility pair together when navigation
+wraps. It scrolls with its existing header: do not add a fixed footer, reserved
+bottom space, focus-driven scrolling, or a new sticky bar. NDB Idle remains exempt.
 
-Include the native `.site-home-dock` / `.site-home` markup in generators so the
-route works without JavaScript; the theme controller creates it only if absent.
-Reserve document-end and keyboard-scroll clearance, and offset nearby sticky
-filters or mobile popovers at their local source. Keep GitHub Source links out of
-headers; useful provenance may remain with the material or in the footer.
+Include native `.site-home` markup in generators so it works without JavaScript.
+Where a theme button is authored, wrap both in `.site-utility-pair`. The controller
+fills missing markup and relocates cached first-release footer links to the
+header. Only pages without any existing header receive a small in-flow utility
+header. Readers retains its original Contents/Search mobile toolbar, with Home
+in the page-top controls. Keep GitHub Source links out of headers; useful provenance
+may remain with the material or in the footer.
 
 Use the opt-in identity header in `COMPONENTS.md`: one relevant transparent PNG
 as `img.site-mark` at 32px with empty `alt`, a serif title, and only useful local

@@ -1,17 +1,16 @@
 # Change record
 
-## 2026-09-30 — Persistent home symbol
+## 2026-09-30 — Header Home emblem
 
-- Add a native, symbol-only Home link with an ink roof/door drawing, a 44px target,
-  keyboard focus and safe-area-aware persistent positioning. Keep the theme dial
-  and each project’s own identity. NDB Idle remains excluded.
-- Author the fallback into pages and generators, propagate cache versions and
-  vendored assets, and embed the mark in the offline solver. Mobile Readers reuses
-  its existing toolbar instead of adding a second strip.
-- Reserve document-end/keyboard-scroll clearance; move an actually obscured focused
-  control above the dock without changing normal reading or theme-toggle scroll.
-  Add a shallow edge strip on narrow screens, and offset adjacent mobile
-  popovers and sticky filters. The earlier one-way navigation decision is superseded.
+- Add one native 44px Home link beside the existing header theme dial. Its abstract
+  bracketed asterisk and rust point echo the homepage's typographic illustrations.
+  Accessible name and tooltip: `Home — jehlp.net`. NDB Idle remains excluded.
+- The owner rejected the first footer version after viewing it. Remove the dock,
+  all reserved bottom space and focus-scrolling behavior; restore Readers' original
+  mobile Contents/Search bar and the original sticky-filter/popover offsets.
+- Keep Home and the theme dial together on wrapped headers. Preserve their existing
+  page-bound positioning; no new sticky bars. Propagate native markup and cache
+  versions through generators, vendored readers and the self-contained Solver.
 
 ## 2026-09-30 — Homepage full-text search and drawn link arrows
 

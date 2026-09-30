@@ -5,87 +5,99 @@ import vm from 'node:vm';
 
 const source = readFileSync(new URL('../v2/theme.js', import.meta.url), 'utf8');
 const css = readFileSync(new URL('../v2/base.css', import.meta.url), 'utf8');
-function page({ path = '/puzzles/loop/', authored = false, edge = null } = {}) {
-  const nodes = [], ready = {}, scrolls = [];
-  const node = tag => ({ tag, dataset: {}, attrs: {}, children: [], style: {},
-    classList: { add() {}, toggle() {} },
-    setAttribute(k, v) { this.attrs[k] = v; },
-    append(n) { this.children.push(n); }, addEventListener() {} });
-  const button = node('button');
-  const existing = authored ? node('a') : null;
-  if (existing) { existing.className = 'site-home'; existing.href = 'https://jehlp.net/'; }
+const homeCSS = css.slice(css.indexOf('/* A header colophon'), css.indexOf('details { border-top:'));
+class Node {
+  constructor(tag) {
+    this.tag = tag; this.children = []; this.parentElement = null;
+    this.className = ''; this.dataset = {}; this.attrs = {}; this.style = {};
+    this.classList = {
+      contains: name => this.className.split(/\s+/).includes(name),
+      add: name => { this.className += ` ${name}`; },
+      remove: name => { this.className = this.className.split(/\s+/).filter(n => n !== name).join(' '); },
+      toggle: (name, value) => { if (value) this.classList.add(name); else this.classList.remove(name); }
+    };
+  }
+  remove() { if (this.parentElement) this.parentElement.children.splice(this.parentElement.children.indexOf(this), 1); this.parentElement = null; }
+  append(...nodes) { for (const n of nodes) { n.remove(); n.parentElement = this; this.children.push(n); } }
+  prepend(...nodes) { for (const n of nodes.reverse()) { n.remove(); n.parentElement = this; this.children.unshift(n); } }
+  before(n) { const p = this.parentElement; n.remove(); n.parentElement = p; p.children.splice(p.children.indexOf(this), 0, n); }
+  closest(selector) { for (let n = this; n; n = n.parentElement) if (selector.startsWith('.') && n.classList.contains(selector.slice(1))) return n; return null; }
+  setAttribute(k, v) { this.attrs[k] = v; }
+  addEventListener() {}
+}
+function page({ path = '/puzzles/loop/', authored = false, legacy = false, header = true } = {}) {
+  const ready = {}, body = new Node('body'), root = new Node('html');
+  const nav = header ? new Node('nav') : null;
+  const button = header ? new Node('button') : null;
+  if (nav) { const h = new Node('header'); h.className = 'site-header'; h.append(nav); body.append(h); button.className = 'theme-toggle'; button.dataset.themeToggle = ''; nav.append(button); }
+  let existing = null;
+  if (authored || legacy) {
+    existing = new Node('a'); existing.className = 'site-home'; existing.href = 'https://jehlp.net/';
+    existing.setAttribute('aria-label', 'Home — jehlp.net'); existing.title = 'Home — jehlp.net';
+    const mark = new Node('span'); mark.setAttribute('aria-hidden', 'true'); existing.append(mark);
+    if (legacy) { const dock = new Node('nav'); dock.className = 'site-home-dock'; dock.append(existing); body.prepend(dock); }
+    else { const pair = new Node('span'); pair.className = 'site-utility-pair'; button.before(pair); pair.append(existing, button); }
+  }
+  const all = (n = body) => [n, ...n.children.flatMap(c => all(c))];
+  const matches = (n, q) => q === '[data-theme-toggle]' ? 'themeToggle' in n.dataset : q.startsWith('.') && n.classList.contains(q.slice(1));
   const document = {
-    documentElement: node('html'), readyState: 'loading',
-    body: { append(n) { nodes.push(n); } }, createElement: node,
-    querySelectorAll() { return [button]; },
-    querySelector(q) {
-      if (q === '[data-theme-toggle]') return button;
-      if (q === '.site-home-dock') return edge ? { getBoundingClientRect: () => edge } : null;
-      if (q === '.site-home') return existing || nodes.find(n => n.className === 'site-home-dock')?.children[0];
-      return null;
-    },
+    body, documentElement: root, readyState: 'loading', createElement: tag => new Node(tag),
+    querySelectorAll(q) { return all().filter(n => matches(n, q)); },
+    querySelector(q) { return q.startsWith('[data-theme-toggle-slot]') ? nav : all().find(n => matches(n, q)) || null; },
     addEventListener(k, f) { ready[k] = f; }
   };
-  const media = { matches: false, addEventListener() {} };
-  vm.runInNewContext(source, { document, window: { location: { pathname: path }, matchMedia: () => media, requestAnimationFrame: f => f(), scrollBy: options => scrolls.push(options), addEventListener() {}, dispatchEvent() {} }, localStorage: { getItem() {}, setItem() {} }, CustomEvent: class {} });
-  return { nodes, existing, scrolls, setup: () => ready.DOMContentLoaded(), focus(box, excluded = false) {
-    const target = { closest: () => excluded, getBoundingClientRect: () => box };
-    document.activeElement = target;
-    ready.focusin({ target });
-  } };
+  vm.runInNewContext(source, { document, window: { location: { pathname: path }, matchMedia: () => ({ matches: false, addEventListener() {} }), addEventListener() {}, dispatchEvent() {} }, localStorage: { getItem() {}, setItem() {} }, CustomEvent: class {} });
+  return { body, nav, button, existing, all, setup: () => ready.DOMContentLoaded() };
 }
 
-test('creates a native, named absolute Home link on nested and offline pages', () => {
+test('creates a native named Home link paired with the existing header theme dial', () => {
   for (const path of ['/puzzles/loop/', '/readers/book/chapters/one.html', '/tmp/ubahn-solver.html', '/']) {
     const p = page({ path }); p.setup(); p.setup();
-    assert.equal(p.nodes.length, 1);
-    const dock = p.nodes[0], link = dock.children[0];
-    assert.equal(dock.tag, 'nav'); assert.equal(dock.attrs['aria-label'], 'Site');
+    const links = p.all().filter(n => n.className === 'site-home');
+    assert.equal(links.length, 1);
+    const link = links[0], pair = link.parentElement;
     assert.equal(link.tag, 'a'); assert.equal(link.href, 'https://jehlp.net/');
-    assert.equal(link.attrs['aria-label'], 'Home · jehlp.net');
-    assert.equal(link.title, 'Home · jehlp.net');
+    assert.equal(link.attrs['aria-label'], 'Home — jehlp.net'); assert.equal(link.title, 'Home — jehlp.net');
     assert.equal(link.children[0].attrs['aria-hidden'], 'true');
+    assert.equal(pair.className, 'site-utility-pair'); assert.equal(pair.parentElement, p.nav);
+    assert.equal(pair.children[1], p.button);
   }
 });
 
-test('keeps authored native fallback links rather than duplicating them', () => {
-  const p = page({ authored: true }); p.setup(); p.setup();
-  assert.equal(p.nodes.length, 0); assert.equal(p.existing.href, 'https://jehlp.net/');
+test('preserves authored native header pairs without duplication or movement', () => {
+  const p = page({ authored: true }), pair = p.existing.parentElement; p.setup(); p.setup();
+  assert.equal(p.existing.parentElement, pair); assert.equal(pair.parentElement, p.nav);
+  assert.equal(p.all().filter(n => n.className === 'site-home').length, 1);
 });
 
-test('explicitly exempts NDB Idle and all of its nested routes', () => {
+test('migrates cached footer markup into the header and removes its old landmark', () => {
+  const p = page({ legacy: true }); p.setup();
+  assert.equal(p.existing.parentElement.className, 'site-utility-pair');
+  assert.equal(p.existing.parentElement.parentElement, p.nav);
+  assert.equal(p.all().filter(n => n.className === 'site-home-dock').length, 0);
+});
+
+test('only pages without a header gain a small in-flow utility header', () => {
+  const p = page({ header: false }); p.setup(); p.setup();
+  const headers = p.all().filter(n => n.className === 'site-utilities');
+  assert.equal(headers.length, 1); assert.equal(headers[0].tag, 'header');
+  assert.equal(headers[0].children[0].className, 'site-utility-pair');
+  assert.equal(p.all().filter(n => n.classList.contains('theme-toggle--floating')).length, 0);
+});
+
+test('explicitly exempts NDB Idle and its nested routes', () => {
   for (const path of ['/ndb-idle', '/ndb-idle/', '/ndb-idle/save/']) {
-    const p = page({ path }); p.setup(); assert.equal(p.nodes.length, 0);
+    const p = page({ path }); p.setup(); assert.equal(p.all().filter(n => n.className === 'site-home').length, 0);
   }
 });
 
-test('Home has a 44px target, focus, safe-area clearance, and print fallback', () => {
-  assert.match(css, /a\.site-home \{[^}]+min-width: 44px;[^}]+min-height: 44px;/);
-  assert.match(css, /\.site-home-dock \{[^}]+position: fixed;[^}]+safe-area-inset-right[^}]+safe-area-inset-bottom/);
-  assert.match(css, /html:has\(\.site-home\)[^}]+scroll-padding-bottom/);
-  assert.match(css, /body:has\(\.site-home\)::after[^}]+height: var\(--site-home-clearance\)/);
-  assert.match(css, /a\.site-home:focus-visible[^}]+outline: 2px solid var\(--blue\)/);
-  assert.match(css, /@media print[\s\S]+\.site-home-dock, \.site-home[^}]+display: none !important/);
-  const icon = readFileSync(new URL('../v2/icons/home.svg', import.meta.url), 'utf8');
-  assert.match(icon, /viewBox="0 0 24 24"/);
-  assert.doesNotMatch(icon, /<script|<image|<text/);
-});
-
-
-test('narrow pages give the symbol a dedicated edge strip rather than cover form ends', () => {
-  assert.match(css, /@media \(max-width: 42rem\) \{\s*\.site-home-dock \{[^}]+width: 100%;[^}]+min-height: calc\(3\.5rem/);
-});
-
-
-test('focus clearance scrolls only a control actually obscured by the fixed dock', () => {
-  const p = page({ edge: { left: 0, right: 390, top: 600, bottom: 657, width: 390, height: 57 } });
-  p.setup(); p.setup();
-  p.focus({ left: 14, right: 370, top: 565, bottom: 606 });
-  assert.equal(p.scrolls.length, 1); assert.equal(p.scrolls[0].top, 14);
-  p.focus({ left: 14, right: 370, top: 80, bottom: 124 });
-  p.focus({ left: 14, right: 370, top: 565, bottom: 606 }, true);
-  assert.equal(p.scrolls.length, 1, 'visible controls, Home and open modal controls retain their scroll state');
-  const integrated = page({ edge: { left: 0, right: 0, top: 0, bottom: 0, width: 0, height: 0 } });
-  integrated.setup(); integrated.focus({ left: 0, right: 100, top: 100, bottom: 144 });
-  assert.equal(integrated.scrolls.length, 0, 'Readers integrated toolbar owns its own clearance');
+test('header emblem has a 44px target, visible focus, no footer, and a print fallback', () => {
+  assert.match(homeCSS, /min-width: 44px;[\s\S]+min-height: 44px;/);
+  assert.match(homeCSS, /\.site-utility-pair \{ display: inline-flex; align-items: center; flex: none;/);
+  assert.match(homeCSS, /a\.site-home:focus-visible[^}]+outline: 2px solid var\(--blue\)/);
+  assert.doesNotMatch(homeCSS, /position: (?:fixed|sticky)|site-home-clearance|body:has|scroll-padding/);
+  assert.doesNotMatch(source, /keepFocusedControlClear|focusin|scrollBy/);
+  assert.match(css, /@media print[\s\S]+\.site-home, \.site-utility-pair[^}]+display: none !important/);
+  const icon = readFileSync(new URL('../v2/icons/home-emblem.svg', import.meta.url), 'utf8');
+  assert.match(icon, /viewBox="0 0 32 32"/); assert.doesNotMatch(icon, /<script|<image|<text/);
 });

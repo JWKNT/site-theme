@@ -16,7 +16,7 @@ themselves into existing consumers.
 
 | Pattern | Shared contract | Page responsibility | Current adopters |
 | --- | --- | --- | --- |
-| Page identity | `.site-header--identity`, `.site-brand`, `img.site-mark`, `data-site-tone` in base CSS | Transparent subject PNG/title and useful local links; separate persistent Home control | Theme docs, guide, readers, reports, puzzles, writing |
+| Page identity | `.site-header--identity`, `.site-brand`, `img.site-mark`, `data-site-tone` in base CSS | Transparent subject PNG/title and useful local links; Home emblem beside the theme dial | Theme docs, guide, readers, reports, puzzles, writing |
 | Directory | `.ui-directory`, list/link semantics, row boundaries | Columns and grouping; `--directory-rule` / `--directory-space` | Homepage, MTL, gallery |
 | Toolbar | `.ui-toolbar`, `.ui-field`, `.ui-field--search` | Labels, filter state, widths, result rendering | Armory, consensus, gallery |
 | Single-choice select | `data-ui-select` on a native `select` | Native options/value/name, labels, change handlers, programmatic synchronization | Profile, consensus, Armory, Albatross voyage, puzzles, gallery |
@@ -269,18 +269,19 @@ Run `node --test tests/*.test.mjs`, then check real focus, breakpoint transition
 overflow, and light/dark modes on the gallery and consumers. DOM stubs test
 controller decisions, not browser accessibility.
 
-## Persistent Home
+## Header Home emblem
 
-Use one native link outside project navigation:
+Place a native link immediately before the existing header theme button, keeping
+both in an inline-flex `.site-utility-pair` when the button is authored:
 
 ```html
-<nav class="site-home-dock" aria-label="Site"><a class="site-home" href="https://jehlp.net/" aria-label="Home · jehlp.net" title="Home · jehlp.net"><span aria-hidden="true">⌂</span></a></nav>
+<span class="site-utility-pair"><a class="site-home" href="https://jehlp.net/" aria-label="Home — jehlp.net" title="Home — jehlp.net"><span aria-hidden="true">✳</span></a><button class="theme-toggle" data-theme-toggle aria-label="Change theme"></button></span>
 ```
 
-The fallback symbol works without CSS. Shared CSS draws the ink roof/door mark,
-provides a 44px target and focus ring, and hides the control for print. The theme
-script adds the same structure only when absent, except on `/ndb-idle/`. Native
-anchors preserve browser history and modified-click behavior. Keep offline
-exports self-contained by embedding `icons/home.svg`. Use
-`--site-home-clearance` for nearby bottom-positioned controls. Readers mobile
-integrates the same dock into its existing toolbar; it never duplicates the link.
+Shared CSS draws the abstract bracketed asterisk and a small rust point. The
+44px link retains a visible focus ring and normal native navigation. Keep the
+existing header placement and scrolling behavior. Never add a Home footer or
+reserve bottom space for it. The theme script creates/pairs missing links and
+migrates obsolete cached docks without touching page content. NDB Idle is exempt.
+Only a page without an existing header uses an in-flow `.site-utilities` header.
+For offline builds embed `icons/home-emblem.svg`; the accent point is CSS-only.
