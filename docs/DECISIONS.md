@@ -1,5 +1,18 @@
 # Design decisions
 
+## 026 — Permanent directory groups, equivalent utilities (2026-10-01)
+
+**Evidence:** The owner requested non-collapsible homepage subsections and matching
+height, spacing and opacity for Home, theme and search, with a new thematic Home mark.
+
+**Decision:** Categories are semantic heading/section groups with permanently
+visible links. Utilities share one control and icon scale, neutral ink and interaction
+states; Home uses a restrained compass rose related to the homepage’s atlas studies.
+
+**Tradeoff:** Larger directories remain longer rather than hiding destinations.
+Search handles finding material. Decorative subject artwork stays separate from
+functional controls. Reconsider only on a new navigation requirement from the owner.
+
 ## 025 — Series share a continuous reader (2026-09-30)
 
 **Evidence:** The owner requested Hyperion and Remembrance of Earth’s Past grouped

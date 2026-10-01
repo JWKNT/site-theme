@@ -119,9 +119,10 @@ page layout rather than changing the content's semantic grouping.
 
 Each project retains its subject identity and project-local navigation. A single,
 symbol-only Home anchor returns to `https://jehlp.net/` from the existing header,
-paired with the theme dial. The abstract bracketed asterisk echoes the homepage's
-typographic studies; it has a 44px target, visible keyboard focus and the accessible
-name/tooltip `Home — jehlp.net`. Keep the utility pair together when navigation
+paired with the theme dial. The fine compass rose echoes the homepage's
+atlas and typographic studies. Home, theme and the homepage search slash share a
+44px target, 1.6rem icon field, .375rem gap, neutral ink and hover rule. Keep visible
+keyboard focus and the Home accessible name/tooltip `Home — jehlp.net`. Keep the utility pair together when navigation
 wraps. At the shared mobile breakpoint, identity headers use a compact title row
 and a full-width navigation row: local links start at the left, while the utility
 pair stays together at the right. Match identity-selector specificity so desktop

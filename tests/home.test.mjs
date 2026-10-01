@@ -5,7 +5,7 @@ import vm from 'node:vm';
 
 const source = readFileSync(new URL('../v2/theme.js', import.meta.url), 'utf8');
 const css = readFileSync(new URL('../v2/base.css', import.meta.url), 'utf8');
-const homeCSS = css.slice(css.indexOf('/* A header colophon'), css.indexOf('details { border-top:'));
+const homeCSS = css.slice(css.indexOf('/* Header utilities share'), css.indexOf('details { border-top:'));
 class Node {
   constructor(tag) {
     this.tag = tag; this.children = []; this.parentElement = null;
@@ -95,9 +95,9 @@ test('header emblem has a 44px target, visible focus, no footer, and a print fal
   assert.match(homeCSS, /min-width: 44px;[\s\S]+min-height: 44px;/);
   assert.match(homeCSS, /\.site-utility-pair \{ display: inline-flex; align-items: center; flex: none;/);
   assert.match(homeCSS, /a\.site-home:focus-visible[^}]+outline: 2px solid var\(--blue\)/);
-  assert.doesNotMatch(homeCSS, /position: (?:fixed|sticky)|site-home-clearance|body:has|scroll-padding/);
+  assert.doesNotMatch(homeCSS.replace(/\[data-theme-toggle\]\.theme-toggle--floating \{[^}]*\}/g, ''), /position: (?:fixed|sticky)|site-home-clearance|body:has|scroll-padding/);
   assert.doesNotMatch(source, /keepFocusedControlClear|focusin|scrollBy/);
   assert.match(css, /@media print[\s\S]+\.site-home, \.site-utility-pair[^}]+display: none !important/);
-  const icon = readFileSync(new URL('../v2/icons/home-emblem.svg', import.meta.url), 'utf8');
-  assert.match(icon, /viewBox="0 0 32 32"/); assert.doesNotMatch(icon, /<script|<image|<text/);
+  const icon = readFileSync(new URL('../v2/icons/home-compass.svg', import.meta.url), 'utf8');
+  assert.match(icon, /viewBox="0 0 24 24"/); assert.doesNotMatch(icon, /<script|<image|<text/);
 });

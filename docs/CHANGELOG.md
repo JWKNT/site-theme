@@ -1,5 +1,20 @@
 # Change record
 
+## 2026-10-01 — Permanent homepage sections and matched utilities
+
+- Replace homepage category disclosures with labeled, always-visible sections;
+  remove collapse controls/state/styles while preserving all 14 destinations,
+  the typographic composition, optional full-text search and keyboard navigation.
+- Give Home, theme and homepage search the same 44px target, 1.6rem icon field,
+  .375rem gap, muted ink, opacity, hover rule and focus treatment. A fine compass
+  rose replaces the bracketed asterisk as the global Home symbol.
+- Refresh Readers’ scoped vendored controls, repair its local link/focus overrides,
+  rebuild the self-contained Solver and exclude Home from MTL’s local blue hover.
+  Other consumers inherit the shared assets; NDB Idle remains exempt.
+- Source/behavior checks: 36 shared-theme and 35 homepage tests passed; Readers
+  21 Python and 6 Node tests, plus MTL build/check and 5 tests passed. See
+  VALIDATION-2026-10-01-UTILITIES.md for release and actual browser evidence.
+
 ## 2026-09-30 — Aligned mobile mastheads
 
 - Correct the identity-header selector precedence at the existing 42rem breakpoint.

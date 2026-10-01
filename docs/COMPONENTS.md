@@ -278,7 +278,8 @@ both in an inline-flex `.site-utility-pair` when the button is authored:
 <span class="site-utility-pair"><a class="site-home" href="https://jehlp.net/" aria-label="Home — jehlp.net" title="Home — jehlp.net"><span aria-hidden="true">✳</span></a><button class="theme-toggle" data-theme-toggle aria-label="Change theme"></button></span>
 ```
 
-Shared CSS draws the abstract bracketed asterisk and a small rust point. The
+Shared CSS draws a fine compass rose for Home. Home, theme and the opt-in
+`button.site-search` slash share the same geometry, muted ink and hover rule. The
 44px link retains a visible focus ring and normal native navigation. Keep the
 existing header placement and scrolling behavior. Never add a Home footer or
 reserve bottom space for it. The theme script creates/pairs missing links and
