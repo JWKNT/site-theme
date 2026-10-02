@@ -54,3 +54,13 @@ test('home, theme and search share dimensions, neutral ink, spacing and icon sca
     assert.doesNotMatch(svg, /<script|<image|<text/);
   }
 });
+
+
+test('coarse-pointer navigation sizing preserves the shared Home and theme grid', () => {
+  const touch = css.split('@media (pointer: coarse) {')[1].split('@media (prefers-reduced-motion: reduce)')[0];
+  assert.match(touch, /\.site-header nav a:not\(\.site-home\), \.site-nav a:not\(\.site-home\), \.section-index a/);
+  assert.doesNotMatch(touch, /\.site-header nav a\s*[,\{]|\.site-nav a\s*[,\{]/);
+  assert.match(touch, /display: inline-flex; align-items: center; min-height: 2\.75rem/);
+  assert.match(control, /display: inline-grid/);
+  assert.match(control, /min-height: 44px/);
+});

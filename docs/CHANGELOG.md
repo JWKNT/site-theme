@@ -1,5 +1,15 @@
 # Change record
 
+## 2026-10-02 — Touch utility alignment
+
+- Exclude the already-44px Home utility from coarse-pointer navigation sizing.
+  The touch-only override changed Home from grid to flex while the theme dial
+  stayed grid, leaving their masks vertically offset despite equal hit targets.
+- Preserve the approved homepage/control geometry, icon artwork and ordinary
+  navigation touch targets; refresh vendored Readers CSS and the Solver export.
+- Add a regression test for the coarse-pointer selector, independently of the
+  narrow-screen breakpoint.
+
 ## 2026-10-02 — Abstract monochrome identities
 
 - Replace colorful masthead illustrations and favicon accents with a coherent

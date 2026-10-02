@@ -11,6 +11,7 @@ fresh generated build; the archived `_site` is stale after source edits.
 | All affected sites | 390px and 1440px, light/dark, keyboard, 200% text | No clipped primary labels or document-wide overflow; visible focus; first useful task stays apparent |
 | Page identity | PNG loaded at 32px in both modes; long title and 200% text | Relevant transparent image, empty alt, reserved dimensions; no Unicode masthead stand-in |
 | Single-choice dropdown | Open/choose; Arrow/Home/End/typeahead then Enter; Escape/Tab; reset and programmatic change | Reader-like sizing; native value/events synchronized; visible focus; disabled options skipped; native fallback without enhancement |
+| Touch utility alignment | Coarse-pointer device/emulation, light/dark; compare mask centers as well as 44px target boxes | Home and theme keep the same layout/display; ordinary navigation keeps touch sizing. Desktop zoom alone does not exercise pointer media queries |
 | Shared theme | Saved/system/legacy preference, cross-tab change/clear, blocked storage | Correct palette, control name/state and icon; no exceptions |
 | Print | Print preview while dark is active | Dark ink on white; no dark browser controls or invisible text |
 | MTL | Mobile contents closed/open, Escape, heading choice, breakpoint change, no JS | Closed links untabbable; focus meaningful; desktop contents visible; reading survives without JS |
