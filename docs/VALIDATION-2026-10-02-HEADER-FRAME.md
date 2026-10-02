@@ -52,11 +52,20 @@ was zero and the same CSS coordinates were compared across destinations.
 | 780px | (647, 24) | (697, 24) | 44 × 44px | 6px |
 | 500px | (375, 12) | (425, 12) | 44 × 44px | 6px |
 | 400px at 125% zoom | (278, 12) | (328, 12) | 44 × 44px | 6px |
+| 393px at 200% zoom | (275.5, 12) | (325.5, 12) | 44 × 44px | 6px |
+| 375px at 200% zoom | (257.5, 12) | (307.5, 12) | 44 × 44px | 6px |
 
-The completed audit contains 166 unique general page/width/theme cases across 27
-routes, plus 48 Solver genre cases. The latter includes 16 generated-offline cases
+The completed audit contains 182 unique general page/width/theme cases across 27
+routes, plus 64 Solver genre cases. The latter includes 16 generated-offline cases
 (four genres × both themes × 1188px and 400px). The freshly built homepage and
 offline export were rechecked after their successful final deployments.
+
+A final narrow supplement added 32 cases at exactly 375×380 and 393×380 CSS px:
+homepage, a long-title Reader, Erdős, Box, and all four Solver genres, in both themes.
+Uniform 200% desktop zoom and native resizing produced these widths. Every control
+retained its 44px target and 6px gap, with no alignment difference, content collision
+or horizontal page overflow. The browser was restored to 1188×761, 100% zoom and
+light theme afterward. This is reflow coverage, not a real-phone simulation.
 
 No utility/content collisions or horizontal overflow appeared in the final matrix.
 Links retains its narrower content column; VN navigation, long puzzle titles,
@@ -109,7 +118,7 @@ existing workflow rebuilt the authored homepage and refreshed search automatical
 
 ## Limits
 
-The smallest tested viewport is 400 CSS px. The longstanding 320px body minimum
+The smallest tested viewport is 375 CSS px. The longstanding 320px body minimum
 can cause horizontal overflow at an exact 320px desktop viewport with a classic
 scrollbar; that extreme desktop case is not claimed as a pass.
 
