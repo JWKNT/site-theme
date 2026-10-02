@@ -263,11 +263,17 @@
       if (rect.bottom < 0 || rect.top > window.innerHeight) { close(); return; }
       const below = window.innerHeight - rect.bottom - 12, above = rect.top - 12;
       const upward = below < 160 && above > below;
-      menu.style.left = `${Math.max(8, rect.left)}px`;
-      menu.style.width = `${Math.min(rect.width, window.innerWidth - 16)}px`;
+      // Compact selected values should not force longer choices into a narrow
+      // column. Fit the options, but keep the whole popup inside the viewport.
+      const maxWidth = Math.max(0, window.innerWidth - 16);
+      menu.style.width = "max-content";
+      menu.style.minWidth = `${Math.min(rect.width, maxWidth)}px`;
+      menu.style.maxWidth = `${maxWidth}px`;
       menu.style.maxHeight = `${Math.max(80, Math.min(320, upward ? above : below))}px`;
       menu.style.top = upward ? "auto" : `${rect.bottom + 4}px`;
       menu.style.bottom = upward ? `${window.innerHeight - rect.top + 4}px` : "auto";
+      const width = menu.getBoundingClientRect().width;
+      menu.style.left = `${Math.max(8, Math.min(rect.left, window.innerWidth - width - 8))}px`;
     }
     function open() {
       if (trigger.disabled || !items.some((item) => !item.disabled)) return;
@@ -296,7 +302,10 @@
         return { node, disabled: disabled || node.hidden };
       });
       if (trigger.disabled) close();
-      else if (!menu.hidden) highlight(enabled(active) ? active : select.selectedIndex);
+      else if (!menu.hidden) {
+        positionMenu();
+        if (!menu.hidden) highlight(enabled(active) ? active : select.selectedIndex);
+      }
     }
     function choose(index) {
       if (!enabled(index)) return;

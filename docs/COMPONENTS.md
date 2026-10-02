@@ -95,6 +95,9 @@ the active option; Enter/Space confirms, Escape dismisses without changing the
 selection, and Tab closes while retaining normal focus travel. The chosen option
 updates the native value and emits bubbling `input`/`change` events. Native form
 submission, reset, required state, and disabled choices remain authoritative.
+The option popup may be wider than a compact trigger so its labels remain
+readable. It fits the options up to the viewport width and stays inset from both
+screen edges; longer labels wrap within that bound.
 
 After assigning `.value` or `.selectedIndex` programmatically, call
 `window.JehlpUI?.enhance(select)` to resync presentation; those property assignments

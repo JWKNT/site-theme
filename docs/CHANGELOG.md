@@ -1,5 +1,17 @@
 # Change record
 
+## 2026-10-02 — Readable compact dropdowns
+
+- Let enhanced select popups fit their option labels instead of inheriting a
+  compact trigger's width. The demonstrated Consensus secondary-sort menu was
+  splitting even “None” across lines because padding and its scrollbar consumed
+  much of the 71px trigger width.
+- Preserve trigger minimum width, bound the popup to the viewport, and clamp both
+  horizontal edges. Remeasure open menus when their native options resynchronize;
+  selection, keyboard behavior, form events, and native fallback stay unchanged.
+- Add three controller regression tests for right/left bounds, narrow viewports,
+  and dynamic remeasurement without losing the pending keyboard choice.
+
 ## 2026-10-02 — Documentation contract corrections
 
 - Bring the public Philosophy typography sentence back into agreement with the

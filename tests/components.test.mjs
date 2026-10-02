@@ -151,3 +151,44 @@ test('scrolling a focused select into view does not cancel its pending keyboard 
   trigger.emit('click'); trigger.rect.bottom = -10; f.window.emit('scroll', { target: f.document });
   assert.equal(menu.hidden, true);
 });
+
+test('compact select triggers allow readable option width while staying inside the right edge', () => {
+  const f = selectFixture(), [trigger, menu] = f.document.children[0].children;
+  f.window.innerWidth = 1181;
+  trigger.rect = { top: 200, bottom: 240, left: 1080, right: 1151, width: 71 };
+  // Geometry is supplied by the fixture; real intrinsic sizing needs browser QA.
+  menu.rect.width = 210;
+  trigger.emit('click');
+  assert.equal(menu.style.width, 'max-content');
+  assert.equal(menu.style.minWidth, '71px');
+  assert.equal(menu.style.maxWidth, '1165px');
+  assert.equal(menu.style.left, '963px');
+  assert.equal(trigger.getAttribute('aria-expanded'), 'true');
+});
+
+test('select popup bounds handle a viewport narrower than its trigger and a clipped left edge', () => {
+  const f = selectFixture(), [trigger, menu] = f.document.children[0].children;
+  f.window.innerWidth = 390;
+  trigger.rect = { top: 200, bottom: 240, left: -20, right: 460, width: 480 };
+  menu.rect.width = 374;
+  trigger.emit('click');
+  assert.equal(menu.style.minWidth, '374px');
+  assert.equal(menu.style.maxWidth, '374px');
+  assert.equal(menu.style.left, '8px');
+});
+
+test('resyncing open options remeasures popup width without changing the pending choice', () => {
+  const f = selectFixture(), [trigger, menu] = f.document.children[0].children;
+  f.window.innerWidth = 1181;
+  trigger.rect = { top: 200, bottom: 240, left: 1050, right: 1121, width: 71 };
+  menu.rect.width = 150;
+  trigger.emit('keydown', { key: 'End' });
+  assert.equal(menu.style.left, '1023px');
+  menu.rect.width = 300;
+  f.window.JehlpUI.enhance(f.select);
+  assert.equal(menu.style.left, '873px');
+  assert.equal(menu.hidden, false);
+  assert.equal(trigger.getAttribute('aria-activedescendant'), menu.children[3].id);
+  trigger.emit('keydown', { key: 'Enter' });
+  assert.equal(f.select.selectedIndex, 3);
+});
