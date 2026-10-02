@@ -64,3 +64,9 @@ test('coarse-pointer navigation sizing preserves the shared Home and theme grid'
   assert.match(control, /display: inline-grid/);
   assert.match(control, /min-height: 44px/);
 });
+
+
+test('subpage header masks share one full-height track regardless of fallback content', () => {
+  assert.match(css, /header a\.site-home,\s*header \[data-theme-toggle\]\.theme-toggle \{\s*grid-template-rows: minmax\(0, 1fr\);\s*grid-auto-rows: 0;/);
+  assert.doesNotMatch(control, /grid-template-rows|grid-auto-rows/);
+});

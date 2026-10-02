@@ -5,6 +5,9 @@
 - Exclude the already-44px Home utility from coarse-pointer navigation sizing.
   The touch-only override changed Home from grid to flex while the theme dial
   stayed grid, leaving their masks vertically offset despite equal hit targets.
+- Normalize icon grid tracks inside subpage headers so empty theme buttons and
+  hidden fallback labels cannot shift mask centers. Keep the homepage’s exact
+  existing placement by scoping this normalization to semantic headers.
 - Preserve the approved homepage/control geometry, icon artwork and ordinary
   navigation touch targets; refresh vendored Readers CSS and the Solver export.
 - Add a regression test for the coarse-pointer selector, independently of the
