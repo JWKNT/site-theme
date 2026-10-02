@@ -6,6 +6,8 @@
   exact revisions and checks, and the unchanged surfaces reviewed alongside them.
 - Keep production browser evidence distinct from source, controlled-timing and
   DOM checks. The separate Solver live-status release remains explicitly pending.
+- Verify the fresh scheduled search snapshot, accented/ASCII and multilingual
+  queries, passage deep links, and search-dismissal focus.
 - See [maintenance validation](VALIDATION-2026-10-02-MAINTENANCE.md) for scope,
   preservation checks and remaining verification limits.
 

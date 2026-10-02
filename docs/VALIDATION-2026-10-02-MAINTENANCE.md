@@ -39,6 +39,21 @@ The Solver's separate concise live-status regions have passed focused tests and
 DOM checks. Their publication and live verification are still pending; they are
 not included in the released revisions above.
 
+## Automatic search integration
+
+[Scheduled refresh 36975434494](https://github.com/JWKNT/JWKNT.github.io/actions/runs/36975434494)
+succeeded at 06:51:05 UTC on homepage revision
+[7d64951](https://github.com/JWKNT/JWKNT.github.io/commit/7d6495179728e13953f9099b043ab5afb16798c1).
+The live coverage snapshot was generated at `2026-10-02T06:50:42.657Z` by a fresh
+public crawl (`cached: false`): 19,508 targets from 15 roots, with language-index
+counts of 19,506 English and 3,380 Japanese entries.
+
+Real-browser queries `Erdős` and `erdos` both reached the guide; `choralcelo`
+returned two Readers passages and opened The Cat at `#story/p-021`; `学校`
+returned 101 results spanning both VN readers, with the first Black Sheep result
+opening chapter F3 at line F3-0470. Escape collapsed search and restored its
+trigger's focus. The homepage layout was unchanged.
+
 ## Browser evidence
 
 - All 15 homepage destinations were reviewed at approximately 1181px desktop and
