@@ -1,5 +1,12 @@
 # Change record
 
+## 2026-10-02 — Utilities hold position across pages
+
+- The homepage utility icons drew 4px higher inside their 44px targets than on every other page.
+  The mask-centering rule applied only inside semantic headers, and the homepage utilities are outside a header.
+- Apply the single full-height mask track to Home, theme and search controls on every page.
+  The Home and theme icons are now pixel-identical on all 27 reviewed pages in Chromium, WebKit and Firefox, at 1440px and 390px.
+
 ## 2026-10-02 — Family consistency pass
 
 - Add a Links subject symbol (paired open links and a joining bar), with its masthead PNG and favicon.
