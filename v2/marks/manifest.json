@@ -1,7 +1,7 @@
 {
   "generator": "python3 tools/make_symbols.py",
   "created": "2026-10-02",
-  "assetCount": 16,
+  "assetCount": 17,
   "notes": [
     "Single-ink abstract subject symbols; SVG sources are authoritative.",
     "PNG derivatives retain the existing 32px img.site-mark contract.",
@@ -224,6 +224,20 @@
       "meaning": "Offset stellar bearings",
       "source": "../symbols/eastern-star.svg",
       "file": "eastern-star.png",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "links",
+      "meaning": "Paired open links and joining bar",
+      "source": "../symbols/links.svg",
+      "file": "links.png",
       "width": 128,
       "height": 128,
       "transparentCorners": [

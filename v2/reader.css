@@ -191,6 +191,7 @@ mark { padding: 0; background: var(--mark); color: inherit; }
 .tool-list { display: grid; gap: 0; padding: 18px 0; }
 .tool-card { border-top: 1px solid var(--line-strong); background: var(--paper); }
 .tool-card:last-child { border-bottom: 1px solid var(--line-strong); }
+.tools-intro + .tool-list > .tool-card:first-child { border-top: 0; }
 .tool-card-heading { display: flex; align-items: start; justify-content: space-between; gap: 18px; padding: 14px 4px 11px; border-bottom: 1px solid var(--line); }
 .tool-card h2 { margin: 3px 0 0; color: var(--blue-dark); font-size: 19px; font-weight: 600; }
 .tool-status { flex: none; padding: 3px 7px; border: 1px solid var(--line-strong); color: var(--muted-strong); font: var(--text-ui, .875rem)/1.4 var(--ui, var(--serif)); }

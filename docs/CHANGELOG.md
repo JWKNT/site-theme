@@ -1,5 +1,17 @@
 # Change record
 
+## 2026-10-02 — Family consistency pass
+
+- Add a Links subject symbol (paired open links and a joining bar), with its masthead PNG and favicon.
+  Chromium rasterized the SVG because Inkscape was not available. The rest of the pipeline matches `tools/make_symbols.py`.
+  Links now has the identity header, favicon, canonical URL, `· jehlp.net` title and shared dropdowns.
+- Remove the doubled rule below the reader Tools introduction. The introduction rule is the only boundary above the first tool.
+- Give the theme Components and Philosophy pages the same four header links as the theme index.
+- Align the BL2, Puzzles, Profile, NGU and Baba content shells with the 74rem header frame on desktop.
+  Narrow-screen widths do not change. Mystery Consensus keeps its wider comparison matrix.
+- Consumer fixes: Black Sheep Town shows its update date as `Aug 13, 2026`, the same as Albatross.
+  Solver toolbar labels have a gap before their inputs. Puzzles pages have canonical URLs. The Erdős mark has the 32px dimensions of the contract.
+
 ## 2026-10-02 — Original technical writing
 
 - Use ASD-STE100 Issue 9 as the default for original explanations, instructions, help, and interface text.
