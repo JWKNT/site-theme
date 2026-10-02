@@ -1,5 +1,14 @@
 # Change record
 
+## 2026-10-02 — Subpage maintenance validation
+
+- Record the released reading, collection, game-interface and guide fixes, their
+  exact revisions and checks, and the unchanged surfaces reviewed alongside them.
+- Keep production browser evidence distinct from source, controlled-timing and
+  DOM checks. The separate Solver live-status release remains explicitly pending.
+- See [maintenance validation](VALIDATION-2026-10-02-MAINTENANCE.md) for scope,
+  preservation checks and remaining verification limits.
+
 ## 2026-10-02 — Readable compact dropdowns
 
 - Let enhanced select popups fit their option labels instead of inheriting a
