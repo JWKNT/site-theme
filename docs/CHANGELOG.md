@@ -1,11 +1,23 @@
 # Change record
 
+## 2026-10-02 — Stable cross-page headers
+
+- Match the homepage’s responsive frame and top inset across mastheads, independent
+  of each page’s content width. Reserve a CSS-first Home/theme lane so navigation
+  and long titles can wrap without moving the pair. Keep native markup and scroll
+  behavior; do not create a sticky bar.
+- Reserve the browser scrollbar gutter and account for safe-area insets, including
+  the homepage and vendored reading/math surfaces. Remove local header measure
+  overrides without changing content shells. Keep NDB Idle independent.
+- Add frame/native-markup tests and update the mobile header contract. See
+  [header validation](VALIDATION-2026-10-02-HEADER-FRAME.md) for measured coverage.
+
 ## 2026-10-02 — Subpage maintenance validation
 
 - Record the released reading, collection, game-interface and guide fixes, their
   exact revisions and checks, and the unchanged surfaces reviewed alongside them.
 - Keep production browser evidence distinct from source, controlled-timing and
-  DOM checks. The separate Solver live-status release remains explicitly pending.
+  DOM checks. The separate Solver live-status release is now verified at 7ab719d.
 - Verify the fresh scheduled search snapshot, accented/ASCII and multilingual
   queries, passage deep links, and search-dismissal focus.
 - See [maintenance validation](VALIDATION-2026-10-02-MAINTENANCE.md) for scope,

@@ -41,6 +41,11 @@ decorative mark is a transparent PNG with empty `alt`; the title remains text.
 Use `img.site-mark` with `width="32" height="32"`, never a Unicode glyph or emoji.
 Keep one mark per header and let the navigation wrap naturally. Long titles may
 wrap; local puzzle navigation can use a named horizontal scroll region.
+The masthead uses the shared homepage frame rather than a content-specific width.
+Its native utility pair occupies a reserved CSS lane from first paint; title and
+local links may wrap without moving Home/theme. Keep the header at document top
+and let it scroll normally. Use `--site-frame-width` and `--site-frame-top` for
+independent reading chrome, with the same safe insets and stable scrollbar gutter.
 Omit GitHub Source buttons/links from the header. Preserve meaningful provenance
 elsewhere and keep downloads or project-local navigation that serve the page.
 

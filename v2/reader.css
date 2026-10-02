@@ -11,7 +11,6 @@
 html { scroll-padding-top: 14px; }
 body { padding-bottom: 48px; font-size: var(--text-body, 1rem); line-height: 1.58; }
 
-.site-header,
 .reader-shell,
 footer { width: min(1120px, calc(100% - 44px)); margin-inline: auto; }
 
@@ -245,8 +244,7 @@ footer p { margin: 3px 0; }
 }
 
 @media (max-width: 650px) {
-  .site-header, .reader-shell, .glossary-shell, .tools-shell, footer { width: min(100% - 28px, 1120px); }
-  .site-header { padding-top: 14px; }
+  .reader-shell, .glossary-shell, .tools-shell, footer { width: min(100% - 28px, 1120px); }
   .site-title { font-size: 20px; }
   .intro { display: block; padding-top: 20px; }
   .quick-stats { flex-wrap: wrap; margin-top: 16px; gap: 14px; }

@@ -33,11 +33,17 @@ Additional unchanged surfaces were checked: Profile (13 tests), Baba recordings
 (48 tests and build), Links (9 tests and its genuinely empty source collection),
 and MTL (build/example validation and 5 UI tests).
 
-## Pending release verification
+## Solver live-status release verified
 
-The Solver's separate concise live-status regions have passed focused tests and
-DOM checks. Their publication and live verification are still pending; they are
-not included in the released revisions above.
+The concise live-status update is released at
+[7ab719d](https://github.com/JWKNT/logical-solver/commit/7ab719d933d5ba469d7c25d364238dd29e5d535e),
+with successful [Pages run 37015018396](https://github.com/JWKNT/logical-solver/actions/runs/37015018396).
+The public index, announcement helper, and offline export match the reviewed bytes.
+Twenty scoped tests plus Cave engine/stepper checks passed. Live browser review
+verified four polite atomic regions, Cave step/undo/solve/candidates, hidden-tab
+routing, and retained focus for Undo/Solve/Candidates. The disabled Take-step
+focus behavior predates this helper change. The aggregate Solver suite and actual
+screen-reader speech were not tested for this scoped release.
 
 ## Automatic search integration
 

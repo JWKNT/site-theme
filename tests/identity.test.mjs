@@ -60,16 +60,17 @@ test('mobile identity mastheads explicitly override desktop wrapping and spacing
   assert.match(header, /align-items:\s*stretch;/);
   assert.match(header, /flex-flow:\s*column nowrap;/);
   assert.match(header, /gap:\s*\.375rem;/);
-  assert.match(mobile, /\.site-header\.site-header--identity\s*\{\s*padding-block:\s*\.875rem \.5rem;/);
+  assert.match(mobile, /padding-inline-end:\s*0; padding-bottom:\s*\.5rem;/);
+  assert.match(mobile, /\.site-header > \.site-brand[^}]+padding-inline-end: var\(--site-utility-clearance\)/);
 });
 
-test('mobile navigation owns a full row with a right-aligned intact utility pair', () => {
+test('mobile navigation owns a full row below the reserved utility lane', () => {
   const nav = mobileRule('.site-header.site-header--identity nav');
   assert.match(nav, /width:\s*100%;/);
   assert.match(nav, /margin-left:\s*0;/);
   assert.match(nav, /justify-content:\s*flex-start;/);
   assert.match(nav, /flex-wrap:\s*wrap;/);
-  assert.match(mobileRule('.site-header nav > .site-utility-pair'), /margin-left:\s*auto;/);
+  assert.match(mobileRule('.site-header nav > .site-utility-pair'), /margin:\s*0;/);
   assert.match(mobileRule('.site-header nav .site-utility-pair .theme-toggle'), /margin-left:\s*0;/);
 });
 
@@ -78,14 +79,14 @@ test('mobile local navigation retains 44px targets without changing the desktop 
   assert.match(links, /min-width:\s*2\.75rem;/);
   assert.match(links, /min-height:\s*2\.75rem;/);
   const desktop = css.split('@media (max-width: 42rem) {')[0];
-  assert.match(desktop, /\.site-header\.site-header--identity \{ align-items: center; flex-flow: row wrap; padding-block: clamp\(1\.25rem, 2\.5vw, 2rem\) 1rem; gap: \.8rem 1\.5rem; \}/);
+  assert.match(desktop, /\.site-header\.site-header--identity \{ align-items: center; flex-flow: row wrap; gap: \.8rem 1\.5rem; \}/);
   assert.match(desktop, /\.site-header\.site-header--identity nav \{ width: auto; margin-left: auto; gap: \.6rem 1rem; \}/);
 });
 
 test('dense documentation links wrap separately from the mobile utility pair', () => {
   const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   const docs = readFileSync(new URL('../v2/docs.css', import.meta.url), 'utf8');
-  assert.match(html, /<span class="docs-nav-links">[\s\S]+?Changes<\/a><\/span><a class="site-home"/);
+  assert.match(html, /<span class="docs-nav-links">[\s\S]+?Changes<\/a><\/span><span class="site-utility-pair"><a class="site-home"/);
   assert.match(docs, /\.docs-nav-links \{ display: contents; \}/);
   assert.match(docs, /@media \(max-width: 42rem\) \{[\s\S]*nav:has\(\.docs-nav-links\) \{ align-items: flex-start; flex-wrap: nowrap;/);
   assert.match(docs, /\.site-header nav \.docs-nav-links \{ display: flex; flex: 1; min-width: 0; flex-wrap: wrap;/);

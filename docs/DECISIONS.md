@@ -400,3 +400,17 @@ Remove the footer spacer, clearance token and focus-scrolling handler entirely.
 owner's explicit preferred layout. Native markup in all generators/static pages
 preserves no-JavaScript navigation, while a compatibility migration moves cached
 first-release docks into headers. NDB Idle stays independent.
+
+
+## 2026-10-02 · Stable masthead utility coordinates
+
+**Evidence:** The owner asked to remove the Home/theme jump when navigating across
+pages with different layouts. Desktop baselines varied by up to 109px horizontally;
+narrow navigation wrapping displaced the shared pair by 40px vertically.
+**Decision:** Give headers their own homepage-matched responsive frame and reserve
+a CSS-first utility lane. Keep authored controls in place and let the header scroll
+normally. Reserve the document scrollbar gutter; include safe insets. Remove local
+header measure overrides, while preserving app content measures and reading layouts.
+**Tradeoff:** Masthead rules can extend beyond a narrow content column. This makes
+global navigation predictable without forcing the actual material into one layout.
+NDB Idle keeps its explicitly independent navigation and styling.

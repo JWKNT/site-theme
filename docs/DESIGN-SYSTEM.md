@@ -122,11 +122,15 @@ symbol-only Home anchor returns to `https://jehlp.net/` from the existing header
 paired with the theme dial. The fine compass rose echoes the homepage's
 atlas and typographic studies. Home, theme and the homepage search slash share a
 44px target, 1.6rem icon field, .375rem gap, neutral ink and hover rule. Keep visible
-keyboard focus and the Home accessible name/tooltip `Home — jehlp.net`. Keep the utility pair together when navigation
-wraps. At the shared mobile breakpoint, identity headers use a compact title row
-and a full-width navigation row: local links start at the left, while the utility
-pair stays together at the right. Match identity-selector specificity so desktop
-wrapping rules cannot silently replace that mobile layout. It scrolls with its existing header: do not add a fixed footer, reserved
+keyboard focus and the Home accessible name/tooltip `Home — jehlp.net`. Keep the utility pair in a reserved CSS-positioned lane of the in-flow masthead.
+The shared `--site-frame-width` and `--site-frame-top` follow the homepage: a 74rem
+maximum with 2.5rem gutters, a 48rem maximum/1.5rem gutters below 60rem, and 1rem
+gutters/.75rem top inset below 38rem. Desktop top inset is 1.5rem. Insets honor
+safe areas; a stable document scrollbar gutter prevents short pages from shifting
+sideways. Content shells keep their own widths. Titles reserve the pair’s space;
+mobile local navigation gets a full-width row below it. Do not override header
+width/top padding locally or reposition native controls after DOM readiness.
+The pair scrolls with its existing header: do not add a fixed footer, reserved
 bottom space, focus-driven scrolling, or a new sticky bar. NDB Idle remains exempt.
 
 Include native `.site-home` markup in generators so it works without JavaScript.
