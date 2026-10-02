@@ -44,7 +44,7 @@ The STE dictionary specifies a word's permitted meaning and part of speech.
 A familiar word is not automatically an approved word.
 Check general words against the current official dictionary when it is available.
 
-Keep a project glossary for necessary technical nouns and verbs.
+Use [the project technical terms](TECHNICAL-TERMS.md) for necessary technical nouns and verbs.
 Issue 9 permits mathematical and scientific terms, formulas, and subject-specific technical verbs.
 It also permits computer and interface terms, such as click, enter, save, sort, and validate.
 Use each term in a consistent technical sense.
