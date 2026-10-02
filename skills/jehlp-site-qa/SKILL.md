@@ -35,3 +35,10 @@ stay in source order. Check narrow/enlarged-text control wrapping, unchanged bit
 colors and proportions, and print's normal top border without the ornament.
 
 Fix demonstrated failures at the responsible layer. Stop optional testing when concrete risks are covered. Leave an honest checklist of unavailable gates; never treat a DOM stub or source regex as proof of browser accessibility.
+
+## Original technical writing
+
+For original prose, use `jehlp-technical-writing` and `docs/WRITING-STYLE.md`.
+Apply ASD-STE100 Issue 9 to explanations, instructions, help, and interface text.
+Preserve translated and reader text, quotations, NDB fiction and item descriptions, and exact technical meaning.
+Review generated outputs and accessible names after a text change.

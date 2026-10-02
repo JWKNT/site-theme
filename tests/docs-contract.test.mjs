@@ -8,7 +8,7 @@ test('public typography guidance retains the authored Georgia and Palatino roles
   for (const text of [philosophy, page]) {
     assert.match(text, /Georgia for reading and ordinary interface text/);
     assert.match(text, /Palatino/);
-    assert.match(text, /Reserve sans serif for genuinely tiny chart labels/);
+    assert.match(text, /Reserve sans serif for very small chart labels/);
   }
   assert.doesNotMatch(page, /sans serif for interface and metadata/);
 });

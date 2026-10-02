@@ -14,3 +14,10 @@ Keep v1 unchanged. Preserve v2 token names, data-theme, the legacy .dark class, 
 Mastheads use relevant transparent PNGs from v2/marks, with the img.site-mark contract; do not restore font glyphs as identity marks. Keep optional data-ui-select behavior in the component layer and local control widths in consumers. Check native fallback before removing conflicting select styles.
 
 Use stylesheet-relative CSS assets. Rebuild logical-solver/dist/ubahn-solver.html after a shared change; its build must inline theme CSS/JS, masks, favicon and PNG masthead. Run node --test tests/*.test.mjs in site-theme, then affected consumer builds/checks. Review both sparse reading and dense working surfaces before publishing a shared revision. Record evidence and exceptions, not a generic “looks good.”
+
+## Original technical writing
+
+For original prose, use `jehlp-technical-writing` and `docs/WRITING-STYLE.md`.
+Apply ASD-STE100 Issue 9 to explanations, instructions, help, and interface text.
+Preserve translated and reader text, quotations, NDB fiction and item descriptions, and exact technical meaning.
+Review generated outputs and accessible names after a text change.

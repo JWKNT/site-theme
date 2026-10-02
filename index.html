@@ -21,7 +21,7 @@
     <main id="theme-doc" tabindex="-1" class="theme-doc">
       <header>
         <h1>Design system</h1>
-        <p class="lede">One visual language. Independent pages.</p>
+        <p class="lede">Shared design for independent pages.</p>
       </header>
       <div class="site-divider" data-ornament="constellation" aria-hidden="true"><span></span></div>
       <section>
@@ -34,15 +34,15 @@
       <section>
         <h2>Typography</h2>
         <dl class="type-specimen">
-          <dt>Headings</dt><dd style="font-family: var(--display); font-weight: 700">Palatino gives titles a confident, traditional presence.</dd>
-          <dt>Reading</dt><dd>Georgia carries explanation and long-form material.</dd>
-          <dt>Interface</dt><dd class="ui">Georgia gives controls, filters, and quiet metadata the same voice.</dd>
+          <dt>Headings</dt><dd style="font-family: var(--display); font-weight: 700">Use bold Palatino for titles.</dd>
+          <dt>Reading</dt><dd>Use Georgia for explanations and long text.</dd>
+          <dt>Interface</dt><dd class="ui">Use Georgia for controls, filters, and metadata.</dd>
           <dt>Data</dt><dd class="mono">0123456789 · ids · values · state</dd>
         </dl>
       </section>
       <section>
         <h2>Readable at every density</h2>
-        <p>Use 18–20px for sustained reading, 16px for dense reference, regular controls at 14px, and secondary metadata at 12px. Wrap a toolbar before shrinking its labels. Plot annotations and puzzle candidates need their own measured treatment.</p>
+        <p>Use 18–20px for long text and 16px for dense reference text. Use 14px for regular controls and 12px for secondary metadata. Before you decrease label sizes, let the toolbar wrap. Assess plot annotations and puzzle candidates separately.</p>
         <div class="table-scroll" tabindex="0" aria-label="Shared type and control scale">
           <table><caption>Shared v2 scale</caption><thead><tr><th scope="col">Role</th><th scope="col">Token</th><th scope="col">Default</th></tr></thead>
           <tbody><tr><th scope="row">Reading</th><td><code>--text-body</code></td><td>1rem</td></tr>
@@ -50,11 +50,11 @@
           <tr><th scope="row">Metadata</th><td><code>--text-meta</code></td><td>.75rem</td></tr>
           <tr><th scope="row">Control height</th><td><code>--control-size</code></td><td>2.25rem · 2.75rem on touch</td></tr></tbody></table>
         </div>
-        <details><summary>How to apply the scale</summary><p>The shared stylesheet supplies defaults. Consumer styles may still override them: repair the declaration that owns the layout and keep chart or board geometry local. See the <a href="docs/DESIGN-SYSTEM.md">design system</a> for ownership and exceptions.</p></details>
+        <details><summary>How to apply the scale</summary><p>The shared stylesheet supplies defaults. A site stylesheet can override them. Change the declaration that controls the layout. Keep chart and board geometry in the site stylesheet. See the <a href="docs/DESIGN-SYSTEM.md">design system</a> for ownership and exceptions.</p></details>
       </section>
       <section>
         <h2>Transitions</h2>
-        <p>A change of subject may use one ruled ornament. The surrounding sections then surrender their own boundary rules, so punctuation never accumulates into a stack.</p>
+        <p>A subject change can use one ruled ornament. Remove adjacent section boundary rules. This prevents duplicate lines.</p>
         <div class="ornament-specimen" aria-hidden="true">
           <span>✦</span><span>⁂</span><span>◆</span><span>⋈</span><span>§</span><span>✣</span>
         </div>
@@ -64,11 +64,11 @@
       <section>
         <h2>Principles</h2>
         <ul>
-          <li>Lead with the material, not a promotional masthead.</li>
-          <li>Make hierarchy skimmable through type, measure, rules, and disclosure.</li>
-          <li>Use margins for context and whitespace for separation before adding boxes.</li>
+          <li>Put the material before promotional content.</li>
+          <li>Use type, line length, rules, and disclosures to show the information hierarchy.</li>
+          <li>Before you add boxes, use margins for context and whitespace for separation.</li>
           <li>Reserve color for meaningful state and comparison.</li>
-          <li>Keep every interaction legible with a keyboard, on a phone, and in print.</li>
+          <li>Keep controls and content clear for keyboard use, phones, and print.</li>
         </ul>
         <p><a href="philosophy.html">Full philosophy and component guidance</a>.</p>
       </section>

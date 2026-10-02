@@ -14,3 +14,9 @@ Use `SKILLS.md` to select a task-specific skill; the maintained copies live in
   Distinguish static/behavior checks from actual browser review.
 - The September 2026 handoff is local work. Do not infer production deployment,
   bot execution, data changes, or remote rewrites from a UI assignment.
+
+## Original technical writing
+
+Use ASD-STE100 Issue 9 for original explanations, instructions, and interface text.
+Read `docs/WRITING-STYLE.md` and `skills/jehlp-technical-writing/SKILL.md` before a prose edit.
+Preserve the protected source, translated, fictional, mathematical, and legal content specified there.

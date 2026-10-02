@@ -164,3 +164,9 @@ Keep CSS icon URLs relative to their stylesheet; HTML masthead images use the
 shared mark URL or an appropriate relative path. Inline builds must embed all
 referenced assets, including PNG marks. Do not trade an offline deliverable for an unnoticed CDN
 dependency. Preserve existing favicon identity and canonical metadata.
+
+## Original technical writing
+
+Use [the writing policy](WRITING-STYLE.md) for original explanations, instructions, and interface text.
+Use ASD-STE100 Issue 9. Preserve source text, translations, quotations, NDB fiction and item descriptions, and technical meaning.
+Keep the existing typography, layout, math presentation, and interactive examples during a writing edit.

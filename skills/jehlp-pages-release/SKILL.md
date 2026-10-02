@@ -12,3 +12,10 @@ Preserve existing user work. Use an explicit file list per repo; never git add -
 Before a shared v2 release, review available consumers outside the archive, including reader surfaces, and confirm local candidates passed relevant QA. Publish new PNG marks and component assets before their consumers reference them. Consumer code using new CSS tokens should keep fallback values so release order does not blank the UI. Identify the theme commit, affected consumer commits and rollback commits; rebuild embedded exports, including their PNG identities, where needed.
 
 Prepare a concrete release plan and commits. Push or deploy only when included in the user's current authorization; a local preparation request does not authorize publication. After an authorized deploy, verify the actual public routes, stylesheet/script asset responses, canonical metadata and a representative interaction. If routing ownership is unclear, report the precise unresolved setting rather than guessing or rewriting remotes.
+
+## Original technical writing
+
+For original prose, use `jehlp-technical-writing` and `docs/WRITING-STYLE.md`.
+Apply ASD-STE100 Issue 9 to explanations, instructions, help, and interface text.
+Preserve translated and reader text, quotations, NDB fiction and item descriptions, and exact technical meaning.
+Review generated outputs and accessible names after a text change.

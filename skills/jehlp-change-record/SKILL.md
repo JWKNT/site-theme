@@ -12,3 +12,10 @@ For an actual change, record date, problem, files or affected projects, resultin
 A handoff names the recipient's requested model/reasoning, exact current state and base commits, dirty-work constraints, ordered next actions, commands, and completion gates. Make local edits and generated files concrete before handing off. Distinguish done, prepared, untested and blocked.
 
 Use current official documentation when specifying Codex installation/model configuration; preserve the user's chosen target. Keep skills self-contained and under site-theme/skills; update their catalog when triggers change. Version these changes in the owning Git repository and keep the portable handoff import separate from live repository metadata.
+
+## Original technical writing
+
+For original prose, use `jehlp-technical-writing` and `docs/WRITING-STYLE.md`.
+Apply ASD-STE100 Issue 9 to explanations, instructions, help, and interface text.
+Preserve translated and reader text, quotations, NDB fiction and item descriptions, and exact technical meaning.
+Review generated outputs and accessible names after a text change.

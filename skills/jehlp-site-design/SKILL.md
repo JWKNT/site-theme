@@ -18,3 +18,10 @@ Give the puzzle transition a small ornament distinct from the masthead logo. Whe
 Inspect existing layout and CSS ownership before editing. Regular reading targets 1rem; navigation and controls .875rem; secondary metadata .75rem. These are design targets. Judge dense chart marks separately instead of shrinking all labels or changing board geometry. Ordinary single-choice selects adopt data-ui-select; retain richer grouped VN chapter browsers. Choose compact paginated rows with detail or an overflowing comparison matrix, not pagination plus an internally scrolling two-axis table.
 
 Make a representative improvement, then extend only the proven pattern. Keep data, ranking, scientific interpretation, puzzle logic and bot policy outside a visual change. Record the actual reusable decision in site-theme/docs/DECISIONS.md and the shipped scope in docs/CHANGELOG.md. Use docs/QA-MATRIX.md to choose checks proportional to the change; do not report unperformed browser checks as passed.
+
+## Original technical writing
+
+For original prose, use `jehlp-technical-writing` and `docs/WRITING-STYLE.md`.
+Apply ASD-STE100 Issue 9 to explanations, instructions, help, and interface text.
+Preserve translated and reader text, quotations, NDB fiction and item descriptions, and exact technical meaning.
+Review generated outputs and accessible names after a text change.

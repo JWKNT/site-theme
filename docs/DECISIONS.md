@@ -1,5 +1,17 @@
 # Design decisions
 
+## 028 — ASD-STE100 for original technical text (2026-10-02)
+
+**Evidence:** The owner requested ASD-STE100 for original website writing and future writing defaults.
+The owner excluded fictional dialogue and item descriptions.
+
+**Decision:** Follow [the writing policy](WRITING-STYLE.md) for original explanations, instructions, help, and interface text.
+Preserve source and translated prose, literary passages, quotations, legal text, data, and exact mathematical meaning.
+Use separate language and technical-meaning reviews for proof prose.
+
+**Tradeoff:** Short sentences can require more paragraph boundaries. Preserve information and logical qualifications before reducing length.
+A build or sentence counter does not establish full dictionary compliance.
+
 ## 027 — Abstract monochrome subject symbols (2026-10-02)
 
 **Evidence:** The owner requested replacing colored site icons with abstract,

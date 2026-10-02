@@ -1,5 +1,13 @@
 # Change record
 
+## 2026-10-02 — Original technical writing
+
+- Use ASD-STE100 Issue 9 as the default for original explanations, instructions, help, and interface text.
+- Add the shared writing policy and a maintained technical-writing skill. Link all site skills to that policy.
+- Revise the public theme guide with short, direct sentences. Preserve its design requirements and controls.
+- Preserve imported reader text, translations, quotations, NDB fiction and item descriptions, and exact mathematical meaning.
+- Separate automatic sentence screening from full rule and dictionary review. Do not claim unverified complete compliance.
+
 ## 2026-10-02 — Stable cross-page headers
 
 - Match the homepage’s responsive frame and top inset across mastheads, independent

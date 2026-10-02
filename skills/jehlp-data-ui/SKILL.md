@@ -12,3 +12,10 @@ Keep search/filter/sort controls together with results. Preserve reset, counts, 
 Choose the collection model before adding overflow. Paginated rows flow with the page: retain essential comparison fields and put secondary fields in accessible detail, without removing them from sorting/export. A true matrix may use a named focusable overflow wrapper without pagination. Do not combine pagination with an internally scrolling two-axis table. Use aligned/tabular values and one connected native header band. A visual chart needs readable text for essential values; smaller annotations are a measured local exception, not a precedent for 9px filter labels.
 
 Preserve source datasets and factual copy. Exercise representative populated/empty/extreme states and the existing tests. Use local fixtures for live UI checks where available; identify them as fixtures. Record remaining data or browser limitations in site-theme/docs/VALIDATION.md or the dated successor record.
+
+## Original technical writing
+
+For original prose, use `jehlp-technical-writing` and `docs/WRITING-STYLE.md`.
+Apply ASD-STE100 Issue 9 to explanations, instructions, help, and interface text.
+Preserve translated and reader text, quotations, NDB fiction and item descriptions, and exact technical meaning.
+Review generated outputs and accessible names after a text change.

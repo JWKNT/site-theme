@@ -1,77 +1,141 @@
 # Site philosophy
 
-The Readers page is the aesthetic reference: warm paper, dark ink, assured traditional type, and a quiet frame for the material. The shared theme carries that character into different kinds of work. A script reader, puzzle archive, solver, reference guide, item database, project index, and link collection should feel related without pretending their content has the same shape.
+Readers is the visual reference. It uses warm paper, dark ink, traditional type, and a simple page frame.
+The shared theme applies this design to different tasks.
+Readers, archives, solvers, guides, databases, indexes, and link collections need layouts that suit their content.
 
 ## Start with the material
 
-Structure follows the information. A long text needs readable measure; a dense archive needs efficient scanning; a tool needs clear state and controls. Reuse the visual language, not a universal page template.
+Structure follows the information. Long text needs a readable line length.
+Dense archives need clear organization. Tools need clear state and controls.
+Use the shared design with a layout that suits each page.
 
 ## Keep the interface subordinate
 
-- Prefer text, whitespace, and alignment before containers or decoration.
-- Use Georgia for reading and ordinary interface text, with bold Palatino headings. Controls belong to the same typographic voice as the material. Reserve sans serif for genuinely tiny chart labels and monospace for values, identifiers, shortcuts, and compact status.
-- Keep the palette neutral. Links and navigation use ink, with fine underlines where needed; restrained blue remains available for focus, selection, and meaningful state.
-- Use hairline rules to explain structure. Avoid cards, shadows, rounded containers, gradients, and animation unless the material needs a real boundary, depth cue, or transition.
-- Keep controls square, compact, plainly labeled, and close to the content they affect. Equivalent dropdowns share one visual and keyboard grammar; remove duplicate controls that do the same job in the same context.
-- Let titles be assured: bold Palatino, ordinary case, modest negative tracking. Most working-page titles fit near 28–32 pixels; sustained reading may use 34–48 pixels. Avoid airy display weights, fashionable rounded UI type, and ornamental lettering in ordinary controls.
+- Prefer text, whitespace, and alignment to containers or decoration.
+- Use Georgia for reading and ordinary interface text. Use bold Palatino for headings.
+  Keep controls consistent with the content type. Reserve sans serif for very small chart labels.
+  Use monospace for values, identifiers, shortcuts, and compact status.
+- Keep the palette neutral. Use ink for links and navigation, with thin underlines where necessary.
+  Use restrained blue for focus, selection, and meaningful state.
+- Use thin rules to show structure. Add decoration only when the material needs a boundary, depth indicator, or transition.
+  This restriction includes cards, shadows, rounded containers, gradients, and animation.
+- Keep controls square, compact, clearly labeled, and near the content they affect.
+  Give equivalent dropdowns the same appearance and keyboard behavior.
+  Remove duplicate controls that have the same function in the same context.
+- Use bold Palatino, ordinary case, and modest negative tracking for titles.
+  Most working-page titles use 28–32 pixels. Long reading pages can use 34–48 pixels.
+  Avoid light display weights, rounded interface type, and ornamental control lettering.
 
 ## Explicit exception: NDB Idle
 
-NDB Idle retains its own game interface and pre-sweep typography, palette, and browser chrome. The owner explicitly exempted it from the Readers aesthetic sweep. Do not migrate or reskin it as part of general theme adoption; reconsider only on an explicit request for that game.
+NDB Idle retains its own game interface, typography, palette, and browser chrome.
+The owner excluded it from the Readers visual redesign.
+Do not change its theme as part of general theme adoption.
+A visual redesign requires an explicit request for that game.
 
-## Carry the Readers character across the family
+## Apply the Readers design across the sites
 
-Refinement is usually the last ten percent: type weight, line length, an aligned baseline, a calmer border, and breathing room around the actual material. Do not turn every page into a novel reader. Keep dense tools efficient and prose generous. Preserve puzzle geometry, chart colors, game art, and data meaning. Theme controls and existing subject marks can remain as restrained punctuation; do not add scrollwork, simulated parchment, or gold decoration to suggest quality.
+Improve type weight, line length, baseline alignment, borders, and content spacing.
+Do not make every page a novel reader. Keep dense tools efficient and prose comfortable to read.
+Preserve puzzle geometry, chart colors, game art, and data meaning.
+Keep theme controls and subject marks small.
+Do not add scrollwork, simulated parchment, or gold decoration.
 
-## Make the hierarchy skimmable
+## Make the hierarchy clear
 
-A long page should work at several depths: title and dateline, section headings, short summaries, the primary material, then disclosed detail. Put context in a margin or a quiet note when room permits. On narrow screens, move it back into the reading flow.
+Organize long pages by title and date, section headings, summaries, primary material, and optional detail.
+Where space permits, put context in a margin. On narrow screens, put it in the text flow.
 
-Whitespace must earn its place. Use margins for useful context or comparison, not unexplained section numbers or empty hero space. Tighten oversized gaps and unbalanced columns before adding decoration, while retaining readable measure and enough separation to scan.
+Use margins for useful context or comparison. Remove unexplained section numbers and empty promotional space.
+Decrease excessive gaps and balance columns. Keep readable line lengths and clear separation.
 
-Use 66–72 characters for sustained prose. Data tools may use a wider shell only where comparison needs it. Tables, timelines, code, and numeric results should use tabular or monospaced figures; prose should not.
+Use 66–72 characters per line for long prose. Use a wider data view only when comparison requires it.
+Use tabular or monospaced figures in tables, timelines, code, and numeric results. Do not apply them to prose.
 
-Major changes of subject may use a shared ruled ornament. It is punctuation, not branding: use it once or twice on a page, never between every dashboard section. The mark may vary with the material—an asterism for an editorial turn, a helix-like bow for genetics, a section sign for documents—but its visual weight stays quiet.
+Use a shared ruled ornament for major subject changes, once or twice per page.
+Do not put one between every dashboard section. Choose a small symbol that suits the material.
+Examples include an asterism for an editorial change, a helix-like bow for genetics, and a section sign for documents.
 
-A transition has one owner. When an ornament separates two sections, the preceding section gives up its closing rule; when a disclosure ends a section, do not add a second rule immediately beneath it. Parallel hairlines should describe rows or columns, never appear as accidental strata around whitespace.
+Give each transition one boundary rule. If an ornament separates two sections, remove the preceding section's closing rule.
+Do not add a second rule below a disclosure at the end of a section.
+Use parallel lines to show rows or columns, not to surround whitespace.
 
-On a puzzle page, one quiet PNG-centered rule marks the start of the main puzzle unit: its lead-in, solve links, and grids belong together below it. Complete rules and worked examples stay above it. Choose the boundary by meaning, not by the first image; the line must not separate a puzzle from its own introduction or links. Its orientation follows the layout.
+Put one PNG-centered divider before the main puzzle unit, after all rules and worked examples.
+Keep its introduction, solve links, and grids together below the line.
+Choose this boundary by meaning. The first image does not necessarily start the main puzzle.
+Align the divider with the layout. Do not separate a puzzle from its introduction or links.
 
-Give that transition its own small geometric ornament, distinct from the masthead logo. A quiet, square-edged sheet can group the main solve links, grids and reference material when they otherwise feel disconnected. Let the divider form the sheet's top edge rather than stacking a second border beneath it. Keep examples outside, avoid shadows, preserve original diagram colors and proportions, and reduce the inset on narrow screens. Group genuine solve actions; do not flatten prose or move a post-grid link merely to make every page identical.
+Use a transition ornament that differs from the masthead logo.
+A thin, square-edged sheet can group main solve links, grids, and references that otherwise appear separate.
+Use the divider as the sheet's top edge. Do not add a second border below it.
+Keep examples outside the sheet. Avoid shadows.
 
-## Earn every feature
+Preserve diagram colors and proportions. Decrease the inset on narrow screens.
+Group actual solve actions together. Keep post-grid links in place and preserve the prose structure.
+Do not impose an identical page layout on different content.
 
-A feature belongs when it makes the material easier to find, read, compare, or operate. Search, filtering, sorting, pagination, drawers, and dialogs are tools for a real information problem—not decoration. Empty states, counts, and status text should be useful and quiet.
+## Add features with a purpose
 
-Choose one collection-navigation model. Paginated lists should flow with the page, with essential comparison fields and further detail on demand. A true matrix may use a named overflow region when its columns must remain together. Do not combine pagination with an internally scrolling two-axis table. A direction arrow is enough for an ordinary sorted heading; explain primary and secondary sorting in the advanced controls, not with unexplained priority digits.
+Add a feature when it helps readers find, read, compare, or operate the material.
+This applies to search, filters, sorting, pagination, drawers, and dialogs.
+Keep empty states, counts, and status text useful and brief.
 
-Static HTML, CSS, and small dependency-free scripts are the default. Precompute stable work during a build and bound rendered output when a collection can become large. The simple case should stay simple as the dataset grows.
+Choose one collection layout. Use compact paginated rows in the page flow, with essential comparison fields and optional details.
+For a matrix whose columns must remain together, use a named overflow region.
+Do not combine pagination with a table that scrolls internally in both directions.
+Use an arrow to show sort direction in ordinary headings.
+Explain primary and secondary sorting in advanced controls, without unexplained priority digits.
+
+Use static HTML, CSS, and small dependency-free scripts by default.
+Calculate stable results during the build. Limit rendered output for large collections.
+Keep simple tasks simple as the dataset grows.
 
 ## Share foundations, preserve identity
 
-The versioned theme owns palette, type stacks, document defaults, focus behavior, accessibility helpers, the standard header, and the color-mode contract. A site stylesheet owns only its content-specific layout and components. Local rules can depart from the foundation when the subject requires it, but should keep the same restraint, proportions, and interaction grammar.
+The versioned theme controls the palette, type stacks, document defaults, focus behavior, accessibility helpers, standard header, and color modes.
+Each site's stylesheet controls only its content-specific layout and components.
+Local styles can differ when the subject requires it.
+Keep their proportions, restraint, and interaction behavior consistent with the shared design.
 
-Mastheads use a small abstract, subject-relevant monochrome symbol beside the text title, never a Unicode glyph or emoji standing in for the page identity. Authoritative SVG geometry produces transparent PNGs for the existing img.site-mark contract. Related subjects share the fine geometric drawing language of Home and the theme dial: black on paper, white on charcoal. The mark is decorative; the title supplies its name.
+Pair each masthead title with a small abstract monochrome subject symbol.
+Do not use a Unicode glyph or emoji as the page identity.
+Generate transparent PNGs from the authoritative SVG geometry for the existing img.site-mark contract.
+Use the fine geometric style of Home and the theme dial: black on paper, white on charcoal.
+The mark is decorative. The title supplies its name.
 
-The root directory has a different job: it may omit a visible masthead entirely
-and use composed, decorative typography to organize category and destination
-names. Keep that artwork separate from the accessible link names and small enough
-to preserve a compact overview. Always-visible category sections and optional search let the
-directory grow; the complete authored destinations remain in static HTML. This
-homepage treatment does not replace the PNG-title convention on independent pages.
+The root directory can omit a visible masthead.
+It can use decorative typography to organize category and destination names.
+Keep that artwork separate from accessible link names. Keep the complete directory compact.
+Use always-visible categories and optional search as the collection grows.
+Keep every authored destination in static HTML. Independent pages retain the PNG-title convention.
 
-Favicons reuse the subject symbol in white on a black rounded field. Their geometry identifies the material—a helix for genetics, a solved path for logic, an aperture for consensus research—without letters or subject colors. Keep semantic colors in charts, puzzle diagrams and game art unchanged.
+Favicons use the subject symbol in white on a rounded black field.
+Use geometry, not letters or subject colors, to identify the material.
+Examples include a genetics helix, a solved logic path, and a consensus-research aperture.
+Preserve semantic colors in charts, puzzle diagrams, and game art.
 
-Visible authorship and canonical metadata use **jehlp.net**. GitHub account names belong only in source links where they are part of the destination.
+Use **jehlp.net** for visible authorship and canonical metadata.
+Use GitHub account names only in source links where they form part of the destination.
 
-Keep GitHub “Source” links out of page headers. The masthead is for identity,
-project-local navigation, and essential controls; useful source provenance may
-remain with the material or in the footer.
+Keep GitHub “Source” links out of page headers.
+The masthead contains identity, project-local navigation, and essential controls.
+Useful source provenance can remain with the material or in the footer.
 
 ## Treat accessibility as part of the style
 
-Pages should work with a keyboard, retain visible focus, expose useful labels and live status, respect reduced motion, remain legible in light and dark modes, and collapse cleanly on narrow screens. Responsive design should simplify hierarchy rather than hide essential content.
+Support keyboard use and visible focus. Give controls useful labels and live status.
+Respect reduced motion. Keep text legible in light and dark modes.
+On narrow screens, simplify the layout without hiding essential content.
 
-## Test the ends of the scale
+## Use direct technical writing
 
-Review the empty state and realistic content, narrow and wide viewports, light and dark modes, keyboard focus, and reduced motion. For collections, test both a handful of records and the largest plausible dataset. Minimalism is successful when there is less interface to manage without losing capability.
+Use ASD-STE100 Issue 9 for original explanations, instructions, help, and interface text.
+Follow [the writing policy](docs/WRITING-STYLE.md).
+Preserve reader text, translations, source quotations, NDB fiction and item descriptions, and exact technical meaning.
+
+## Test the range of states
+
+Review empty and realistic states. Test narrow and wide viewports, both color modes, keyboard focus, and reduced motion.
+For collections, test a few records and the largest plausible dataset.
+Remove unnecessary interface elements without removing capability.

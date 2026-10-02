@@ -39,3 +39,10 @@ and no-script behavior as relevant, plus existing consumer tests. Record contrac
 and adopters in `docs/COMPONENTS.md`; add a working gallery example when it helps
 future adoption. Do not add an abstraction or dependency solely to increase the
 component count.
+
+## Original technical writing
+
+For original prose, use `jehlp-technical-writing` and `docs/WRITING-STYLE.md`.
+Apply ASD-STE100 Issue 9 to explanations, instructions, help, and interface text.
+Preserve translated and reader text, quotations, NDB fiction and item descriptions, and exact technical meaning.
+Review generated outputs and accessible names after a text change.
