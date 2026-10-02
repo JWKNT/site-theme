@@ -1,5 +1,14 @@
 # Change record
 
+## 2026-10-02 — Documentation contract corrections
+
+- Bring the public Philosophy typography sentence back into agreement with the
+  authored policy: Georgia for reading and ordinary controls, Palatino headings,
+  and sans serif reserved for tiny chart labels.
+- Repair the copyable identity-header example to include the existing named Home
+  link, utility pair, and required `theme-toggle` class. Add regression checks for
+  both corrections; no shared styling or theme behavior changes in this update.
+
 ## 2026-10-02 — Touch utility alignment
 
 - Exclude the already-44px Home utility from coarse-pointer navigation sizing.

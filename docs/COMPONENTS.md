@@ -52,7 +52,10 @@ elsewhere and keep downloads or project-local navigation that serve the page.
   </div>
   <nav aria-label="Page links">
     <a href="#reference">Reference</a>
-    <button type="button" data-theme-toggle aria-label="Use dark theme">◐</button>
+    <span class="site-utility-pair">
+      <a class="site-home" href="https://jehlp.net/" aria-label="Home — jehlp.net" title="Home — jehlp.net"><span aria-hidden="true">✳</span></a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme"></button>
+    </span>
   </nav>
 </header>
 ```
