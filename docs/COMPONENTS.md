@@ -57,11 +57,15 @@ elsewhere and keep downloads or project-local navigation that serve the page.
 </header>
 ```
 
-The 14 maintained PNGs in `v2/marks/` are `site-theme.png`, `home.png`,
+The 16 maintained PNGs in `v2/marks/` are `site-theme.png`, `home.png`,
 `mtl-guide.png`, `profile.png`, `mystery-report.png`, `ngu-idle-dashboard.png`,
 `logical-solver.png`, `bl2.png`, `box-puzzles.png`, `black-sheep-town.png`,
-`albatross-koukairoku.png`, `writing.png`, `puzzles.png`, and `baba-is-you.png`. Use a unique mark for each project; subpages within that project may share its mark. Choose the relevant
-subject, check both color modes, and preserve the existing favicon separately.
+`albatross-koukairoku.png`, `writing.png`, `puzzles.png`, `baba-is-you.png`,
+`readers.png`, and `eastern-star.png`. Use a unique mark for each project; subpages within that project may share its mark. Choose the relevant
+subject and check both color modes. Abstract, single-ink SVG geometry in
+`v2/symbols/` is authoritative; `tools/make_symbols.py` renders transparent black
+PNG mastheads and white-on-black favicons. Dark mode inverts only mastheads and
+decorative divider images, never diagrams or game art.
 Publish a new mark before adopting its URL; embed the PNG in offline exports.
 
 **Single-choice selects.** Keep an ordinary native `select`, its `id`, `name`,

@@ -51,7 +51,7 @@ Static HTML, CSS, and small dependency-free scripts are the default. Precompute 
 
 The versioned theme owns palette, type stacks, document defaults, focus behavior, accessibility helpers, the standard header, and the color-mode contract. A site stylesheet owns only its content-specific layout and components. Local rules can depart from the foundation when the subject requires it, but should keep the same restraint, proportions, and interaction grammar.
 
-Mastheads use a small, relevant transparent PNG beside the text title, never a Unicode glyph or emoji standing in for the page identity. Related subjects share a restrained drawing language, with a mark that remains clear on paper and charcoal. The mark is decorative; the title supplies its name.
+Mastheads use a small abstract, subject-relevant monochrome symbol beside the text title, never a Unicode glyph or emoji standing in for the page identity. Authoritative SVG geometry produces transparent PNGs for the existing img.site-mark contract. Related subjects share the fine geometric drawing language of Home and the theme dial: black on paper, white on charcoal. The mark is decorative; the title supplies its name.
 
 The root directory has a different job: it may omit a visible masthead entirely
 and use composed, decorative typography to organize category and destination
@@ -60,7 +60,7 @@ to preserve a compact overview. Always-visible category sections and optional se
 directory grow; the complete authored destinations remain in static HTML. This
 homepage treatment does not replace the PNG-title convention on independent pages.
 
-Favicons retain their separate dark rounded field, ivory geometry, and one subject color. Their center marks identify the material—a helix for genetics, a solved path for logic, a lens for consensus research—without relying on letters.
+Favicons reuse the subject symbol in white on a black rounded field. Their geometry identifies the material—a helix for genetics, a solved path for logic, an aperture for consensus research—without letters or subject colors. Keep semantic colors in charts, puzzle diagrams and game art unchanged.
 
 Visible authorship and canonical metadata use **jehlp.net**. GitHub account names belong only in source links where they are part of the destination.
 

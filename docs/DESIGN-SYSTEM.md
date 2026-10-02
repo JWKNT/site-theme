@@ -140,10 +140,11 @@ may remain with the material or in the footer.
 Use the opt-in identity header in `COMPONENTS.md`: one relevant transparent PNG
 as `img.site-mark` at 32px with empty `alt`, a serif title, and only useful local
 navigation. Choose a maintained asset from `v2/marks/`; do not substitute Unicode
-or emoji. Blue, plum, teal, and ochre
-identity tones are available in both color modes. Reserve these for marks and
-small editorial accents; links, focus, selection, and data/status colors keep
-their existing meanings. Do not tint the whole reading surface.
+or emoji. These are single-ink abstract symbols generated from `v2/symbols/`: black
+on paper and inverted to white on charcoal. Run `python3 tools/make_symbols.py`
+(Inkscape and Pillow) to regenerate mastheads and white-on-black favicons from the
+same geometry. Keep the approved Home compass and theme dial. Links, focus,
+selection, game art and data/status colors retain their existing meanings.
 
 Make margins useful: place context alongside the material when it saves space,
 balance column heights where practical, and remove unexplained number gutters or

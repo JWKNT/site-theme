@@ -1,5 +1,15 @@
 # Change record
 
+## 2026-10-02 — Abstract monochrome identities
+
+- Replace colorful masthead illustrations and favicon accents with a coherent
+  set of abstract subject symbols, matching the Home compass and theme dial.
+- Keep authoritative SVG geometry and generate compatible transparent PNG
+  mastheads plus white-on-black favicons. Shared dark mode inverts only mastheads.
+- Refresh Readers’ vendored identity/CSS, Baba’s local favicon and the embedded
+  Solver export. Preserve utility controls, game art, diagrams and data colors;
+  NDB Idle remains exempt.
+
 ## 2026-10-01 — Permanent homepage sections and matched utilities
 
 - Replace homepage category disclosures with labeled, always-visible sections;

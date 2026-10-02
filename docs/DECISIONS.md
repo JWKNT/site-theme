@@ -1,5 +1,19 @@
 # Design decisions
 
+## 027 — Abstract monochrome subject symbols (2026-10-02)
+
+**Evidence:** The owner requested replacing colored site icons with abstract,
+relevant black-and-white symbols like Home and the light/dark control.
+
+**Decision:** Subject identities use one geometric ink and a related stroke weight.
+Maintain SVG sources and derive both PNG mastheads and white-on-black favicons
+from them. Preserve existing image dimensions, empty alternative text and public
+asset URLs. Invert only mastheads for dark mode and reset them for print.
+
+**Tradeoff:** Individual identity is carried by shape rather than accent color.
+Game art, puzzle diagrams and meaningful data colors remain independent. This
+supersedes the colored-masthead and one-subject-color favicon guidance.
+
 ## 026 — Permanent directory groups, equivalent utilities (2026-10-01)
 
 **Evidence:** The owner requested non-collapsible homepage subsections and matching

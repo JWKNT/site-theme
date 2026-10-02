@@ -19,9 +19,9 @@ def puzzle_transition():
             draw.line(points, fill=outline, width=width * scale, joint="curve")
 
     # A hollow lozenge and two smaller points: a transition, not a second logo.
-    diamond(64, 64, 25, outline="#a58a55", width=5)
-    diamond(17, 64, 8, fill="#a58a55")
-    diamond(111, 64, 8, fill="#a58a55")
+    diamond(64, 64, 25, outline="#000000", width=5)
+    diamond(17, 64, 8, fill="#000000")
+    diamond(111, 64, 8, fill="#000000")
     return image.resize((128, 128), Image.Resampling.LANCZOS)
 
 
