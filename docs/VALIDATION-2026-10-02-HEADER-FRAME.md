@@ -77,7 +77,7 @@ was used to bypass it; final visual and geometry verification used the public si
 
 Every branch below was read back at the exact revision, and every Pages deployment
 completed successfully. The separate, unchanged mathematical theorem rebuild is
-reported separately from the successful guide deployment.
+reported separately from the successful guide deployment; both completed successfully.
 
 | Repository | Revision | Successful Pages run | Checks |
 | --- | --- | --- | --- |
@@ -88,7 +88,7 @@ reported separately from the successful guide deployment.
 | JWKNT.github.io | [ddd95e3](https://github.com/JWKNT/JWKNT.github.io/commit/ddd95e3dfd6b1b3b57f834400de2119551da96ec) | [37017034309](https://github.com/JWKNT/JWKNT.github.io/actions/runs/37017034309) | 48 tests; native search/build workflow |
 | mystery-report | [e1f8ae6](https://github.com/JWKNT/mystery-report/commit/e1f8ae6579a23d01ae99f32017a5733e27cfd196) | [37017042104](https://github.com/JWKNT/mystery-report/actions/runs/37017042104) | 22 tests |
 | box-puzzles | [23dd5bd](https://github.com/JWKNT/box-puzzles/commit/23dd5bd44ea10522b9d85d28739e4aebc42616e8) | [37017046337](https://github.com/JWKNT/box-puzzles/actions/runs/37017046337) | 16 tests; typecheck, lint and Pages build; full deployment CI |
-| erdos1016 | [9dfeda0](https://github.com/JWKNT/erdos1016/commit/9dfeda03366f1f9c745fbfd7aebc2f8fa84e5854) | [37017052893](https://github.com/JWKNT/erdos1016/actions/runs/37017052893) | 25 site tests; Pages checks; fresh theorem CI still running at 14:12 UTC |
+| erdos1016 | [9dfeda0](https://github.com/JWKNT/erdos1016/commit/9dfeda03366f1f9c745fbfd7aebc2f8fa84e5854) | [37017052893](https://github.com/JWKNT/erdos1016/actions/runs/37017052893) | 25 site tests; Pages checks; [fresh theorem CI passed](https://github.com/JWKNT/erdos1016/actions/runs/37017052780) |
 | site-theme | [61b371a](https://github.com/JWKNT/site-theme/commit/61b371a63b4dfece34376114780e1e59ca042568) | [37016761397](https://github.com/JWKNT/site-theme/actions/runs/37016761397) | 49 Node tests |
 | profile | [c08ad20](https://github.com/JWKNT/profile/commit/c08ad206fd9987f1b29464b09af5a6ee6e01cfcc) | [37017283678](https://github.com/JWKNT/profile/actions/runs/37017283678) | 13 tests |
 | ngu-idle-dashboard | [3f87e76](https://github.com/JWKNT/ngu-idle-dashboard/commit/3f87e76af77b54ab31569641230e04db8c7bd72f) | [37017472460](https://github.com/JWKNT/ngu-idle-dashboard/actions/runs/37017472460) | 12 tests |
