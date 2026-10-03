@@ -1,5 +1,16 @@
 # Design decisions
 
+## 029 — Draw link arrows and share dropdown presentation (2026-10-03)
+
+**Evidence:** The owner reported mobile emoji arrows and requested the homepage arrow and shared dropdown style throughout the included sites.
+
+**Decision:** Draw decorative up-right arrows with `.ui-link-arrow` in the shared base stylesheet. Preserve the homepage geometry.
+Use `data-ui-select` for ordinary single-choice menus, including homepage and Readers search controls.
+Keep grouped chapter browsers and the native no-script fallback.
+
+**Tradeoff:** Styled dropdowns need JavaScript. The underlying native select remains the value and form authority.
+CSS arrows remain monochrome without JavaScript or a font. Reconsider only if navigation semantics require a different mark.
+
 ## 028 — ASD-STE100 for original technical text (2026-10-02)
 
 **Evidence:** The owner requested ASD-STE100 for original website writing and future writing defaults.

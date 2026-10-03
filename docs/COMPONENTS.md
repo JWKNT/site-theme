@@ -19,7 +19,7 @@ themselves into existing consumers.
 | Page identity | `.site-header--identity`, `.site-brand`, `img.site-mark`, `data-site-tone` in base CSS | Transparent subject PNG/title and useful local links; Home emblem beside the theme dial | Theme docs, guide, readers, reports, puzzles, writing |
 | Directory | `.ui-directory`, list/link semantics, row boundaries | Columns and grouping; `--directory-rule` / `--directory-space` | Homepage, MTL, gallery |
 | Toolbar | `.ui-toolbar`, `.ui-field`, `.ui-field--search` | Labels, filter state, widths, result rendering | Armory, consensus, gallery |
-| Single-choice select | `data-ui-select` on a native `select` | Native options/value/name, labels, change handlers, programmatic synchronization | Profile, consensus, Armory, Albatross voyage, puzzles, gallery |
+| Single-choice select | `data-ui-select` on a native `select` | Native options/value/name, labels, change handlers, programmatic synchronization | Home search, Readers search scope, Erdős demos, Links, Profile, consensus, Armory, Albatross voyage, puzzles, gallery |
 | Segmented controls | `.ui-segmented`, `aria-pressed` buttons or `aria-current="page"` links | Selection state and actions; not an ARIA tab widget | Consensus |
 | Responsive disclosure | `data-disclosure="(max-width: 650px)"` button + `aria-controls` region | Breakpoint, label, region layout | MTL contents, Armory/puzzle filters, gallery |
 | Section index | `data-section-nav` on native anchor navigation | Section IDs, shell, section content | Profile, NGU dashboard, gallery |
@@ -76,6 +76,11 @@ PNG mastheads and white-on-black favicons. Dark mode inverts only mastheads and
 decorative divider images, never diagrams or game art.
 Publish a new mark before adopting its URL; embed the PNG in offline exports.
 
+**Link direction marks.** Use `<span class="ui-link-arrow" aria-hidden="true"></span>` after a descriptive link label.
+The shared base stylesheet draws the homepage arrow with CSS. It does not depend on a font or Unicode presentation.
+Keep the mark out of the accessible name. Local styles can control placement and visibility.
+Home, Armory source links, MTL Markdown links, and puzzle provenance links use this mark.
+
 **Single-choice selects.** Keep an ordinary native `select`, its `id`, `name`,
 options, initial selection, label, and application `change` handlers. Add
 `data-ui-select` and load the optional component layer. The script adds the shared
@@ -109,6 +114,8 @@ After assigning `.value` or `.selectedIndex` programmatically, call
 do not emit a change event. Enhance again after populating options or replacing
 controls. The call is idempotent. Keep local width/layout rules, but remove
 conflicting control styling and superseded custom-menu listeners.
+Page keyboard shortcuts must respect `event.defaultPrevented`, so Escape can close a menu before closing its parent search surface.
+Readers and Erdős vendor the same component files for their self-contained static exports.
 
 **Disclosures.** Start the toggle `hidden` and the region visible. The script
 exposes the toggle at its narrow breakpoint and uses native `hidden` on the closed

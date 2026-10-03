@@ -1,5 +1,16 @@
 # Change record
 
+## 2026-10-03 — Mobile arrows and dropdown consistency
+
+- Draw link direction marks with the homepage geometry in shared CSS.
+  Replace Unicode arrows in Armory source links, MTL Markdown links, and all 126 puzzle provenance links.
+- Use the shared dropdown for homepage site search, 79 Readers search-scope controls, and five Erdős demo selectors.
+  Preserve native values, labels, change events, no-script controls, and grouped chapter browsers.
+- Let Escape close a dropdown before its parent search interface.
+  Keep the Readers component copies identical to the canonical shared files.
+- Rebuild generated pages and the offline Solver export.
+  See `VALIDATION-2026-10-03-CONTROLS.md` for checks and publication evidence.
+
 ## 2026-10-03 — Page review released
 
 - Review the homepage and all 14 included destinations. Exclude NDB Idle.
