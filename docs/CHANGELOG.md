@@ -1,6 +1,6 @@
 # Change record
 
-## 2026-10-03 — Page review prepared for approval
+## 2026-10-03 — Page review released
 
 - Review the homepage and all 14 included destinations. Exclude NDB Idle.
   Keep the existing visual design and record each result in
@@ -16,7 +16,10 @@
 - NGU's initial state waits for telemetry before reporting unlocks or action failures.
 - Regenerate the homepage HTML from its current directory source.
   This includes the Mathematics category already present in the deployed build.
-- These changes are prepared locally. They have not been deployed.
+- Publish the reviewed commits to `main` in seven repositories after user authorization.
+  All Pages deployments pass. Verify live routes, changed assets, controls, and homepage search.
+  Record the 176 passing follow-up tests, release commits, and deployment links in the validation report.
+  The separate Lean theorem rebuild remains in progress at the time of this record.
 
 ## 2026-10-02 — Utilities hold position across pages
 

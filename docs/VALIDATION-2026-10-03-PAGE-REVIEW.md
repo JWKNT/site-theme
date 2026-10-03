@@ -6,7 +6,7 @@ Reviewed the homepage and its 14 destinations other than NDB Idle, in directory 
 The theme documentation was also reviewed. NDB Idle was not cloned, opened, or changed.
 Media repositories and the unpublished private Jekyll site were not review targets.
 
-Seven repositories contain prepared changes. These changes have not been deployed.
+The reviewed changes are on `main` in seven repositories. All seven GitHub Pages deployments passed.
 The review preserves the Readers design: serif type, restrained controls, thin rules, and layouts suited to each task.
 
 ## Page-by-page findings
@@ -91,7 +91,7 @@ The complete solver engine and soundness batteries were not rerun for these cont
 - New status copy follows the repository's ASD-STE100-based guidance.
   The full official dictionary was not reviewed. No complete compliance claim is made.
 
-## Prepared repository bases
+## Repository bases and rollback references
 
 | Repository | Base commit |
 | --- | --- |
@@ -103,7 +103,49 @@ The complete solver engine and soundness batteries were not rerun for these cont
 | Home | `ddd95e3dfd6b1b3b57f834400de2119551da96ec` |
 | NGU dashboard | `4eb4d7b871237855bd0c9a11ce70f167bae54675` |
 
-For a later release, publish the theme change first, then the affected consumers.
+The theme was published first, followed by the affected consumers.
 The two translation readers use the shared reader stylesheet and need no content rebuild.
 The offline Solver file is included with its source changes.
-Use the existing GitHub Pages workflows and routes.
+The existing GitHub Pages workflows and routes are unchanged.
+To roll back a change, revert its release commit on `main`. Preserve later commits and avoid a forced ref update.
+
+
+## Release verification
+
+The user authorized publication after a second review on 2026-10-03.
+All seven upstream branches still matched the reviewed bases.
+The second review found no additional application defect.
+All 176 focused Node tests passed across the seven changed repositories.
+The homepage, Links collection, and offline Solver rebuilt without a source difference.
+
+The command-line Git push returned HTTP 401 and did not change a branch.
+The authenticated GitHub Git API published the same trees and commits through fast-forward updates.
+The API commit IDs match the reviewed local commit IDs exactly.
+
+| Repository | Release commit | Pages deployment |
+| --- | --- | --- |
+| site-theme | [`095ac97745`](https://github.com/JWKNT/site-theme/commit/095ac97745dabc132ba656644f7b0e03fd57e7f2) | [Passed](https://github.com/JWKNT/site-theme/actions/runs/37158727516) |
+| links | [`6c6c3133aa`](https://github.com/JWKNT/links/commit/6c6c3133aa2669177e2da870da253a64d2244c55) | [Passed](https://github.com/JWKNT/links/actions/runs/37158729702) |
+| profile | [`c14577842c`](https://github.com/JWKNT/profile/commit/c14577842c58ce54c41c21602bc3d45771897d60) | [Passed](https://github.com/JWKNT/profile/actions/runs/37158732080) |
+| logical-solver | [`d9870490bf`](https://github.com/JWKNT/logical-solver/commit/d9870490bf15a3fe8d99d4d28a1e4c59bebd4678) | [Passed](https://github.com/JWKNT/logical-solver/actions/runs/37158734377) |
+| erdos1016 | [`18220539b8`](https://github.com/JWKNT/erdos1016/commit/18220539b864d909f2ed8a71ae46790ec15e33a3) | [Passed](https://github.com/JWKNT/erdos1016/actions/runs/37158736934) |
+| JWKNT.github.io | [`a88b351663`](https://github.com/JWKNT/JWKNT.github.io/commit/a88b35166330c34390c89bd83f3157e6e66a889e) | [Passed](https://github.com/JWKNT/JWKNT.github.io/actions/runs/37158739085) |
+| ngu-idle-dashboard | [`9716dd0a04`](https://github.com/JWKNT/ngu-idle-dashboard/commit/9716dd0a04f39d1fb1b09a5516fe92a041a1864a) | [Passed](https://github.com/JWKNT/ngu-idle-dashboard/actions/runs/37158741218) |
+
+The deployed HTML, CSS, JavaScript, and offline Solver file match all 11 changed application files byte for byte.
+The shared reader stylesheet reaches both translation readers through their existing URLs.
+Live browser checks passed at 390px and 1440px on all seven changed sites and both translation readers.
+The checks covered canonical URLs, page width, theme switching, and the relevant controls.
+The browser used fresh, TLS-verified public responses, without local source substitution.
+
+The homepage search snapshot contains 19,508 targets.
+It identifies source commit `a88b35166330c34390c89bd83f3157e6e66a889e` and a fresh crawl at `2026-10-03T22:32:31.774Z`.
+A live search for “Erdős” returns the proof guide. Escape returns focus to the search control.
+
+The pre-release browser checks also passed repeated Links failures followed by empty and populated recovery.
+Chapter-menu focus, 200% formula scrolling, touch control sizes, and the offline Solver export passed.
+The NGU check remains limited to its read-only offline presentation.
+
+The separate [Lean verification run](https://github.com/JWKNT/erdos1016/actions/runs/37158736953) was still rebuilding the theorem when this release record was prepared.
+Its verification-gate tests and toolchain installation passed. No theorem-verification success is claimed here.
+The proof-guide deployment passed independently. This release changes no Lean source or mathematical content.
