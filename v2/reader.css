@@ -39,6 +39,7 @@ footer { width: min(1120px, calc(100% - 44px)); margin-inline: auto; }
 .reader-controls .control-label,
 .search-control span { color: var(--muted-strong); font: 500 var(--text-ui, .875rem)/1.4 var(--ui, var(--serif)); font-variant: normal; letter-spacing: 0; text-transform: none; }
 .reader-controls button { min-height: var(--control-size, 2.25rem); padding: 5px 9px; border: 1px solid var(--line-strong); border-radius: 0; background: var(--paper); font: var(--text-ui, .875rem)/1.4 var(--ui, var(--serif)); }
+.chapter-control > button { min-width: var(--control-size, 2.25rem); }
 .reader-controls button:hover:not(:disabled) { border-color: var(--blue); color: var(--blue); }
 .reader-controls button:disabled { cursor: default; opacity: .38; }
 .reader-controls input[type="search"] { min-height: var(--control-size, 2.25rem); border: 1px solid var(--line-strong); border-radius: 0; outline: none; background: var(--paper); font: var(--text-ui, .875rem)/1.4 var(--ui, var(--serif)); }
@@ -48,7 +49,7 @@ footer { width: min(1120px, calc(100% - 44px)); margin-inline: auto; }
 .chapter-picker-button { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 14px; text-align: left; }
 .chapter-picker-caret { flex: none; width: .4rem; height: .4rem; margin-right: .15rem; border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; font-size: 0; transform: translateY(-30%) rotate(45deg); }
 .chapter-menu { position: absolute; top: calc(100% + 4px); left: 0; z-index: 30; width: min(760px, calc(100vw - 44px)); max-height: min(70vh, 620px); overflow: auto; border: 1px solid var(--line-strong); background: var(--paper); box-shadow: 0 8px 24px var(--shadow); }
-.chapter-control .chapter-menu { left: -37px; }
+.chapter-control .chapter-menu { left: calc(-1 * var(--control-size, 2.25rem) - 6px); }
 .chapter-menu-toolbar { position: sticky; top: 0; z-index: 1; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 9px; border-bottom: 1px solid var(--line-strong); background: var(--surface); }
 .chapter-menu-toolbar > span { margin-right: auto; color: var(--muted); font: var(--text-ui, .875rem)/1.4 var(--ui, var(--serif)); }
 .reader-controls .chapter-order-button,
@@ -249,7 +250,7 @@ footer p { margin: 3px 0; }
   .site-title { font-size: 20px; }
   .intro { display: block; padding-top: 20px; }
   .quick-stats { flex-wrap: wrap; margin-top: 16px; gap: 14px; }
-  .quick-stats div { min-width: 0; flex: 1 1 7rem; }
+  .quick-stats div { min-width: 0; flex: 1 1 auto; padding: 0; }
   .reader-controls { display: grid; grid-template-columns: 1fr auto; gap: 12px 8px; }
   .chapter-control { grid-column: 1 / -1; }
   .chapter-picker { width: 100%; }

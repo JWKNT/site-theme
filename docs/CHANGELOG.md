@@ -1,5 +1,23 @@
 # Change record
 
+## 2026-10-03 — Page review prepared for approval
+
+- Review the homepage and all 14 included destinations. Exclude NDB Idle.
+  Keep the existing visual design and record each result in
+  `VALIDATION-2026-10-03-PAGE-REVIEW.md`.
+- Keep translation-reader metadata on one mobile row when space permits.
+  Give chapter arrows the shared minimum control width and align their menus.
+- Links hides search and sorting for an empty collection. A failed load offers
+  a retry. The empty state uses less space. Search uses the shared control height.
+- Profile and Logical Solvers use the shared height for previously small controls.
+  Rebuild the Solver export and update its check for the current shared utility selector.
+- Erdős 1016 uses text-relative contents columns and local scrolling for seven long formulas.
+  Mathematical markup and prose are unchanged.
+- NGU's initial state waits for telemetry before reporting unlocks or action failures.
+- Regenerate the homepage HTML from its current directory source.
+  This includes the Mathematics category already present in the deployed build.
+- These changes are prepared locally. They have not been deployed.
+
 ## 2026-10-02 — Utilities hold position across pages
 
 - The homepage utility icons drew 4px higher inside their 44px targets than on every other page.
