@@ -2,11 +2,13 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 const read = path => readFileSync(new URL(`../${path}`, import.meta.url));
-test('the approved Wrenfold Regular font supplies default, heading and UI roles', () => {
+test('the approved Wrenfold Regular font supplies reading prose while original UI roles remain', () => {
  const css = read('v2/base.css').toString();
  assert.match(css, /@font-face\s*\{[^}]*font-family: "Wrenfold Text";[^}]*fonts\/WrenfoldText-Regular\.woff2[^}]*font-weight: 400;[^}]*font-display: swap;/);
- assert.match(css, /--serif: "Wrenfold Text", Georgia/);
- assert.match(css, /--display: var\(--serif\)/);
+ assert.match(css, /--reading: "Wrenfold Text", Georgia/);
+ assert.match(css, /--serif: Georgia, "Times New Roman", serif/);
+ assert.match(css, /--display: "Palatino Linotype"/);
+ assert.match(css, /\.prose \{[^}]*font-family: var\(--reading\)/);
  assert.match(css, /--ui: var\(--serif\)/);
  assert.match(css, /code, kbd, pre, samp \{ font-family: var\(--mono\)/);
  assert.match(read('v2/fonts/OFL-1.1.txt').toString(), /License: OFL-1.1/);

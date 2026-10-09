@@ -1,7 +1,7 @@
 # A quiet frame, made usable
 
-Readers is the visual reference: Wrenfold Text reading and interface text, bold Wrenfold Text
-headings, monospaced values, paper and charcoal surfaces, restrained state colors, square controls,
+Readers is the visual reference: Wrenfold Text reading content, Georgia interface text, bold Palatino
+interface headings, monospaced values, paper and charcoal surfaces, restrained state colors, square controls,
 and thin rules. Improve the ability to read and operate the material before
 adding decoration. Subject identity belongs inside this common language, not in
 a separate visual system for each page.
@@ -26,7 +26,7 @@ health interpretation, puzzle rules, or bot decisions while restyling their UI.
 | Sustained reading | 18–20px for sustained prose; 16px for dense reference | `--text-body: 1rem`, line height roughly 1.6 |
 | Regular labels, navigation, controls | 14px or larger | `--text-ui: .875rem` |
 | Secondary metadata | 12px or larger | `--text-meta: .75rem` |
-| Page titles | Usually 26–32px | `--display`, Wrenfold Text stack, weight 700 |
+| Page titles | Usually 26–32px | `--display`, Palatino stack, weight 700 |
 | Desktop interface controls | At least 36px high | `--control-size: 2.25rem` |
 | Coarse-pointer interface controls | Aim for 44px high | `--control-size: 2.75rem` |
 
@@ -49,7 +49,7 @@ See `COMPONENTS.md` for keyboard behavior, native fallback, and programmatic syn
 
 ### Font contracts
 
-`--serif` starts with Wrenfold Text, followed by system serif and CJK fallbacks. `--display` and `--ui` use this same stack. Consumers use `var(--ui, var(--serif))` during staggered deployment. The stylesheet loads the local Regular WOFF2 with `font-display: swap`. Browsers synthesize bold and italic styles. Keep `--sans` for small chart annotations. Numerical grids, coordinates, identifiers, code, and mathematical notation retain their dedicated fonts. Keep the font license and copyright notices in `v2/fonts/`.
+`--reading` starts with Wrenfold Text and includes system serif and CJK fallbacks. Apply it to article prose, proof text, book chapters, and translations. Article headings can use the same role. `--serif` retains Georgia and Times New Roman. `--display` retains Palatino. `--ui: var(--serif)` keeps menus and controls unchanged. Decorative homepage symbols retain their original font. The Regular WOFF2 uses `font-display: swap`. Browsers synthesize bold and italic styles. Numerical grids, code, and mathematical notation retain their dedicated fonts. Keep font notices in `v2/fonts/`.
 
 Use ink-colored links and navigation with restrained underlines. Status, selected controls, scientific plots, and game/puzzle cues retain meaningful color. Borders should organize content rather than outline every label; use neutral tag surfaces and one rule per transition.
 

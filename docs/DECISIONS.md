@@ -453,3 +453,10 @@ Use the approved Regular WOFF2 without subsetting. Browsers synthesize bold and 
 Keep the SIL OFL license and original copyright notices with vendored fonts and offline exports.
 Use the approved 124 folio-scroll SVG for Home. Preserve its geometry, accessible name, and 44-pixel target.
 Keep legacy Home icon URLs as folio aliases during cache transitions.
+
+## 2026-10-09: Reading-only scope supersedes the broad default
+
+The owner clarified that Wrenfold Text applies to reading content, including proof text, books, and fan translations.
+Restore all original default, menu, control, masthead, and decorative-symbol fonts.
+Use `--reading` for content prose and article headings. Keep ordinary defaults on the original `--serif`, `--display`, and `--ui` roles.
+This decision supersedes the earlier site-wide Wrenfold default. The folio-scroll Home selection remains unchanged.

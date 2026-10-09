@@ -13,7 +13,7 @@ Use the shared design with a layout that suits each page.
 ## Keep the interface subordinate
 
 - Prefer text, whitespace, and alignment to containers or decoration.
-- Use Wrenfold Text for reading, headings, and ordinary interface text.
+- Use Wrenfold Text for reading content and article headings. Use Georgia for ordinary interface text and Palatino for interface headings.
   Keep controls consistent with the content type. Reserve sans serif for very small chart labels.
   Use monospace for values, identifiers, shortcuts, and compact status.
 - Keep the palette neutral. Use ink for links and navigation, with thin underlines where necessary.
@@ -23,14 +23,14 @@ Use the shared design with a layout that suits each page.
 - Keep controls square, compact, clearly labeled, and near the content they affect.
   Give equivalent dropdowns the same appearance and keyboard behavior.
   Remove duplicate controls that have the same function in the same context.
-- Use bold Wrenfold Text, ordinary case, and modest negative tracking for titles.
+- Use bold Palatino, ordinary case, and modest negative tracking for interface titles.
   Most working-page titles use 28–32 pixels. Long reading pages can use 34–48 pixels.
   Avoid light display weights, rounded interface type, and ornamental control lettering.
 
 ## Explicit exception: NDB Idle
 
 NDB Idle retains its own game interface, palette, and browser chrome.
-It uses Wrenfold Text for ordinary text, as requested on 9 October 2026.
+It retains its original interface fonts. Use Wrenfold Text only for explicit reading content.
 The owner excluded it from the Readers visual redesign.
 Do not change its theme as part of general theme adoption.
 A visual redesign requires an explicit request for that game.

@@ -660,3 +660,9 @@ The fresh playthrough adds per-level approach, mechanics, and attempts beside th
 - Load the approved Regular WOFF2 with system fallbacks. Include its SIL OFL license and copyright notices.
 - Replace the Home compass with the approved 124 folio-scroll geometry. Keep the Home name, target size, and color behavior.
 - Preserve old icon URLs as folio aliases for cached consumers.
+
+## 2026-10-09: Reading-only typography correction
+
+- Restore the original default, interface, menu, and decorative fonts.
+- Apply Wrenfold Text only to reading content and article headings through `--reading`.
+- Keep the selected folio-scroll Home icon.

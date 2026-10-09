@@ -99,7 +99,7 @@ footer { width: min(1120px, calc(100% - 44px)); margin-inline: auto; }
 .language-label { display: none; color: var(--muted); font: var(--text-ui, .875rem)/1.4 var(--ui, var(--serif)); }
 .speaker { display: block; min-height: 1.4em; margin-bottom: 2px; color: var(--blue-dark); font: 600 var(--text-ui, .875rem)/1.4 var(--ui, var(--serif)); }
 .speaker:empty::after { content: "\00a0"; }
-.line-text { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; word-break: normal; }
+.line-text { font-family: var(--reading, "Wrenfold Text", Georgia, serif); margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; word-break: normal; }
 .japanese .line-text { line-height: 1.7; }
 .japanese .line-text { font-family: "Wrenfold Text", "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", var(--serif); }
 mark { padding: 0; background: var(--mark); color: inherit; }
@@ -325,3 +325,6 @@ footer p { margin: 3px 0; }
   .intro { padding-top: 0; }
   .script-line { break-inside: avoid; }
 }
+
+/* Reading content keeps the selected typeface; reader controls keep their original roles. */
+.script-heading h2 { font-family: var(--reading, "Wrenfold Text", Georgia, serif); }
