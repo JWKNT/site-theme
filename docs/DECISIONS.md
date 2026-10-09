@@ -441,3 +441,15 @@ NDB Idle keeps its explicitly independent navigation and styling.
 ## 2026-10-09 — Static mastheads
 
 Masthead titles identify the page without acting as links. Put useful parent and sibling destinations in local navigation. Omit current-page links and unbounded author lists from headers. Keep catalogue navigation with the catalogue. The root directory does not need a Home self-link.
+
+
+## 2026-10-09: Wrenfold default and folio Home
+
+The owner selected Wrenfold Text as the default font across the site, including headings and ordinary controls.
+NDB Idle follows this typography choice but retains its game interface, palette, and navigation.
+Code, numerical grids, and mathematical notation retain their dedicated fonts. CJK characters use system fallbacks.
+
+Use the approved Regular WOFF2 without subsetting. Browsers synthesize bold and italic where requested.
+Keep the SIL OFL license and original copyright notices with vendored fonts and offline exports.
+Use the approved 124 folio-scroll SVG for Home. Preserve its geometry, accessible name, and 44-pixel target.
+Keep legacy Home icon URLs as folio aliases during cache transitions.

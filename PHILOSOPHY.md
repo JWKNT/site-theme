@@ -29,7 +29,8 @@ Use the shared design with a layout that suits each page.
 
 ## Explicit exception: NDB Idle
 
-NDB Idle retains its own game interface, typography, palette, and browser chrome.
+NDB Idle retains its own game interface, palette, and browser chrome.
+It uses Wrenfold Text for ordinary text, as requested on 9 October 2026.
 The owner excluded it from the Readers visual redesign.
 Do not change its theme as part of general theme adoption.
 A visual redesign requires an explicit request for that game.
