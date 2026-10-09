@@ -98,7 +98,7 @@ test('header emblem has a 44px target, visible focus, no footer, and a print fal
   assert.doesNotMatch(homeCSS.replace(/\[data-theme-toggle\]\.theme-toggle--floating \{[^}]*\}/g, ''), /position: (?:fixed|sticky)|site-home-clearance|body:has|scroll-padding/);
   assert.doesNotMatch(source, /keepFocusedControlClear|focusin|scrollBy/);
   assert.match(css, /@media print[\s\S]+\.site-home, \.site-utility-pair[^}]+display: none !important/);
-  const icon = readFileSync(new URL('../v2/icons/home-compass.svg', import.meta.url), 'utf8');
+  const icon = readFileSync(new URL('../v2/icons/home-folio-scroll.svg', import.meta.url), 'utf8');
   assert.match(icon, /viewBox="0 0 24 24"/); assert.doesNotMatch(icon, /<script|<image|<text/);
 });
 

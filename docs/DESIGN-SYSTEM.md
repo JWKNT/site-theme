@@ -1,6 +1,6 @@
 # A quiet frame, made usable
 
-Readers is the visual reference: Georgia reading and interface text, bold Palatino
+Readers is the visual reference: Wrenfold Text reading and interface text, bold Wrenfold Text
 headings, monospaced values, paper and charcoal surfaces, restrained state colors, square controls,
 and thin rules. Improve the ability to read and operate the material before
 adding decoration. Subject identity belongs inside this common language, not in
@@ -26,7 +26,7 @@ health interpretation, puzzle rules, or bot decisions while restyling their UI.
 | Sustained reading | 18–20px for sustained prose; 16px for dense reference | `--text-body: 1rem`, line height roughly 1.6 |
 | Regular labels, navigation, controls | 14px or larger | `--text-ui: .875rem` |
 | Secondary metadata | 12px or larger | `--text-meta: .75rem` |
-| Page titles | Usually 26–32px | `--display`, Palatino stack, weight 700 |
+| Page titles | Usually 26–32px | `--display`, Wrenfold Text stack, weight 700 |
 | Desktop interface controls | At least 36px high | `--control-size: 2.25rem` |
 | Coarse-pointer interface controls | Aim for 44px high | `--control-size: 2.75rem` |
 
@@ -49,7 +49,7 @@ See `COMPONENTS.md` for keyboard behavior, native fallback, and programmatic syn
 
 ### Font contracts
 
-`--serif` is Georgia / Times New Roman; `--display` is Palatino Linotype / Palatino / Book Antiqua / P052 / Georgia. `--ui: var(--serif)` gives controls the same voice. Consumers use `var(--ui, var(--serif))` for compatibility during staggered deployment. Keep `--sans` available for tiny chart annotations; do not redefine it as a disguised serif. Numerical grids, coordinates, identifiers, and code keep their existing mono fonts. No font downloads are required.
+`--serif` starts with Wrenfold Text, followed by system serif and CJK fallbacks. `--display` and `--ui` use this same stack. Consumers use `var(--ui, var(--serif))` during staggered deployment. The stylesheet loads the local Regular WOFF2 with `font-display: swap`. Browsers synthesize bold and italic styles. Keep `--sans` for small chart annotations. Numerical grids, coordinates, identifiers, code, and mathematical notation retain their dedicated fonts. Keep the font license and copyright notices in `v2/fonts/`.
 
 Use ink-colored links and navigation with restrained underlines. Status, selected controls, scientific plots, and game/puzzle cues retain meaningful color. Borders should organize content rather than outline every label; use neutral tag surfaces and one rule per transition.
 

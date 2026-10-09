@@ -47,7 +47,7 @@ test('home, theme and search share dimensions, neutral ink, spacing and icon sca
   assert.match(css, /\.site-utility-pair \{[^}]*gap: var\(--utility-gap, \.375rem\)/);
   assert.match(css, /a\.site-home::before,\s*\[data-theme-toggle\]\.theme-toggle::before,\s*button\.site-search::before \{[^}]*width: var\(--utility-icon-size, 1\.6rem\)/);
   assert.doesNotMatch(css, /--home-accent|a\.site-home::after/);
-  for (const icon of ['home-compass', 'search-slash']) {
+  for (const icon of ['home-folio-scroll', 'search-slash']) {
     assert.ok(css.includes(`icons/${icon}.svg`));
     const svg = readFileSync(new URL(`../v2/icons/${icon}.svg`, import.meta.url), 'utf8');
     assert.match(svg, /viewBox="0 0 24 24"/);

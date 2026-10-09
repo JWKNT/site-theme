@@ -2,12 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
-test('public typography guidance retains the authored Georgia and Palatino roles', () => {
+test('public typography guidance retains the approved Wrenfold Text roles', () => {
   const philosophy = readFileSync(new URL('../PHILOSOPHY.md', import.meta.url), 'utf8');
   const page = readFileSync(new URL('../philosophy.html', import.meta.url), 'utf8');
   for (const text of [philosophy, page]) {
-    assert.match(text, /Georgia for reading and ordinary interface text/);
-    assert.match(text, /Palatino/);
+    assert.match(text, /Wrenfold Text for reading, headings, and ordinary interface text/);
     assert.match(text, /Reserve sans serif for very small chart labels/);
   }
   assert.doesNotMatch(page, /sans serif for interface and metadata/);

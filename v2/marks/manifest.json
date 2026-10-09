@@ -6,12 +6,12 @@
     "Single-ink abstract subject symbols; SVG sources are authoritative.",
     "PNG derivatives retain the existing 32px img.site-mark contract.",
     "Mastheads render black on paper and white on charcoal; favicons use white symbols on a black field.",
-    "Home reuses the approved compass; existing Home/theme/search controls are unchanged."
+    "Home uses the approved 124 folio-scroll geometry."
   ],
   "assets": [
     {
       "id": "home",
-      "meaning": "Compass rose",
+      "meaning": "Folio scroll",
       "source": "../symbols/home.svg",
       "file": "home.png",
       "width": 128,

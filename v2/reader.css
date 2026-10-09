@@ -101,7 +101,7 @@ footer { width: min(1120px, calc(100% - 44px)); margin-inline: auto; }
 .speaker:empty::after { content: "\00a0"; }
 .line-text { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; word-break: normal; }
 .japanese .line-text { line-height: 1.7; }
-.japanese .line-text { font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", var(--serif); }
+.japanese .line-text { font-family: "Wrenfold Text", "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", var(--serif); }
 mark { padding: 0; background: var(--mark); color: inherit; }
 .reader-background,
 .reader-portrait-stage,

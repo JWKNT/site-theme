@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Wrenfold Text";
+  src: url("fonts/WrenfoldText-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --paper: #fbfaf7;
   --surface: #f4f2ed;
@@ -16,8 +24,8 @@
   --bad: #8a3f3f;
   --shadow: rgb(28 25 20 / 14%);
   --shadow-soft: rgb(28 25 20 / 8%);
-  --serif: Georgia, "Times New Roman", serif;
-  --display: "Palatino Linotype", Palatino, "Book Antiqua", "P052", Georgia, serif;
+  --serif: "Wrenfold Text", Georgia, "Times New Roman", "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif CJK JP", serif;
+  --display: var(--serif);
   --ui: var(--serif);
   --sans: "Avenir Next", Avenir, Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
@@ -220,8 +228,8 @@ button.site-search::before {
   mask: url("icons/theme-dial-dark.svg") center / contain no-repeat;
 }
 a.site-home::before {
-  -webkit-mask-image: url("icons/home-compass.svg");
-  mask-image: url("icons/home-compass.svg");
+  -webkit-mask-image: url("icons/home-folio-scroll.svg");
+  mask-image: url("icons/home-folio-scroll.svg");
 }
 button.site-search::before {
   -webkit-mask-image: url("icons/search-slash.svg");

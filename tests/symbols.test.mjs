@@ -41,7 +41,8 @@ test('mastheads and favicons share maintained monochrome geometry', () => {
     const svg = read(`v2/symbols/${asset.id}.svg`).toString();
     assert.match(svg, /viewBox="0 0 24 24"/);
     assert.doesNotMatch(svg, /<text|<image|https?:\/\/(?!www\.w3\.org)/);
-    assert.deepEqual([...new Set(svg.match(/#[\da-f]{3,8}/gi))], ['#000']);
+    if (asset.id === 'home') assert.match(svg, /stroke="currentColor"/);
+    else assert.deepEqual([...new Set(svg.match(/#[\da-f]{3,8}/gi))], ['#000']);
     for (const kind of ['marks', 'favicons']) {
       const pixels = rgba(read(`v2/${kind}/${asset.file}`));
       let visible = 0;
@@ -57,8 +58,8 @@ test('mastheads and favicons share maintained monochrome geometry', () => {
   }
 });
 
-test('Home keeps its approved compass geometry', () => {
-  assert.equal(read('v2/symbols/home.svg').toString(), read('v2/icons/home-compass.svg').toString());
+test('Home keeps its approved folio-scroll geometry', () => {
+  assert.equal(read('v2/symbols/home.svg').toString(), read('v2/icons/home-folio-scroll.svg').toString());
 });
 
 test('dark and print inversion is limited to decorative site identities', () => {
