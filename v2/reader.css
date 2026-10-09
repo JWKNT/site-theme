@@ -109,7 +109,7 @@ mark { padding: 0; background: var(--mark); color: inherit; }
 
 .glossary-term { position: relative; }
 .glossary-term-link { color: var(--blue-dark); text-decoration-line: underline; text-decoration-style: dotted; text-decoration-thickness: 1px; text-underline-offset: 3px; }
-.glossary-popover { position: absolute; bottom: calc(100% + 9px); left: 50%; z-index: 20; display: none; width: min(340px, calc(100vw - 36px)); padding: 12px 13px; border: 1px solid var(--line-strong); background: var(--paper); box-shadow: 0 8px 24px var(--shadow); color: var(--ink); font: var(--text-body, 1rem)/1.6 var(--serif); text-align: left; text-decoration: none; transform: translateX(-50%); }
+.glossary-popover { position: absolute; bottom: calc(100% + 9px); left: 50%; z-index: 20; display: none; width: min(340px, calc(100vw - 36px)); padding: 12px 13px; border: 1px solid var(--line-strong); background: var(--paper); box-shadow: 0 8px 24px var(--shadow); color: var(--ink); font: var(--text-body, 1rem)/1.6 var(--reading, "Wrenfold Text", Georgia, serif); text-align: left; text-decoration: none; transform: translateX(-50%); }
 .glossary-term:hover .glossary-popover,
 .glossary-term:focus-within .glossary-popover { display: grid; gap: 4px; }
 .glossary-term.is-dismissed .glossary-popover { display: none; }
@@ -328,3 +328,5 @@ footer p { margin: 3px 0; }
 
 /* Reading content keeps the selected typeface; reader controls keep their original roles. */
 .script-heading h2 { font-family: var(--reading, "Wrenfold Text", Georgia, serif); }
+
+.glossary-entry h2, .glossary-language > p, .glossary-definition p { font-family: var(--reading, "Wrenfold Text", Georgia, serif); }

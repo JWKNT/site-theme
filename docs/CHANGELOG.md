@@ -666,3 +666,5 @@ The fresh playthrough adds per-level approach, mechanics, and attempts beside th
 - Restore the original default, interface, menu, and decorative fonts.
 - Apply Wrenfold Text only to reading content and article headings through `--reading`.
 - Keep the selected folio-scroll Home icon.
+
+Reading content includes bilingual glossary definitions. Language labels, search fields, and close controls retain their original interface font.

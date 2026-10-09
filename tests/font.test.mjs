@@ -20,3 +20,10 @@ test('all current and legacy Home asset names retain exact folio geometry', () =
  for (const file of ['icons/home-compass.svg', 'icons/home.svg', 'icons/home-emblem.svg', 'symbols/home.svg']) assert.equal(read(`v2/${file}`).toString(), approved);
  assert.match(approved, /M6 4H16C20 4 21 8 18 9C15 10 14 6 16 4/);
 });
+
+test('translation definitions and article text use the reading role', () => {
+ const css=read('v2/reader.css').toString();
+ assert.match(css,/\.line-text \{ font-family: var\(--reading/);
+ assert.match(css,/\.glossary-popover \{[^}]+font: var\(--text-body, 1rem\)\/1\.6 var\(--reading/);
+ assert.match(css,/\.glossary-entry h2, \.glossary-language > p, \.glossary-definition p \{ font-family: var\(--reading/);
+});
