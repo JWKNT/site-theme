@@ -437,3 +437,7 @@ header measure overrides, while preserving app content measures and reading layo
 **Tradeoff:** Masthead rules can extend beyond a narrow content column. This makes
 global navigation predictable without forcing the actual material into one layout.
 NDB Idle keeps its explicitly independent navigation and styling.
+
+## 2026-10-09 — Static mastheads
+
+Masthead titles identify the page without acting as links. Put useful parent and sibling destinations in local navigation. Omit current-page links and unbounded author lists from headers. Keep catalogue navigation with the catalogue. The root directory does not need a Home self-link.

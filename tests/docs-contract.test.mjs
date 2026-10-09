@@ -21,3 +21,13 @@ test('copyable header markup supplies the named native Home and styled theme pai
   assert.match(header, /class="site-home" href="https:\/\/jehlp\.net\/" aria-label="Home — jehlp.net"/);
   assert.match(header, /<button class="theme-toggle" type="button" data-theme-toggle/);
 });
+
+test("documentation mastheads are static and omit current-page navigation", () => {
+  for (const filename of ["index.html", "components.html", "philosophy.html"]) {
+    const html = readFileSync(new URL(`../${filename}`, import.meta.url), "utf8");
+    const header = html.match(/<header class="site-header[\s\S]*?<\/header>/)[0];
+    assert.doesNotMatch(header, /<a class="site-title"/);
+    assert.doesNotMatch(header, /aria-current="page"/);
+    if (filename !== "index.html") assert.match(header, /href="index.html">Design system/);
+  }
+});

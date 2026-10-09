@@ -51,7 +51,7 @@ function page({ path = '/puzzles/loop/', authored = false, legacy = false, heade
 }
 
 test('creates a native named Home link paired with the existing header theme dial', () => {
-  for (const path of ['/puzzles/loop/', '/readers/book/chapters/one.html', '/tmp/ubahn-solver.html', '/']) {
+  for (const path of ['/puzzles/loop/', '/readers/book/chapters/one.html', '/tmp/ubahn-solver.html']) {
     const p = page({ path }); p.setup(); p.setup();
     const links = p.all().filter(n => n.className === 'site-home');
     assert.equal(links.length, 1);
@@ -100,4 +100,11 @@ test('header emblem has a 44px target, visible focus, no footer, and a print fal
   assert.match(css, /@media print[\s\S]+\.site-home, \.site-utility-pair[^}]+display: none !important/);
   const icon = readFileSync(new URL('../v2/icons/home-compass.svg', import.meta.url), 'utf8');
   assert.match(icon, /viewBox="0 0 24 24"/); assert.doesNotMatch(icon, /<script|<image|<text/);
+});
+
+test('does not add a redundant Home link on the root directory', () => {
+  for (const path of ['/', '/index.html']) {
+    const p = page({ path }); p.setup(); p.setup();
+    assert.equal(p.all().filter(n => n.className === 'site-home').length, 0);
+  }
 });

@@ -117,7 +117,9 @@ page layout rather than changing the content's semantic grouping.
 
 ## Independent pages, related identities
 
-Each project retains its subject identity and project-local navigation. A single,
+Each project retains its subject identity and useful project-local navigation.
+Masthead titles are plain text. Omit current-page links and author lists from headers.
+Keep author navigation in the Readers catalogue. The root directory omits the Home self-link. A single,
 symbol-only Home anchor returns to `https://jehlp.net/` from the existing header,
 paired with the theme dial. The fine compass rose echoes the homepage's
 atlas and typographic studies. Home, theme and the homepage search slash share a

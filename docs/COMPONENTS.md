@@ -35,8 +35,7 @@ filtering, dataset interpretation, telemetry, puzzle rules, or network calls her
 
 **Page identity.** This is CSS-only and needs no optional component script. Add
 `data-site-tone="blue"` (or `plum`, `teal`, `ochre`) to the body. Use a plain title
-on the project landing page; a subpage may link to that project's own landing
-page. Never point the brand or navigation to the global home directory. The
+on every page. Put useful links to the project landing page in local navigation. Never point the brand or navigation to the global home directory. The
 decorative mark is a transparent PNG with empty `alt`; the title remains text.
 Use `img.site-mark` with `width="32" height="32"`, never a Unicode glyph or emoji.
 Keep one mark per header and let the navigation wrap naturally. Long titles may
