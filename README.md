@@ -12,7 +12,7 @@ restrained visual language without forcing unrelated projects into one layout.
 <link rel="stylesheet" href="assets/styles.css">
 ```
 
-The shared stylesheet owns type roles, design tokens, document defaults,
+The shared stylesheet owns type roles, design tokens (including the code palette), document defaults,
 accessibility utilities, controls, tables, ruled ornaments, standard shells, and header
 primitives. Each consumer keeps only content-specific layout and visualization
 rules locally. The controller applies the saved or system theme before the page

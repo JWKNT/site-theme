@@ -34,6 +34,9 @@ Only a verified leading solver-only run may become an action row; post-grid link
 stay in source order. Check narrow/enlarged-text control wrapping, unchanged bitmap
 colors and proportions, and print's normal top border without the ornament.
 
+For code listings, check token contrast in both modes and print, keyboard focus and scrolling in a long listing,
+the first open of a lazily loaded listing and its no-script source link.
+
 Fix demonstrated failures at the responsible layer. Stop optional testing when concrete risks are covered. Leave an honest checklist of unavailable gates; never treat a DOM stub or source regex as proof of browser accessibility.
 
 ## Original technical writing

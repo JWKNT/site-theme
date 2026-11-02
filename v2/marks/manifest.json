@@ -1,7 +1,7 @@
 {
   "generator": "python3 tools/make_symbols.py",
   "created": "2026-10-02",
-  "assetCount": 17,
+  "assetCount": 18,
   "notes": [
     "Single-ink abstract subject symbols; SVG sources are authoritative.",
     "PNG derivatives retain the existing 32px img.site-mark contract.",
@@ -238,6 +238,20 @@
       "meaning": "Paired open links and joining bar",
       "source": "../symbols/links.svg",
       "file": "links.png",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "pokemon-reborn",
+      "meaning": "A split sphere with a rising seam",
+      "source": "../symbols/pokemon-reborn.svg",
+      "file": "pokemon-reborn.png",
       "width": 128,
       "height": 128,
       "transparentCorners": [

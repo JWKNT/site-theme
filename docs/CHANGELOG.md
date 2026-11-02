@@ -1,5 +1,19 @@
 # Change record
 
+## 2026-11-02 — Syntax highlighting and Pokémon Reborn identity
+
+- Add the `--code-*` tokens to base.css. They alias the theme tones, so dark mode and print need no second palette.
+  Print turns strings and deletions gray.
+- Add the `.ui-code` listing and `hljs-*` token rules to components.css, with a fallback for every new token.
+  `.ui-code--wrap` wraps prose-valued data. Print wraps every listing.
+- Add the `jehlp-code-highlighting` skill and catalog row. Point the component and QA skills to it.
+  Add the code principle to PHILOSOPHY.md and philosophy.html, and the contract to COMPONENTS.md.
+- Add a highlighted listing to the component gallery. The theme documents load the new stylesheet versions.
+- Add the `pokemon-reborn` symbol, mark and favicon: a split sphere with a rising seam.
+  The PNGs come from the authoritative SVG through `rsvg-convert` with the `make_symbols.py` image steps,
+  because Inkscape was not available. Other marks were not regenerated.
+- Record `JWKNT/pokemon-reborn` in the repository inventory.
+
 ## 2026-10-03 — Mobile arrows and dropdown consistency
 
 - Draw link direction marks with the homepage geometry in shared CSS.

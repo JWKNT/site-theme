@@ -1,5 +1,16 @@
 # Design decisions
 
+## 030 — Build-time syntax highlighting on the theme tones (2026-11-02)
+
+**Evidence:** The owner requested highlighted scripts for the Pokémon Reborn record and a reusable approach for later pages.
+
+**Decision:** Highlight during the build with a pinned highlight.js. Style its `hljs-*` spans with `--code-*` tokens that alias
+existing tones: muted comments, blue keywords, and green, ochre, plum, and teal for strings, numbers, names, and types.
+Ship no runtime highlighter and no page-specific syntax theme. Large collections use native disclosures with fetched fragments.
+
+**Tradeoff:** The highlight.js class names become part of the shared contract. Another highlighter needs a class map.
+Reconsider if a language needs semantic distinctions that this palette cannot show.
+
 ## 029 — Draw link arrows and share dropdown presentation (2026-10-03)
 
 **Evidence:** The owner reported mobile emoji arrows and requested the homepage arrow and shared dropdown style throughout the included sites.

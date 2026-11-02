@@ -49,7 +49,7 @@ See `COMPONENTS.md` for keyboard behavior, native fallback, and programmatic syn
 
 ### Font contracts
 
-`--reading` starts with Wrenfold Text and includes system serif and CJK fallbacks. Apply it to article prose, proof text, book chapters, and translations. Article headings can use the same role. `--serif` retains Georgia and Times New Roman. `--display` retains Palatino. `--ui: var(--serif)` keeps menus and controls unchanged. Decorative homepage symbols retain their original font. The Regular WOFF2 uses `font-display: swap`. Browsers synthesize bold and italic styles. Numerical grids, code, and mathematical notation retain their dedicated fonts. Keep font notices in `v2/fonts/`.
+`--reading` starts with Wrenfold Text and includes system serif and CJK fallbacks. Apply it to article prose, proof text, book chapters, and translations. Article headings can use the same role. `--serif` retains Georgia and Times New Roman. `--display` retains Palatino. `--ui: var(--serif)` keeps menus and controls unchanged. Decorative homepage symbols retain their original font. The Regular WOFF2 uses `font-display: swap`. Browsers synthesize bold and italic styles. Numerical grids, code, and mathematical notation retain their dedicated fonts. Code listings use `--mono` at `--text-ui` with the `--code-*` palette. Keep font notices in `v2/fonts/`.
 
 Use ink-colored links and navigation with restrained underlines. Status, selected controls, scientific plots, and game/puzzle cues retain meaningful color. Borders should organize content rather than outline every label; use neutral tag surfaces and one rule per transition.
 
@@ -61,7 +61,7 @@ control creation, browser chrome, and both theme events. `v2/docs.css`: theme
 reference pages. `v2/reader.css`: the shared bilingual and English reader surface,
 used by Black Sheep Town and Albatross Koukairoku.
 
-`v2/components.css` and `v2/components.js` are an optional layer for directories,
+`v2/components.css` and `v2/components.js` are an optional layer for code listings, directories,
 controls, select menus, disclosures, navigation, overflow, dialogs, and copying. See
 `COMPONENTS.md` for explicit contracts and the working gallery. Existing pages do
 not gain behavior merely by using a coincidentally similar class name.
@@ -99,6 +99,9 @@ labels. Keep text and background tokens paired in both modes and in print.
 ## Color and boundaries
 
 Blue carries links, focus, and selection. Dataset colors retain their meanings.
+Syntax tokens use the `--code-*` aliases of the theme tones: muted comments, blue keywords,
+and quiet green, ochre, plum, and teal for strings, numbers, names, and types. Each passes 4.5:1 on paper
+and surface in both modes. Print turns the palette gray. Highlight during the build.
 Use muted ink for secondary text, and reserve faint ink for nonessential marks;
 check contrast in context. A section boundary has one owner. Preserve the existing
 rule/ornament grammar rather than stacking borders around the same whitespace.

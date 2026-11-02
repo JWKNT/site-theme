@@ -27,6 +27,7 @@ themselves into existing consumers.
 | Table header band | `.ui-table` on one native table | Widths, numeric alignment, cell content, bounded wrapper height | Consensus, Profile, dashboard, MTL, Armory, gallery |
 | Dialog | `.ui-dialog`, `.ui-dialog-body`, `.ui-dialog-dismiss`, `data-dialog` | Title relationship, content, `showModal()`, domain actions | Armory, Profile, consensus, gallery |
 | Copy code | `data-copy-code` on `pre` containing `code` | The actual snippet | MTL, gallery |
+| Code listing | `.ui-code` on `pre`, `hljs-*` spans, `--code-*` tokens | Build-time highlighter, language, disclosure and loading | Pokémon Reborn scripts and notes, gallery |
 
 CSS classes define appearance; data attributes opt into behavior. Do not put
 filtering, dataset interpretation, telemetry, puzzle rules, or network calls here.
@@ -64,11 +65,11 @@ elsewhere and keep downloads or project-local navigation that serve the page.
 </header>
 ```
 
-The 16 maintained PNGs in `v2/marks/` are `site-theme.png`, `home.png`,
+The 18 maintained PNGs in `v2/marks/` are `site-theme.png`, `home.png`,
 `mtl-guide.png`, `profile.png`, `mystery-report.png`, `ngu-idle-dashboard.png`,
 `logical-solver.png`, `bl2.png`, `box-puzzles.png`, `black-sheep-town.png`,
 `albatross-koukairoku.png`, `writing.png`, `puzzles.png`, `baba-is-you.png`,
-`readers.png`, and `eastern-star.png`. Use a unique mark for each project; subpages within that project may share its mark. Choose the relevant
+`readers.png`, `eastern-star.png`, `links.png`, and `pokemon-reborn.png`. Use a unique mark for each project; subpages within that project may share its mark. Choose the relevant
 subject and check both color modes. Abstract, single-ink SVG geometry in
 `v2/symbols/` is authoritative; `tools/make_symbols.py` renders transparent black
 PNG mastheads and white-on-black favicons. Dark mode inverts only mastheads and
@@ -222,6 +223,18 @@ and focus restoration. The optional script adds dismissal only when a pointer
 click starts and ends outside the dialog rectangle. Clicking padding or dragging
 text outside does not close it. Observe `close` for URL cleanup instead of
 overriding Escape. Use `--dialog-width` to vary shell width.
+
+**Code listings.** Highlight source during the build with a pinned highlight.js
+version. Never load a highlighter or its theme in the browser. Use
+`<pre class="ui-code" tabindex="0" aria-label="Source of name.py"><code class="hljs language-python">`.
+The shared rules color the `hljs-*` spans with `--code-*` tokens, which alias the
+theme tones; dark mode and print follow without a second palette. Long lines
+scroll inside the named block. `.ui-code--wrap` wraps data whose values are prose,
+such as pretty-printed JSON. A highlighted listing has the same text content as
+its source. For a large collection, give each listing a native `details` element,
+fetch a static fragment on the first open, and keep a plain-text source link in
+the closed panel for use without JavaScript. Fragment loading stays local until a
+second consumer needs it. See the `jehlp-code-highlighting` skill.
 
 **Code copying.** Success is reported on the button. If clipboard access fails,
 the code is selected for manual copying and the button explains this. Only the

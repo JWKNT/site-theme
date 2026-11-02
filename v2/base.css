@@ -48,6 +48,15 @@
   --tone-plum: #775466;
   --tone-teal: #3d6e6b;
   --tone-ochre: #836228;
+  /* Source-code tokens follow the theme tones, so dark and print modes need no second palette. */
+  --code-comment: var(--muted);
+  --code-keyword: var(--blue);
+  --code-string: var(--good);
+  --code-number: var(--tone-ochre);
+  --code-title: var(--tone-plum);
+  --code-type: var(--tone-teal);
+  --code-meta: var(--muted-strong);
+  --code-deletion: var(--bad);
   color-scheme: light;
 }
 
@@ -318,6 +327,7 @@ th { color: var(--muted-strong); font: 600 var(--text-ui)/1.4 var(--ui, var(--se
     --ink: #000; --muted-strong: #333; --muted: #444; --faint: #555;
     --line: #bbb; --line-strong: #777; --blue: #000; --blue-dark: #000;
     --tone-blue: #333; --tone-plum: #333; --tone-teal: #333; --tone-ochre: #333;
+    --code-string: #333; --code-deletion: #333;
     color-scheme: light !important;
   }
   body { background: #fff !important; color: #000 !important; }

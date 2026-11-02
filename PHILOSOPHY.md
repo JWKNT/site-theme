@@ -129,6 +129,14 @@ Support keyboard use and visible focus. Give controls useful labels and live sta
 Respect reduced motion. Keep text legible in light and dark modes.
 On narrow screens, simplify the layout without hiding essential content.
 
+## Show code as code
+
+Show source code and structured data in monospace, with the shared syntax palette.
+Calculate the highlighting during the build. Do not load a highlighter in the browser.
+The palette uses the theme tones: muted comments, blue keywords, and quiet hues for strings, numbers, and names.
+Color helps the reader to parse code. It does not decorate the page.
+Keep the exact source text. Put long collections of listings in native disclosures.
+
 ## Use direct technical writing
 
 Use ASD-STE100 Issue 9 for original explanations, instructions, help, and interface text.

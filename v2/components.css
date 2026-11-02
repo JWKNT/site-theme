@@ -51,9 +51,27 @@
 pre[data-copy-code] { position: relative; padding: calc(var(--control-size, 2.25rem) + 1rem) 1rem 1rem; overflow: auto; border: 1px solid var(--line, #d9d5cd); background: var(--surface, #f4f2ed); }
 .ui-copy { position: absolute; top: .35rem; right: .5rem; min-height: var(--control-size, 2.25rem); padding: .2rem .5rem; font: var(--text-ui, .875rem)/1.4 var(--ui, Georgia, serif); }
 
+/* Source code: build-time highlight.js spans on the shared --code-* tokens.
+   One quiet palette for every language; no token backgrounds or bold keywords. */
+.ui-code { box-sizing: border-box; max-width: 100%; margin: 0; padding: .8rem 1rem; overflow: auto; border: 1px solid var(--line, #d9d5cd); background: var(--surface, #f4f2ed); color: var(--ink, #181817); font: var(--text-ui, .875rem)/1.55 var(--mono, Menlo, monospace); tab-size: 4; scrollbar-width: thin; }
+.ui-code > code { display: block; min-width: max-content; font: inherit; white-space: pre; }
+.ui-code--wrap > code { min-width: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.hljs-comment, .hljs-quote { color: var(--code-comment, var(--muted, #6f6c66)); }
+.hljs-keyword, .hljs-selector-tag, .hljs-doctag { color: var(--code-keyword, var(--blue, #35567a)); }
+.hljs-string, .hljs-regexp, .hljs-addition, .hljs-link { color: var(--code-string, var(--good, #416b50)); }
+.hljs-number, .hljs-literal, .hljs-symbol, .hljs-bullet { color: var(--code-number, var(--tone-ochre, #836228)); }
+.hljs-title, .hljs-section, .hljs-selector-id, .hljs-selector-class { color: var(--code-title, var(--tone-plum, #775466)); }
+.hljs-built_in, .hljs-type, .hljs-attr, .hljs-attribute, .hljs-property, .hljs-name, .hljs-tag { color: var(--code-type, var(--tone-teal, #3d6e6b)); }
+.hljs-meta, .hljs-meta .hljs-keyword { color: var(--code-meta, var(--muted-strong, #4a4945)); }
+.hljs-deletion { color: var(--code-deletion, var(--bad, #8a3f3f)); }
+.hljs-emphasis { font-style: italic; }
+.hljs-strong { font-weight: 600; }
+
 @media print {
   .ui-scroll-hint, .ui-copy, [data-disclosure], [data-disclosure-close], .ui-dialog-dismiss { display: none !important; }
   /* Printing must release later page-specific scrollport heights. */
   [data-scroll-region] { max-height: none !important; overflow: visible !important; }
+  .ui-code { overflow: visible; }
+  .ui-code > code { min-width: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
   .ui-table > thead { position: static; box-shadow: none; }
 }

@@ -13,7 +13,8 @@ foundation files.
 
 Choose the smallest pattern that serves the material. Existing contracts cover
 directories, grouped fields, single-choice selects, segmented selections, responsive disclosures, section
-indexes, overflow regions, native dialog shells, and copyable code. Extract a new
+indexes, overflow regions, native dialog shells, copyable code and highlighted code listings
+(`jehlp-code-highlighting`). Extract a new
 behavior when real consumers share its semantics, not merely similar class names.
 Prove it in a representative page before spreading it. Keep intentional local
 differences explicit.
