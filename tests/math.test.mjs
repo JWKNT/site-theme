@@ -13,6 +13,7 @@ test('the component layer owns one math face and a scrolling display block', () 
   assert.match(css, /\.ui-math-char \{ font-family: var\(--math\)/);
   assert.match(css, /\.ui-equation \{[^}]*overflow-x: auto/);
   assert.match(css, /@media print \{[\s\S]*\.ui-code, \.ui-equation \{ overflow: visible; \}/);
+  assert.match(css, /math \.tml-right \{ text-align: right; text-align: -webkit-right; \}/);
 });
 
 test('the math font is a real OpenType file with its notices beside it', () => {

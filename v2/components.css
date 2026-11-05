@@ -76,6 +76,13 @@ math { font-family: var(--math); font-size: 1.06em; }
 .ui-equation { margin: 1.1rem 0 1.3rem; padding-block: .2rem; overflow-x: auto; overflow-y: hidden; overscroll-behavior-inline: contain; }
 .ui-equation math { display: block; width: max-content; min-width: 100%; font-size: 1.12em; math-style: normal; }
 .ui-equation:focus-visible { outline: 2px solid var(--blue, #35567a); outline-offset: 4px; }
+/* Temml output needs these rules: cell alignment, equation rows and small italic corrections. */
+math .tml-right { text-align: right; text-align: -webkit-right; }
+math .tml-left { text-align: left; text-align: -webkit-left; }
+mtable.tml-jot > mtr > mtd { padding-block: .7ex; }
+.tml-sml-pad { padding-left: .05em; }
+.tml-med-pad { padding-left: .1em; }
+.tml-lrg-pad { padding-left: .15em; }
 
 @media print {
   .ui-scroll-hint, .ui-copy, [data-disclosure], [data-disclosure-close], .ui-dialog-dismiss { display: none !important; }
