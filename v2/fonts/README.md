@@ -10,3 +10,9 @@ Only Regular is available. Browsers synthesize bold and italic where requested.
 Use this font only for reading content and article headings.
 Menus, controls, decorative symbols, and ordinary defaults retain their original fonts.
 Code, numerical grids, and mathematical notation retain their dedicated fonts.
+
+# Latin Modern Math
+
+`latinmodern-math.otf` is the unmodified GUST Latin Modern Math font. `LICENSE-Latin-Modern.txt` holds its notices.
+Keep them together in every redistributed copy. `components.css` declares this face as `--math`.
+Browsers download the file only when a page shows MathML or `.ui-math-char`.

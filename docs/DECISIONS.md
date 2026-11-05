@@ -1,5 +1,19 @@
 # Design decisions
 
+## 031 — Native MathML and explainers that omit the proof (2026-11-05)
+
+**Evidence:** The owner requested linkable pages that explain what an AI mathematics result answers, without the proof,
+for a reader with high-school mathematics and some science or engineering education.
+
+**Decision:** Typeset math during the build with a pinned Temml and ship native MathML with one shared font.
+Calculate figures during the build as inline SVG on theme tokens. Keep each explainer in one fixed section order, with a dated
+status that separates a machine-checked proof, human review, peer review and any prize decision. Host the collection in the
+homepage repository at `/ai-math/`, because it is a page family and no owner request names a new repository.
+
+**Tradeoff:** Status lines age and need a manual update. The math font is 733 KB, but only pages with math download it.
+The Temml output is part of the published HTML, so a typesetter upgrade can change many pages. Reconsider a dedicated
+repository if the collection needs its own release schedule.
+
 ## 030 — Build-time syntax highlighting on the theme tones (2026-11-02)
 
 **Evidence:** The owner requested highlighted scripts for the Pokémon Reborn record and a reusable approach for later pages.

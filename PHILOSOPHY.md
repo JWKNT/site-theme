@@ -137,6 +137,19 @@ The palette uses the theme tones: muted comments, blue keywords, and quiet hues 
 Color helps the reader to parse code. It does not decorate the page.
 Keep the exact source text. Put long collections of listings in native disclosures.
 
+## Show mathematics as mathematics
+
+Typeset formulas as native MathML during the build, with the shared math font.
+Do not load a typesetter in the browser. Do not put a formula in an image.
+
+## Explain the question before the proof
+
+An explainer page says what a result answers. It does not show the proof.
+Write for a reader with high-school mathematics and some science or engineering education.
+Define each term. Give worked examples with numbers that the reader can check.
+Say what the result does not say. State who checked the result, how, and on what date.
+A claim of proof is not a confirmed proof. Keep the words for each exact.
+
 ## Use direct technical writing
 
 Use ASD-STE100 Issue 9 for original explanations, instructions, help, and interface text.

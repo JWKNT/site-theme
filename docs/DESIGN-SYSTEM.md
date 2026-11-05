@@ -49,6 +49,8 @@ See `COMPONENTS.md` for keyboard behavior, native fallback, and programmatic syn
 
 ### Font contracts
 
+`--math` starts with Latin Modern Math and belongs to the optional component layer. Apply it to MathML and to single mathematical letters in plain text. Do not use it for prose.
+
 `--reading` starts with Wrenfold Text and includes system serif and CJK fallbacks. Apply it to article prose, proof text, book chapters, and translations. Article headings can use the same role. `--serif` retains Georgia and Times New Roman. `--display` retains Palatino. `--ui: var(--serif)` keeps menus and controls unchanged. Decorative homepage symbols retain their original font. The Regular WOFF2 uses `font-display: swap`. Browsers synthesize bold and italic styles. Numerical grids, code, and mathematical notation retain their dedicated fonts. Code listings use `--mono` at `--text-ui` with the `--code-*` palette. Keep font notices in `v2/fonts/`.
 
 Use ink-colored links and navigation with restrained underlines. Status, selected controls, scientific plots, and game/puzzle cues retain meaningful color. Borders should organize content rather than outline every label; use neutral tag surfaces and one rule per transition.
@@ -61,7 +63,7 @@ control creation, browser chrome, and both theme events. `v2/docs.css`: theme
 reference pages. `v2/reader.css`: the shared bilingual and English reader surface,
 used by Black Sheep Town and Albatross Koukairoku.
 
-`v2/components.css` and `v2/components.js` are an optional layer for code listings, directories,
+`v2/components.css` and `v2/components.js` are an optional layer for code listings, mathematics, directories,
 controls, select menus, disclosures, navigation, overflow, dialogs, and copying. See
 `COMPONENTS.md` for explicit contracts and the working gallery. Existing pages do
 not gain behavior merely by using a coincidentally similar class name.

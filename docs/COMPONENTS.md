@@ -28,6 +28,7 @@ themselves into existing consumers.
 | Dialog | `.ui-dialog`, `.ui-dialog-body`, `.ui-dialog-dismiss`, `data-dialog` | Title relationship, content, `showModal()`, domain actions | Armory, Profile, consensus, gallery |
 | Copy code | `data-copy-code` on `pre` containing `code` | The actual snippet | MTL, gallery |
 | Code listing | `.ui-code` on `pre`, `hljs-*` spans, `--code-*` tokens | Build-time highlighter, language, disclosure and loading | Pokémon Reborn scripts and notes, gallery |
+| Mathematics | Native MathML, `--math`, `.ui-equation`, `.ui-math-char` | Build-time typesetter, formula content, figures | AI Math Results, gallery |
 
 CSS classes define appearance; data attributes opt into behavior. Do not put
 filtering, dataset interpretation, telemetry, puzzle rules, or network calls here.
@@ -69,7 +70,7 @@ The 18 maintained PNGs in `v2/marks/` are `site-theme.png`, `home.png`,
 `mtl-guide.png`, `profile.png`, `mystery-report.png`, `ngu-idle-dashboard.png`,
 `logical-solver.png`, `bl2.png`, `box-puzzles.png`, `black-sheep-town.png`,
 `albatross-koukairoku.png`, `writing.png`, `puzzles.png`, `baba-is-you.png`,
-`readers.png`, `eastern-star.png`, `links.png`, and `pokemon-reborn.png`. Use a unique mark for each project; subpages within that project may share its mark. Choose the relevant
+`readers.png`, `eastern-star.png`, `links.png`, `pokemon-reborn.png`, and `ai-math.png`. Use a unique mark for each project; subpages within that project may share its mark. Choose the relevant
 subject and check both color modes. Abstract, single-ink SVG geometry in
 `v2/symbols/` is authoritative; `tools/make_symbols.py` renders transparent black
 PNG mastheads and white-on-black favicons. Dark mode inverts only mastheads and
@@ -235,6 +236,15 @@ its source. For a large collection, give each listing a native `details` element
 fetch a static fragment on the first open, and keep a plain-text source link in
 the closed panel for use without JavaScript. Fragment loading stays local until a
 second consumer needs it. See the `jehlp-code-highlighting` skill.
+
+**Mathematics.** Typeset formulas during the build as native MathML with a pinned
+Temml. Never load a typesetter in the browser, and do not put a formula in an image.
+`components.css` styles every `math` element with the `--math` face. The Latin Modern
+Math file downloads only when a page shows math. Put a display formula in
+`<div class="ui-equation" data-scroll-region aria-label="Formula">`, so a long formula
+scrolls inside its block. Use `.ui-math-char` for a letter such as ℤ in a heading or other
+plain text, because Wrenfold Text does not include those letters. The Erdős 1016 guide
+keeps its own vendored copy of the same font. See the `jehlp-math-explainer` skill.
 
 **Code copying.** Success is reported on the button. If clipboard access fails,
 the code is selected for manual copying and the button explains this. Only the

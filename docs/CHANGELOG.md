@@ -1,5 +1,18 @@
 # Change record
 
+## 2026-11-05 — Native mathematics and result explainers
+
+- Add the Latin Modern Math font and its notices to `v2/fonts/`. It is the unmodified file that the Erdős 1016 guide vendors.
+- Add the `--math` face, `math` rule, `.ui-equation` and `.ui-math-char` to components.css. Print shows long formulas in full.
+- Add a math specimen to the component gallery. The gallery loads the new stylesheet version.
+- Add the `jehlp-math-explainer` skill and catalog row. Point the writing skill to it.
+  Add the mathematics and explainer principles to PHILOSOPHY.md and philosophy.html, and the contract to COMPONENTS.md.
+- Add number theory, complexity, geometry and fluid terms to the technical term register.
+- Add the `ai-math` symbol, mark and favicon: a needle that turns inside a deltoid.
+  The PNGs come from the authoritative SVG through `rsvg-convert` with the `make_symbols.py` image steps,
+  because Inkscape was not available. Other marks were not regenerated.
+- Record the `/ai-math/` route in the repository inventory.
+
 ## 2026-11-02 — Syntax highlighting and Pokémon Reborn identity
 
 - Add the `--code-*` tokens to base.css. They alias the theme tones, so dark mode and print need no second palette.

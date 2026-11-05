@@ -8,6 +8,7 @@ description: "Write or revise original jehlp.net explanations, instructions, hel
 Read the owning repository's AGENTS.md and site-theme/docs/WRITING-STYLE.md.
 Locate site-theme beside the current repository, or resolve this skill's real path.
 Use the writing policy for all new original technical text and substantive prose edits.
+For a page that explains a mathematics result, also use `jehlp-math-explainer`.
 
 Classify original prose and protected content before the edit.
 Preserve reader text, translations, quotations, names, citations, legal text, and code.

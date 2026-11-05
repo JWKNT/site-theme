@@ -67,11 +67,21 @@ pre[data-copy-code] { position: relative; padding: calc(var(--control-size, 2.25
 .hljs-emphasis { font-style: italic; }
 .hljs-strong { font-weight: 600; }
 
+/* Mathematics: native MathML from a build-time typesetter. The font loads only
+   when a page shows math. A long display formula scrolls inside its own block. */
+@font-face { font-family: "Latin Modern Math"; src: url("fonts/latinmodern-math.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
+:root { --math: "Latin Modern Math", "STIX Two Math", "Cambria Math", math, serif; }
+math { font-family: var(--math); font-size: 1.06em; }
+.ui-math-char { font-family: var(--math); font-weight: 400; }
+.ui-equation { margin: 1.1rem 0 1.3rem; padding-block: .2rem; overflow-x: auto; overflow-y: hidden; overscroll-behavior-inline: contain; }
+.ui-equation math { display: block; width: max-content; min-width: 100%; font-size: 1.12em; math-style: normal; }
+.ui-equation:focus-visible { outline: 2px solid var(--blue, #35567a); outline-offset: 4px; }
+
 @media print {
   .ui-scroll-hint, .ui-copy, [data-disclosure], [data-disclosure-close], .ui-dialog-dismiss { display: none !important; }
   /* Printing must release later page-specific scrollport heights. */
   [data-scroll-region] { max-height: none !important; overflow: visible !important; }
-  .ui-code { overflow: visible; }
+  .ui-code, .ui-equation { overflow: visible; }
   .ui-code > code { min-width: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
   .ui-table > thead { position: static; box-shadow: none; }
 }

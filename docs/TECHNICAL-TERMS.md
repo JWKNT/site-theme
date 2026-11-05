@@ -7,6 +7,9 @@ Preserve exact labels, symbols, names, and imported text when the writing policy
 | Subject | Technical nouns | Usage |
 | --- | --- | --- |
 | Mathematics | graph, vertex, edge, cycle, path, forest, cycle space, cycle rank, pancyclic graph | Keep each definition and its hypotheses exact. A cycle is not an arbitrary even edge set. |
+| Number theory | integer, rational number, polynomial, coefficient, degree, Diophantine set, witness, prime, zero, half-plane, modulus | State the set that each unknown belongs to. A rational solution is not an integer solution. A zero-free half-plane is not a statement about zeros on a line. |
+| Complexity | algorithm, Boolean variable, clause, assignment, polynomial time, exponential time, reduction, NP-hard, approximation ratio, label, constraint | Distinguish a decision from a count and an upper limit from a lower limit. State a time bound with its hidden constant. A hypothesis is not a theorem. |
+| Geometry and fluids | Kakeya set, tube, Hausdorff dimension, Jacobian determinant, viscosity, velocity, vortex, singularity, blow-up | Keep area and dimension separate. A singularity of an equation is not a claim about a real fluid. |
 | Proofs | witness, cut, correlation, expectation, second moment, upper bound, lower bound, recurrence, iterated logarithm | Preserve implication direction, quantifiers, probability spaces, and asymptotic qualifications. |
 | Solvers | clue, candidate, deduction, solution, segment, shaded cell, number base, cipher digit | Distinguish every solution, some solutions, no solution, and an unresolved result. |
 | A38 | pass, gray cell, route, direction | A pass is a puzzle resource. A pass cell consumes it. Keep acquisition and consumption distinct. |
