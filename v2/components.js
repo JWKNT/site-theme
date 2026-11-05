@@ -144,7 +144,8 @@
       if (horizontal) {
         const left = region.scrollLeft > 2;
         const right = region.scrollLeft + region.clientWidth < region.scrollWidth - 2;
-        hint.textContent = left && right ? "← More columns on either side →" : left ? "← More columns to the left" : "More columns to the right →";
+        const noun = region.dataset.scrollNoun || "columns";
+        hint.textContent = left && right ? `← More ${noun} on either side →` : left ? `← More ${noun} to the left` : `More ${noun} to the right →`;
         region.setAttribute("aria-describedby", `${description} ${hint.id}`.trim());
       } else if (description) region.setAttribute("aria-describedby", description);
       else region.removeAttribute("aria-describedby");

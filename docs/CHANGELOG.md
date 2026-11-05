@@ -5,6 +5,7 @@
 - Add the Latin Modern Math font and its notices to `v2/fonts/`. It is the unmodified file that the Erdős 1016 guide vendors.
 - Add the `--math` face, `math` rule, `.ui-equation` and `.ui-math-char` to components.css. Print shows long formulas in full.
 - Add a math specimen to the component gallery. The gallery loads the new stylesheet version.
+- Add `data-scroll-noun` to the overflow hint, so a formula does not report columns. The default stays `columns`.
 - Add the `jehlp-math-explainer` skill and catalog row. Point the writing skill to it.
   Add the mathematics and explainer principles to PHILOSOPHY.md and philosophy.html, and the contract to COMPONENTS.md.
 - Add number theory, complexity, geometry and fluid terms to the technical term register.

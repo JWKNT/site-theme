@@ -35,5 +35,6 @@ test('the skill, catalog, philosophy and gallery describe build-time mathematics
   assert.match(text('docs/COMPONENTS.md'), /\*\*Mathematics\.\*\*/);
   const gallery = text('components.html');
   assert.match(gallery, /<a href="#math">Math<\/a>/);
-  assert.match(gallery, /<div class="ui-equation" data-scroll-region aria-label="[^"]+"><math display="block">/);
+  assert.match(gallery, /<div class="ui-equation" data-scroll-region data-scroll-noun="of the formula" aria-label="[^"]+"><math display="block">/);
+  assert.match(text('v2/components.js'), /region\.dataset\.scrollNoun \|\| "columns"/);
 });

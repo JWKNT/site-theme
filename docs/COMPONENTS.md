@@ -241,8 +241,8 @@ second consumer needs it. See the `jehlp-code-highlighting` skill.
 Temml. Never load a typesetter in the browser, and do not put a formula in an image.
 `components.css` styles every `math` element with the `--math` face. The Latin Modern
 Math file downloads only when a page shows math. Put a display formula in
-`<div class="ui-equation" data-scroll-region aria-label="Formula">`, so a long formula
-scrolls inside its block. Use `.ui-math-char` for a letter such as ℤ in a heading or other
+`<div class="ui-equation" data-scroll-region data-scroll-noun="of the formula" aria-label="Formula">`, so a long formula
+scrolls inside its block and the overflow hint names the formula, not columns. Use `.ui-math-char` for a letter such as ℤ in a heading or other
 plain text, because Wrenfold Text does not include those letters. The Erdős 1016 guide
 keeps its own vendored copy of the same font. See the `jehlp-math-explainer` skill.
 

@@ -31,7 +31,7 @@ Paraphrase sources. Use a quotation only for a short phrase that the page needs,
 
 Add an explainer to the homepage repository as one entry in `data/ai-math.json` and one body in `content/ai-math/<slug>.html`. Write math between `\(` and `\)` or between `\[` and `\]`. The build typesets it to native MathML with a pinned Temml. Do not load a typesetter in the browser. Do not put a formula in an image.
 
-Load `v2/components.css` for the `--math` face and `.ui-equation`. Use `.ui-math-char` for a double-struck letter in a heading or other plain text. Put a formula that can overflow in `.ui-equation` with `data-scroll-region` and an accessible name.
+Load `v2/components.css` for the `--math` face and `.ui-equation`. Use `.ui-math-char` for a double-struck letter in a heading or other plain text. Put a formula that can overflow in `.ui-equation` with `data-scroll-region`, `data-scroll-noun="of the formula"` and an accessible name.
 
 Calculate figures during the build as inline SVG. Use the theme tokens, so that both color modes work. Give each figure an accessible name and a caption that states what it shows. Draw only what the mathematics or the data supports. If a quantity has an unknown constant, say so near the figure.
 
