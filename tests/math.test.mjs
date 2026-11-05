@@ -26,11 +26,12 @@ test('the skill, catalog, philosophy and gallery describe build-time mathematics
   const skill = text('skills/jehlp-math-explainer/SKILL.md');
   assert.match(skill, /^---\nname: jehlp-math-explainer\ndescription: /);
   assert.match(skill, /Do not show the proof/);
+  assert.match(skill, /under 300 words/);
   assert.match(skill, /Do not load a typesetter in the browser/);
   assert.match(text('SKILLS.md'), /\[`jehlp-math-explainer`\]\(skills\/jehlp-math-explainer\/SKILL\.md\)/);
   for (const page of ['PHILOSOPHY.md', 'philosophy.html']) {
     assert.match(text(page), /Show mathematics as mathematics[\s\S]*native MathML during the build/);
-    assert.match(text(page), /Explain the question before the proof[\s\S]*does not show the proof/);
+    assert.match(text(page), /Say what a result means, then stop[\s\S]*does not show the proof/);
   }
   assert.match(text('docs/COMPONENTS.md'), /\*\*Mathematics\.\*\*/);
   const gallery = text('components.html');

@@ -1,5 +1,12 @@
 # Change record
 
+## 2026-11-05 — Short explainers
+
+- The owner reviewed `/ai-math/` and found it far too verbose. Rewrite the `jehlp-math-explainer` skill:
+  a title and plain paragraphs under 300 words, one margin figure, and no headings, summaries, status, history or source list.
+- Replace the explainer section of PHILOSOPHY.md and philosophy.html. Add "less is often more" to the writing principle.
+- Add a rule to WRITING-STYLE.md: remove each sentence and section that the reader can do without.
+
 ## 2026-11-05 — Native mathematics and result explainers
 
 - Add the Latin Modern Math font and its notices to `v2/fonts/`. It is the unmodified file that the Erdős 1016 guide vendors.

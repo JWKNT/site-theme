@@ -34,6 +34,7 @@ A writing edit does not authorize a change to behavior, layout, data, or publica
 10. Use the same term for the same concept.
 11. Remove metaphors, idioms, rhetorical questions, and unnecessary words.
 12. Do not use semicolons in original prose.
+13. Remove each sentence and section that the reader can do without, even when it is correct.
 
 Use short phrases for controls and labels. Keep accessible names consistent with visible labels.
 Do not shorten a sentence by deleting a condition, limitation, or required explanation.

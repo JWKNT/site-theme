@@ -142,15 +142,17 @@ Keep the exact source text. Put long collections of listings in native disclosur
 Typeset formulas as native MathML during the build, with the shared math font.
 Do not load a typesetter in the browser. Do not put a formula in an image.
 
-## Explain the question before the proof
+## Say what a result means, then stop
 
-An explainer page says what a result answers. It does not show the proof.
-Write for a reader with high-school mathematics and some science or engineering education.
-Define each term. Give worked examples with numbers that the reader can check.
-Say what the result does not say. State who checked the result, how, and on what date.
+An explainer answers one question: what does this statement mean? A smart reader without the background finishes it in two minutes.
+It does not show the proof. It has no section headings, summaries, status lines, history or source list.
+Link a source on the words that state the result. Use an example only if it shows an idea that the reader probably has not met.
 A claim of proof is not a confirmed proof. Keep the words for each exact.
 
 ## Use direct technical writing
+
+Less is often more. Say what the reader needs, then stop. A short page that answers the question is better than a complete one that buries the answer.
+Accuracy does not need length. Remove each section that the reader can do without, even when it is correct.
 
 Use ASD-STE100 Issue 9 for original explanations, instructions, help, and interface text.
 Follow [the writing policy](docs/WRITING-STYLE.md).

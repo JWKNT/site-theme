@@ -1,5 +1,19 @@
 # Design decisions
 
+## 032 — Explainers are two-minute pages (2026-11-05)
+
+**Evidence:** The owner reviewed the live `/ai-math/` pages and called them far too verbose. A reader asks what a statement means
+and wants the answer in two minutes. Summaries, section headings, status, history, consequences and source lists are noise.
+The owner also noted that the margins were unused, and that direct resources are generally hard to find.
+
+**Decision:** An explainer is a title and plain paragraphs under 300 words. A source link sits on the words that state the result.
+Each page has one figure or small table. Content uses the masthead frame: text column and margin figure on a wide screen, one
+column on a narrow screen. Short pages can use a text column wider than the long-prose measure. The landing page lists titles.
+This replaces the fixed section order and dated status of decision 031. The MathML and hosting parts of 031 stay.
+
+**Tradeoff:** A page no longer shows how far a result has been checked. The wording still says "reports" for an unconfirmed claim,
+and the link leads to the source. Reconsider if readers treat an unconfirmed report as settled.
+
 ## 031 — Native MathML and explainers that omit the proof (2026-11-05)
 
 **Evidence:** The owner requested linkable pages that explain what an AI mathematics result answers, without the proof,
