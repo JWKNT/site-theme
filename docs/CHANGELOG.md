@@ -1,5 +1,12 @@
 # Change record
 
+## 2026-11-05 — Minimal AI security pages
+
+- Follow the owner's correction: retain only CVSS 9.9 or 10, leaving seven cases and removing 52 lower-scored pages.
+- Match AI Math's plain title list and paragraph-based reading layout, with a small code figure in the margin. Remove the filter, evidence panels, source lists, footer and AI Math cross-links.
+- Keep essential source links and impact qualifications in the explanation. Preserve full attribution, score and release evidence in the case data.
+- Validation: 12 tests, desktop/mobile browser checks, seven live case routes and refreshed homepage search. See `VALIDATION-2026-11-05-AI-SECURITY-MINIMAL.md`.
+
 ## 2026-11-05 — AI security sister collection
 
 - Add the `ai-security` identity: a code path crossing a bounded region. The authoritative SVG supplies the 128px mark and 192px favicon through CairoSVG and the existing Pillow image steps. Other marks are unchanged.

@@ -1,5 +1,13 @@
 # Design decisions
 
+## 036 — Minimal AI security pages and a 9.9 cutoff (2026-11-05)
+
+**Evidence:** The owner found the initial collection too verbose and asked for the minimal form of AI Math Results, with only scores of 9.9 or 10. The owner also clarified that AI Math is a design reference, not a linked part of this site.
+
+**Decision:** Replace decision 035's evidence sidebar and searchable directory with a plain title list and short explanations. Each case has one compact linked CVE/score line, plain paragraphs and one small margin code figure. Essential AI attribution and released-fix sources belong in the prose; the complete evidence stays in the data file. Remove AI Math cross-links. Raise the inclusion floor to 9.9 and remove the 52 lower-scored pages, leaving seven cases.
+
+**Tradeoff:** Detailed provenance takes a source-file visit. The relevant impact limits remain in the explanation so a high score does not imply a broader demonstrated result. The AI discovery and released-fix evidence requirements from 035 stay. Reconsider search only if the collection becomes difficult to scan.
+
 ## 035 — AI security explanations with a public evidence threshold (2026-11-05)
 
 **Evidence:** The owner requested a sister to AI Math Results, in its own repository, for readers with baseline programming competence. Cases must involve AI discovery, a CVSS score of at least 9.8, and a released fix. The explanation concerns the weak code and its failure, not how to patch it.
