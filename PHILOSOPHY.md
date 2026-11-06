@@ -144,13 +144,10 @@ Do not load a typesetter in the browser. Do not put a formula in an image.
 
 ## Say what a result means, then stop
 
-An explainer answers one question: what does this statement mean? A smart reader without the background finishes it in two minutes.
+An explainer answers one question: what does this statement mean? It assumes school arithmetic, defines each term at first use and works through numbers.
 It does not show the proof. It has no section headings, summaries, status lines, history or source list.
-Link a source on the words that state the result. Use an example only if it shows an idea that the reader probably has not met.
+Link a source on the words that state the result. Remove each sentence that the reader can do without.
 A claim of proof is not a confirmed proof. Keep the words for each exact.
-
-A reader with less schooling can choose more words. A Simplify button opens a longer page that defines each term and works through numbers.
-The short page stays the default. The longer page keeps the same plain form and removes each sentence that the reader can do without.
 
 ## Use direct technical writing
 

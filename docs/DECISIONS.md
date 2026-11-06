@@ -1,5 +1,19 @@
 # Design decisions
 
+## 034 — Plain explainers in their own repository (2026-11-05)
+
+**Evidence:** The owner read the simple versions from decision 033 and said that they are "basically exactly what we're looking for".
+The owner asked to replace the short pages with them, and to move the collection out of the homepage repository.
+
+**Decision:** Each explainer has one page, with the text of its former simple version. It assumes school arithmetic, defines each term
+at first use and has 400 to 800 words. This replaces the reader and the word limit of decision 032, and all of decision 033.
+The form of 032 stays: plain paragraphs, one margin figure, and no proof, status, history or source list. `JWKNT/ai-math` now owns the
+collection and publishes generated pages from the `main` root, as `pokemon-reborn` does. The route `/ai-math/` does not change.
+This replaces the hosting choice of decision 031.
+
+**Tradeoff:** A reader with the background reads definitions that they do not need. The pages stay short enough to scan.
+The `/simple/` links from decision 033 stop working, but they were live for less than a day. Reconsider if readers ask for less.
+
 ## 033 — A simple version behind a button (2026-11-05)
 
 **Evidence:** The owner asked for a Simplify button on each explainer. It replaces the page with a longer, more spelled-out version

@@ -1,5 +1,13 @@
 # Change record
 
+## 2026-11-05 — Plain explainers in their own repository
+
+- The owner read the simple versions and said that they are what the pages should be. Make that text the only page for each result.
+  Remove the short pages, the Simplify button and the `/simple/` routes.
+- Move the collection from the homepage repository to `JWKNT/ai-math`. The route `/ai-math/` does not change.
+- Update the `jehlp-math-explainer` skill, its catalog row, PHILOSOPHY.md, philosophy.html and the repository inventory.
+  Record decision 034.
+
 ## 2026-11-05 — Simple versions of explainers
 
 - The owner asked for a Simplify button on each `/ai-math/` explainer. It opens a longer page for a reader with less schooling.

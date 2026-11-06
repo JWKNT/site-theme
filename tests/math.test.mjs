@@ -26,15 +26,15 @@ test('the skill, catalog, philosophy and gallery describe build-time mathematics
   const skill = text('skills/jehlp-math-explainer/SKILL.md');
   assert.match(skill, /^---\nname: jehlp-math-explainer\ndescription: /);
   assert.match(skill, /Do not show the proof/);
-  assert.match(skill, /under 300 words/);
-  assert.match(skill, /The short page stays the default/);
-  assert.match(skill, /content\/ai-math\/<slug>\.simple\.html/);
+  assert.match(skill, /400 to 800 words/);
+  assert.match(skill, /Assume school arithmetic/);
+  assert.match(skill, /`content\/<slug>\.html`/);
   assert.match(skill, /Do not load a typesetter in the browser/);
   assert.match(text('SKILLS.md'), /\[`jehlp-math-explainer`\]\(skills\/jehlp-math-explainer\/SKILL\.md\)/);
   for (const page of ['PHILOSOPHY.md', 'philosophy.html']) {
     assert.match(text(page), /Show mathematics as mathematics[\s\S]*native MathML during the build/);
     assert.match(text(page), /Say what a result means, then stop[\s\S]*does not show the proof/);
-    assert.match(text(page), /Say what a result means, then stop[\s\S]*A Simplify button opens a longer page[\s\S]*The short page stays the default/);
+    assert.match(text(page), /Say what a result means, then stop[\s\S]*assumes school arithmetic, defines each term at first use/);
   }
   assert.match(text('docs/COMPONENTS.md'), /\*\*Mathematics\.\*\*/);
   const gallery = text('components.html');

@@ -32,7 +32,7 @@ The current sweep includes every public Pages app in the account. Added inventor
 | `readers` | `JWKNT/readers` | `https://jehlp.net/readers/` | Static; aesthetic reference preserved |
 | `links` | `JWKNT/links` | `https://jehlp.net/links/` | `npm run build`; migrated v1 to v2 |
 | `ndb-idle` | `JWKNT/ndb-idle` | `https://jehlp.net/ndb-idle/` | Vite / Pages Actions; explicit theme exception, preserve independent game styling |
-| `JWKNT.github.io` (`/ai-math/`) | `JWKNT/JWKNT.github.io` | `https://jehlp.net/ai-math/` | `node build.mjs` from `data/ai-math.json` and `content/ai-math/`, published with the homepage artifact |
+| `ai-math` | `JWKNT/ai-math` | `https://jehlp.net/ai-math/` | `npm run build` · `main` root; generated pages from `data/results.json` and `content/` |
 | `pokemon-reborn` | `JWKNT/pokemon-reborn` | `https://jehlp.net/pokemon-reborn/` | `npm run build` · `main` root; curated public import of the private `reborn` checkout via `npm run import` |
 
 The media repositories contain recordings, not independent UI surfaces. The private
