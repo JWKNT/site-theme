@@ -21,6 +21,7 @@
   in the `jehlp-math-explainer` skill. A page defines every other term itself, because a reader can land on any page from a link.
 - The `ai-math` tests now check the definitions and words on each page.
 - The owner removed the definitions of "conjecture" and "hypothesis" from every page. The baseline now includes both words.
+- The owner also removed "letters" and the definition of "variables". Say "variables", which the baseline now includes.
 
 ## 2026-11-05 — Plain explainers in their own repository
 
