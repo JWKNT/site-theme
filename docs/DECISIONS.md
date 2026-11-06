@@ -1,5 +1,20 @@
 # Design decisions
 
+## 033 — A simple version behind a button (2026-11-05)
+
+**Evidence:** The owner asked for a Simplify button on each explainer. It replaces the page with a longer, more spelled-out version
+for a reader with less schooling, and it keeps the spirit of the short page. It is not the default.
+
+**Decision:** Each explainer has a second static page at `<slug>/simple/`, with its own body file. A square Simplify link beside the
+title opens it, and a Short version link returns. This needs no script, and the Back button and shared links work. A short page
+downloads nothing extra. The simple page keeps the form of decision 032. It defines each term at first use and works through numbers,
+in 400 to 800 words. The margin figure stays in view while the longer text scrolls. Site search indexes only the short page, because
+the longer text would otherwise rank above the default.
+
+**Tradeoff:** Each new result needs two bodies, and each fact appears twice. Exact checks in the tests cover the numbers on both.
+A script that swaps the text in place would keep one URL, but it would put a script and two copies of the math on each short page.
+Reconsider if the two versions of a page start to disagree.
+
 ## 032 — Explainers are two-minute pages (2026-11-05)
 
 **Evidence:** The owner reviewed the live `/ai-math/` pages and called them far too verbose. A reader asks what a statement means

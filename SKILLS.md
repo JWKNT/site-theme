@@ -10,7 +10,7 @@ this Git repository. They do not require ChatGPT Work tools or an API key.
 | [`jehlp-shared-theme`](skills/jehlp-shared-theme/SKILL.md) | Change or adopt the shared jehlp.net CSS and theme controller, including compatibility, local overrides, and offline exports. |
 | [`jehlp-components`](skills/jehlp-components/SKILL.md) | Extract, extend, or adopt reusable interface patterns with explicit markup contracts and native fallbacks. |
 | [`jehlp-code-highlighting`](skills/jehlp-code-highlighting/SKILL.md) | Show source code and structured data with build-time syntax highlighting, the shared code palette and native disclosures. |
-| [`jehlp-math-explainer`](skills/jehlp-math-explainer/SKILL.md) | Explain what a mathematics result answers, without its proof, with native MathML, calculated figures and dated verification status. |
+| [`jehlp-math-explainer`](skills/jehlp-math-explainer/SKILL.md) | Say what a mathematics result means in a two-minute page, without its proof, with native MathML, calculated figures and a longer simple version behind a button. |
 | [`jehlp-data-ui`](skills/jehlp-data-ui/SKILL.md) | Improve jehlp.net tables, filters, chart controls, and live status without changing the underlying data or domain logic. |
 | [`jehlp-site-qa`](skills/jehlp-site-qa/SKILL.md) | Review jehlp.net UI changes in the browser for responsive layout, keyboard use, color modes, and regressions across shared-theme consumers. |
 | [`jehlp-pages-release`](skills/jehlp-pages-release/SKILL.md) | Prepare a reviewed jehlp.net GitHub Pages update across the theme and site repositories while preserving routing and generated assets. |

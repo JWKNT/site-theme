@@ -1,5 +1,13 @@
 # Change record
 
+## 2026-11-05 — Simple versions of explainers
+
+- The owner asked for a Simplify button on each `/ai-math/` explainer. It opens a longer page for a reader with less schooling.
+  The short page stays the default.
+- Add the simple version to the `jehlp-math-explainer` skill, its catalog row, PHILOSOPHY.md and philosophy.html.
+  Remove the stale words "dated verification status" from the catalog row.
+- Record decision 033. The button and layout stay in the homepage repository, because this page family is the only consumer.
+
 ## 2026-11-05 — Short explainers
 
 - The owner reviewed `/ai-math/` and found it far too verbose. Rewrite the `jehlp-math-explainer` skill:

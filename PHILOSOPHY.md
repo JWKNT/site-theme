@@ -149,6 +149,9 @@ It does not show the proof. It has no section headings, summaries, status lines,
 Link a source on the words that state the result. Use an example only if it shows an idea that the reader probably has not met.
 A claim of proof is not a confirmed proof. Keep the words for each exact.
 
+A reader with less schooling can choose more words. A Simplify button opens a longer page that defines each term and works through numbers.
+The short page stays the default. The longer page keeps the same plain form and removes each sentence that the reader can do without.
+
 ## Use direct technical writing
 
 Less is often more. Say what the reader needs, then stop. A short page that answers the question is better than a complete one that buries the answer.
