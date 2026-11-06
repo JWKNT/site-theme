@@ -6,6 +6,7 @@
 - Record the separate AI Security Findings repository, its `/ai-security/` route, and its use of the shared plain code listing.
 - Record decision 035: programming-level explanations, inert examples, named CVSS assessments, explicit AI discovery and released-fix evidence.
 - Make skill-directory checks ignore regular files such as macOS `.DS_Store`.
+- Verify all 59 public case routes and the homepage search integration. See `VALIDATION-2026-11-05-AI-SECURITY.md` for evidence, source commits and rollback notes.
 
 ## 2026-11-05 — One baseline for explainers
 
