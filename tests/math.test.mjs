@@ -27,7 +27,8 @@ test('the skill, catalog, philosophy and gallery describe build-time mathematics
   assert.match(skill, /^---\nname: jehlp-math-explainer\ndescription: /);
   assert.match(skill, /Do not show the proof/);
   assert.match(skill, /400 to 800 words/);
-  assert.match(skill, /Assume school arithmetic/);
+  assert.match(skill, /Use the same baseline on every page/);
+  assert.match(skill, /A link to another page does not replace a definition/);
   assert.match(skill, /`content\/<slug>\.html`/);
   assert.match(skill, /Do not load a typesetter in the browser/);
   assert.match(text('SKILLS.md'), /\[`jehlp-math-explainer`\]\(skills\/jehlp-math-explainer\/SKILL\.md\)/);

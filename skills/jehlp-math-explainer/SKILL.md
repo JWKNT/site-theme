@@ -9,11 +9,25 @@ Read the owning repository's AGENTS.md, the theme's PHILOSOPHY.md and the math c
 
 ## Write the page
 
-The reader asks one question: what does this statement mean? Answer it, then stop. Assume school arithmetic and no more. Define each term at first use, including words such as fraction, exponent, matrix and conjecture. Put a number on each idea, and work through one example step by step. Say in words what each symbol in a formula means. Do not show the proof.
+The reader asks one question: what does this statement mean? Answer it, then stop. Use the same baseline on every page: whole and negative numbers, fractions, decimals, percentages, whole-number powers, square roots, letters that stand for numbers, simple equations, points on a grid, simple shapes, and the words proof and theorem. Define everything else at first use, on that page, because a reader can land on any page from a link. A link to another page does not replace a definition. Put a number on each idea, and work through one example step by step. Say in words what each symbol in a formula means, including a Greek letter or a power that is not a whole number. Do not show the proof.
 
 Use a title and plain paragraphs, 400 to 800 words. Do not add section headings, a summary under the title, status lines, history, a section on why the result matters, a section on what it does not say, or a source list. If a misreading is likely, correct it in one sentence where it arises. Link the source on the words that state the result. A landing page is a list of titles.
 
 Remove each sentence that the reader can do without. Use literal comparisons, not metaphors. Give each page one figure or small table for the margin, and keep its caption short. A worked example can use a small table in the text column.
+
+Use one word for each idea: whole number, fraction, method, paper, chance, fixed number and limit. Do not write integer, rational number, coefficient, algorithm, manuscript, preprint, probability, constant or bound. Use the same definition on each page that needs it:
+
+- A conjecture is a statement that nobody has proved yet.
+- A hypothesis is a statement that nobody has proved yet.
+- A polynomial is a formula that only adds and multiplies numbers and letters.
+- A matrix is a table of numbers.
+- A complex number has the form `a + bi`, where `i² = -1`. It is a point on a flat map, with `a` across and `b` up.
+- A graph is a set of dots, called vertices, joined by lines, called edges.
+- A function is a rule that gives an output for each input.
+- Lean is a computer program that checks each step of a proof.
+- In `n` dimensions, a point is a list of `n` numbers.
+
+The tests in the `ai-math` repository check these words and definitions.
 
 ## Check the facts
 

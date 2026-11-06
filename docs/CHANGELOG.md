@@ -1,5 +1,11 @@
 # Change record
 
+## 2026-11-05 — One baseline for explainers
+
+- The owner asked for one baseline across all the explainers. State the baseline, the standard definitions and the standard words
+  in the `jehlp-math-explainer` skill. A page defines every other term itself, because a reader can land on any page from a link.
+- The `ai-math` tests now check the definitions and words on each page.
+
 ## 2026-11-05 — Plain explainers in their own repository
 
 - The owner read the simple versions and said that they are what the pages should be. Make that text the only page for each result.
