@@ -1,5 +1,12 @@
 # Change record
 
+## 2026-11-05 — AI security sister collection
+
+- Add the `ai-security` identity: a code path crossing a bounded region. The authoritative SVG supplies the 128px mark and 192px favicon through CairoSVG and the existing Pillow image steps. Other marks are unchanged.
+- Record the separate AI Security Findings repository, its `/ai-security/` route, and its use of the shared plain code listing.
+- Record decision 035: programming-level explanations, inert examples, named CVSS assessments, explicit AI discovery and released-fix evidence.
+- Make skill-directory checks ignore regular files such as macOS `.DS_Store`.
+
 ## 2026-11-05 — One baseline for explainers
 
 - The owner asked for one baseline across all the explainers. State the baseline, the standard definitions and the standard words

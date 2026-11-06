@@ -1,7 +1,7 @@
 {
   "generator": "python3 tools/make_symbols.py",
   "created": "2026-10-02",
-  "assetCount": 19,
+  "assetCount": 20,
   "notes": [
     "Single-ink abstract subject symbols; SVG sources are authoritative.",
     "PNG derivatives retain the existing 32px img.site-mark contract.",
@@ -266,6 +266,20 @@
       "meaning": "A needle that turns inside a deltoid",
       "source": "../symbols/ai-math.svg",
       "file": "ai-math.png",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "ai-security",
+      "meaning": "A code path crossing a bounded region",
+      "source": "../symbols/ai-security.svg",
+      "file": "ai-security.png",
       "width": 128,
       "height": 128,
       "transparentCorners": [

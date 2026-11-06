@@ -27,7 +27,7 @@ themselves into existing consumers.
 | Table header band | `.ui-table` on one native table | Widths, numeric alignment, cell content, bounded wrapper height | Consensus, Profile, dashboard, MTL, Armory, gallery |
 | Dialog | `.ui-dialog`, `.ui-dialog-body`, `.ui-dialog-dismiss`, `data-dialog` | Title relationship, content, `showModal()`, domain actions | Armory, Profile, consensus, gallery |
 | Copy code | `data-copy-code` on `pre` containing `code` | The actual snippet | MTL, gallery |
-| Code listing | `.ui-code` on `pre`, `hljs-*` spans, `--code-*` tokens | Build-time highlighter, language, disclosure and loading | Pokémon Reborn scripts and notes, gallery |
+| Code listing | `.ui-code` on `pre`, `hljs-*` spans, `--code-*` tokens | Build-time highlighter, language, disclosure and loading | Pokémon Reborn scripts and notes, AI Security Findings (plain pseudocode), gallery |
 | Mathematics | Native MathML, `--math`, `.ui-equation`, `.ui-math-char` | Build-time typesetter, formula content, figures | AI Math Results, gallery |
 
 CSS classes define appearance; data attributes opt into behavior. Do not put

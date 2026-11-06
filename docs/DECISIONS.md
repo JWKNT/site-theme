@@ -1,5 +1,15 @@
 # Design decisions
 
+## 035 — AI security explanations with a public evidence threshold (2026-11-05)
+
+**Evidence:** The owner requested a sister to AI Math Results, in its own repository, for readers with baseline programming competence. Cases must involve AI discovery, a CVSS score of at least 9.8, and a released fix. The explanation concerns the weak code and its failure, not how to patch it.
+
+**Decision:** `JWKNT/ai-security` publishes static explanations at `/ai-security/`, with a searchable list and one page per case. The text follows the plain-paragraph form of decision 034. Each page adds a short, inert code sketch and a source margin with AI attribution, a named CVSS assessment, release evidence, and material limits. Pseudocode uses the shared `.ui-code` surface with plain-text fallback. Reading prose and article titles use Wrenfold Text; the masthead and controls keep the UI face.
+
+A public source must support each inclusion condition. A released fix does not imply that every installation is updated. A high third-party score does not establish a demonstrated exploit or override a maintainer's narrower description. Source disagreements stay visible. The repository records exclusions and the bounds of the manual review.
+
+**Tradeoff:** The evidence margin adds detail beyond the math page form because the numeric threshold and attribution are part of this collection's meaning. Schematic code explains an invariant without publishing an attack. It cannot substitute for restricted vendor source; those pages state that limit. Reconsider the format if the source margin obscures the explanation.
+
 ## 034 — Plain explainers in their own repository (2026-11-05)
 
 **Evidence:** The owner read the simple versions from decision 033 and said that they are "basically exactly what we're looking for".

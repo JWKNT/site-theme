@@ -10,7 +10,7 @@ test('the shared writing policy preserves source content and exact technical mea
  assert.match(read('SKILLS.md'),/jehlp-technical-writing/);
 });
 test('every maintained site skill includes the original technical writing default',()=>{
- for(const dir of readdirSync(new URL('../skills/',import.meta.url))){
+ for(const dir of readdirSync(new URL('../skills/',import.meta.url),{withFileTypes:true}).filter(entry=>entry.isDirectory()).map(entry=>entry.name)){
   const skill=read(`skills/${dir}/SKILL.md`);
   assert.match(skill,/WRITING-STYLE\.md/,dir);
   assert.match(skill,/ASD-STE100 Issue 9/,dir);
