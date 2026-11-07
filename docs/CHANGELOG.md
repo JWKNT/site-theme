@@ -1,5 +1,10 @@
 # Change record
 
+## 2026-11-07 — The site favicon in the homepage colors
+
+- The owner asked that the favicon of the site use the same eye icon as the homepage. Draw `favicons/home.png` as the homepage draws the seal: ink on a paper circle, with the accent point. Record decision 040.
+- `tools/make_symbols.py` renders this favicon from `symbols/home.svg` with heavier strokes for small sizes. The other favicons do not change.
+
 ## 2026-11-07 — Homepage title, circular favicons, and a door for Home
 
 - The owner asked for more than links on the landing page. Add a `jehlp.net` wordmark above the directory, with style library icon i0063, the Ruffle seal, as the site identity. This replaces the rule that the root directory has no visible title.

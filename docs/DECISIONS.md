@@ -1,5 +1,13 @@
 # Design decisions
 
+## 040 — The site favicon in the homepage colors (2026-11-07)
+
+**Evidence:** The owner asked that the favicon of the site use the same eye icon as the homepage.
+
+**Decision:** `favicons/home.png` shows the Ruffle seal as the homepage draws it: ink on a paper circle, with the accent point at the center of the eye. Its strokes are heavier than the homepage drawing, so that the eye stays visible at 16 pixels. The homepage and the accounts page load it at a new address, so that a browser does not keep an old copy.
+
+**Tradeoff:** The site favicon differs from the white-on-black subject favicons. That difference marks it as the identity of the whole site.
+
 ## 039 — A separate reader for Omniscient Reader's Viewpoint (2026-11-07)
 
 **Evidence:** The owner asked to take the novel out of Readers and to give it its own repository, like Black Sheep Town and Albatross, with the translation side by side as well as an English reader.

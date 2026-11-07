@@ -117,6 +117,7 @@ Use always-visible categories and optional search as the collection grows.
 Keep every authored destination in static HTML. Independent pages retain the PNG-title convention.
 
 Favicons use the subject symbol in white on a circular black field. Do not use a square field.
+The site favicon is the exception: it shows the Ruffle seal as the homepage draws it, in ink on a paper circle with the accent point.
 Use geometry, not letters or subject colors, to identify the material.
 Examples include a genetics helix, a solved logic path, and a consensus-research aperture.
 Preserve semantic colors in charts, puzzle diagrams, and game art.

@@ -5,7 +5,7 @@
   "notes": [
     "Single-ink abstract subject symbols; SVG sources are authoritative.",
     "PNG derivatives retain the existing 32px img.site-mark contract.",
-    "Mastheads render black on paper and white on charcoal; favicons use white symbols on a circular black field.",
+    "Mastheads render black on paper and white on charcoal; favicons use white symbols on a circular black field, except home.png, which draws the seal in the homepage colors.",
     "Home uses style library i0063, the Ruffle seal. The Home link uses the separate open-door icon, icons/home-doorway.svg."
   ],
   "assets": [

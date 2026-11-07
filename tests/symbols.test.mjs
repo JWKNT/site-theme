@@ -46,9 +46,12 @@ test('mastheads and favicons share maintained monochrome geometry', () => {
     for (const kind of ['marks', 'favicons']) {
       const pixels = rgba(read(`v2/${kind}/${asset.file}`));
       let visible = 0;
+      // The site favicon keeps the homepage colors, so only its shape is checked here.
+      const monochrome = !(kind === 'favicons' && asset.id === 'home');
       for (let n = 0; n < pixels.length; n += 4) {
         if (!pixels[n + 3]) continue;
         visible++;
+        if (!monochrome) continue;
         assert.equal(pixels[n], pixels[n + 1], `${asset.id} ${kind} red/green`);
         assert.equal(pixels[n], pixels[n + 2], `${asset.id} ${kind} red/blue`);
         if (kind === 'marks') assert.equal(pixels[n], 0, `${asset.id} uses black ink`);
@@ -65,7 +68,7 @@ test('the site identity is the Ruffle seal, style library i0063', () => {
   assert.notEqual(seal, read('v2/icons/home-doorway.svg').toString());
 });
 
-test('every favicon is a white symbol on a circular black field', () => {
+test('every favicon is a symbol on a circular field', () => {
   for (const asset of manifest.assets) {
     const png = read(`v2/favicons/${asset.file}`);
     const size = png.readUInt32BE(16), pixels = rgba(png);
@@ -79,13 +82,25 @@ test('every favicon is a white symbol on a circular black field', () => {
         else if (distance < radius - 2) assert.equal(alpha(x, y), 255, `${asset.id} is opaque inside the circle at ${x},${y}`);
       }
     }
-    // A symbol that reaches the rim would leave no black ring around it.
+    // A symbol that reaches the rim would leave no ring of the field around it. The field is
+    // black, except for the site favicon, which uses the homepage paper.
+    const field = asset.id === 'home' ? value => value > 240 : value => value < 80;
     for (let turn = 0; turn < 360; turn++) {
       const x = Math.round(center + (radius - 3) * Math.cos(turn * Math.PI / 180));
       const y = Math.round(center + (radius - 3) * Math.sin(turn * Math.PI / 180));
-      assert.ok(pixels[(y * size + x) * 4] < 80, `${asset.id} keeps a black rim at ${turn} degrees`);
+      assert.ok(field(pixels[(y * size + x) * 4]), `${asset.id} keeps a ring of its field at ${turn} degrees`);
     }
   }
+});
+
+test('the site favicon shows the seal as the homepage draws it', () => {
+  const pixels = rgba(read('v2/favicons/home.png')), size = 192, at = (x, y) => [...pixels.subarray((y * size + x) * 4, (y * size + x) * 4 + 4)];
+  // Paper field, accent point at the center of the eye, and ink lines between them.
+  assert.deepEqual(at(96, 8), [0xfb, 0xfa, 0xf7, 255]);
+  assert.deepEqual(at(95, 95), [0xa0, 0x4f, 0x38, 255]);
+  let ink = 0;
+  for (let n = 0; n < pixels.length; n += 4) if (pixels[n + 3] === 255 && pixels[n] < 40 && pixels[n + 1] < 40 && pixels[n + 2] < 40) ink++;
+  assert.ok(ink > 500, `the seal has ink lines (${ink} pixels)`);
 });
 
 test('dark and print inversion is limited to decorative site identities', () => {
