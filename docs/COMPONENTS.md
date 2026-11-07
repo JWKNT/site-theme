@@ -27,7 +27,7 @@ themselves into existing consumers.
 | Table header band | `.ui-table` on one native table | Widths, numeric alignment, cell content, bounded wrapper height | Consensus, Profile, dashboard, MTL, Armory, gallery |
 | Dialog | `.ui-dialog`, `.ui-dialog-body`, `.ui-dialog-dismiss`, `data-dialog` | Title relationship, content, `showModal()`, domain actions | Armory, Profile, consensus, gallery |
 | Copy code | `data-copy-code` on `pre` containing `code` | The actual snippet | MTL, gallery |
-| Code listing | `.ui-code` on `pre`, `hljs-*` spans, `--code-*` tokens | Build-time highlighter, language, disclosure and loading | Pokémon Reborn scripts and notes, AI Security Findings (plain pseudocode), gallery |
+| Code listing | `.ui-code` on `pre`, `hljs-*` spans, `--code-*` tokens | Build-time highlighter, language, disclosure and loading | Pokémon Reborn scripts and notes, gallery |
 | Mathematics | Native MathML, `--math`, `.ui-equation`, `.ui-math-char` | Build-time typesetter, formula content, figures | AI Math Results, gallery |
 
 CSS classes define appearance; data attributes opt into behavior. Do not put
@@ -70,10 +70,10 @@ The 18 maintained PNGs in `v2/marks/` are `site-theme.png`, `home.png`,
 `mtl-guide.png`, `profile.png`, `mystery-report.png`, `ngu-idle-dashboard.png`,
 `logical-solver.png`, `bl2.png`, `box-puzzles.png`, `black-sheep-town.png`,
 `albatross-koukairoku.png`, `writing.png`, `puzzles.png`, `baba-is-you.png`,
-`readers.png`, `eastern-star.png`, `links.png`, `pokemon-reborn.png`, and `ai-math.png`. Use a unique mark for each project; subpages within that project may share its mark. Choose the relevant
+`readers.png`, `eastern-star.png`, `links.png`, `pokemon-reborn.png`, `ai-math.png`, and `omniscient-readers-viewpoint.png`. Use a unique mark for each project; subpages within that project may share its mark. Choose the relevant
 subject and check both color modes. Abstract, single-ink SVG geometry in
 `v2/symbols/` is authoritative; `tools/make_symbols.py` renders transparent black
-PNG mastheads and white-on-black favicons. Dark mode inverts only mastheads and
+PNG mastheads and circular white-on-black favicons. Dark mode inverts only mastheads and
 decorative divider images, never diagrams or game art.
 Publish a new mark before adopting its URL; embed the PNG in offline exports.
 
@@ -322,11 +322,11 @@ both in an inline-flex `.site-utility-pair` when the button is authored:
 <span class="site-utility-pair"><a class="site-home" href="https://jehlp.net/" aria-label="Home — jehlp.net" title="Home — jehlp.net"><span aria-hidden="true">✳</span></a><button class="theme-toggle" data-theme-toggle aria-label="Change theme"></button></span>
 ```
 
-Shared CSS draws a fine compass rose for Home. Home, theme and the opt-in
+Shared CSS draws a fine open door for Home. Home, theme and the opt-in
 `button.site-search` slash share the same geometry, muted ink and hover rule. The
 44px link retains a visible focus ring and normal native navigation. Keep the
 existing header placement and scrolling behavior. Never add a Home footer or
 reserve bottom space for it. The theme script creates/pairs missing links and
 migrates obsolete cached docks without touching page content. NDB Idle is exempt.
 Only a page without an existing header uses an in-flow `.site-utilities` header.
-For offline builds embed `icons/home-emblem.svg`; the accent point is CSS-only.
+For offline builds embed `icons/home-doorway.svg`.

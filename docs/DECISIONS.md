@@ -1,5 +1,27 @@
 # Design decisions
 
+## 039 — A separate reader for Omniscient Reader's Viewpoint (2026-11-07)
+
+**Evidence:** The owner asked to take the novel out of Readers and to give it its own repository, like Black Sheep Town and Albatross, with the translation side by side as well as an English reader.
+
+**Decision:** `JWKNT/omniscient-readers-viewpoint` publishes the English of edition 42 at `/omniscient-readers-viewpoint/`, with the shared reader layout. The old Readers address redirects there, and keeps its chapter and paragraph links. The side-by-side view reads the Korean from `data/source/`, which Git ignores, and appears only away from jehlp.net.
+
+**Tradeoff:** The live site has no side-by-side view. The project has always kept the Korean private, and it is the complete text of a novel on sale. Publishing it would be a new public copy, so it stays a local view. Later English changes in the translation project stay out until they pass the project's own release review.
+
+## 038 — Homepage title, seal, circular favicons and a door for Home (2026-11-07)
+
+**Evidence:** The owner asked for a stylized jehlp.net above the categories, style library icon i0063 as the site icon, circular favicons, and a Home icon that looks like a Home button without being a house.
+
+**Decision:** The root directory has one `h1`: the Ruffle seal and an outlined wordmark, in the two columns of the directory. Every favicon uses a circular field. Home draws an open door, because a homepage is the way in. This supersedes the folio-scroll Home of the 2026-10-09 decision and the rounded field of decision 027. Decision 027 otherwise stands.
+
+**Tradeoff:** The wordmark takes some height above the directory. An open door can also suggest "leave", which is what a Home link does on a subpage.
+
+## 037 — Remove AI Security Findings (2026-11-07)
+
+**Evidence:** The owner asked to remove the page and its repository.
+
+**Decision:** The homepage, search and shared theme no longer list it. Decisions 035 and 036 stay as history and no longer apply.
+
 ## 036 — Minimal AI security pages and a 9.9 cutoff (2026-11-05)
 
 **Evidence:** The owner found the initial collection too verbose and asked for the minimal form of AI Math Results, with only scores of 9.9 or 10. The owner also clarified that AI Math is a design reference, not a linked part of this site.

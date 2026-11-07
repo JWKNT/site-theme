@@ -1,11 +1,19 @@
 # Change record
 
+## 2026-11-07 — Homepage title, circular favicons, and a door for Home
+
+- The owner asked for more than links on the landing page. Add a `jehlp.net` wordmark above the directory, with style library icon i0063, the Ruffle seal, as the site identity. This replaces the rule that the root directory has no visible title.
+- The owner said that square favicons are not good. Regenerate every favicon on a circular black field. `tools/make_symbols.py` now accepts `rsvg-convert` as well as Inkscape.
+- The owner said that the folio scroll does not look like a Home button, and asked for no house. Home now draws an open door, `icons/home-doorway.svg`. The older Home icon URLs keep working and draw the same door.
+- The owner asked to remove AI Security Findings. Remove its mark, favicon, inventory row and validation records. Decisions 035 and 036 stay as history.
+- Move Omniscient Reader's Viewpoint out of Readers to its own repository, in the form of the Black Sheep Town and Albatross readers. Add its mark: an eye above an open book. Record decision 039.
+
 ## 2026-11-05 — Minimal AI security pages
 
 - Follow the owner's correction: retain only CVSS 9.9 or 10, leaving seven cases and removing 52 lower-scored pages.
 - Match AI Math's plain title list and paragraph-based reading layout, with a small code figure in the margin. Remove the filter, evidence panels, source lists, footer and AI Math cross-links.
 - Keep essential source links and impact qualifications in the explanation. Preserve full attribution, score and release evidence in the case data.
-- Validation: 12 tests, desktop/mobile browser checks, seven live case routes and refreshed homepage search. See `VALIDATION-2026-11-05-AI-SECURITY-MINIMAL.md`.
+- Validation: 12 tests, desktop/mobile browser checks, seven live case routes and refreshed homepage search.
 
 ## 2026-11-05 — AI security sister collection
 
@@ -13,7 +21,7 @@
 - Record the separate AI Security Findings repository, its `/ai-security/` route, and its use of the shared plain code listing.
 - Record decision 035: programming-level explanations, inert examples, named CVSS assessments, explicit AI discovery and released-fix evidence.
 - Make skill-directory checks ignore regular files such as macOS `.DS_Store`.
-- Verify all 59 public case routes and the homepage search integration. See `VALIDATION-2026-11-05-AI-SECURITY.md` for evidence, source commits and rollback notes.
+- Verify all 59 public case routes and the homepage search integration.
 
 ## 2026-11-05 — One baseline for explainers
 

@@ -32,7 +32,7 @@ subject and remove adjacent section or disclosure rules so the transition has a
 single visual owner.
 
 Individual favicons live in `v2/favicons/`; `tools/make_favicons.py` regenerates
-the family from the same field, stroke, and accent system.
+the family on the same circular field, from the same strokes.
 
 ## Versioning
 

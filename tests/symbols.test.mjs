@@ -58,8 +58,34 @@ test('mastheads and favicons share maintained monochrome geometry', () => {
   }
 });
 
-test('Home keeps its approved folio-scroll geometry', () => {
-  assert.equal(read('v2/symbols/home.svg').toString(), read('v2/icons/home-folio-scroll.svg').toString());
+test('the site identity is the Ruffle seal, style library i0063', () => {
+  const seal = read('v2/symbols/home.svg').toString();
+  assert.match(seal, /<title>Ruffle seal - Home<\/title>/);
+  assert.match(seal, /M12 3\.2C14 2\.1 16 4 16 5\.5/);
+  assert.notEqual(seal, read('v2/icons/home-doorway.svg').toString());
+});
+
+test('every favicon is a white symbol on a circular black field', () => {
+  for (const asset of manifest.assets) {
+    const png = read(`v2/favicons/${asset.file}`);
+    const size = png.readUInt32BE(16), pixels = rgba(png);
+    assert.equal(size, 192, asset.id);
+    const alpha = (x, y) => pixels[(y * size + x) * 4 + 3];
+    const center = (size - 1) / 2, radius = center - 3;
+    for (let y = 0; y < size; y++) {
+      for (let x = 0; x < size; x++) {
+        const distance = Math.hypot(x - center, y - center);
+        if (distance > radius + 2) assert.equal(alpha(x, y), 0, `${asset.id} is transparent outside the circle at ${x},${y}`);
+        else if (distance < radius - 2) assert.equal(alpha(x, y), 255, `${asset.id} is opaque inside the circle at ${x},${y}`);
+      }
+    }
+    // A symbol that reaches the rim would leave no black ring around it.
+    for (let turn = 0; turn < 360; turn++) {
+      const x = Math.round(center + (radius - 3) * Math.cos(turn * Math.PI / 180));
+      const y = Math.round(center + (radius - 3) * Math.sin(turn * Math.PI / 180));
+      assert.ok(pixels[(y * size + x) * 4] < 80, `${asset.id} keeps a black rim at ${turn} degrees`);
+    }
+  }
 });
 
 test('dark and print inversion is limited to decorative site identities', () => {

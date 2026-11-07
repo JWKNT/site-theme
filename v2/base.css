@@ -186,7 +186,7 @@ button:hover:not(:disabled) { border-color: var(--ink); background: var(--surfac
 button[aria-pressed="true"] { border-color: var(--blue); background: var(--surface-blue); color: var(--blue-dark); }
 button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 /* Header utilities share one geometry, ink weight and interaction grammar.
-   The compass, dial and slash are quiet punctuation inside equal hit targets. */
+   The open door, dial and slash are quiet punctuation inside equal hit targets. */
 :root { --utility-size: 2.75rem; --utility-icon-size: 1.6rem; --utility-gap: .375rem; }
 .site-utility-pair { display: inline-flex; align-items: center; flex: none; gap: var(--utility-gap, .375rem); }
 .site-utilities { display: flex; justify-content: flex-end; width: var(--site-frame-width); margin: 0 auto; padding: var(--site-frame-top) 0 1rem; }
@@ -240,8 +240,8 @@ button.site-search::before {
   mask: url("icons/theme-dial-dark.svg") center / contain no-repeat;
 }
 a.site-home::before {
-  -webkit-mask-image: url("icons/home-folio-scroll.svg");
-  mask-image: url("icons/home-folio-scroll.svg");
+  -webkit-mask-image: url("icons/home-doorway.svg");
+  mask-image: url("icons/home-doorway.svg");
 }
 button.site-search::before {
   -webkit-mask-image: url("icons/search-slash.svg");

@@ -5,13 +5,13 @@
   "notes": [
     "Single-ink abstract subject symbols; SVG sources are authoritative.",
     "PNG derivatives retain the existing 32px img.site-mark contract.",
-    "Mastheads render black on paper and white on charcoal; favicons use white symbols on a black field.",
-    "Home uses the approved 124 folio-scroll geometry."
+    "Mastheads render black on paper and white on charcoal; favicons use white symbols on a circular black field.",
+    "Home uses style library i0063, the Ruffle seal. The Home link uses the separate open-door icon, icons/home-doorway.svg."
   ],
   "assets": [
     {
       "id": "home",
-      "meaning": "Folio scroll",
+      "meaning": "Ruffle seal, style library i0063",
       "source": "../symbols/home.svg",
       "file": "home.png",
       "width": 128,
@@ -276,10 +276,10 @@
       ]
     },
     {
-      "id": "ai-security",
-      "meaning": "A code path crossing a bounded region",
-      "source": "../symbols/ai-security.svg",
-      "file": "ai-security.png",
+      "id": "omniscient-readers-viewpoint",
+      "meaning": "An eye above an open book",
+      "source": "../symbols/omniscient-readers-viewpoint.svg",
+      "file": "omniscient-readers-viewpoint.png",
       "width": 128,
       "height": 128,
       "transparentCorners": [

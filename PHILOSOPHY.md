@@ -105,13 +105,18 @@ Generate transparent PNGs from the authoritative SVG geometry for the existing i
 Use the fine geometric style of Home and the theme dial: black on paper, white on charcoal.
 The mark is decorative. The title supplies its name.
 
-The root directory can omit a visible masthead.
-It can use decorative typography to organize category and destination names.
+The site itself uses the Ruffle seal, icon i0063 of the style library.
+The Home link in each header draws an open door, because a homepage is the way in.
+Do not draw Home as a house.
+
+The root directory has one title: the seal and a jehlp.net wordmark.
+Draw the wordmark in the same language as the category studies, with a faint echo and an accent point.
+It uses decorative typography to organize category and destination names.
 Keep that artwork separate from accessible link names. Keep the complete directory compact.
 Use always-visible categories and optional search as the collection grows.
 Keep every authored destination in static HTML. Independent pages retain the PNG-title convention.
 
-Favicons use the subject symbol in white on a rounded black field.
+Favicons use the subject symbol in white on a circular black field. Do not use a square field.
 Use geometry, not letters or subject colors, to identify the material.
 Examples include a genetics helix, a solved logic path, and a consensus-research aperture.
 Preserve semantic colors in charts, puzzle diagrams, and game art.

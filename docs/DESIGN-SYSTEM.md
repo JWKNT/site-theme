@@ -126,8 +126,8 @@ Each project retains its subject identity and useful project-local navigation.
 Masthead titles are plain text. Omit current-page links and author lists from headers.
 Keep author navigation in the Readers catalogue. The root directory omits the Home self-link. A single,
 symbol-only Home anchor returns to `https://jehlp.net/` from the existing header,
-paired with the theme dial. The fine compass rose echoes the homepage's
-atlas and typographic studies. Home, theme and the homepage search slash share a
+paired with the theme dial. The fine open door shows the way in to the site
+without drawing a house. Home, theme and the homepage search slash share a
 44px target, 1.6rem icon field, .375rem gap, neutral ink and hover rule. Keep visible
 keyboard focus and the Home accessible name/tooltip `Home — jehlp.net`. Keep the utility pair in a reserved CSS-positioned lane of the in-flow masthead.
 The shared `--site-frame-width` and `--site-frame-top` follow the homepage: a 74rem
@@ -153,8 +153,8 @@ as `img.site-mark` at 32px with empty `alt`, a serif title, and only useful loca
 navigation. Choose a maintained asset from `v2/marks/`; do not substitute Unicode
 or emoji. These are single-ink abstract symbols generated from `v2/symbols/`: black
 on paper and inverted to white on charcoal. Run `python3 tools/make_symbols.py`
-(Inkscape and Pillow) to regenerate mastheads and white-on-black favicons from the
-same geometry. Keep the approved Home compass and theme dial. Links, focus,
+(Inkscape or rsvg-convert, and Pillow) to regenerate mastheads and circular
+white-on-black favicons from the same geometry. Keep the Home door and theme dial. Links, focus,
 selection, game art and data/status colors retain their existing meanings.
 
 Make margins useful: place context alongside the material when it saves space,

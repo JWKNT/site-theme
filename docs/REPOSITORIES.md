@@ -33,7 +33,7 @@ The current sweep includes every public Pages app in the account. Added inventor
 | `links` | `JWKNT/links` | `https://jehlp.net/links/` | `npm run build`; migrated v1 to v2 |
 | `ndb-idle` | `JWKNT/ndb-idle` | `https://jehlp.net/ndb-idle/` | Vite / Pages Actions; explicit theme exception, preserve independent game styling |
 | `ai-math` | `JWKNT/ai-math` | `https://jehlp.net/ai-math/` | `npm run build` · `main` root; generated pages from `data/results.json` and `content/` |
-| `ai-security` | `JWKNT/ai-security` | `https://jehlp.net/ai-security/` | `npm run build` · `main` root; generated explanations from `data/cases.json` and `content/` |
+| `omniscient-readers-viewpoint` | `JWKNT/omniscient-readers-viewpoint` | `https://jehlp.net/omniscient-readers-viewpoint/` | Static · `main` root; `tools/build_data.py` reads the translation project in `readers/data/orv`. The Korean text stays in the ignored `data/source/` |
 | `pokemon-reborn` | `JWKNT/pokemon-reborn` | `https://jehlp.net/pokemon-reborn/` | `npm run build` · `main` root; curated public import of the private `reborn` checkout via `npm run import` |
 
 The media repositories contain recordings, not independent UI surfaces. The private

@@ -15,10 +15,11 @@ test('the approved Wrenfold Regular font supplies reading prose while original U
  assert.match(read('v2/fonts/Noto-Debian-copyright.txt').toString(), /Copyright/);
  assert.equal(read('v2/fonts/WrenfoldText-Regular.woff2').toString('ascii', 0, 4), 'wOF2');
 });
-test('all current and legacy Home asset names retain exact folio geometry', () => {
- const approved = read('v2/icons/home-folio-scroll.svg').toString();
- for (const file of ['icons/home-compass.svg', 'icons/home.svg', 'icons/home-emblem.svg', 'symbols/home.svg']) assert.equal(read(`v2/${file}`).toString(), approved);
- assert.match(approved, /M6 4H16C20 4 21 8 18 9C15 10 14 6 16 4/);
+test('all current and legacy Home icon names draw the open door', () => {
+ const approved = read('v2/icons/home-doorway.svg').toString();
+ for (const file of ['home-folio-scroll', 'home-compass', 'home', 'home-emblem']) assert.equal(read(`v2/icons/${file}.svg`).toString(), approved);
+ assert.match(approved, /<title>Open door - Home<\/title>/);
+ assert.match(approved, /M5 21V9\.5a7 7 0 0 1 14 0V21/);
 });
 
 test('translation definitions and article text use the reading role', () => {
