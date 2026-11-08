@@ -24,6 +24,7 @@ health interpretation, puzzle rules, or bot decisions while restyling their UI.
 | Role | Target | Implementation |
 | --- | --- | --- |
 | Sustained reading | 18–20px for sustained prose; 16px for dense reference | `--text-body: 1rem`, line height roughly 1.6 |
+| Paragraph alignment | Justified, with hyphenation | `p` and `.prose li` in `base.css`; code keeps manual hyphenation |
 | Regular labels, navigation, controls | 14px or larger | `--text-ui: .875rem` |
 | Secondary metadata | 12px or larger | `--text-meta: .75rem` |
 | Page titles | Usually 26–32px | `--display`, Palatino stack, weight 700 |

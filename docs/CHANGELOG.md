@@ -1,5 +1,10 @@
 # Change record
 
+## 2026-11-08 — Justified text
+
+- The owner said that text should always be justified by default. `base.css` now justifies paragraphs and `.prose` list items, with automatic hyphenation. Code keeps manual hyphenation. Record decision 042.
+- A browser check of 23 live pages that load the shared theme found one conflict: centered empty-state messages in the script readers and Puzzles. `.empty-state p` now keeps the alignment of its container. Erdős 1016 uses its own copy of the theme, and NDB Idle does not load it.
+
 ## 2026-11-08 — The human mark in the page margin
 
 - The owner asked that the homepage introduction cover the width of the page, with the human bracket in the right margin and not above the Reading column. Add `--human-mark-hang`, which moves the mark out of its block into a page margin. The homepage uses it on wide screens.

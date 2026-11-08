@@ -1,5 +1,13 @@
 # Design decisions
 
+## 042 — Justified text by default (2026-11-08)
+
+**Evidence:** The owner asked to justify the homepage introduction and said that text should always be justified by default.
+
+**Decision:** `base.css` justifies `p` and `.prose li` and turns on automatic hyphenation for them. Code, keyboard input and sample output keep manual hyphenation, so that their words stay exact. An empty state keeps the alignment of its container. Headings, controls, tables and captions are not paragraphs, so they keep their alignment. A local rule can still set the alignment of a block, but a page does not set prose back to the left.
+
+**Tradeoff:** Justified text has uneven word spacing in a narrow column, and WCAG 1.4.8 (level AAA) advises against it. Hyphenation reduces the uneven spacing. Pages that vendor the theme, such as Erdős 1016, change when they next copy it.
+
 ## 041 — The human mark and the homepage introduction (2026-11-08)
 
 **Evidence:** The owner gave an introduction for the homepage, to replace the jehlp.net wordmark. It says that AI writes and programs everything on jehlp.net under the owner's supervision, unless a symbol marks it. The owner asked for a bracket in the right margin with an abstract human symbol, kept in a known place for reuse.

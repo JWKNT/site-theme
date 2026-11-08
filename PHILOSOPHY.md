@@ -52,6 +52,8 @@ Use margins for useful context or comparison. Remove unexplained section numbers
 Decrease excessive gaps and balance columns. Keep readable line lengths and clear separation.
 
 Use 66–72 characters per line for long prose. Use a wider data view only when comparison requires it.
+Justify text by default. The shared stylesheet aligns paragraphs to both edges and hyphenates them, so that the word spacing stays even.
+Headings, controls, tables, code and captions keep their own alignment.
 Use tabular or monospaced figures in tables, timelines, code, and numeric results. Do not apply them to prose.
 
 Use a shared ruled ornament for major subject changes, once or twice per page.

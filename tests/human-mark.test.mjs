@@ -38,7 +38,7 @@ test('the contract, philosophy, writing policy, skill and gallery describe one h
     assert.doesNotMatch(text, /jehlp\.net wordmark/);
   }
   assert.match(read('docs/WRITING-STYLE.md'), /- Preserve text that the owner wrote\. The human mark identifies it\./);
-  assert.match(read('docs/DECISIONS.md'), /^# Design decisions\n\n## 041 — The human mark and the homepage introduction/);
+  assert.match(read('docs/DECISIONS.md'), /\n## 041 — The human mark and the homepage introduction \(2026-11-08\)\n/);
   const skill = read('skills/jehlp-human-mark/SKILL.md');
   assert.match(skill, /^---\nname: jehlp-human-mark\ndescription: /);
   assert.ok(skill.includes(markup));

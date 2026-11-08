@@ -15,6 +15,8 @@ Use margins for meaningful context and comparison; remove unexplained number gut
 
 Give the puzzle transition a small ornament distinct from the masthead logo. When the grid and solve links feel detached, one thin, square-edged sheet may enclose the complete main unit, using the divider as its top edge. Keep examples outside and original diagram colors intact; avoid shadows and excess inset. Group only verified solver-only content into an action row, preserving post-grid links and notes in source order.
 
+Justify text by default. The shared base justifies and hyphenates paragraphs and `.prose` list items. Do not set paragraphs back to left alignment. Headings, controls, tables, code and captions keep their own alignment. A container that centers its text must center its paragraphs explicitly, as `.empty-state p` does.
+
 Inspect existing layout and CSS ownership before editing. Regular reading targets 1rem; navigation and controls .875rem; secondary metadata .75rem. These are design targets. Judge dense chart marks separately instead of shrinking all labels or changing board geometry. Ordinary single-choice selects adopt data-ui-select; retain richer grouped VN chapter browsers. Choose compact paginated rows with detail or an overflowing comparison matrix, not pagination plus an internally scrolling two-axis table.
 
 Make a representative improvement, then extend only the proven pattern. Keep data, ranking, scientific interpretation, puzzle logic and bot policy outside a visual change. Record the actual reusable decision in site-theme/docs/DECISIONS.md and the shipped scope in docs/CHANGELOG.md. Use docs/QA-MATRIX.md to choose checks proportional to the change; do not report unperformed browser checks as passed.
