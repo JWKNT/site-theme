@@ -41,7 +41,7 @@ test('the skill, catalog, philosophy and gallery describe build-time highlightin
   const skill = read('skills/jehlp-code-highlighting/SKILL.md');
   assert.match(skill, /^---\nname: jehlp-code-highlighting\ndescription: /);
   assert.match(skill, /Highlight code during the build/);
-  assert.match(read('SKILLS.md'), /These are ten focused skills\.[\s\S]*\[`jehlp-code-highlighting`\]\(skills\/jehlp-code-highlighting\/SKILL\.md\)/);
+  assert.match(read('SKILLS.md'), /These are eleven focused skills\.[\s\S]*\[`jehlp-code-highlighting`\]\(skills\/jehlp-code-highlighting\/SKILL\.md\)/);
   for (const text of [read('PHILOSOPHY.md'), read('philosophy.html')]) assert.match(text, /Show code as code[\s\S]*during the build/);
   assert.match(read('docs/COMPONENTS.md'), /\*\*Code listings\.\*\*/);
   const gallery = read('components.html');

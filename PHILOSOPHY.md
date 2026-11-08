@@ -109,8 +109,8 @@ The site itself uses the Ruffle seal, icon i0063 of the style library.
 The Home link in each header draws an open door, because a homepage is the way in.
 Do not draw Home as a house.
 
-The root directory has one title: the seal and a jehlp.net wordmark.
-Draw the wordmark in the same language as the category studies, with a faint echo and an accent point.
+The root directory has one title: the seal. The owner's introduction is beside it, in the column of the destination names.
+Draw homepage art in the same language as the category studies, with a faint echo and an accent point.
 It uses decorative typography to organize category and destination names.
 Keep that artwork separate from accessible link names. Keep the complete directory compact.
 Use always-visible categories and optional search as the collection grows.
@@ -128,6 +128,14 @@ Use GitHub account names only in source links where they form part of the destin
 Keep GitHub “Source” links out of page headers.
 The masthead contains identity, project-local navigation, and essential controls.
 Useful source provenance can remain with the material or in the footer.
+
+## Mark what the owner wrote
+
+AI writes and programs jehlp.net under the owner's supervision.
+The human mark identifies the exceptions: a square bracket in the right margin of a passage, with a human figure beside it.
+Put the mark only on text that the owner wrote. Do not put it on text that AI wrote.
+Keep the owner's words exactly. Do not apply the technical writing rules to them.
+The homepage introduction explains the mark and carries it.
 
 ## Treat accessibility as part of the style
 

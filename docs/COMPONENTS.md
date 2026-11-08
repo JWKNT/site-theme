@@ -29,6 +29,7 @@ themselves into existing consumers.
 | Copy code | `data-copy-code` on `pre` containing `code` | The actual snippet | MTL, gallery |
 | Code listing | `.ui-code` on `pre`, `hljs-*` spans, `--code-*` tokens | Build-time highlighter, language, disclosure and loading | Pokémon Reborn scripts and notes, gallery |
 | Mathematics | Native MathML, `--math`, `.ui-equation`, `.ui-math-char` | Build-time typesetter, formula content, figures | AI Math Results, gallery |
+| Human mark | `.ui-human` on a block, one `.ui-human-mark` inside it, `v2/icons/human.svg` | Only text that the owner wrote, in the owner's exact words | Homepage introduction, gallery |
 
 CSS classes define appearance; data attributes opt into behavior. Do not put
 filtering, dataset interpretation, telemetry, puzzle rules, or network calls here.
@@ -81,6 +82,27 @@ Publish a new mark before adopting its URL; embed the PNG in offline exports.
 The shared base stylesheet draws the homepage arrow with CSS. It does not depend on a font or Unicode presentation.
 Keep the mark out of the accessible name. Local styles can control placement and visibility.
 Home, Armory source links, MTL Markdown links, and puzzle provenance links use this mark.
+
+**Human mark.** AI writes and programs jehlp.net under the owner's supervision. The human mark
+identifies a passage that the owner wrote. Add `class="ui-human"` to the block that holds the
+owner's words, and put one `.ui-human-mark` inside it. The optional component stylesheet draws a
+square bracket in the right margin of the block, with the human figure from `v2/icons/human.svg`
+beside it. The block reserves that margin with right padding, so the mark never covers text.
+The mark size follows the text size. To change it, set `--human-mark-size` on the block.
+The figure uses the muted ink and the bracket uses the strong line color, in both color modes.
+The mark prints, and it uses the system text color when forced colors are on.
+
+```html
+<div class="ui-human">
+  <p>Text that the owner wrote.</p>
+  <span class="ui-human-mark" role="img" aria-label="Written by a human" title="Written by a human"></span>
+</div>
+```
+
+Use the mark only on text that the owner wrote, and keep those words exactly. Do not apply the
+technical writing rules to them. Mark a whole block, not a phrase inside a sentence. Screen readers
+announce the mark as "Written by a human". An offline export keeps `components.css` and
+`icons/human.svg` together, because the stylesheet loads the figure by a relative URL.
 
 **Single-choice selects.** Keep an ordinary native `select`, its `id`, `name`,
 options, initial selection, label, and application `change` handlers. Add

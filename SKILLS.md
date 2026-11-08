@@ -1,11 +1,12 @@
 # Codex skills for jehlp.net
 
-These are ten focused skills. Their source of truth is
+These are eleven focused skills. Their source of truth is
 this Git repository. They do not require ChatGPT Work tools or an API key.
 
 | Skill | Use when |
 | --- | --- |
 | [`jehlp-technical-writing`](skills/jehlp-technical-writing/SKILL.md) | Write original technical explanations and interface text with ASD-STE100 Issue 9. Preserve source, translated, literary, and formal content. |
+| [`jehlp-human-mark`](skills/jehlp-human-mark/SKILL.md) | Mark a passage that the owner wrote with the shared human mark, and keep the owner's exact words. AI writes everything else on jehlp.net. |
 | [`jehlp-site-design`](skills/jehlp-site-design/SKILL.md) | Design or improve jehlp.net pages using the shared visual language while preserving each project’s reading, comparison, or working surface. |
 | [`jehlp-shared-theme`](skills/jehlp-shared-theme/SKILL.md) | Change or adopt the shared jehlp.net CSS and theme controller, including compatibility, local overrides, and offline exports. |
 | [`jehlp-components`](skills/jehlp-components/SKILL.md) | Extract, extend, or adopt reusable interface patterns with explicit markup contracts and native fallbacks. |

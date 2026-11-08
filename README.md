@@ -31,6 +31,10 @@ constellation marks through `data-ornament`. Use one at a genuine change of
 subject and remove adjacent section or disclosure rules so the transition has a
 single visual owner.
 
+A passage that the owner wrote carries the human mark: `.ui-human` in
+`v2/components.css`, with the figure in `v2/icons/human.svg`. AI writes and
+programs everything else on jehlp.net under the owner's supervision.
+
 Individual favicons live in `v2/favicons/`; `tools/make_favicons.py` regenerates
 the family on the same circular field, from the same strokes.
 

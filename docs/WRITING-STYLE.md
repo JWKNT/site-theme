@@ -9,6 +9,7 @@ The rule applies to new text and substantive edits to existing text.
 Classify the text before an edit.
 
 - Rewrite original explanations and instructions at their source.
+- Preserve text that the owner wrote. The human mark identifies it.
 - Preserve reader text, translations, source quotations, literary passages, and quoted examples.
 - Preserve NDB fictional dialogue, story text, bestiary prose, and item descriptions.
 - Preserve proper titles, names, citations, legal text, licenses, identifiers, URLs, and code.

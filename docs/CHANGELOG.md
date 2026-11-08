@@ -1,5 +1,11 @@
 # Change record
 
+## 2026-11-08 — The human mark
+
+- The owner replaced the `jehlp.net` wordmark on the homepage with an introduction in the owner's words. It says that AI writes and programs everything on jehlp.net under the owner's supervision, unless the human mark is on it.
+- Add the human mark to the optional component layer: `.ui-human` on a passage that the owner wrote, with one `.ui-human-mark` inside it. The mark is a square bracket in the right margin with the human figure, `icons/human.svg`. The gallery shows it on a sentence from the owner's introduction. Record decision 041.
+- Add the `jehlp-human-mark` skill. The writing policy now protects the owner's text.
+
 ## 2026-11-07 — The site favicon in the homepage colors
 
 - The owner asked that the favicon of the site use the same eye icon as the homepage. Draw `favicons/home.png` as the homepage draws the seal: ink on a paper circle, with the accent point. Record decision 040.
