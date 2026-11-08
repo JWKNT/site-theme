@@ -26,7 +26,7 @@ Load `v2/components.css` after `v2/base.css`. Add `class="ui-human"` to the bloc
 </div>
 ```
 
-The stylesheet draws a square bracket in the right margin of the block and the figure from `v2/icons/human.svg` beside it. The block reserves that margin with right padding. The mark size follows the text size. To change it, set `--human-mark-size` on the block. Mark a whole block, not a phrase inside a sentence. Use the shared figure. Do not draw it again, and do not replace it with an emoji or a Unicode glyph.
+The stylesheet draws a square bracket in the right margin of the block and the figure from `v2/icons/human.svg` beside it. The block reserves that margin with right padding. The mark size follows the text size. To change it, set `--human-mark-size` on the block. Where the page has a right margin with room for the mark, set `--human-mark-hang` on the block to move the mark into that margin. The homepage does this on wide screens. Mark a whole block, not a phrase inside a sentence. Use the shared figure. Do not draw it again, and do not replace it with an emoji or a Unicode glyph.
 
 A generator renders the same markup during the build. An offline export keeps `components.css` and `icons/human.svg` together, because the stylesheet loads the figure by a relative URL.
 

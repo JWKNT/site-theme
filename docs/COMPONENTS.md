@@ -89,6 +89,9 @@ owner's words, and put one `.ui-human-mark` inside it. The optional component st
 square bracket in the right margin of the block, with the human figure from `v2/icons/human.svg`
 beside it. The block reserves that margin with right padding, so the mark never covers text.
 The mark size follows the text size. To change it, set `--human-mark-size` on the block.
+Where the page has a right margin, set `--human-mark-hang` on the block to move the mark out
+into that margin, up to the full mark width, `calc(var(--human-mark-size) * 7 / 3)`. The block
+gives up the same amount of padding. Set it only where the margin has room for the mark.
 The figure uses the muted ink and the bracket uses the strong line color, in both color modes.
 The mark prints, and it uses the system text color when forced colors are on.
 

@@ -86,9 +86,10 @@ mtable.tml-jot > mtr > mtd { padding-block: .7ex; }
 
 /* Human mark. AI writes jehlp.net under the owner's supervision. A passage that the
    owner wrote gets a square bracket in its right margin, with the human figure.
-   The space, tick and gaps follow the figure size, which follows the text size. */
-.ui-human { --human-mark-size: 1.75em; position: relative; padding-right: calc(var(--human-mark-size) * 7 / 3); }
-.ui-human-mark { position: absolute; inset: 0 0 0 auto; width: calc(var(--human-mark-size) * 7 / 3); color: var(--muted-strong, #4a4945); }
+   The space, tick and gaps follow the figure size, which follows the text size.
+   --human-mark-hang moves the mark out into a page margin, up to its full width. */
+.ui-human { --human-mark-size: 1.75em; position: relative; padding-right: calc(var(--human-mark-size) * 7 / 3 - var(--human-mark-hang, 0px)); }
+.ui-human-mark { position: absolute; inset: 0 calc(-1 * var(--human-mark-hang, 0px)) 0 auto; width: calc(var(--human-mark-size) * 7 / 3); color: var(--muted-strong, #4a4945); }
 .ui-human-mark::before { content: ""; position: absolute; top: .3em; bottom: .3em; left: calc(var(--human-mark-size) * 2 / 3); width: calc(var(--human-mark-size) / 3); border: 1px solid var(--line-strong, #aaa49a); border-left: 0; }
 .ui-human-mark::after { content: ""; position: absolute; top: 50%; right: 0; width: var(--human-mark-size); height: var(--human-mark-size); transform: translateY(-50%); background: currentColor; -webkit-mask: url("icons/human.svg") center / contain no-repeat; mask: url("icons/human.svg") center / contain no-repeat; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 @media (max-width: 38rem) { .ui-human { --human-mark-size: 1.5em; } }

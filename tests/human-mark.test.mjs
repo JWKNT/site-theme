@@ -7,8 +7,8 @@ const markup = '<span class="ui-human-mark" role="img" aria-label="Written by a 
 
 test('the optional component layer draws the human mark in the right margin', () => {
   const css = read('v2/components.css');
-  assert.match(css, /\.ui-human \{ --human-mark-size: 1\.75em; position: relative; padding-right: calc\(var\(--human-mark-size\) \* 7 \/ 3\); \}/, 'the block reserves the margin');
-  assert.match(css, /\.ui-human-mark \{ position: absolute; inset: 0 0 0 auto; width: calc\(var\(--human-mark-size\) \* 7 \/ 3\);/);
+  assert.match(css, /\.ui-human \{ --human-mark-size: 1\.75em; position: relative; padding-right: calc\(var\(--human-mark-size\) \* 7 \/ 3 - var\(--human-mark-hang, 0px\)\); \}/, 'the block reserves the margin unless the mark hangs');
+  assert.match(css, /\.ui-human-mark \{ position: absolute; inset: 0 calc\(-1 \* var\(--human-mark-hang, 0px\)\) 0 auto; width: calc\(var\(--human-mark-size\) \* 7 \/ 3\);/, 'the mark moves out by the same amount');
   assert.match(css, /\.ui-human-mark::before \{[^}]*border: 1px solid var\(--line-strong, #aaa49a\); border-left: 0; \}/, 'a square bracket that opens toward the text');
   assert.match(css, /\.ui-human-mark::after \{[^}]*mask: url\("icons\/human\.svg"\) center \/ contain no-repeat;[^}]*print-color-adjust: exact; \}/);
   assert.match(css, /@media \(forced-colors: active\) \{ \.ui-human-mark::after \{ background: CanvasText; forced-color-adjust: none; \} \}/);
@@ -29,6 +29,7 @@ test('the contract, philosophy, writing policy, skill and gallery describe one h
   const contracts = read('docs/COMPONENTS.md');
   assert.match(contracts, /\*\*Human mark\.\*\*/);
   assert.match(contracts, /\| Human mark \| `\.ui-human` on a block/);
+  assert.match(contracts, /set `--human-mark-hang` on the block to move the mark out\ninto that margin/);
   assert.ok(contracts.includes(markup));
   for (const text of [read('PHILOSOPHY.md'), read('philosophy.html')]) {
     assert.match(text, /Mark what the owner wrote/);

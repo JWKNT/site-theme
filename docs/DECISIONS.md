@@ -4,7 +4,7 @@
 
 **Evidence:** The owner gave an introduction for the homepage, to replace the jehlp.net wordmark. It says that AI writes and programs everything on jehlp.net under the owner's supervision, unless a symbol marks it. The owner asked for a bracket in the right margin with an abstract human symbol, kept in a known place for reuse.
 
-**Decision:** The shared theme owns the human mark: `.ui-human`, `.ui-human-mark` and `icons/human.svg`. The figure is a head and pointed shoulders, with the square point of the Ruffle seal at the heart. The homepage keeps the seal as its `h1` and shows the owner's paragraph, in the owner's exact words, with the mark. An arrow with an accent point and a faint echo ends the paragraph and points at the mark. This supersedes the wordmark of decision 038 and the rule that the root directory has no introduction.
+**Decision:** The shared theme owns the human mark: `.ui-human`, `.ui-human-mark` and `icons/human.svg`. The figure is a head and pointed shoulders, with the square point of the Ruffle seal at the heart. The homepage keeps the seal as its `h1` and shows the owner's paragraph, in the owner's exact words, with the mark. An arrow with an accent point and a faint echo ends the paragraph and points at the mark. On a wide screen, the introduction covers the frame and the mark hangs in the right page margin, through `--human-mark-hang`. One ink rule separates the introduction from the categories. This supersedes the wordmark of decision 038 and the rule that the root directory has no introduction.
 
 **Tradeoff:** The introduction makes the top of the homepage taller. The mark takes right padding from each marked block, so the lines of that block are shorter on a narrow screen.
 

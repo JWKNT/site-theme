@@ -109,7 +109,8 @@ The site itself uses the Ruffle seal, icon i0063 of the style library.
 The Home link in each header draws an open door, because a homepage is the way in.
 Do not draw Home as a house.
 
-The root directory has one title: the seal. The owner's introduction is beside it, in the column of the destination names.
+The root directory has one title: the seal. The owner's introduction is beside it and covers the frame, with the human mark in the right margin.
+One clear rule separates the introduction from the categories.
 Draw homepage art in the same language as the category studies, with a faint echo and an accent point.
 It uses decorative typography to organize category and destination names.
 Keep that artwork separate from accessible link names. Keep the complete directory compact.

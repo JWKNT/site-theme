@@ -1,5 +1,10 @@
 # Change record
 
+## 2026-11-08 — The human mark in the page margin
+
+- The owner asked that the homepage introduction cover the width of the page, with the human bracket in the right margin and not above the Reading column. Add `--human-mark-hang`, which moves the mark out of its block into a page margin. The homepage uses it on wide screens.
+- The owner asked for a clear bar between the introduction and the categories. The homepage draws one ink rule there, in place of the first row of category rules.
+
 ## 2026-11-08 — The human mark
 
 - The owner replaced the `jehlp.net` wordmark on the homepage with an introduction in the owner's words. It says that AI writes and programs everything on jehlp.net under the owner's supervision, unless the human mark is on it.
