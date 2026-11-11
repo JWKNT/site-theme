@@ -1,5 +1,9 @@
 # Change record
 
+## 2026-11-11 — Remove labels that repeat what the page shows
+
+- The owner asked to delete text that adds nothing: labels for what is already clear, footnotes and extra descriptors. In the readers, the JP and EN labels beside each line on a phone and in each glossary heading are gone. The script of a text shows its language.
+
 ## 2026-11-10 — Site sweep
 
 - The owner asked for a review of every page except NDB Idle. In the script readers, the labels of the control row were at four different heights. Each group is now one label line, a 6px gap and one control line. The scope choices have the height of a control, and on a phone the search field has the full width.

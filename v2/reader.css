@@ -167,8 +167,9 @@ mark { padding: 0; background: var(--mark); color: inherit; }
 .glossary-title-pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-bottom: 1px solid var(--line-strong); background: var(--surface); }
 .glossary-title { display: flex; min-width: 0; flex-direction: column; justify-content: center; padding: 10px 13px; }
 .glossary-title.english { border-left: 1px solid var(--line-strong); }
-.glossary-language-label { color: var(--muted); font: var(--text-ui, .875rem)/1.4 var(--ui, var(--serif)); }
-.glossary-entry h2 { margin: 2px 0 0; color: var(--blue-dark); font-size: 17px; font-weight: 600; overflow-wrap: anywhere; }
+/* The script of each text shows its language. A JP or EN label beside it adds nothing. */
+.glossary-language-label { display: none; }
+.glossary-entry h2 { margin: 0; color: var(--blue-dark); font-size: 17px; font-weight: 600; overflow-wrap: anywhere; }
 .glossary-title p { margin: 2px 0 0; color: var(--muted); font-size: var(--text-ui, .875rem); }
 .glossary-comparison { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 .glossary-language { display: flex; min-width: 0; align-items: center; padding: 15px 18px; }
@@ -266,7 +267,6 @@ footer p { margin: 3px 0; }
   .line-number { grid-row: 1 / span 2; padding: 10px 4px; font-size: 12px; }
   .language-column { padding: 10px; }
   .language-column.english { padding-top: 8px; border-top: 1px solid var(--line-strong); border-left: 0; }
-  .language-label { display: inline-block; min-width: 24px; vertical-align: baseline; }
   .speaker { display: inline; min-height: 0; }
   .speaker:empty::after { content: ""; }
   .line-text { margin-top: 2px; font-size: var(--text-body, 1rem); }
