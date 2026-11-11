@@ -80,8 +80,8 @@
   &lt;span class="ui-human-mark" role="img" aria-label="Written by a human" title="Written by a human"&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre><p>Use the mark only on text that the owner wrote, and keep those words exactly. The mark size follows the text size. To change it, set <code>--human-mark-size</code> on the block.</p></details>
       </section>
-      <section id="use"><h2>Use only what the page needs</h2><p>Load the optional component layer after the foundation and before local styles. Explicit data attributes enable its behavior. Pages without these attributes keep their existing behavior.</p><pre data-copy-code><code>&lt;script src="https://jehlp.net/site-theme/v2/theme.js?v=20260930-header-home"&gt;&lt;/script&gt;
-&lt;link rel="stylesheet" href="https://jehlp.net/site-theme/v2/base.css?v=20261009-reading-folio"&gt;
+      <section id="use"><h2>Use only what the page needs</h2><p>Load the optional component layer after the foundation and before local styles. Explicit data attributes enable its behavior. Pages without these attributes keep their existing behavior.</p><pre data-copy-code><code>&lt;script src="https://jehlp.net/site-theme/v2/theme.js?v=20261009-reading-folio"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="https://jehlp.net/site-theme/v2/base.css?v=20261108-justify"&gt;
 &lt;link rel="stylesheet" href="https://jehlp.net/site-theme/v2/components.css"&gt;
 &lt;link rel="stylesheet" href="assets/styles.css"&gt;
 &lt;script src="https://jehlp.net/site-theme/v2/components.js" defer&gt;&lt;/script&gt;</code></pre><p>For components added later, call <code>window.JehlpUI?.enhance(container)</code>. Repeated calls are safe. See the <a href="docs/COMPONENTS.md">full component contracts</a> for examples and limits.</p></section>

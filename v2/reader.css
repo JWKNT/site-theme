@@ -34,6 +34,8 @@ footer { width: min(1120px, calc(100% - 44px)); margin-inline: auto; }
 .reader-controls { display: grid; grid-template-columns: auto auto minmax(220px, 1fr) auto; gap: 14px 22px; align-items: end; padding: .5rem 0 1.1rem; border-bottom: 1px solid var(--line); }
 .chapter-control { display: grid; grid-template-columns: auto minmax(130px, 1fr) auto; gap: 6px; align-items: end; }
 .chapter-control > .control-label { grid-column: 1 / -1; }
+/* Each group in the row is one label line, a 6px gap and one control line, so the labels share a line. */
+.reader-controls .control-label { margin: 0; }
 .reader-controls label,
 .reader-controls legend,
 .reader-controls .control-label,
@@ -71,11 +73,11 @@ footer { width: min(1120px, calc(100% - 44px)); margin-inline: auto; }
 .glossary-controls .chapter-menu-option:focus { border-color: var(--line-strong); outline: 0; color: var(--blue-dark); }
 .reader-controls .chapter-menu-option[aria-selected="true"],
 .glossary-controls .chapter-menu-option[aria-selected="true"] { border-color: var(--blue); background: var(--surface-blue); color: var(--blue-dark); }
-.scope-control { display: flex; flex-wrap: wrap; gap: 9px; margin: 0; padding: 0 0 4px; border: 0; }
-.scope-control legend { margin-bottom: 2px; }
-.scope-control label { white-space: nowrap; font-variant: normal; letter-spacing: 0; }
-.scope-control input { accent-color: var(--blue); }
-.search-control { display: grid; gap: 3px; }
+.scope-control { display: flex; flex-wrap: wrap; gap: 0 9px; min-width: 0; margin: 0; padding: 0; border: 0; }
+.scope-control legend { margin-bottom: 6px; padding: 0; }
+.scope-control label { display: inline-flex; align-items: center; gap: .3em; min-height: var(--control-size, 2.25rem); white-space: nowrap; font-variant: normal; letter-spacing: 0; }
+.scope-control input { margin: 0; accent-color: var(--blue); }
+.search-control { display: grid; gap: 6px; }
 .clear-search { margin-bottom: 0; }
 
 .script-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; padding: 1.6rem 0 .9rem; border-bottom: 1px solid var(--line-strong); }
@@ -251,7 +253,8 @@ footer p { margin: 3px 0; }
   .intro { display: block; padding-top: 20px; }
   .quick-stats { flex-wrap: wrap; margin-top: 16px; gap: 14px; }
   .quick-stats div { min-width: 0; flex: 1 1 auto; padding: 0; }
-  .reader-controls { display: grid; grid-template-columns: 1fr auto; gap: 12px 8px; }
+  .reader-controls { display: grid; grid-template-columns: 1fr auto; gap: 12px 0; }
+  .clear-search { margin-left: 8px; }
   .chapter-control { grid-column: 1 / -1; }
   .chapter-picker { width: 100%; }
   .scope-control { grid-column: 1 / -1; grid-row: auto; }

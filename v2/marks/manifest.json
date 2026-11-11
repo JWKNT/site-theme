@@ -1,7 +1,7 @@
 {
   "generator": "python3 tools/make_symbols.py",
   "created": "2026-10-02",
-  "assetCount": 20,
+  "assetCount": 21,
   "notes": [
     "Single-ink abstract subject symbols; SVG sources are authoritative.",
     "PNG derivatives retain the existing 32px img.site-mark contract.",
@@ -280,6 +280,20 @@
       "meaning": "An eye above an open book",
       "source": "../symbols/omniscient-readers-viewpoint.svg",
       "file": "omniscient-readers-viewpoint.png",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "style-library",
+      "meaning": "A decorated initial beside lines of text",
+      "source": "../symbols/style-library.svg",
+      "file": "style-library.png",
       "width": 128,
       "height": 128,
       "transparentCorners": [
