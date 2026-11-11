@@ -5,6 +5,7 @@
 - The owner asked for a review of every page except NDB Idle. In the script readers, the labels of the control row were at four different heights. Each group is now one label line, a 6px gap and one control line. The scope choices have the height of a control, and on a phone the search field has the full width.
 - Style Library had no masthead symbol and no favicon. Add `style-library`: a decorated initial beside lines of text.
 - Hide the search shortcut hint on a touch screen. Update the version tags in the two "Use" examples.
+- A description in `.ui-directory` is a short gloss beside a name, as in a table. It keeps start alignment, because one or two justified lines in a narrow column have wide gaps.
 
 ## 2026-11-08 — Justified text
 

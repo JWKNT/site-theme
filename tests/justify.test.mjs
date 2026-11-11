@@ -18,3 +18,8 @@ test('the philosophy, design system, skill and decisions record justified text',
   assert.match(read('skills/jehlp-site-design/SKILL.md'), /Justify text by default\./);
   assert.match(read('docs/DECISIONS.md'), /^# Design decisions\n\n## 042 — Justified text by default/);
 });
+
+test('a directory description is a short gloss and is not justified', () => {
+  const components = readFileSync(new URL('../v2/components.css', import.meta.url), 'utf8');
+  assert.match(components, /\.ui-directory p \{[^}]*text-align: start;[^}]*hyphens: manual; \}/);
+});

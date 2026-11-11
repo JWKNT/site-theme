@@ -28,7 +28,8 @@
 .ui-directory > li { padding: var(--directory-space, .8rem) 0; border-bottom: var(--directory-rule, 1px solid var(--line, #d9d5cd)); }
 .ui-directory > li:last-child { border-bottom: 0; }
 .ui-directory a { font-weight: 600; }
-.ui-directory p { margin: .2rem 0 0; color: var(--muted-strong, #4a4945); }
+/* A description is a short gloss beside a name, as in a table: it is not justified. */
+.ui-directory p { margin: .2rem 0 0; color: var(--muted-strong, #4a4945); text-align: start; -webkit-hyphens: manual; hyphens: manual; }
 
 [data-scroll-region] { max-width: 100%; overflow: auto; scrollbar-width: thin; }
 /* One native table, one scroll context, one opaque header band. */
