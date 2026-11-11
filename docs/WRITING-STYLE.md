@@ -36,6 +36,7 @@ A writing edit does not authorize a change to behavior, layout, data, or publica
 11. Remove metaphors, idioms, rhetorical questions, and unnecessary words.
 12. Do not use semicolons in original prose.
 13. Remove each sentence and section that the reader can do without, even when it is correct.
+14. Do not label what the page already shows. Do not add a note, a footnote or a descriptor that repeats what a title, a control or the layout makes clear.
 
 Use short phrases for controls and labels. Keep accessible names consistent with visible labels.
 Do not shorten a sentence by deleting a condition, limitation, or required explanation.

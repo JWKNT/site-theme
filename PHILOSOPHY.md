@@ -171,6 +171,10 @@ A claim of proof is not a confirmed proof. Keep the words for each exact.
 Less is often more. Say what the reader needs, then stop. A short page that answers the question is better than a complete one that buries the answer.
 Accuracy does not need length. Remove each section that the reader can do without, even when it is correct.
 
+Do not label what the page already shows. AI writing adds labels, footnotes and descriptors where the page is already clear.
+Remove a line that repeats what a title, a control or the layout shows.
+Keep a note only when the reader needs it: a limit of the data, a legal notice, or an instruction for an unfamiliar tool.
+
 Use ASD-STE100 Issue 9 for original explanations, instructions, help, and interface text.
 Follow [the writing policy](docs/WRITING-STYLE.md).
 Preserve reader text, translations, source quotations, NDB fiction and item descriptions, and exact technical meaning.

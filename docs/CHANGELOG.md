@@ -3,6 +3,7 @@
 ## 2026-11-11 — Remove labels that repeat what the page shows
 
 - The owner asked to delete text that adds nothing: labels for what is already clear, footnotes and extra descriptors. In the readers, the JP and EN labels beside each line on a phone and in each glossary heading are gone. The script of a text shows its language.
+- Record the rule in the philosophy and as rule 14 of the writing policy: do not label what the page already shows. The same pass removed descriptor lines, footnotes and operating instructions from 16 consumer sites.
 
 ## 2026-11-10 — Site sweep
 
