@@ -67,11 +67,11 @@ elsewhere and keep downloads or project-local navigation that serve the page.
 </header>
 ```
 
-The 21 maintained PNGs in `v2/marks/` are `site-theme.png`, `home.png`,
+The 22 maintained PNGs in `v2/marks/` are `site-theme.png`, `home.png`,
 `mtl-guide.png`, `profile.png`, `mystery-report.png`, `ngu-idle-dashboard.png`,
 `logical-solver.png`, `bl2.png`, `box-puzzles.png`, `black-sheep-town.png`,
 `albatross-koukairoku.png`, `writing.png`, `puzzles.png`, `baba-is-you.png`,
-`readers.png`, `eastern-star.png`, `links.png`, `pokemon-reborn.png`, `ai-math.png`, `omniscient-readers-viewpoint.png`, and `style-library.png`. Use a unique mark for each project; subpages within that project may share its mark. Choose the relevant
+`readers.png`, `eastern-star.png`, `links.png`, `pokemon-reborn.png`, `ai-math.png`, `omniscient-readers-viewpoint.png`, `style-library.png`, and `better-minecraft-1-12-2.png`. Use a unique mark for each project; subpages within that project may share its mark. Choose the relevant
 subject and check both color modes. Abstract, single-ink SVG geometry in
 `v2/symbols/` is authoritative; `tools/make_symbols.py` renders transparent black
 PNG mastheads and circular white-on-black favicons. Dark mode inverts only mastheads and

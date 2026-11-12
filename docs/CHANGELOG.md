@@ -1,5 +1,9 @@
 # Change record
 
+## 2026-11-12 — Better 1.12.2 identity
+
+- Add `better-minecraft-1-12-2`: a block with a mark on its top face, for the Better 1.12.2 Minecraft mod page.
+
 ## 2026-11-11 — Remove labels that repeat what the page shows
 
 - The owner asked to delete text that adds nothing: labels for what is already clear, footnotes and extra descriptors. In the readers, the JP and EN labels beside each line on a phone and in each glossary heading are gone. The script of a text shows its language.

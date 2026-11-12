@@ -1,7 +1,7 @@
 {
   "generator": "python3 tools/make_symbols.py",
   "created": "2026-10-02",
-  "assetCount": 21,
+  "assetCount": 22,
   "notes": [
     "Single-ink abstract subject symbols; SVG sources are authoritative.",
     "PNG derivatives retain the existing 32px img.site-mark contract.",
@@ -294,6 +294,20 @@
       "meaning": "A decorated initial beside lines of text",
       "source": "../symbols/style-library.svg",
       "file": "style-library.png",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "better-minecraft-1-12-2",
+      "meaning": "A block with a mark on its top face",
+      "source": "../symbols/better-minecraft-1-12-2.svg",
+      "file": "better-minecraft-1-12-2.png",
       "width": 128,
       "height": 128,
       "transparentCorners": [
