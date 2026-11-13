@@ -1,5 +1,9 @@
 # Change record
 
+## 2026-11-13 — AI Painting identity
+
+- Add `ai-painting`: a canvas with one brush stroke and the ring of the brush at its end, for the AI Painting page.
+
 ## 2026-11-12 — Better 1.12.2 identity
 
 - Add `better-minecraft-1-12-2`: a block with a mark on its top face, for the Better 1.12.2 Minecraft mod page.
