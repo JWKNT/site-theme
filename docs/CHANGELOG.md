@@ -1,5 +1,10 @@
 # Change record
 
+## 2026-11-13 — Art category on the homepage
+
+- The owner asked for an Art category on the homepage, with AI Painting in it. The category has a new study, `stroke`: one sweep of a brush, with its faint echo and an accent point where the brush lifts. Art comes last, so the two columns end level.
+- The AI Painting landing page shows every painting at one height, whatever its shape.
+
 ## 2026-11-13 — AI Painting identity
 
 - Add `ai-painting`: a canvas with one brush stroke and the ring of the brush at its end, for the AI Painting page.
