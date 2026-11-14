@@ -112,6 +112,14 @@ export async function check(url, html) {
 
 const pageLike = (u) => u.origin === ORIGIN && !/\.(png|jpe?g|gif|svg|webp|mp4|webm|mov|pdf|zip|json|js|mjs|css|txt|md|ttf|otf|woff2?|ico|xml|csv|tsv|bin|exe|dmg|patch|7z|lean)$/i.test(u.pathname);
 
+// Not a page to share: a build source with no head, a redirect, or a fragment that a page loads
+// (noindex and no canonical address).
+export function skip(html) {
+  if (!/<head[\s>]/i.test(html) || /http-equiv="refresh"/i.test(html)) return true;
+  const { meta, links } = head(html);
+  return /noindex/.test(meta.robots || '') && !links.canonical;
+}
+
 function htmlFiles(path) {
   // A not-found page is not shared, so it needs no preview.
   if (statSync(path).isFile()) return path.endsWith('.html') && !path.endsWith('404.html') ? [path] : [];
@@ -123,8 +131,7 @@ for (const s of starts) {
   if (existsSync(s)) {
     for (const file of htmlFiles(s)) {
       const html = readFileSync(file, 'utf8');
-      if (/http-equiv="refresh"/i.test(html)) continue;
-      results.push(await check(file, html));
+      if (!skip(html)) results.push(await check(file, html));
     }
     continue;
   }

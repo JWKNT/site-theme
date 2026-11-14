@@ -38,7 +38,7 @@ filtering, dataset interpretation, telemetry, puzzle rules, or network calls her
 ## Link preview
 
 Discord, Slack, Teams and other apps read these tags, without scripts, when someone shares a link.
-Put them in the `head` of every page, after the canonical link. A not-found page needs none.
+Put them in the `head` of every page, after the canonical link. A not-found page, a redirect, a build source and a fragment that a page loads (marked `noindex`, with no canonical link) need none.
 
 ```html
 <meta name="description" content="What is on the page, in one sentence.">
