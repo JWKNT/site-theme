@@ -8,6 +8,7 @@
 //   --json=out.json writes the results; --no-images does not download the images.
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { inflateSync } from 'node:zlib';
 import { fileURLToPath } from 'node:url';
 
 const main = process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1];
@@ -41,9 +42,41 @@ export function head(html) {
   return { meta, links, title: title ? decode(title.trim()) : '' };
 }
 
+// True when a PNG has a pixel that is not fully opaque. An alpha channel alone is not enough:
+// many opaque images carry one.
+function transparent(b) {
+  const type = b[25], depth = b[24];
+  const u32 = (at) => (b[at] << 24 | b[at + 1] << 16 | b[at + 2] << 8 | b[at + 3]) >>> 0;
+  const parts = [];
+  let palette = false;
+  for (let at = 8; at < b.length;) {
+    const size = u32(at), name = String.fromCharCode(...b.slice(at + 4, at + 8));
+    if (name === 'IDAT') parts.push(b.subarray(at + 8, at + 8 + size));
+    if (name === 'tRNS') palette = Array.from(b.subarray(at + 8, at + 8 + size)).some((v) => v < 255);
+    at += size + 12;
+  }
+  if (type === 3) return palette;
+  if ((type !== 4 && type !== 6) || depth !== 8) return false;
+  const channels = type === 6 ? 4 : 2, w = u32(16), h = u32(20), stride = w * channels;
+  const data = inflateSync(Buffer.concat(parts.map((x) => Buffer.from(x))));
+  const row = new Uint8Array(stride), prev = new Uint8Array(stride);
+  for (let y = 0; y < h; y++) {
+    const start = y * (stride + 1), filter = data[start];
+    for (let x = 0; x < stride; x++) {
+      const a = x >= channels ? row[x - channels] : 0, up = prev[x], c = x >= channels ? prev[x - channels] : 0;
+      const p = a + up - c, pa = Math.abs(p - a), pb = Math.abs(p - up), pc = Math.abs(p - c);
+      const pred = [0, a, up, (a + up) >> 1, pa <= pb && pa <= pc ? a : pb <= pc ? up : c][filter];
+      row[x] = (data[start + 1 + x] + pred) & 255;
+    }
+    for (let x = channels - 1; x < stride; x += channels) if (row[x] < 255) return true;
+    prev.set(row);
+  }
+  return false;
+}
+
 export function size(buf) {
   const b = new Uint8Array(buf);
-  if (b[0] === 0x89 && b[1] === 0x50) return { type: 'png', w: (b[16] << 24 | b[17] << 16 | b[18] << 8 | b[19]) >>> 0, h: (b[20] << 24 | b[21] << 16 | b[22] << 8 | b[23]) >>> 0, alpha: b[25] === 6 || b[25] === 4 };
+  if (b[0] === 0x89 && b[1] === 0x50) return { type: 'png', w: (b[16] << 24 | b[17] << 16 | b[18] << 8 | b[19]) >>> 0, h: (b[20] << 24 | b[21] << 16 | b[22] << 8 | b[23]) >>> 0, alpha: transparent(b) };
   if (b[0] === 0xff && b[1] === 0xd8) {
     for (let i = 2; i < b.length - 9;) {
       if (b[i] !== 0xff) { i++; continue; }
