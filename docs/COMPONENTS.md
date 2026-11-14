@@ -29,10 +29,39 @@ themselves into existing consumers.
 | Copy code | `data-copy-code` on `pre` containing `code` | The actual snippet | MTL, gallery |
 | Code listing | `.ui-code` on `pre`, `hljs-*` spans, `--code-*` tokens | Build-time highlighter, language, disclosure and loading | Pokémon Reborn scripts and notes, gallery |
 | Mathematics | Native MathML, `--math`, `.ui-equation`, `.ui-math-char` | Build-time typesetter, formula content, figures | AI Math Results, gallery |
+| Link preview | Open Graph and Twitter card tags in `head`, `v2/cards/<symbol>.png` | Page title, description, canonical address, image choice | Every page |
 | Human mark | `.ui-human` on a block, one `.ui-human-mark` inside it, `v2/icons/human.svg` | Only text that the owner wrote, in the owner's exact words | Homepage introduction, gallery |
 
 CSS classes define appearance; data attributes opt into behavior. Do not put
 filtering, dataset interpretation, telemetry, puzzle rules, or network calls here.
+
+## Link preview
+
+Discord, Slack, Teams and other apps read these tags, without scripts, when someone shares a link.
+Put them in the `head` of every page, after the canonical link. A not-found page needs none.
+
+```html
+<meta name="description" content="What is on the page, in one sentence.">
+<link rel="canonical" href="https://jehlp.net/<site>/<page>">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="jehlp.net">
+<meta property="og:title" content="Page · Site">
+<meta property="og:description" content="What is on the page, in one sentence.">
+<meta property="og:url" content="https://jehlp.net/<site>/<page>">
+<meta property="og:image" content="https://jehlp.net/site-theme/v2/cards/<symbol>.png">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
+<meta property="og:image:alt" content="The <Site> symbol">
+<meta name="twitter:card" content="summary">
+```
+
+- `og:title` names the page without "· jehlp.net", which `og:site_name` gives. A subpage adds its site: `Glossary · Black Sheep Town`.
+- `og:description` says what is on the page in 25 to 220 characters. Do not repeat the title.
+- `og:url` is the canonical address. Every address is absolute and uses https.
+- The image is the card of the subject symbol: an opaque 600px square, made by `tools/make_cards.py` from `v2/symbols/`. A site that keeps its own mark makes its card with `python3 tools/make_cards.py mark.svg card.png`.
+- A page whose subject is a picture can show it: a painting, a puzzle diagram. Use an opaque PNG or JPEG of 200px or more on each side. A picture at least 1.3 times as wide as it is high uses `summary_large_image`; a card or a narrower picture uses `summary`.
+- Do not use SVG or a transparent PNG: many apps cannot show SVG, and some fill transparency with black.
+- `node tools/check-embeds.mjs <files or folders>` checks local pages; `node tools/check-embeds.mjs https://jehlp.net/<site>/ --crawl` checks the published pages that the links reach.
 
 ## Behavior contracts
 

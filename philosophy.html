@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Design philosophy for the projects published at jehlp.net.">
     <link rel="canonical" href="https://jehlp.net/site-theme/philosophy.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="jehlp.net">
+    <meta property="og:title" content="Philosophy · Site Theme">
+    <meta property="og:description" content="Design philosophy for the projects published at jehlp.net.">
+    <meta property="og:url" content="https://jehlp.net/site-theme/philosophy.html">
+    <meta property="og:image" content="https://jehlp.net/site-theme/v2/cards/site-theme.png">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="600">
+    <meta property="og:image:alt" content="The Site Theme symbol">
+    <meta name="twitter:card" content="summary">
     <meta name="theme-color" content="#fbfaf7">
     <title>Site Philosophy · jehlp.net</title>
     <link rel="icon" href="v2/favicons/site-theme.png" type="image/png">
@@ -58,6 +68,11 @@
         <p>The theme controls the palette, type roles, focus behavior, accessibility helpers, standard page frames, transitions, and color modes. Each site keeps the layouts and visualizations that its subject requires.</p>
         <p>Pair each masthead title with a small abstract subject symbol. Do not use a Unicode glyph or emoji. Generate compatible transparent PNGs from the SVG geometry. Use black on paper and white on charcoal. The title supplies the name. Favicons use the same geometry in white on a circular black field. The site favicon shows the seal as the homepage draws it, in ink on a paper circle with the accent point.</p>
         <p>The site itself uses the Ruffle seal, icon i0063 of the style library. The homepage has one title: the seal, with the owner’s introduction beside it. One clear rule separates the introduction from the categories. The Home link in each header draws an open door, because a homepage is the way in. Do not draw Home as a house.</p>
+      </section>
+      <section>
+        <h2>Give every page a link preview</h2>
+        <p>Discord, Slack, Teams and other apps show a preview when someone shares a link: a title, a description and an image. They read the tags in the head of the page. They do not run scripts.</p>
+        <p>Give every page the complete set of tags, with a title that names the page and a description that says what is on it. The image is the subject card of the site: its symbol in ink on an opaque square of paper. A page that is a picture, such as a painting or a puzzle, can show that picture. When you add or change a page, check its preview with <code>tools/check-embeds.mjs</code>.</p>
       </section>
       <section>
         <h2>Mark what the owner wrote</h2>

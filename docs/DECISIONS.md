@@ -1,5 +1,14 @@
 # Design decisions
 
+## 043 — A link preview on every page (2026-11-13)
+
+**Evidence:** The owner asked that every page of jehlp.net have a proper preview when its link is shared in Teams, Discord or Slack: an image or icon with words that suit the page. A crawl of 1,184 published pages found none with a complete preview. Most had no image, and the Readers pages had no preview tags at all.
+
+**Decision:** Every page has the Open Graph and Twitter card tags of `docs/COMPONENTS.md`. The image is the opaque card of the subject symbol in `v2/cards/`, or the page's own picture for a painting or a puzzle. `tools/check-embeds.mjs` checks local files or the published site, and the release and QA skills require it.
+
+**Tradeoff:** A square card shows as a small picture beside the text, not as a banner. A banner for each page would need art for each page; the cards come from the symbols that already exist. Box Logic had a large preview image removed in August; it now has the small card only.
+
+
 ## 042 — Justified text by default (2026-11-08)
 
 **Evidence:** The owner asked to justify the homepage introduction and said that text should always be justified by default.

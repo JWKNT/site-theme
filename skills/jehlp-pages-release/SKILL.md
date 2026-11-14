@@ -11,7 +11,7 @@ Preserve existing user work. Use an explicit file list per repo; never git add -
 
 Before a shared v2 release, review available consumers outside the archive, including reader surfaces, and confirm local candidates passed relevant QA. Publish new PNG marks and component assets before their consumers reference them. Consumer code using new CSS tokens should keep fallback values so release order does not blank the UI. Identify the theme commit, affected consumer commits and rollback commits; rebuild embedded exports, including their PNG identities, where needed.
 
-Prepare a concrete release plan and commits. Push or deploy only when included in the user's current authorization; a local preparation request does not authorize publication. After an authorized deploy, verify the actual public routes, stylesheet/script asset responses, canonical metadata and a representative interaction. If routing ownership is unclear, report the precise unresolved setting rather than guessing or rewriting remotes.
+Prepare a concrete release plan and commits. Push or deploy only when included in the user's current authorization; a local preparation request does not authorize publication. Before a push, check the link preview of each new or changed page with `node <site-theme>/tools/check-embeds.mjs <files>`. After an authorized deploy, verify the actual public routes, stylesheet/script asset responses, canonical metadata, the link previews (`check-embeds.mjs https://jehlp.net/<site>/ --crawl`) and a representative interaction. If routing ownership is unclear, report the precise unresolved setting rather than guessing or rewriting remotes.
 
 ## Original technical writing
 

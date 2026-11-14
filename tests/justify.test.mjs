@@ -16,7 +16,7 @@ test('the philosophy, design system, skill and decisions record justified text',
   for (const text of [read('PHILOSOPHY.md'), read('philosophy.html')]) assert.match(text, /Justify text by default\. The shared stylesheet aligns paragraphs to both edges and hyphenates them/);
   assert.match(read('docs/DESIGN-SYSTEM.md'), /\| Paragraph alignment \| Justified, with hyphenation \|/);
   assert.match(read('skills/jehlp-site-design/SKILL.md'), /Justify text by default\./);
-  assert.match(read('docs/DECISIONS.md'), /^# Design decisions\n\n## 042 — Justified text by default/);
+  assert.match(read('docs/DECISIONS.md'), /\n## 042 — Justified text by default/);
 });
 
 test('a directory description is a short gloss and is not justified', () => {

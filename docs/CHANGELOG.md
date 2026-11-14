@@ -1,5 +1,11 @@
 # Change record
 
+## 2026-11-13 — Link previews
+
+- The owner asked for a proper link preview on every page. Add `v2/cards/`, an opaque 600px card for each subject symbol, made by `tools/make_cards.py`. Add the tag contract to `docs/COMPONENTS.md`, the rule to the philosophy and decision 043.
+- Add `tools/check-embeds.mjs`, which checks the preview tags and the image of local pages or of the published site. The release, QA and design skills now require it.
+- The same change gave every published page a complete preview, in each site's generator or page.
+
 ## 2026-11-13 — Art category on the homepage
 
 - The owner asked for an Art category on the homepage, with AI Painting in it. The category has a new study, `stroke`: one sweep of a brush, with its faint echo and an accent point where the brush lifts. Art comes last, so the two columns end level.

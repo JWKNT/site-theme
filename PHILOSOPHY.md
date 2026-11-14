@@ -132,6 +132,15 @@ Keep GitHub “Source” links out of page headers.
 The masthead contains identity, project-local navigation, and essential controls.
 Useful source provenance can remain with the material or in the footer.
 
+## Give every page a link preview
+
+Discord, Slack, Teams and other apps show a preview when someone shares a link: a title, a description and an image.
+They read the tags in the head of the page. They do not run scripts.
+Give every page the complete set of tags in `docs/COMPONENTS.md`, with a title that names the page and a description that says what is on it.
+The image is the subject card of the site from `v2/cards/`: its symbol in ink on an opaque square of paper.
+A page that is a picture, such as a painting or a puzzle, can show that picture.
+When you add or change a page, check its preview with `tools/check-embeds.mjs`.
+
 ## Mark what the owner wrote
 
 AI writes and programs jehlp.net under the owner's supervision.
