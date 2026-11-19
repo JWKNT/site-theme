@@ -35,6 +35,7 @@ The current sweep includes every public Pages app in the account. Added inventor
 | `ai-math` | `JWKNT/ai-math` | `https://jehlp.net/ai-math/` | `npm run build` · `main` root; generated pages from `data/results.json` and `content/` |
 | `omniscient-readers-viewpoint` | `JWKNT/omniscient-readers-viewpoint` | `https://jehlp.net/omniscient-readers-viewpoint/` | Static · `main` root; `tools/build_data.py` reads the translation project in `readers/data/orv`. The Korean text stays in the ignored `data/source/` |
 | `pokemon-reborn` | `JWKNT/pokemon-reborn` | `https://jehlp.net/pokemon-reborn/` | `npm run build` · `main` root; curated public import of the private `reborn` checkout via `npm run import` |
+| `omnifactory` | `JWKNT/omnifactory` | `https://jehlp.net/omnifactory/` | `npm run build` · `main` root; public notes log of the Omnifactory run |
 
 The media repositories contain recordings, not independent UI surfaces. The private
 `site` checkout has Pages disabled and unrelated user edits; it is not a release

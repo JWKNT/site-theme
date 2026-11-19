@@ -1,7 +1,7 @@
 {
   "generator": "python3 tools/make_symbols.py",
   "created": "2026-10-02",
-  "assetCount": 23,
+  "assetCount": 24,
   "notes": [
     "Single-ink abstract subject symbols; SVG sources are authoritative.",
     "PNG derivatives retain the existing 32px img.site-mark contract.",
@@ -322,6 +322,20 @@
       "meaning": "A canvas with one brush stroke and the ring of the brush at its end",
       "source": "../symbols/ai-painting.svg",
       "file": "ai-painting.png",
+      "width": 128,
+      "height": 128,
+      "transparentCorners": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "omnifactory",
+      "meaning": "A cog with six square teeth around a square casing",
+      "source": "../symbols/omnifactory.svg",
+      "file": "omnifactory.png",
       "width": 128,
       "height": 128,
       "transparentCorners": [

@@ -1,5 +1,9 @@
 # Change record
 
+## 2026-11-19 — Omnifactory identity
+
+- Add `omnifactory`: a cog with six square teeth around a square casing, for the Omnifactory page. It has a masthead mark, a favicon and a link preview card.
+
 ## 2026-11-13 — Link previews
 
 - The owner asked for a proper link preview on every page. Add `v2/cards/`, an opaque 600px card for each subject symbol, made by `tools/make_cards.py`. Add the tag contract to `docs/COMPONENTS.md`, the rule to the philosophy and decision 043.
